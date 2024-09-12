@@ -1,7 +1,7 @@
 project:
   name: quickstart
-  connections: ["connections/"] # connection definitions, can contain references to secrets in vaults
-  flows: ["flows/"]  # each flow is a pipeline definition, contains component definitions nested within it
-  profiles: ["profiles/"] # contains values for a profile (such as dev/stage/prod) that bind to parameters in other resources like connections
-  sources: ["src/"] # python source files are placed here
-  vaults: ["vaults/"] # vault definitions
+  connections: ["connections/"]
+  flows: ["flows/"]
+  profiles: ["profiles/"]
+  sources: ["src/"]
+  vaults: ["vaults/"]
