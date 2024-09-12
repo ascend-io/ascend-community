@@ -13,7 +13,7 @@ profile:
 
     # GCP + BigQuery
     gcp_project_id: ascend-io-dev-inception-test-2
-    bigquery_dataset: quickstart
+    bigquery_dataset: quickstart2
 
   defaults:
     - kind: Flow
