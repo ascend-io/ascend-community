@@ -9,13 +9,13 @@ connection:
     key: ${secret.my_vault.ascend-env-prod-data-plane-creds}
     create_dataset_if_not_exists: True
 
-  # For all Snowflake connection options:
-  # https://docs.ascend.io/reference/resource/connection/connection-snowflake#snowflakeconnectionoptions
-  snowflake:
-    account: ${params.snowflake_account}
-    database: ${params.snowflake_database}
-    schema: ${params.snowflake_schema}
-    user: ${params.snowflake_user}
-    password: ${secret.my_vault.ascend-env-prod-snowflake-password}
-    role: ${params.snowflake_role}
-    warehouse: ${params.snowflake_warehouse}
+  # # For all Snowflake connection options:
+  # # https://docs.ascend.io/reference/resource/connection/connection-snowflake#snowflakeconnectionoptions
+  # snowflake:
+  #   account: ${params.snowflake_account}
+  #   database: ${params.snowflake_database}
+  #   schema: ${params.snowflake_schema}
+  #   user: ${params.snowflake_user}
+  #   password: ${secret.my_vault.ascend-env-prod-snowflake-password}
+  #   role: ${params.snowflake_role}
+  #   warehouse: ${params.snowflake_warehouse}
