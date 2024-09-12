@@ -12,7 +12,7 @@ profile:
     # snowflake_warehouse: ASCEND_ENV_PROD
 
     # GCP + BigQuery
-    gcp_project_id: <your-prod-env-GCP-project-id>
+    gcp_project_id: ascend-env-prod-data-plane
     bigquery_dataset: quickstart
 
   defaults:
