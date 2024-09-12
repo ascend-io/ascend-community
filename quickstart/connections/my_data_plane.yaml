@@ -6,7 +6,7 @@ connection:
   bigquery:
     project: ${params.gcp_project_id}
     dataset: ${params.bigquery_dataset}
-    key: ${secret.my_vault.ascend-env-prod-data-plane-creds}
+    key: ${secret.my_vault.ascend-env-prod-data-plane}
     create_dataset_if_not_exists: True
 
   # # For all Snowflake connection options:
