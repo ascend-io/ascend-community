@@ -1,0 +1,1 @@
+Place data files in this folder, and reference them in local filesystem connections. Data files can belong to standard types such as CSV or JSON, in which case your read connector needs to specify the appropriate parse option for loading the data.
