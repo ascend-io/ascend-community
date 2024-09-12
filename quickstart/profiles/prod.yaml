@@ -1,5 +1,5 @@
 profile:
-  parameters:
+  params:
     # TODO: update these values to match what you used in the quickstart
 
     # # Azure + Snowflake
@@ -12,7 +12,7 @@ profile:
     # snowflake_warehouse: ASCEND_ENV_PROD
 
     # GCP + BigQuery
-    gcp_project_id: ascend-env-prod-data-plane
+    gcp_project_id: ascend-io-dev-inception-test-2
     bigquery_dataset: quickstart
 
   defaults:
