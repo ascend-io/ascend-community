@@ -5,4 +5,4 @@ vault:
   #   vault_name: ${params.azure_key_vault_name}
 
   gcp_secret_manager:
-    project: ascend-io-dev-inception-test-2
+    project: ${parameter.gcp_project_id}
