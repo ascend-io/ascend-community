@@ -5,4 +5,5 @@ vault:
   #   vault_name: ${params.azure_key_vault_name}
 
   gcp_secret_manager:
-    project: ${params.gcp_project_id}
+    project: ascend-env-prod-data-plane
+    # ${params.gcp_project_id}
