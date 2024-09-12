@@ -1,0 +1,21 @@
+connection:
+  # Below are two examples of connections: BigQuery and Snowflake. Choose the one that fits your use case and you can delete the other.
+
+  # For all BigQuery connection options:
+  # https://docs.ascend.io/reference/resource/connection/connection-bigquery#bigqueryconnectionoptions
+  bigquery:
+    project: ${parameter.gcp_project_id}
+    dataset: ${parameter.bigquery_dataset}
+    key: ${secret.my_vault.ascend-env-prod-data-plane}
+    create_dataset_if_not_exists: True
+
+  # For all Snowflake connection options:
+  # https://docs.ascend.io/reference/resource/connection/connection-snowflake#snowflakeconnectionoptions
+  snowflake:
+    account: ${parameter.snowflake_account}
+    database: ${parameter.snowflake_database}
+    schema: ${parameter.snowflake_schema}
+    user: ${parameter.snowflake_user}
+    password: ${secret.my_vault.ascend-env-prod-snowflake-password}
+    role: ${parameter.snowflake_role}
+    warehouse: ${parameter.snowflake_warehouse}
