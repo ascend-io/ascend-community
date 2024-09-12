@@ -1,5 +1,5 @@
 profile:
-  params:
+  parameters:
     # TODO: update these values to match what you used in the quickstart
 
     # # Azure + Snowflake
