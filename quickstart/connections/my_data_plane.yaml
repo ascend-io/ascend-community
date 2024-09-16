@@ -19,3 +19,4 @@ connection:
     password: ${secret.my_vault.ascend-env-prod-snowflake-password}
     role: ${parameter.snowflake_role}
     warehouse: ${parameter.snowflake_warehouse}
+    create_schema_if_not_exists: True
