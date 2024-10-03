@@ -1,0 +1,3 @@
+-- a query that queries a table produced by the lake_reader component stored in data plane storage
+SELECT *
+FROM {{ ref('lake_reader') }}

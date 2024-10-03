@@ -1,0 +1,3 @@
+connection:
+  s3:
+    root: s3://ascend-io-sample-data-read/ottos_summit_expeditions

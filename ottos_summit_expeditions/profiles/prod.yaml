@@ -1,0 +1,24 @@
+profile:
+  parameters:
+    # TODO: update these values to match what you used in the quickstart
+
+    # Azure + Snowflake
+    azure_key_vault_name: <your-prod-env-Azure-Key-Vault-name>
+    snowflake_account: <your-prod-env-Snowflake-account-name>
+    snowflake_database: ASCEND_ENV_PROD
+    snowflake_schema: quickstart
+    snowflake_user: ASCEND_ENV_PROD
+    snowflake_role: ASCEND_ENV_PROD
+    snowflake_warehouse: ASCEND_ENV_PROD
+
+    # GCP + BigQuery
+    gcp_project_id: <your-prod-env-GCP-project-id>
+    bigquery_dataset: quickstart
+
+  defaults:
+    - kind: Flow
+      name:
+        regex: .*
+      spec:
+        data_plane:
+          connection_name: my_data_plane
