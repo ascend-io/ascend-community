@@ -17,7 +17,8 @@ WITH guide_success_rate AS (
 )
 SELECT
     guide_id,
-    first_name || ' ' || last_name AS guide_name,
+    first_name,
+    last_name,
     total_expeditions,
     total_successes,
     success_rate

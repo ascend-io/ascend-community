@@ -10,10 +10,12 @@ profile:
     snowflake_user: ASCEND_ENV_PROD
     snowflake_role: ASCEND_ENV_PROD
     snowflake_warehouse: ASCEND_ENV_PROD
+    success_rate_threshold: 50
 
     # GCP + BigQuery
     gcp_project_id: <your-prod-env-GCP-project-id>
     bigquery_dataset: quickstart
+    success_rate_threshold: 50
 
   defaults:
     - kind: Flow

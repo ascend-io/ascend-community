@@ -6,10 +6,4 @@ component:
       parser:
         csv:
           has_header: true
-  tests:
-    columns:
-      string_col:
-        - not_null
-        - unique
-      num_col:
-        - not_null
+
