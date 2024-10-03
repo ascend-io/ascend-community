@@ -2,7 +2,7 @@ component:
   read:
     connection: local_files
     local_file:
-      path: /data.csv
+      path: /financials.csv
       parser:
         csv:
           has_header: true
