@@ -1,0 +1,51 @@
+guide_id,first_name,last_name,experience_years,certifications,total_expeditions_led,average_success_rate,customer_rating
+1,Melissa,Huber,1,"Rock Climbing Instructor, Wilderness First Aid",70,80.9,4.4
+2,Cory,Burns,12,"Backcountry Navigation, Wilderness First Aid",40,84.9,3.7
+3,Leslie,Reid,18,"Mountain Safety, Backcountry Navigation",41,77.9,5.0
+4,Richard,Hale,11,"Wilderness First Aid, Rock Climbing Instructor, Backcountry Navigation",59,72.5,3.7
+5,Joseph,Black,20,"Wilderness First Aid, Backcountry Navigation, Mountain Safety",34,74.4,4.2
+6,David,Moreno,10,"Wilderness First Aid, Mountain Safety, Backcountry Navigation",38,80.2,4.7
+7,Ryan,Mendoza,20,"Wilderness First Aid, Mountain Safety",79,86.2,4.8
+8,Courtney,Peterson,3,"Avalanche Safety, Rock Climbing Instructor, Wilderness First Aid",48,73.5,4.8
+9,Raymond,Allen,16,Mountain Safety,56,79.1,5.0
+10,Julie,Holland,3,Rock Climbing Instructor,18,93.2,4.3
+11,Kendra,Thompson,4,"Avalanche Safety, Wilderness First Aid",24,72.4,4.1
+12,Cassie,Decker,18,"Backcountry Navigation, Wilderness First Aid, Mountain Safety",75,93.1,4.0
+13,Melinda,Brown,10,Avalanche Safety,64,75.7,4.0
+14,Laura,Sanchez,20,Mountain Safety,98,70.9,3.6
+15,Cynthia,Smith,12,Avalanche Safety,73,93.7,3.7
+16,Wendy,Martin,10,"Avalanche Safety, Mountain Safety",46,87.7,3.9
+17,Alan,Johnson,13,"Avalanche Safety, Wilderness First Aid",87,90.0,4.7
+18,Eduardo,Herrera,13,"Rock Climbing Instructor, Wilderness First Aid, Backcountry Navigation",23,83.4,4.7
+19,Nicholas,Johnson,4,"Wilderness First Aid, Mountain Safety, Avalanche Safety",80,83.0,4.9
+20,Jeffrey,Swanson,1,"Backcountry Navigation, Rock Climbing Instructor, Mountain Safety",44,84.2,4.3
+21,Matthew,Hardin,9,Wilderness First Aid,79,72.2,4.1
+22,Antonio,Christensen,18,"Mountain Safety, Rock Climbing Instructor, Wilderness First Aid",49,73.9,4.3
+23,Hannah,Walker,9,"Backcountry Navigation, Mountain Safety",26,83.7,4.6
+24,William,Fowler,11,"Avalanche Safety, Rock Climbing Instructor, Backcountry Navigation",25,93.6,3.9
+25,Martha,Thomas,9,"Wilderness First Aid, Mountain Safety, Rock Climbing Instructor",30,76.4,4.6
+26,Heather,Watson,17,"Backcountry Navigation, Mountain Safety, Rock Climbing Instructor",45,88.0,4.0
+27,Dawn,Frye,12,"Avalanche Safety, Backcountry Navigation, Rock Climbing Instructor",39,81.9,4.0
+28,Austin,Ayala,1,"Mountain Safety, Avalanche Safety",72,86.8,4.9
+29,Michael,Haney,6,"Backcountry Navigation, Rock Climbing Instructor",24,89.9,3.7
+30,Jason,Taylor,6,Avalanche Safety,76,86.6,4.7
+31,Stacy,Holt,3,Rock Climbing Instructor,72,75.7,3.9
+32,Kellie,Morales,15,Rock Climbing Instructor,12,92.4,3.6
+33,Jeffrey,Ortiz,11,"Rock Climbing Instructor, Mountain Safety",11,70.1,3.9
+34,Derek,Cook,19,Wilderness First Aid,84,80.6,4.2
+35,Brianna,Nguyen,9,"Mountain Safety, Wilderness First Aid, Avalanche Safety",38,92.5,4.5
+36,James,Wells,20,"Backcountry Navigation, Rock Climbing Instructor",22,88.2,4.9
+37,Pamela,Smith,5,"Mountain Safety, Avalanche Safety",79,88.6,4.5
+38,Richard,Briggs,8,"Rock Climbing Instructor, Mountain Safety, Avalanche Safety",33,91.3,3.5
+39,Scott,Holder,13,"Backcountry Navigation, Rock Climbing Instructor, Wilderness First Aid",63,74.7,4.7
+40,Tina,Miller,20,"Rock Climbing Instructor, Avalanche Safety",61,73.0,4.8
+41,Michael,Lopez,15,"Mountain Safety, Rock Climbing Instructor, Avalanche Safety",59,89.1,4.9
+42,Barbara,Charles,6,Avalanche Safety,17,83.0,4.5
+43,Elaine,Bartlett,4,"Backcountry Navigation, Wilderness First Aid",90,77.1,4.9
+44,Melissa,Russell,3,"Wilderness First Aid, Avalanche Safety, Backcountry Navigation",100,75.4,4.9
+45,Melinda,Hunter,10,Rock Climbing Instructor,61,87.3,4.0
+46,Joseph,Banks,9,"Rock Climbing Instructor, Wilderness First Aid, Mountain Safety",11,79.9,4.0
+47,Kathleen,Morrison,8,"Avalanche Safety, Wilderness First Aid",17,73.6,4.6
+48,Erin,Wright,10,"Avalanche Safety, Mountain Safety",64,77.1,4.1
+49,Lauren,Smith,18,"Rock Climbing Instructor, Backcountry Navigation, Mountain Safety",21,88.3,3.7
+50,Leslie,Macdonald,14,"Wilderness First Aid, Backcountry Navigation",50,87.1,4.8
