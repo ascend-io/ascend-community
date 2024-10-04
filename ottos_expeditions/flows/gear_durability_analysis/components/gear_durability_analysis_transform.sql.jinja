@@ -9,7 +9,7 @@ FROM
 JOIN
     {{ ref('routes') }} r ON e.route_id = r.route_id
 JOIN
-    {{ ref('expedition_outcome') }} eo ON e.expedition_id = eo.expedition_id
+    {{ ref('expedition_outcomes') }} eo ON e.expedition_id = eo.expedition_id
 JOIN
     {{ ref('gear_rentals') }} g ON eo.climber_id = g.customer_id
 GROUP BY
