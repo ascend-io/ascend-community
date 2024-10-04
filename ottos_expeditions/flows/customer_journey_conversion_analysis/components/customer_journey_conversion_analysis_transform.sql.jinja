@@ -3,7 +3,7 @@ WITH customer_journey AS (
         wt.customer_id,
         wt.session_id,
         wt.visit_date,
-        wt.page_visited,
+        wt.visit_timestamp,
         wt.traffic_source,
         wt.device_type,
         wt.session_duration,
@@ -19,7 +19,7 @@ WITH customer_journey AS (
 conversion_analysis AS (
     SELECT
         cj.traffic_source,
-        cj.page_visited,
+        cj.visit_timestamp,
         COUNT(cj.session_id) AS total_sessions,
         SUM(CASE WHEN cj.conversion = TRUE THEN 1 ELSE 0 END) AS total_conversions,
         ROUND(SUM(CASE WHEN cj.conversion = TRUE THEN 1 ELSE 0 END) * 100.0 / COUNT(cj.session_id), 2) AS conversion_rate,
@@ -28,11 +28,11 @@ conversion_analysis AS (
     FROM
         customer_journey cj
     GROUP BY
-        cj.traffic_source, cj.page_visited
+        cj.traffic_source, cj.visit_timestamp
 )
 SELECT
     traffic_source,
-    page_visited,
+    visit_timestamp,
     total_sessions,
     total_conversions,
     conversion_rate,
