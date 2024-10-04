@@ -5,5 +5,5 @@ from ascend.resources import component, ref, test
   dependencies=[ref("customer_cohort_analysis_transform")]
 )
 # Function to refresh dataset
-def refresh_dataset():
+def refresh_dataset(customer_cohort_analysis_transform, context):
     pass
