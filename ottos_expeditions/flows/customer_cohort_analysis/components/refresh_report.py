@@ -6,7 +6,8 @@ from ascend.application.context import ComponentExecutionContext
 
 @custom_python()
 # Function to refresh dataset
-def refresh_powerbi_dataset(context: ComponentExecutionContext):
+def refresh_dataset(context: ComponentExecutionContext):
+    '''
     # Configuration - replace with your values from you vault
     client_id = context.vaults["my_vault"].get("powerbi","CLIENT_ID")
     client_secret = context.vaults["my_vault"].get("powerbi","CLIENT_SECRET")
@@ -39,3 +40,4 @@ def refresh_powerbi_dataset(context: ComponentExecutionContext):
     else:
         raise Exception(f"Failed to refresh dataset: {response.status_code}, {response.text}")
 
+'''
