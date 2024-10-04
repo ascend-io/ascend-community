@@ -4,7 +4,7 @@
 
 Welcome, Expedition Engineer! 🌟 Get ready to embark on **Otto's Expeditions**, an interactive journey where you'll harness the power of Ascend to build, manage, and optimize data flows for Otto's mountaineering adventures.
 
-![Otto's Expeditions Logo](/images/ottos_expeditions_logo.gif)
+![Otto's Expeditions Logo](https://storage.googleapis.com/external-docs-assets/v3/ottos-expeditions/ottos_expeditions_logo.gif)
 
 ## 🐐 The Legend of Otto
 
@@ -121,7 +121,7 @@ Ascend on! 🚀
 ---
 
 <a name="expedition-1-customer-cohort-analysis"></a>
-![Expedition #1](./images/1.png)
+![Expedition #1](https://storage.googleapis.com/external-docs-assets/v3/ottos-expeditions/1.png)
 
 
 ## 🏆 Expedition 1: Customer Cohort Analysis
@@ -167,7 +167,7 @@ Ascend on! 🚀
 
 ---
 
-![Expedition #2](./images/2.png)
+![Expedition #2](https://storage.googleapis.com/external-docs-assets/v3/ottos-expeditions/2.png)
 
 <a name="expedition-2-gear-durability-analysis"></a>
 
@@ -234,7 +234,7 @@ Great job! You've completed Expedition 2! Let's keep climbing.
 
 ---
 
-![Expedition #3](./images/3.png)
+![Expedition #3](https://storage.googleapis.com/external-docs-assets/v3/ottos-expeditions/3.png)
 
 <a name="expedition-3-guide-performance--summiting-success-rate"></a>
 
@@ -299,7 +299,7 @@ Great job! You've completed Expedition 3! Ready for your next Adventure?
 
 ---
 
-![Expedition #4](./images/4.png)
+![Expedition #4](https://storage.googleapis.com/external-docs-assets/v3/ottos-expeditions/4.png)
 <a name="expedition-4-route-difficulty--success-prediction"></a>
 
 ## 🏆 Expedition 4: Route Difficulty & Success Prediction
@@ -359,7 +359,7 @@ Great job! You've completed Expedition 4! On to the next one!
 
 ---
 
-![Expedition #5](./images/5.png)
+![Expedition #5](https://storage.googleapis.com/external-docs-assets/v3/ottos-expeditions/5.png)
 
 <a name="expedition-5-weather-impact-analysis"></a>
 
@@ -409,7 +409,7 @@ Great job! You've completed Expedition 5! Ready to take on the next challenge?
 
 ---
 
-![Expedition #6](./images/6.png)
+![Expedition #6](https://storage.googleapis.com/external-docs-assets/v3/ottos-expeditions/6.png)
 
 <a name="expedition-6-customer-journey-and-conversion-analysis"></a>
 
@@ -465,7 +465,7 @@ Great job! You've completed Expedition 6! Your biggest adventure is on the horiz
 
 ---
 
-![Expedition #7](./images/7.png)
+![Expedition #7](https://storage.googleapis.com/external-docs-assets/v3/ottos-expeditions/7.png)
 
 <a name="expedition-7-revenue-cost-analysis"></a>
 
@@ -555,7 +555,7 @@ Great job! You've completed Expedition 7!
 
 ---
 
-![Congratulations!](./images/8.png)
+![Congratulations!](https://storage.googleapis.com/external-docs-assets/v3/ottos-expeditions/8.png)
 
 ## Congratulations! You've completed all the expeditions!
 Great job! You've successfully navigated through the challenges and conquered all the expeditions. Now you're ready to take on new adventures. Here's a few places to start:
