@@ -9,7 +9,9 @@ FROM
 JOIN
     {{ ref('routes') }} r ON e.route_id = r.route_id
 JOIN
-    {{ ref('gear_rentals') }} g ON e.expedition_id = g.expedition_id
+    {{ ref('expedition_outcome') }} eo ON e.expedition_id = eo.expedition_id
+JOIN
+    {{ ref('gear_rentals') }} g ON eo.climber_id = g.customer_id
 GROUP BY
     r.route_name, r.difficulty_level, g.gear_type
 ORDER BY
