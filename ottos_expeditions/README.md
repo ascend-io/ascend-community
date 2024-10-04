@@ -214,7 +214,7 @@ Let's add a data quality tests to our `gear_rentals` component.
             - not_null
       ```
 
-  #Tessa - Also please add a quick description of the test.
+ With this test, we're ensuring the `rental_date` column is not null.  
 
   - Click **Save** to save the changes.
 
