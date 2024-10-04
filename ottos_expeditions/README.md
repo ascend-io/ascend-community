@@ -207,11 +207,11 @@ Let's add a data quality tests to our `gear_rentals` component.
 
   - To add a data quality tests, add the following code to the `gear_rentals.yaml` file:
 
-  ```yaml
-  tests:
-    columns:
-      Hi tessa :) 
-  ```
+      ```yaml
+      tests:
+        columns:
+          Hi tessa :) 
+      ```
 
   #Tessa - Also please add a quick description of the test.
 
@@ -273,9 +273,9 @@ To do this, let's try asking our trusty AI pal Otto for help.
   - Click on the **Otto** icon in the top right corner of the screen. (It looks like a chat bubble)
   - Ask Otto to help you update the transformation component to create a `guide_name` field by combining first and last names.
 
-  ```
-  Hey Otto, can you help me update the transformation component to create a `guide_name` field by combining first and last names?
-  ```
+      ```
+      Hey Otto, can you help me update the transformation component to create a `guide_name` field by combining first and last names?
+      ```
 
   - Otto will provide you with the code to update the transformation component. You can copy and paste the change or let Otto update the file directly for you (you just need to confirm the changes you want him to make).
   - Once the file is updated, click **Save** to save the changes.
@@ -426,9 +426,9 @@ Here's how to do it:
 - Click on the `customer_journey_conversion_analysis_transform.sql.jinja` file to open it.
 - Add the following code to the file:
 
-```sql  
-Tessa - Please add the code to implement data partitioning on the transformation component. 
-```
+    ```sql  
+    Tessa - Please add the code to implement data partitioning on the transformation component. 
+    ```
 
 - Click **Save** to save the changes.
 
@@ -459,16 +459,16 @@ In this flow, you'll work with revenue and cost data to analyze the financial he
   - Create a new file called `expeditions.yaml` in the `components` folder.
   - Open the file and add the following code:
 
-  ```yaml
-  component:
-  read:
-    connection: local_files
-    local_file:
-      path: /expeditions.csv
-      parser:
-        csv:
-          has_header: true
-  ```
+      ```yaml
+      component:
+      read:
+        connection: local_files
+        local_file:
+          path: /expeditions.csv
+          parser:
+            csv:
+              has_header: true
+      ```
   You'll notice that this is the same code we've used in previous flows for reading the Expeditions data. In many cases, you'll be able to reuse components from other flows so there is no need to re-ingest data. But for this flow we're keeping things simple and ingesting the data again.
 
   - Click **Save** to save the changes.
@@ -477,44 +477,45 @@ In this flow, you'll work with revenue and cost data to analyze the financial he
   - Create a new file called `financial.yaml` in the `components` folder.
   - Open the file and add the following code:
 
-  ```yaml
-  component:
-  read:
-    connection: local_files
-    local_file:
-      path: /financial.csv
-      parser:
-        csv:  
-          has_header: true
-  ```
+      ```yaml
+      component:
+      read:
+        connection: local_files
+        local_file:
+          path: /financial.csv
+          parser:
+            csv:  
+              has_header: true
+      ```
   - Click **Save** to save the changes.
 
 ### 4. Create Your Transformation Component
   - Create a new file called `revenue_cost_analysis_transform.sql.jinja` in the `components` folder.
   - Open the file and add the following code:
 
-  ```sql
-WITH expedition_financials AS (
-    SELECT
-        e.expedition_name,
-        f.total_revenue,
-        f.total_cost,
-        ROUND((f.total_revenue - f.total_cost) * 100.0 / f.total_revenue, 2) AS profit_margin
-    FROM
-        {{ ref('expeditions') }} e
-    JOIN
-        {{ ref('financials') }} f ON e.expedition_id = f.expedition_id
-)
-SELECT
-    expedition_name,
-    total_revenue,
-    total_cost,
-    profit_margin
-FROM
-    expedition_financials
-ORDER BY
-    profit_margin DESC;
-  ```
+      ```sql
+      WITH expedition_financials AS (
+        SELECT
+            e.expedition_name,
+            f.total_revenue,
+            f.total_cost,
+            ROUND((f.total_revenue - f.total_cost) * 100.0 / f.total_revenue, 2) AS profit_margin
+        FROM
+          {{ ref('expeditions') }} e
+        JOIN
+          {{ ref('financials') }} f ON e.expedition_id = f.expedition_id
+      )
+      SELECT
+          expedition_name,
+          total_revenue,
+          total_cost,
+          profit_margin
+      FROM
+          expedition_financials
+      ORDER BY
+          profit_margin DESC;
+      ```
+
 This query joins data from the two read components to analyze the financial health of the company. By calculating the `profit_margin`, it provides insights into the percentage of profit margin for each expedition.
 
 ### 5. Build & Run the Project
@@ -529,12 +530,10 @@ Great job! You've completed Expedition 7!
 Great job! You've successfully navigated through the challenges and conquered all the expeditions. Now you're ready to take on new adventures. Here's a few places to start:
 
 ### 🧑‍🤝‍🧑 Join the Expedition Team
-Become a contributor and help us scale new heights:
-- **Contributing Guidelines**: Follow the steps in `CONTRIBUTING.md` to get started.
+Become a contributor and help us scale new heights! Follow the steps in `CONTRIBUTING.md` to get started.
 
 ### 📚 Resources & Support
 Enhance your knowledge and find the support you need:
 - **Ask Otto**: Our integrated AI assistant can help answer questions and provide guidance. Click the chat icon in the bar at the top right of the screen.
 - **Ascend.io Documentation**: [Explore here](https://docs.ascend.io)
-- **Otto's Expeditions Docs**: Comprehensive guides and tutorials.
 - **Contact Us**: Reach out via [email](mailto:support@ascend.io) for personalized assistance.
