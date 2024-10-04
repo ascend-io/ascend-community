@@ -4,7 +4,7 @@
 
 Welcome, Expedition Engineer! 🌟 Get ready to embark on **Otto's Expeditions**, an interactive journey where you'll harness the power of Ascend to build, manage, and optimize data flows for Otto's mountaineering adventures.
 
-![Otto's Expeditions Logo](/ottos_expeditions/ottos_expeditions_logo.gif)
+![Otto's Expeditions Logo](https://storage.googleapis.com/external-docs-assets/v3/ottos-expeditions/ottos_expeditions_logo.gif)
 
 ## 🐐 The Legend of Otto
 
@@ -32,20 +32,22 @@ Are you ready to conquer **7 thrilling data expeditions?** Strap on your boots, 
 6. [Join the Expedition Team](#join-the-expedition-team)
 7. [Resources & Support](#resources--support)
 
+---
 
 <a name="gear-up-getting-started"></a>
+![Gear Up](https://storage.googleapis.com/external-docs-assets/v3/ottos-expeditions/9.png)
 
 ## 🏁 Gear up: Getting Started
 Before we make our ascent, let's make sure we're fully equipped for the journey ahead.
 
-### 🔧 Prerequisites
+### 🔧 Prerequisites 
   - **A Configured Ascend Instance**: To request an instance, reach out to your Ascend.io representative. For details on how to configure and set up your Ascend instance, refer to the [Ascend.io Setup Guide](https://docs.ascend.io/gettingstarted/setup/).
 
-  - **A Git Repository**: You'll need a Git repository to clone the project into.
+  - **A Git Repository**: You'll need a Git repository to clone the project into. 
 
 
 ### 📁 Cloning the Project into your Repository
-  To get you started, clone the [Otto's Expeditions Project](https://github.com/ascend-io/ascend-community/tree/main/ottos_expeditions) into your repository.
+  To get you started, clone the [Otto's Expeditions Project](https://github.com/ascend-io/ascend-community/tree/main/ottos_expeditions) into your repository. 
 
    1. In your terminal, run the following commands to clone the quickstart project:
 
@@ -79,7 +81,7 @@ First, let's set up your Project in Ascend.
   1. Log in to your Ascend Instance and navigate to your Project Settings (**Settings** -> **Project**).
   2. Click on **Add Project**.
   3. Enter the Project Title as `Otto's Expeditions`.
-  4. Select the **Git Repository** you created in the previous step.
+  4. Select the **Git Repository** you created in the previous step. 
   5. Enter the Project Root Directory of your repository: `ottos_expeditions`.
   6. Click **Save**.
 
@@ -118,8 +120,11 @@ Now that you know your way around the project, it's time to start climbing! Ther
 
 Ascend on! 🚀
 
+---
 
 <a name="expedition-1-customer-cohort-analysis"></a>
+![Expedition #1](https://storage.googleapis.com/external-docs-assets/v3/ottos-expeditions/1.png)
+
 
 ## 🏆 Expedition 1: Customer Cohort Analysis
 **Objective**: Analyze customer cohorts to understand booking behaviors and trends.
@@ -127,9 +132,9 @@ Ascend on! 🚀
   ### 1. Overview
   In this expedition, you'll work with customer data to categorize customers into cohorts and update reports for downstream consumers in PowerBI. To start open the `flows/customer_cohort_analysis` folder in the File Explorer on the left.
 
-  - **Data Source**:
+  - **Data Source**: 
     - `data/customers.csv`
-  - **Components**:
+  - **Components**: 
     - `customers.yaml`
     - `customer_cohort_analysis_transform.sql.jinja`
     - `refresh_powerbi.py`
@@ -137,7 +142,7 @@ Ascend on! 🚀
   ### 2. Flow Walkthrough
   1. **Read Component**:
       - Open `components/customers.yaml`.
-
+    
       This simple yaml file defines the connection to our local files so we can grab customer data. We define the connection type as `local_files` and the path to the file as `customers.csv`. We also define the parser as a csv with a header.
 
 
@@ -159,9 +164,12 @@ Ascend on! 🚀
 
   You should see the flow run to completion in the **DAG view** of the **Build Explorer** panel. You can click the **Runs** tab within the **Build Explorer** panel to view details about the run including **Config Details**, **Logs**, and a **Timeline view** of the run.
 
-### 4. Congratulations!
+### 4. Congratulations! 
   Great job! Expedition 1 was a breeze! Ready to take it to the next level? Let's try another one.
 
+---
+
+![Expedition #2](https://storage.googleapis.com/external-docs-assets/v3/ottos-expeditions/2.png)
 
 <a name="expedition-2-gear-durability-analysis"></a>
 
@@ -173,11 +181,11 @@ In this flow, you'll work with gear data to analyze how out gear holds up on var
 
 To start open the `flows/gear_durability_analysis` folder in the File Explorer on the left.
 
-- **Data Sources**:
+- **Data Sources**: 
   - `data/expeditions.csv`
   - `data/gear_rentals.csv`
   - `data/routes.csv`
-- **Components**:
+- **Components**: 
   - `expeditions.yaml`
   - `gear_durability_analysis_transform.sql.jinja`
   - `gear_rentals.yaml`
@@ -188,10 +196,10 @@ To start open the `flows/gear_durability_analysis` folder in the File Explorer o
 
       In this flow we're reading data from 3 different tables. Let's take a look at each of the components for these tables.
 
-    - Open `components/expeditions.yaml`.
-    - Open `components/gear_rentals.yaml`.
-    - Open `components/routes.yaml`.
-
+    - Open `components/expeditions.yaml`. 
+    - Open `components/gear_rentals.yaml`. 
+    - Open `components/routes.yaml`. 
+  
     These components read data from our local files. We define the connection type as `local_files` and the path to the files in the data folder. We also define the parser as a csv with a header for each one.
 
 
@@ -213,8 +221,7 @@ Let's add a data quality tests to our `gear_rentals` component.
           rental_date:
             - not_null
       ```
-
- With this test, we're ensuring the `rental_date` column is not null.  
+  With this test, we're ensuring the `rental_date` column is not null.  
 
   - Click **Save** to save the changes.
 
@@ -227,6 +234,9 @@ To build the project with the changes you made, click on the **Build Project** b
 ### 5. Congratulations!
 Great job! You've completed Expedition 2! Let's keep climbing.
 
+---
+
+![Expedition #3](https://storage.googleapis.com/external-docs-assets/v3/ottos-expeditions/3.png)
 
 <a name="expedition-3-guide-performance--summiting-success-rate"></a>
 
@@ -234,15 +244,15 @@ Great job! You've completed Expedition 2! Let's keep climbing.
 **Objective**: Evaluate guide performance and the success rates of expeditions.
 
 ### 1. Overview
-In this flow, you'll work with performance data to evaluate guide performance and the success rates of expeditions. We'll also work with Otto to update our transformation logic to create a `guide_name` field by combining first and last names.
+In this flow, you'll work with performance data to evaluate guide performance and the success rates of expeditions. We'll also work with Otto to update our transformation logic to create a `guide_name` field by combining first and last names. 
 
 To start open the `flows/guide_performance_summiting_success_rate` folder in the File Explorer on the left.
 
-- **Data Sources**:
+- **Data Sources**: 
   - `data/expeditions.csv`
   - `data/expeditions_outcomes.csv`
   - `data/guides.csv`
-- **Components**:
+- **Components**: 
   - `expeditions.yaml`
   - `expeditions_outcomes.yaml`
   - `guide_performance_summiting_success_rate_transform.sql.jinja`
@@ -253,10 +263,10 @@ To start open the `flows/guide_performance_summiting_success_rate` folder in the
 
       In this flow we're reading data from 3 different tables. Let's take a look at each of the components for these tables.
 
-      - Open `components/expeditions.yaml`.
-      - Open `components/expeditions_outcomes.yaml`.
-      - Open `components/guides.yaml`.
-
+      - Open `components/expeditions.yaml`. 
+      - Open `components/expeditions_outcomes.yaml`. 
+      - Open `components/guides.yaml`. 
+  
       These components read data from our local files. We define the connection type as `local_files` and the path to the files in the data folder. We also define the parser as a csv with a header for each one.
 
 
@@ -289,7 +299,9 @@ To build the project with the changes you made, click on the **Build Project** b
 ### 5. Congratulations!
 Great job! You've completed Expedition 3! Ready for your next Adventure?
 
+---
 
+![Expedition #4](https://storage.googleapis.com/external-docs-assets/v3/ottos-expeditions/4.png)
 <a name="expedition-4-route-difficulty--success-prediction"></a>
 
 ## 🏆 Expedition 4: Route Difficulty & Success Prediction
@@ -300,12 +312,12 @@ In this flow, you'll work with route data to predict the success of expeditions 
 
 To start open the `flows/route_difficulty_success_prediction` folder in the File Explorer on the left.
 
-- **Data Sources**:
+- **Data Sources**: 
     - `data/expeditions_outcomes.csv`
     - `data/expeditions.csv`
     - `data/routes.csv`
 
-  - **Components**:
+  - **Components**: 
     - `expeditions_outcomes.yaml`
     - `expeditions.yaml`
     - `routes.yaml`
@@ -313,9 +325,9 @@ To start open the `flows/route_difficulty_success_prediction` folder in the File
 
 ### 2. Flow Walkthrough
 - **Read Components**
-  - Open `components/expeditions_outcomes.yaml`.
-  - Open `components/expeditions.yaml`.
-  - Open `components/routes.yaml`.
+  - Open `components/expeditions_outcomes.yaml`. 
+  - Open `components/expeditions.yaml`. 
+  - Open `components/routes.yaml`. 
 
   These components read data from our local files. We define the connection type as `local_files` and the path to the files in the data folder. We also define the parser as a csv with a header for each one.
 
@@ -332,11 +344,11 @@ Here's how to do it:
 
 - Click on the `route_difficulty_success_prediction_transform.sql.jinja` file to open it.
 - Change the materialization type to `view` by inserting this code above the query.
-  ```
-  {{
-    config(materialized="view")
-  }}
-  ```
+    ```
+    {{
+      config(materialized="view")
+    }}
+    ```
 
 - Click **Save** to save the changes.
 
@@ -346,6 +358,10 @@ To build the project with the changes you made, click on the **Build Project** b
 
 ### 5. Congratulations!
 Great job! You've completed Expedition 4! On to the next one!
+
+---
+
+![Expedition #5](https://storage.googleapis.com/external-docs-assets/v3/ottos-expeditions/5.png)
 
 <a name="expedition-5-weather-impact-analysis"></a>
 
@@ -357,11 +373,11 @@ In this flow, you'll work with weather data to assess how weather conditions aff
 
 To start open the `flows/weather_impact_analysis` folder in the File Explorer on the left.
 
-- **Data Sources**:
+- **Data Sources**: 
   - `data/expeditions_outcomes.csv`
   - `data/expeditions.csv`
   - `data/weather.csv`
-- **Components**:
+- **Components**: 
   - `expeditions_outcomes.yaml`
   - `expeditions.yaml`
   - `weather.yaml`
@@ -369,9 +385,9 @@ To start open the `flows/weather_impact_analysis` folder in the File Explorer on
 
 ### 2. Flow Walkthrough
 - **Read Components**
-  - Open `components/expeditions_outcomes.yaml`.
-  - Open `components/expeditions.yaml`.
-  - Open `components/weather.yaml`.
+  - Open `components/expeditions_outcomes.yaml`. 
+  - Open `components/expeditions.yaml`. 
+  - Open `components/weather.yaml`. 
 
   These components read data from our local files. We define the connection type as `local_files` and the path to the files in the data folder. We also define the parser as a csv with a header for each one.
 
@@ -386,23 +402,18 @@ To start open the `flows/weather_impact_analysis` folder in the File Explorer on
 
 Let's say we want to adjust the pipeline parameters to enhance analysis precision. We can do this by changing the runtime parameters for the the `weather_impact_analysis_transform.sql.jinja` file.
 
-To do this, we will change the parameter value located in the prod.yaml file in the profiles folder. Change the value from 50 to 75.
+To do this, we will change the parameter value located in the `prod.yaml` file in the `profiles` folder. Change the value from 50 to 75.
     ```yaml
         success_rate_threshold: 75
     ```
-- Click **Save** to save the changes.
-
-### 4. Build the Project
-
-To build the project with the changes you made, click on the **Build Project** button from the **Build Explorer** panel. Once the build is complete, you can run the flow to see the results.
-
-### 5. Congratulations!
+### 4. Congratulations!
 Great job! You've completed Expedition 5! Ready to take on the next challenge?
 
 ---
 
-<a name="expedition-6-customer-journey-and-conversion-analysis"></a>
+![Expedition #6](https://storage.googleapis.com/external-docs-assets/v3/ottos-expeditions/6.png)
 
+<a name="expedition-6-customer-journey-and-conversion-analysis"></a>
 
 ## 🏆 Expedition 6: Customer Journey and Conversion Analysis
 **Objective**: Map and optimize the customer journey to boost conversions.
@@ -412,18 +423,18 @@ In this flow, you'll work with customer journey data to map and optimize the cus
 
 To start open the `flows/customer_journey_conversion_analysis` folder in the File Explorer on the left.
 
-- **Data Sources**:
+- **Data Sources**: 
   - `data/orders.csv`
   - `data/web_traffic.csv`
-- **Components**:
+- **Components**: 
   - `customer_journey_conversion_analysis_transform.sql.jinja`
   - `orders.yaml`
   - `web_traffic.yaml`
 
 ### 2. Flow Walkthrough
 - **Read Components**
-  - Open `components/orders.yaml`.
-  - Open `components/web_traffic.yaml`.
+  - Open `components/orders.yaml`. 
+  - Open `components/web_traffic.yaml`. 
 
   These components read data from our local files. We define the connection type as `local_files` and the path to the files in the data folder. We also define the parser as a csv with a header for each one.
 
@@ -434,14 +445,14 @@ To start open the `flows/customer_journey_conversion_analysis` folder in the Fil
 
 ### 3. Implement Data Partitioning on the Transformation Component
 
-Let's say we want to implement data partitioning to optimize the flow. The files we are ingesting in this flow are already partitioned by date, so we can use the partitions from upstream to partition data in the transformation component.
+Let's say we want to implement data partitioning to optimize the flow. The files we are ingesting in this flow are already partitioned by date, so we can use the partitions from upstream to partition data in the transformation component. 
 
 Here's how to do it:
 
 - Click on the `customer_journey_conversion_analysis_transform.sql.jinja` file to open it.
 - Add the following code to the file:
 
-    ```
+    ```sql  
     {{ ref('web_traffic', map_partitions=True) }} wt
     ```
 
@@ -454,6 +465,10 @@ To build the project with the changes you made, click on the **Build Project** b
 ### 5. Congratulations!
 Great job! You've completed Expedition 6! Your biggest adventure is on the horizon! Ready for the final expedition?
 
+---
+
+![Expedition #7](https://storage.googleapis.com/external-docs-assets/v3/ottos-expeditions/7.png)
+
 <a name="expedition-7-revenue-cost-analysis"></a>
 
 ## 🏆 Expedition 7: Revenue Cost Analysis
@@ -462,7 +477,7 @@ Great job! You've completed Expedition 6! Your biggest adventure is on the horiz
 ### 1. Overview
 In this flow, you'll work with revenue and cost data to analyze the financial health of the company. Now that you've got a good grasp of the basics of the platform, you'll be building this flow from scratch. But don't worry, we've got your covered with step by step instructions.
 
-- **Data Sources**:
+- **Data Sources**: 
   - `data/expeditions.csv`
   - `data/financial.csv`
 
@@ -499,7 +514,7 @@ In this flow, you'll work with revenue and cost data to analyze the financial he
         local_file:
           path: /financial.csv
           parser:
-            csv:
+            csv:  
               has_header: true
       ```
   - Click **Save** to save the changes.
@@ -538,8 +553,11 @@ This query joins data from the two read components to analyze the financial heal
 To build the project with the changes you made, click on the **Build Project** button from the **Build Explorer** panel. Once the build is complete, you can run the flow to see the results.
 
 ### 6. Congratulations!
-Great job! You've completed Expedition 7!
+Great job! You've completed Expedition 7! 
 
+---
+
+![Congratulations!](https://storage.googleapis.com/external-docs-assets/v3/ottos-expeditions/8.png)
 
 ## Congratulations! You've completed all the expeditions!
 Great job! You've successfully navigated through the challenges and conquered all the expeditions. Now you're ready to take on new adventures. Here's a few places to start:
