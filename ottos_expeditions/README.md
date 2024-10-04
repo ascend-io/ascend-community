@@ -38,14 +38,14 @@ Are you ready to conquer **7 thrilling data expeditions?** Strap on your boots, 
 ## 🏁 Gear up: Getting Started
 Before we make our ascent, let's make sure we're fully equipped for the journey ahead.
 
-### 🔧 Prerequisites 
+### 🔧 Prerequisites
   - **A Configured Ascend Instance**: To request an instance, reach out to your Ascend.io representative. For details on how to configure and set up your Ascend instance, refer to the [Ascend.io Setup Guide](https://docs.ascend.io/gettingstarted/setup/).
 
-  - **A Git Repository**: You'll need a Git repository to clone the project into. 
+  - **A Git Repository**: You'll need a Git repository to clone the project into.
 
 
 ### 📁 Cloning the Project into your Repository
-  To get you started, clone the [Otto's Expeditions Project](https://github.com/ascend-io/ascend-community/tree/main/ottos_expeditions) into your repository. 
+  To get you started, clone the [Otto's Expeditions Project](https://github.com/ascend-io/ascend-community/tree/main/ottos_expeditions) into your repository.
 
    1. In your terminal, run the following commands to clone the quickstart project:
 
@@ -79,7 +79,7 @@ First, let's set up your Project in Ascend.
   1. Log in to your Ascend Instance and navigate to your Project Settings (**Settings** -> **Project**).
   2. Click on **Add Project**.
   3. Enter the Project Title as `Otto's Expeditions`.
-  4. Select the **Git Repository** you created in the previous step. 
+  4. Select the **Git Repository** you created in the previous step.
   5. Enter the Project Root Directory of your repository: `ottos_expeditions`.
   6. Click **Save**.
 
@@ -127,9 +127,9 @@ Ascend on! 🚀
   ### 1. Overview
   In this expedition, you'll work with customer data to categorize customers into cohorts and update reports for downstream consumers in PowerBI. To start open the `flows/customer_cohort_analysis` folder in the File Explorer on the left.
 
-  - **Data Source**: 
+  - **Data Source**:
     - `data/customers.csv`
-  - **Components**: 
+  - **Components**:
     - `customers.yaml`
     - `customer_cohort_analysis_transform.sql.jinja`
     - `refresh_powerbi.py`
@@ -137,7 +137,7 @@ Ascend on! 🚀
   ### 2. Flow Walkthrough
   1. **Read Component**:
       - Open `components/customers.yaml`.
-    
+
       This simple yaml file defines the connection to our local files so we can grab customer data. We define the connection type as `local_files` and the path to the file as `customers.csv`. We also define the parser as a csv with a header.
 
 
@@ -159,7 +159,7 @@ Ascend on! 🚀
 
   You should see the flow run to completion in the **DAG view** of the **Build Explorer** panel. You can click the **Runs** tab within the **Build Explorer** panel to view details about the run including **Config Details**, **Logs**, and a **Timeline view** of the run.
 
-### 4. Congratulations! 
+### 4. Congratulations!
   Great job! Expedition 1 was a breeze! Ready to take it to the next level? Let's try another one.
 
 
@@ -173,11 +173,11 @@ In this flow, you'll work with gear data to analyze how out gear holds up on var
 
 To start open the `flows/gear_durability_analysis` folder in the File Explorer on the left.
 
-- **Data Sources**: 
+- **Data Sources**:
   - `data/expeditions.csv`
   - `data/gear_rentals.csv`
   - `data/routes.csv`
-- **Components**: 
+- **Components**:
   - `expeditions.yaml`
   - `gear_durability_analysis_transform.sql.jinja`
   - `gear_rentals.yaml`
@@ -188,10 +188,10 @@ To start open the `flows/gear_durability_analysis` folder in the File Explorer o
 
       In this flow we're reading data from 3 different tables. Let's take a look at each of the components for these tables.
 
-    - Open `components/expeditions.yaml`. 
-    - Open `components/gear_rentals.yaml`. 
-    - Open `components/routes.yaml`. 
-  
+    - Open `components/expeditions.yaml`.
+    - Open `components/gear_rentals.yaml`.
+    - Open `components/routes.yaml`.
+
     These components read data from our local files. We define the connection type as `local_files` and the path to the files in the data folder. We also define the parser as a csv with a header for each one.
 
 
@@ -210,7 +210,8 @@ Let's add a data quality tests to our `gear_rentals` component.
       ```yaml
       tests:
         columns:
-          Hi tessa :) 
+          rental_date:
+            - not_null
       ```
 
   #Tessa - Also please add a quick description of the test.
@@ -233,15 +234,15 @@ Great job! You've completed Expedition 2! Let's keep climbing.
 **Objective**: Evaluate guide performance and the success rates of expeditions.
 
 ### 1. Overview
-In this flow, you'll work with performance data to evaluate guide performance and the success rates of expeditions. We'll also work with Otto to update our transformation logic to create a `guide_name` field by combining first and last names. 
+In this flow, you'll work with performance data to evaluate guide performance and the success rates of expeditions. We'll also work with Otto to update our transformation logic to create a `guide_name` field by combining first and last names.
 
 To start open the `flows/guide_performance_summiting_success_rate` folder in the File Explorer on the left.
 
-- **Data Sources**: 
+- **Data Sources**:
   - `data/expeditions.csv`
   - `data/expeditions_outcomes.csv`
   - `data/guides.csv`
-- **Components**: 
+- **Components**:
   - `expeditions.yaml`
   - `expeditions_outcomes.yaml`
   - `guide_performance_summiting_success_rate_transform.sql.jinja`
@@ -252,10 +253,10 @@ To start open the `flows/guide_performance_summiting_success_rate` folder in the
 
       In this flow we're reading data from 3 different tables. Let's take a look at each of the components for these tables.
 
-      - Open `components/expeditions.yaml`. 
-      - Open `components/expeditions_outcomes.yaml`. 
-      - Open `components/guides.yaml`. 
-  
+      - Open `components/expeditions.yaml`.
+      - Open `components/expeditions_outcomes.yaml`.
+      - Open `components/guides.yaml`.
+
       These components read data from our local files. We define the connection type as `local_files` and the path to the files in the data folder. We also define the parser as a csv with a header for each one.
 
 
@@ -299,12 +300,12 @@ In this flow, you'll work with route data to predict the success of expeditions 
 
 To start open the `flows/route_difficulty_success_prediction` folder in the File Explorer on the left.
 
-- **Data Sources**: 
+- **Data Sources**:
     - `data/expeditions_outcomes.csv`
     - `data/expeditions.csv`
     - `data/routes.csv`
 
-  - **Components**: 
+  - **Components**:
     - `expeditions_outcomes.yaml`
     - `expeditions.yaml`
     - `routes.yaml`
@@ -312,9 +313,9 @@ To start open the `flows/route_difficulty_success_prediction` folder in the File
 
 ### 2. Flow Walkthrough
 - **Read Components**
-  - Open `components/expeditions_outcomes.yaml`. 
-  - Open `components/expeditions.yaml`. 
-  - Open `components/routes.yaml`. 
+  - Open `components/expeditions_outcomes.yaml`.
+  - Open `components/expeditions.yaml`.
+  - Open `components/routes.yaml`.
 
   These components read data from our local files. We define the connection type as `local_files` and the path to the files in the data folder. We also define the parser as a csv with a header for each one.
 
@@ -330,7 +331,13 @@ Let's say we want to modify the materialization type of the `route_difficulty_su
 Here's how to do it:
 
 - Click on the `route_difficulty_success_prediction_transform.sql.jinja` file to open it.
-- Change the materialization type to `view` by adding CODE to the code #hi Tessa :) 
+- Change the materialization type to `view` by inserting this code above the query.
+  ```
+  {{
+    config(materialized="view")
+  }}
+  ```
+
 - Click **Save** to save the changes.
 
 ### 4. Build the Project
@@ -350,11 +357,11 @@ In this flow, you'll work with weather data to assess how weather conditions aff
 
 To start open the `flows/weather_impact_analysis` folder in the File Explorer on the left.
 
-- **Data Sources**: 
+- **Data Sources**:
   - `data/expeditions_outcomes.csv`
   - `data/expeditions.csv`
   - `data/weather.csv`
-- **Components**: 
+- **Components**:
   - `expeditions_outcomes.yaml`
   - `expeditions.yaml`
   - `weather.yaml`
@@ -362,9 +369,9 @@ To start open the `flows/weather_impact_analysis` folder in the File Explorer on
 
 ### 2. Flow Walkthrough
 - **Read Components**
-  - Open `components/expeditions_outcomes.yaml`. 
-  - Open `components/expeditions.yaml`. 
-  - Open `components/weather.yaml`. 
+  - Open `components/expeditions_outcomes.yaml`.
+  - Open `components/expeditions.yaml`.
+  - Open `components/weather.yaml`.
 
   These components read data from our local files. We define the connection type as `local_files` and the path to the files in the data folder. We also define the parser as a csv with a header for each one.
 
@@ -379,9 +386,17 @@ To start open the `flows/weather_impact_analysis` folder in the File Explorer on
 
 Let's say we want to adjust the pipeline parameters to enhance analysis precision. We can do this by changing the runtime parameters for the the `weather_impact_analysis_transform.sql.jinja` file.
 
-To do this, tessa is gunna explain how to do it. :) YAY TESSA
+To do this, we will change the parameter value located in the prod.yaml file in the profiles folder. Change the value from 50 to 75.
+    ```yaml
+        success_rate_threshold: 75
+    ```
+- Click **Save** to save the changes.
 
-### 4. Congratulations!
+### 4. Build the Project
+
+To build the project with the changes you made, click on the **Build Project** button from the **Build Explorer** panel. Once the build is complete, you can run the flow to see the results.
+
+### 5. Congratulations!
 Great job! You've completed Expedition 5! Ready to take on the next challenge?
 
 ---
@@ -397,18 +412,18 @@ In this flow, you'll work with customer journey data to map and optimize the cus
 
 To start open the `flows/customer_journey_conversion_analysis` folder in the File Explorer on the left.
 
-- **Data Sources**: 
+- **Data Sources**:
   - `data/orders.csv`
   - `data/web_traffic.csv`
-- **Components**: 
+- **Components**:
   - `customer_journey_conversion_analysis_transform.sql.jinja`
   - `orders.yaml`
   - `web_traffic.yaml`
 
 ### 2. Flow Walkthrough
 - **Read Components**
-  - Open `components/orders.yaml`. 
-  - Open `components/web_traffic.yaml`. 
+  - Open `components/orders.yaml`.
+  - Open `components/web_traffic.yaml`.
 
   These components read data from our local files. We define the connection type as `local_files` and the path to the files in the data folder. We also define the parser as a csv with a header for each one.
 
@@ -419,15 +434,15 @@ To start open the `flows/customer_journey_conversion_analysis` folder in the Fil
 
 ### 3. Implement Data Partitioning on the Transformation Component
 
-Let's say we want to implement data partitioning to optimize the flow. The files we are ingesting in this flow are already partitioned by date, so we can use the partitions from upstream to partition data in the transformation component. 
+Let's say we want to implement data partitioning to optimize the flow. The files we are ingesting in this flow are already partitioned by date, so we can use the partitions from upstream to partition data in the transformation component.
 
 Here's how to do it:
 
 - Click on the `customer_journey_conversion_analysis_transform.sql.jinja` file to open it.
 - Add the following code to the file:
 
-    ```sql  
-    Tessa - Please add the code to implement data partitioning on the transformation component. 
+    ```
+    {{ ref('web_traffic', map_partitions=True) }} wt
     ```
 
 - Click **Save** to save the changes.
@@ -447,7 +462,7 @@ Great job! You've completed Expedition 6! Your biggest adventure is on the horiz
 ### 1. Overview
 In this flow, you'll work with revenue and cost data to analyze the financial health of the company. Now that you've got a good grasp of the basics of the platform, you'll be building this flow from scratch. But don't worry, we've got your covered with step by step instructions.
 
-- **Data Sources**: 
+- **Data Sources**:
   - `data/expeditions.csv`
   - `data/financial.csv`
 
@@ -484,7 +499,7 @@ In this flow, you'll work with revenue and cost data to analyze the financial he
         local_file:
           path: /financial.csv
           parser:
-            csv:  
+            csv:
               has_header: true
       ```
   - Click **Save** to save the changes.
@@ -523,7 +538,7 @@ This query joins data from the two read components to analyze the financial heal
 To build the project with the changes you made, click on the **Build Project** button from the **Build Explorer** panel. Once the build is complete, you can run the flow to see the results.
 
 ### 6. Congratulations!
-Great job! You've completed Expedition 7! 
+Great job! You've completed Expedition 7!
 
 
 ## Congratulations! You've completed all the expeditions!
