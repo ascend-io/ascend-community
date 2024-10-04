@@ -32,8 +32,10 @@ Are you ready to conquer **7 thrilling data expeditions?** Strap on your boots, 
 6. [Join the Expedition Team](#join-the-expedition-team)
 7. [Resources & Support](#resources--support)
 
+---
 
 <a name="gear-up-getting-started"></a>
+![Gear Up](https://storage.googleapis.com/external-docs-assets/v3/ottos-expeditions/9.png)
 
 ## 🏁 Gear up: Getting Started
 Before we make our ascent, let's make sure we're fully equipped for the journey ahead.
