@@ -2,7 +2,9 @@
 
 # 🏔️ Otto's Expeditions: Beginning Your Data Adventure with Ascend
 
-Welcome, Expedition Engineer! 🌟 Get ready to embark on **Otto's Expeditions**, an interactive journey where you'll harness the power of Ascend to build, manage, and optimize data flows for Otto's mountaineering adventures.
+Welcome, Expedition Engineer! 🌟 
+
+Get ready to embark on **Otto's Expeditions**, an interactive journey where you'll harness the power of Ascend to build, manage, and optimize data flows for Otto's mountaineering adventures.
 
 ![Otto's Expeditions Logo](/ottos_expeditions/ottos_expeditions_logo.gif)
 
@@ -14,7 +16,7 @@ Meet Otto, the extraordinary mountain goat who turned his passion for scaling pe
 
 As a data engineer for Otto's Summit Expeditions, you'll dive into the heart of the company's operations. You'll enhance and refine our data flows to ensure seamless expeditions and derive insightful analytics. From customer cohort analysis to weather impact predictions, your work will be crucial in taking Otto's adventures to new heights!
 
-Are you ready to conquer **7 thrilling data expeditions?** Strap on your boots, fire up Ascend, and let's start climbing! 🏔️
+Are you ready to conquer **7 thrilling data expeditions**? Strap on your boots, fire up Ascend, and let's start climbing! 🏔️
 
 ## 🗺️ Table of Contents
 1. [Introduction](#introduction)
@@ -42,6 +44,7 @@ Before we make our ascent, let's make sure we're fully equipped for the journey 
   - **A Configured Ascend Instance**: To request an instance, reach out to your Ascend.io representative. For details on how to configure and set up your Ascend instance, refer to the [Ascend.io Setup Guide](https://docs.ascend.io/gettingstarted/setup/).
 
   - **A Git Repository**: You'll need a Git repository to clone the project into. 
+    - NOTE: You will need to set up local SSH keys associated with this Git repository
 
 
 ### 📁 Cloning the Project into your Repository
@@ -54,7 +57,7 @@ Before we make our ascent, let's make sure we're fully equipped for the journey 
       ```
 
 
-   2. Clone your repository in the same directory:
+   2. Clone your repository in the *same directory*:
 
       ```bash
       git clone {your-repo-ssh-url} # make sure you have set up local ssh keys
@@ -76,19 +79,22 @@ Before we make our ascent, let's make sure we're fully equipped for the journey 
 
 First, let's set up your Project in Ascend.
 
-  1. Log in to your Ascend Instance and navigate to your Project Settings (**Settings** -> **Project**).
+  1. Log in to your Ascend Instance and navigate to your Project Settings (steps listed below).
+      - Click on your profile in the top right
+      - Click on **Settings**
+      - Once the Settings menu is open, click the **Projects** tab in the sidebar.
   2. Click on **Add Project**.
-  3. Enter the Project Title as `Otto's Expeditions`.
-  4. Select the **Git Repository** you created in the previous step. 
-  5. Enter the Project Root Directory of your repository: `ottos_expeditions`.
+  3. In the *Title* field, enter the Project title as `Otto's Expeditions`.
+  4. In the *Repository* field, select the Git repository you created in the *Prerequisites* step from the dropdown menu. 
+  5. In the *Project Root* field, enter the Project root directory of your repository: `ottos_expeditions`.
   6. Click **Save**.
 
 Next, let's set up your Workspace.
 
-  1. In the settings page, click on the **Workspace** tab.
+  1. In the Settings page, click on the **Workspaces** tab in the sidebar.
   2. Click on **Add Workspace** and configure the workspace with the following details:
 
-  - **Workspace Title**: `[Your Name]`
+  - **Title**: `[Your Name]`
   - **Environment**: Select an Environment (e.g. `Prod`)
   - **Project**: Select the **Otto's Expeditions** Project you created in the previous step.
   - **Branch**: Create a new Branch with the name `otto/your-name-here`
@@ -105,7 +111,7 @@ You're all set up! 🎉 To start exploring the project, open the workspace you j
 <a name="warm-up-project-structure"></a>
 
 ## 📁 Warm up: Explore the Project Structure
-Now that we're all set up, let's explore the folders that make up Otto's Expeditions' project. In your workspace you can see all the folders and files for the project from the file explorer on the left.
+Now that we're all set up, let's explore the folders that make up the Otto's Expeditions Project. In your Workspace you can see all the folders and files for the project from the file explorer on the left.
 
 - **`connections/`**: Define connections to data sources and sinks.
 - **`data/`**: Host the raw data files used in the flows for this project.
@@ -116,7 +122,7 @@ Now that we're all set up, let's explore the folders that make up Otto's Expedit
 ## 🏔️ Take on the Summits!
 Now that you know your way around the project, it's time to start climbing! There are 7 expeditions in total, each designed to enhance your understanding of the Ascend platform. Think you've got what it takes to conquer them all?
 
-Ascend on! 🚀
+Let's Ascend! 🚀
 
 
 <a name="expedition-1-customer-cohort-analysis"></a>
@@ -192,7 +198,7 @@ To start open the `flows/gear_durability_analysis` folder in the File Explorer o
     - Open `components/gear_rentals.yaml`. 
     - Open `components/routes.yaml`. 
   
-    These components read data from our local files. We define the connection type as `local_files` and the path to the files in the data folder. We also define the parser as a csv with a header for each one.
+      These components read data from our local files. We define the connection type as `local_files` and the path to the files in the data folder. We also define the parser as a CSV parser that expects a header row for each CSV file.
 
 
   - **Data Transformation**:
@@ -203,9 +209,9 @@ To start open the `flows/gear_durability_analysis` folder in the File Explorer o
 
 ### 3. Add Data Quality Tests
 
-Let's add a data quality tests to our `gear_rentals` component.
+Let's add a data quality test to our `gear_rentals` component.
 
-  - To add a data quality tests, add the following code to the `gear_rentals.yaml` file:
+  - To add data quality tests, add the following code to the `gear_rentals.yaml` file:
 
   ```yaml
   tests:
@@ -213,7 +219,7 @@ Let's add a data quality tests to our `gear_rentals` component.
       Hi tessa :) 
   ```
 
-  #Tessa - Also please add a quick description of the test.
+  <!-- TODO: Tessa - Also please add a quick description of the test. -->
 
   - Click **Save** to save the changes.
 
@@ -221,6 +227,8 @@ Let's add a data quality tests to our `gear_rentals` component.
 ### 4. Build the Project
 
 To build the project with the changes you made, click on the **Build Project** button from the **Build Explorer** panel. Once the build is complete, you can run the flow to see the results.
+
+<!-- TODO: Do we ever actually define the Build Explorer panel? I know we can get to Build Project by clicking the bottom-left Build Successful/Failed option and that opens to Build Project. If that's what it's referring to that's fine but I don't think I'd expect that to be the Build Explorer panel if I was the customer. I think we either need to refer to it explicitly/detail how to do it in the instructions or make a more obvious sign on the UI for a customer to easily understand there's something there. -->
 
 
 ### 5. Congratulations!
@@ -235,7 +243,7 @@ Great job! You've completed Expedition 2! Let's keep climbing.
 ### 1. Overview
 In this flow, you'll work with performance data to evaluate guide performance and the success rates of expeditions. We'll also work with Otto to update our transformation logic to create a `guide_name` field by combining first and last names. 
 
-To start open the `flows/guide_performance_summiting_success_rate` folder in the File Explorer on the left.
+To start, open the `flows/guide_performance_summiting_success_rate` folder in the File Explorer on the left.
 
 - **Data Sources**: 
   - `data/expeditions.csv`
@@ -256,13 +264,13 @@ To start open the `flows/guide_performance_summiting_success_rate` folder in the
       - Open `components/expeditions_outcomes.yaml`. 
       - Open `components/guides.yaml`. 
   
-      These components read data from our local files. We define the connection type as `local_files` and the path to the files in the data folder. We also define the parser as a csv with a header for each one.
+      These components read data from our local files. We define the connection type as `local_files` and the path to the files in the data folder. We also define the parser as a CSV parser that expects a header row for each CSV file.
 
 
   - **Data Transformation**
     - Open `components/guide_performance_summiting_success_rate_transform.sql.jinja`.
 
-    This query is to compute the success rate of each guide by analyzing their expeditions and determining how often they successfully reached the summit. The results are then ordered to highlight the guides with the highest success rates.
+    This query computes the success rate of each guide by analyzing their expeditions and determining how often they successfully reach the summit. The results are then ordered to highlight the guides with the highest success rates.
 
 ### 3. Update the Transformation Component
 
@@ -270,7 +278,7 @@ Let's say we want to update the transformation component to create a `guide_name
 
 To do this, let's try asking our trusty AI pal Otto for help.
 
-  - Click on the **Otto** icon in the top right corner of the screen. (It looks like a chat bubble)
+  - Click on the **Otto** icon (it looks like a chat bubble) in the top right corner of the screen. 
   - Ask Otto to help you update the transformation component to create a `guide_name` field by combining first and last names.
 
   ```
@@ -316,7 +324,7 @@ To start open the `flows/route_difficulty_success_prediction` folder in the File
   - Open `components/expeditions.yaml`. 
   - Open `components/routes.yaml`. 
 
-  These components read data from our local files. We define the connection type as `local_files` and the path to the files in the data folder. We also define the parser as a csv with a header for each one.
+      These components read data from our local files. We define the connection type as `local_files` and the path to the files in the data folder. We also define the parser as a CSV parser that expects a header row for each CSV file.
 
 - **Data Transformation**
     - Open `components/route_difficulty_success_prediction_transform.sql.jinja`.
@@ -330,7 +338,7 @@ Let's say we want to modify the materialization type of the `route_difficulty_su
 Here's how to do it:
 
 - Click on the `route_difficulty_success_prediction_transform.sql.jinja` file to open it.
-- Change the materialization type to `view` by adding CODE to the code #hi Tessa :) 
+- Change the materialization type to `view` by adding <!-- TODO: Add  CODE to the code #hi Tessa :) -->
 - Click **Save** to save the changes.
 
 ### 4. Build the Project
@@ -365,8 +373,8 @@ To start open the `flows/weather_impact_analysis` folder in the File Explorer on
   - Open `components/expeditions_outcomes.yaml`. 
   - Open `components/expeditions.yaml`. 
   - Open `components/weather.yaml`. 
-
-  These components read data from our local files. We define the connection type as `local_files` and the path to the files in the data folder. We also define the parser as a csv with a header for each one.
+      
+    These components read data from our local files. We define the connection type as `local_files` and the path to the files in the data folder. We also define the parser as a CSV parser that expects a header row for each CSV file.
 
 - **Data Transformation**
   - Open `components/weather_impact_analysis_transform.sql.jinja`.
@@ -379,7 +387,9 @@ To start open the `flows/weather_impact_analysis` folder in the File Explorer on
 
 Let's say we want to adjust the pipeline parameters to enhance analysis precision. We can do this by changing the runtime parameters for the the `weather_impact_analysis_transform.sql.jinja` file.
 
-To do this, tessa is gunna explain how to do it. :) YAY TESSA
+<!-- TODO: Put this into words 
+
+To do this, tessa is gunna explain how to do it. :) YAY TESSA -->
 
 ### 4. Congratulations!
 Great job! You've completed Expedition 5! Ready to take on the next challenge?
@@ -410,7 +420,7 @@ To start open the `flows/customer_journey_conversion_analysis` folder in the Fil
   - Open `components/orders.yaml`. 
   - Open `components/web_traffic.yaml`. 
 
-  These components read data from our local files. We define the connection type as `local_files` and the path to the files in the data folder. We also define the parser as a csv with a header for each one.
+    These components read data from our local files. We define the connection type as `local_files` and the path to the files in the data folder. We also define the parser as a CSV parser that expects a header row for each CSV file.
 
 - **Data Transformation**
   - Open `components/customer_journey_conversion_analysis_transform.sql.jinja`.
@@ -427,7 +437,7 @@ Here's how to do it:
 - Add the following code to the file:
 
 ```sql  
-Tessa - Please add the code to implement data partitioning on the transformation component. 
+<!-- TODO: Tessa - Please add the code to implement data partitioning on the transformation component. -->
 ```
 
 - Click **Save** to save the changes.
@@ -445,7 +455,7 @@ Great job! You've completed Expedition 6! Your biggest adventure is on the horiz
 **Objective**: Analyze revenue and costs to ensure financial health.
 
 ### 1. Overview
-In this flow, you'll work with revenue and cost data to analyze the financial health of the company. Now that you've got a good grasp of the basics of the platform, you'll be building this flow from scratch. But don't worry, we've got your covered with step by step instructions.
+In this flow, you'll work with revenue and cost data to analyze the financial health of the company. Now that you've got a good grasp on the basics of the platform, you'll be building this flow from scratch. But don't worry, we've got you covered with step-by-step instructions.
 
 - **Data Sources**: 
   - `data/expeditions.csv`
@@ -454,6 +464,7 @@ In this flow, you'll work with revenue and cost data to analyze the financial he
 ### 2. Set up the flow
   - To start, you'll need to create a new folder in the `flows` directory. Let's name it `revenue_cost_analysis`. This folder will host all the assets for this flow.
   - Inside the `revenue_cost_analysis` folder, create a new folder called `components`. Ascend looks for a `components` folder in each flow directory to understand the components in the flow.
+  <!-- TODO: Don't we need to also have them create a flow definition YAML? -->
 
 ### 3. Create Your Expeditions Read Component
   - Create a new file called `expeditions.yaml` in the `components` folder.
