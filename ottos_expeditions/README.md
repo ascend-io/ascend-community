@@ -6,7 +6,7 @@ Welcome, Expedition Engineer! 🌟
 
 Get ready to embark on **Otto's Expeditions**, an interactive journey where you'll harness the power of Ascend to build, manage, and optimize data flows for Otto's mountaineering adventures.
 
-![Otto's Expeditions Logo](/ottos_expeditions/ottos_expeditions_logo.gif)
+![Otto's Expeditions Logo](https://storage.googleapis.com/external-docs-assets/v3/ottos-expeditions/ottos_expeditions_logo.gif)
 
 ## 🐐 The Legend of Otto
 
@@ -34,8 +34,10 @@ Are you ready to conquer **7 thrilling data expeditions**? Strap on your boots, 
 6. [Join the Expedition Team](#join-the-expedition-team)
 7. [Resources & Support](#resources--support)
 
+---
 
 <a name="gear-up-getting-started"></a>
+![Gear Up](https://storage.googleapis.com/external-docs-assets/v3/ottos-expeditions/9.png)
 
 ## 🏁 Gear up: Getting Started
 Before we make our ascent, let's make sure we're fully equipped for the journey ahead.
@@ -124,8 +126,11 @@ Now that you know your way around the project, it's time to start climbing! Ther
 
 Let's Ascend! 🚀
 
+---
 
 <a name="expedition-1-customer-cohort-analysis"></a>
+![Expedition #1](https://storage.googleapis.com/external-docs-assets/v3/ottos-expeditions/1.png)
+
 
 ## 🏆 Expedition 1: Customer Cohort Analysis
 **Objective**: Analyze customer cohorts to understand booking behaviors and trends.
@@ -168,6 +173,9 @@ Let's Ascend! 🚀
 ### 4. Congratulations! 
   Great job! Expedition 1 was a breeze! Ready to take it to the next level? Let's try another one.
 
+---
+
+![Expedition #2](https://storage.googleapis.com/external-docs-assets/v3/ottos-expeditions/2.png)
 
 <a name="expedition-2-gear-durability-analysis"></a>
 
@@ -213,13 +221,13 @@ Let's add a data quality test to our `gear_rentals` component.
 
   - To add data quality tests, add the following code to the `gear_rentals.yaml` file:
 
-  ```yaml
-  tests:
-    columns:
-      Hi tessa :) 
-  ```
-
-  <!-- TODO: Tessa - Also please add a quick description of the test. -->
+      ```yaml
+      tests:
+        columns:
+          rental_date:
+            - not_null
+      ```
+  With this test, we're ensuring the `rental_date` column is not null.  
 
   - Click **Save** to save the changes.
 
@@ -234,6 +242,9 @@ To build the project with the changes you made, click on the **Build Project** b
 ### 5. Congratulations!
 Great job! You've completed Expedition 2! Let's keep climbing.
 
+---
+
+![Expedition #3](https://storage.googleapis.com/external-docs-assets/v3/ottos-expeditions/3.png)
 
 <a name="expedition-3-guide-performance--summiting-success-rate"></a>
 
@@ -281,9 +292,9 @@ To do this, let's try asking our trusty AI pal Otto for help.
   - Click on the **Otto** icon (it looks like a chat bubble) in the top right corner of the screen. 
   - Ask Otto to help you update the transformation component to create a `guide_name` field by combining first and last names.
 
-  ```
-  Hey Otto, can you help me update the transformation component to create a `guide_name` field by combining first and last names?
-  ```
+      ```
+      Hey Otto, can you help me update the transformation component to create a `guide_name` field by combining first and last names?
+      ```
 
   - Otto will provide you with the code to update the transformation component. You can copy and paste the change or let Otto update the file directly for you (you just need to confirm the changes you want him to make).
   - Once the file is updated, click **Save** to save the changes.
@@ -296,7 +307,9 @@ To build the project with the changes you made, click on the **Build Project** b
 ### 5. Congratulations!
 Great job! You've completed Expedition 3! Ready for your next Adventure?
 
+---
 
+![Expedition #4](https://storage.googleapis.com/external-docs-assets/v3/ottos-expeditions/4.png)
 <a name="expedition-4-route-difficulty--success-prediction"></a>
 
 ## 🏆 Expedition 4: Route Difficulty & Success Prediction
@@ -338,7 +351,13 @@ Let's say we want to modify the materialization type of the `route_difficulty_su
 Here's how to do it:
 
 - Click on the `route_difficulty_success_prediction_transform.sql.jinja` file to open it.
-- Change the materialization type to `view` by adding <!-- TODO: Add  CODE to the code #hi Tessa :) -->
+- Change the materialization type to `view` by inserting this code above the query.
+    ```
+    {{
+      config(materialized="view")
+    }}
+    ```
+
 - Click **Save** to save the changes.
 
 ### 4. Build the Project
@@ -347,6 +366,10 @@ To build the project with the changes you made, click on the **Build Project** b
 
 ### 5. Congratulations!
 Great job! You've completed Expedition 4! On to the next one!
+
+---
+
+![Expedition #5](https://storage.googleapis.com/external-docs-assets/v3/ottos-expeditions/5.png)
 
 <a name="expedition-5-weather-impact-analysis"></a>
 
@@ -387,17 +410,18 @@ To start open the `flows/weather_impact_analysis` folder in the File Explorer on
 
 Let's say we want to adjust the pipeline parameters to enhance analysis precision. We can do this by changing the runtime parameters for the the `weather_impact_analysis_transform.sql.jinja` file.
 
-<!-- TODO: Put this into words 
-
-To do this, tessa is gunna explain how to do it. :) YAY TESSA -->
-
+To do this, we will change the parameter value located in the `prod.yaml` file in the `profiles` folder. Change the value from 50 to 75.
+    ```yaml
+        success_rate_threshold: 75
+    ```
 ### 4. Congratulations!
 Great job! You've completed Expedition 5! Ready to take on the next challenge?
 
 ---
 
-<a name="expedition-6-customer-journey-and-conversion-analysis"></a>
+![Expedition #6](https://storage.googleapis.com/external-docs-assets/v3/ottos-expeditions/6.png)
 
+<a name="expedition-6-customer-journey-and-conversion-analysis"></a>
 
 ## 🏆 Expedition 6: Customer Journey and Conversion Analysis
 **Objective**: Map and optimize the customer journey to boost conversions.
@@ -436,9 +460,9 @@ Here's how to do it:
 - Click on the `customer_journey_conversion_analysis_transform.sql.jinja` file to open it.
 - Add the following code to the file:
 
-```sql  
-<!-- TODO: Tessa - Please add the code to implement data partitioning on the transformation component. -->
-```
+    ```sql  
+    {{ ref('web_traffic', map_partitions=True) }} wt
+    ```
 
 - Click **Save** to save the changes.
 
@@ -448,6 +472,10 @@ To build the project with the changes you made, click on the **Build Project** b
 
 ### 5. Congratulations!
 Great job! You've completed Expedition 6! Your biggest adventure is on the horizon! Ready for the final expedition?
+
+---
+
+![Expedition #7](https://storage.googleapis.com/external-docs-assets/v3/ottos-expeditions/7.png)
 
 <a name="expedition-7-revenue-cost-analysis"></a>
 
@@ -470,16 +498,16 @@ In this flow, you'll work with revenue and cost data to analyze the financial he
   - Create a new file called `expeditions.yaml` in the `components` folder.
   - Open the file and add the following code:
 
-  ```yaml
-  component:
-  read:
-    connection: local_files
-    local_file:
-      path: /expeditions.csv
-      parser:
-        csv:
-          has_header: true
-  ```
+      ```yaml
+      component:
+      read:
+        connection: local_files
+        local_file:
+          path: /expeditions.csv
+          parser:
+            csv:
+              has_header: true
+      ```
   You'll notice that this is the same code we've used in previous flows for reading the Expeditions data. In many cases, you'll be able to reuse components from other flows so there is no need to re-ingest data. But for this flow we're keeping things simple and ingesting the data again.
 
   - Click **Save** to save the changes.
@@ -488,44 +516,45 @@ In this flow, you'll work with revenue and cost data to analyze the financial he
   - Create a new file called `financial.yaml` in the `components` folder.
   - Open the file and add the following code:
 
-  ```yaml
-  component:
-  read:
-    connection: local_files
-    local_file:
-      path: /financial.csv
-      parser:
-        csv:  
-          has_header: true
-  ```
+      ```yaml
+      component:
+      read:
+        connection: local_files
+        local_file:
+          path: /financial.csv
+          parser:
+            csv:  
+              has_header: true
+      ```
   - Click **Save** to save the changes.
 
 ### 4. Create Your Transformation Component
   - Create a new file called `revenue_cost_analysis_transform.sql.jinja` in the `components` folder.
   - Open the file and add the following code:
 
-  ```sql
-WITH expedition_financials AS (
-    SELECT
-        e.expedition_name,
-        f.total_revenue,
-        f.total_cost,
-        ROUND((f.total_revenue - f.total_cost) * 100.0 / f.total_revenue, 2) AS profit_margin
-    FROM
-        {{ ref('expeditions') }} e
-    JOIN
-        {{ ref('financials') }} f ON e.expedition_id = f.expedition_id
-)
-SELECT
-    expedition_name,
-    total_revenue,
-    total_cost,
-    profit_margin
-FROM
-    expedition_financials
-ORDER BY
-    profit_margin DESC;
-  ```
+      ```sql
+      WITH expedition_financials AS (
+        SELECT
+            e.expedition_name,
+            f.total_revenue,
+            f.total_cost,
+            ROUND((f.total_revenue - f.total_cost) * 100.0 / f.total_revenue, 2) AS profit_margin
+        FROM
+          {{ ref('expeditions') }} e
+        JOIN
+          {{ ref('financials') }} f ON e.expedition_id = f.expedition_id
+      )
+      SELECT
+          expedition_name,
+          total_revenue,
+          total_cost,
+          profit_margin
+      FROM
+          expedition_financials
+      ORDER BY
+          profit_margin DESC;
+      ```
+
 This query joins data from the two read components to analyze the financial health of the company. By calculating the `profit_margin`, it provides insights into the percentage of profit margin for each expedition.
 
 ### 5. Build & Run the Project
@@ -535,17 +564,18 @@ To build the project with the changes you made, click on the **Build Project** b
 ### 6. Congratulations!
 Great job! You've completed Expedition 7! 
 
+---
+
+![Congratulations!](https://storage.googleapis.com/external-docs-assets/v3/ottos-expeditions/8.png)
 
 ## Congratulations! You've completed all the expeditions!
 Great job! You've successfully navigated through the challenges and conquered all the expeditions. Now you're ready to take on new adventures. Here's a few places to start:
 
 ### 🧑‍🤝‍🧑 Join the Expedition Team
-Become a contributor and help us scale new heights:
-- **Contributing Guidelines**: Follow the steps in `CONTRIBUTING.md` to get started.
+Become a contributor and help us scale new heights! Follow the steps in `CONTRIBUTING.md` to get started.
 
 ### 📚 Resources & Support
 Enhance your knowledge and find the support you need:
 - **Ask Otto**: Our integrated AI assistant can help answer questions and provide guidance. Click the chat icon in the bar at the top right of the screen.
 - **Ascend.io Documentation**: [Explore here](https://docs.ascend.io)
-- **Otto's Expeditions Docs**: Comprehensive guides and tutorials.
 - **Contact Us**: Reach out via [email](mailto:support@ascend.io) for personalized assistance.

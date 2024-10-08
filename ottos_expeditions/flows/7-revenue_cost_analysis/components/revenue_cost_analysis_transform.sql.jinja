@@ -1,6 +1,6 @@
 WITH expedition_financials AS (
     SELECT
-        e.expedition_name,
+        e.expedition_id,
         f.total_revenue,
         f.total_cost,
         ROUND((f.total_revenue - f.total_cost) * 100.0 / f.total_revenue, 2) AS profit_margin
@@ -10,11 +10,11 @@ WITH expedition_financials AS (
         {{ ref('financials') }} f ON e.expedition_id = f.expedition_id
 )
 SELECT
-    expedition_name,
+    expedition_id,
     total_revenue,
     total_cost,
     profit_margin
 FROM
     expedition_financials
 ORDER BY
-    profit_margin DESC;
+    profit_margin DESC

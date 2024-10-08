@@ -2,8 +2,7 @@ WITH customer_journey AS (
     SELECT
         wt.customer_id,
         wt.session_id,
-        wt.visit_date,
-        wt.page_visited,
+        wt.visit_timestamp,
         wt.traffic_source,
         wt.device_type,
         wt.session_duration,
@@ -14,25 +13,31 @@ WITH customer_journey AS (
     FROM
         {{ ref('web_traffic') }} wt
     LEFT JOIN
-        {{ ref('orders') }} o ON wt.customer_id = o.customer_id AND wt.visit_date = o.order_date
+        {{ ref('orders') }} o ON wt.customer_id = o.customer_id AND CAST(wt.visit_timestamp AS DATE) = o.order_date
 ),
 conversion_analysis AS (
     SELECT
         cj.traffic_source,
-        cj.page_visited,
+        cj.visit_timestamp,
         COUNT(cj.session_id) AS total_sessions,
         SUM(CASE WHEN cj.conversion = TRUE THEN 1 ELSE 0 END) AS total_conversions,
-        ROUND(SUM(CASE WHEN cj.conversion = TRUE THEN 1 ELSE 0 END) * 100.0 / COUNT(cj.session_id), 2) AS conversion_rate,
+        ROUND(
+            CASE
+                WHEN COUNT(cj.session_id) > 0 THEN SUM(CASE WHEN cj.conversion = TRUE THEN 1 ELSE 0 END) * 100.0 / COUNT(cj.session_id)
+                ELSE 0
+            END,
+            2
+        ) AS conversion_rate,
         AVG(cj.session_duration) AS avg_session_duration,
         SUM(cj.order_amount) AS total_revenue
     FROM
         customer_journey cj
     GROUP BY
-        cj.traffic_source, cj.page_visited
+        cj.traffic_source, cj.visit_timestamp
 )
 SELECT
     traffic_source,
-    page_visited,
+    visit_timestamp,
     total_sessions,
     total_conversions,
     conversion_rate,
