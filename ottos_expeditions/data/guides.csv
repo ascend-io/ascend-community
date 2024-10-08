@@ -1,0 +1,51 @@
+guide_id,first_name,last_name,experience_years,certifications,total_expeditions_led,average_success_rate,customer_rating
+1,Debra,Roy,20,"Rock Climbing Instructor, Backcountry Navigation",99,87.1,3.8
+2,Michael,Pena,15,Rock Climbing Instructor,17,86.2,5.0
+3,Amber,Alvarado,1,"Rock Climbing Instructor, Avalanche Safety, Backcountry Navigation",25,74.7,4.2
+4,Carla,Garcia,3,"Wilderness First Aid, Avalanche Safety, Backcountry Navigation",96,70.5,3.7
+5,Alyssa,Martinez,6,"Rock Climbing Instructor, Avalanche Safety, Backcountry Navigation",73,71.8,4.6
+6,Jacob,Smith,5,"Wilderness First Aid, Backcountry Navigation",72,79.3,4.1
+7,Ashley,Colon,3,"Mountain Safety, Wilderness First Aid, Avalanche Safety",37,78.8,4.4
+8,Gary,Mayer,19,"Wilderness First Aid, Backcountry Navigation, Avalanche Safety",29,74.6,4.0
+9,Jessica,Ritter,15,"Avalanche Safety, Backcountry Navigation",33,75.7,4.1
+10,David,Thomas,16,Rock Climbing Instructor,97,81.2,4.6
+11,Kristin,Singleton,16,"Avalanche Safety, Backcountry Navigation, Wilderness First Aid",44,76.1,3.5
+12,Jorge,Hopkins,18,Wilderness First Aid,98,89.4,4.9
+13,Regina,Miranda,11,Avalanche Safety,39,79.6,4.8
+14,Natalie,Glass,16,"Mountain Safety, Rock Climbing Instructor, Backcountry Navigation",17,80.6,4.1
+15,Mercedes,Davenport,5,"Rock Climbing Instructor, Wilderness First Aid, Mountain Safety",22,74.0,4.1
+16,Jeffrey,Bentley,15,"Avalanche Safety, Mountain Safety, Wilderness First Aid",62,73.3,5.0
+17,Jacqueline,Berry,7,"Rock Climbing Instructor, Wilderness First Aid, Avalanche Safety",72,86.6,4.0
+18,Stephanie,Thompson,6,"Rock Climbing Instructor, Avalanche Safety, Mountain Safety",82,89.1,4.2
+19,Andres,Young,9,"Wilderness First Aid, Mountain Safety, Avalanche Safety",45,83.6,3.6
+20,Christopher,Knight,14,"Wilderness First Aid, Backcountry Navigation",22,89.2,4.1
+21,Deborah,Thompson,10,Wilderness First Aid,89,70.0,4.6
+22,Malik,Scott,10,"Wilderness First Aid, Rock Climbing Instructor",20,94.5,4.0
+23,James,Tran,6,"Avalanche Safety, Wilderness First Aid, Mountain Safety",47,93.9,4.4
+24,Sheri,Delacruz,15,"Avalanche Safety, Rock Climbing Instructor",63,84.9,4.7
+25,Nicole,Diaz,11,"Avalanche Safety, Rock Climbing Instructor, Mountain Safety",54,76.4,4.1
+26,Brian,Hall,11,"Rock Climbing Instructor, Wilderness First Aid",65,71.0,4.5
+27,Justin,Stewart,5,Mountain Safety,90,86.1,3.7
+28,Carla,Torres,10,Wilderness First Aid,97,81.6,3.8
+29,Victoria,Parsons,4,"Wilderness First Aid, Rock Climbing Instructor, Avalanche Safety",53,78.1,4.9
+30,Denise,Ball,7,Rock Climbing Instructor,92,88.5,4.0
+31,Renee,Fisher,13,Wilderness First Aid,57,87.2,4.5
+32,Cynthia,Hernandez,11,"Avalanche Safety, Backcountry Navigation, Wilderness First Aid",90,75.0,4.1
+33,Alexis,Monroe,20,"Backcountry Navigation, Rock Climbing Instructor",61,72.1,3.7
+34,Edward,Sanders,15,"Wilderness First Aid, Rock Climbing Instructor, Mountain Safety",95,71.4,3.9
+35,Amy,Morris,14,"Rock Climbing Instructor, Mountain Safety",48,85.2,4.3
+36,Tricia,Dunn,1,"Wilderness First Aid, Backcountry Navigation, Avalanche Safety",46,83.1,4.2
+37,Nancy,Mcclure,8,"Rock Climbing Instructor, Backcountry Navigation, Avalanche Safety",73,81.9,4.6
+38,Lisa,Nelson,8,Backcountry Navigation,80,79.6,4.3
+39,Amy,Garcia,3,"Backcountry Navigation, Wilderness First Aid",78,92.7,4.8
+40,Tracy,Martin,17,"Rock Climbing Instructor, Backcountry Navigation",92,75.2,4.8
+41,Cindy,Mendoza,14,Avalanche Safety,82,92.9,5.0
+42,Joseph,Garcia,17,"Avalanche Safety, Rock Climbing Instructor",86,79.4,4.7
+43,Scott,Mills,20,"Mountain Safety, Wilderness First Aid",87,78.5,3.5
+44,Carrie,Carter,8,"Backcountry Navigation, Rock Climbing Instructor, Mountain Safety",64,92.4,4.1
+45,Amanda,Clark,2,"Wilderness First Aid, Backcountry Navigation, Avalanche Safety",94,80.5,4.8
+46,Angela,Noble,5,Mountain Safety,89,83.8,4.3
+47,Carol,Gibson,4,"Wilderness First Aid, Mountain Safety",98,72.2,4.0
+48,Brandon,Stokes,12,Avalanche Safety,64,75.4,4.1
+49,John,Jones,10,"Avalanche Safety, Wilderness First Aid",69,93.4,3.8
+50,Steven,Hansen,8,"Wilderness First Aid, Mountain Safety, Avalanche Safety",45,93.4,4.7

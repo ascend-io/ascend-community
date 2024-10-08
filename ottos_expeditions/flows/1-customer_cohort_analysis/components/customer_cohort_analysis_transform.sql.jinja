@@ -1,0 +1,23 @@
+WITH customer_enriched AS (
+    SELECT
+        c.customer_id,
+        c.first_name,
+        c.last_name,
+        c.experience_level,
+        c.previous_summits,
+        CASE
+            WHEN c.previous_summits = 0 THEN 'First-Timers'
+            WHEN c.previous_summits BETWEEN 1 AND 5 THEN 'Regular Climbers'
+            ELSE 'Experienced Climbers'
+        END AS customer_cohort
+    FROM
+        {{ ref('customers') }} c
+)
+SELECT
+    customer_cohort,
+    COUNT(customer_id) AS total_customers,
+    AVG(previous_summits) AS avg_summits
+FROM
+    customer_enriched
+GROUP BY
+    customer_cohort
