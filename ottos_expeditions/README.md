@@ -44,10 +44,13 @@ Before we make our ascent, let's make sure we're fully equipped for the journey 
 
 ### 🔧 Prerequisites 
   - **A Configured Ascend Instance**: To request an instance, reach out to your Ascend.io representative. For details on how to configure and set up your Ascend instance, refer to the [Ascend.io Setup Guide](https://docs.ascend.io/gettingstarted/setup/).
+    - A configured Ascend Instance includes the following:
+      - Vault
+      - Instance Store
+      - Data Plane Connection
 
   - **A Git Repository**: You'll need a Git repository to clone the project into. 
     - NOTE: You will need to set up local SSH keys associated with this Git repository
-
 
 ### 📁 Cloning the Project into your Repository
   To get you started, clone the [Otto's Expeditions Project](https://github.com/ascend-io/ascend-community/tree/main/ottos_expeditions) into your repository. 
@@ -82,7 +85,7 @@ Before we make our ascent, let's make sure we're fully equipped for the journey 
 First, let's set up your Project in Ascend.
 
   1. Log in to your Ascend Instance and navigate to your Project Settings (steps listed below).
-      - Click on your profile in the top right
+      - Click on your user profile in the top right
       - Click on **Settings**
       - Once the Settings menu is open, click the **Projects** tab in the sidebar.
   2. Click on **Add Project**.
@@ -102,13 +105,48 @@ Next, let's set up your Workspace.
   - **Branch**: Create a new Branch with the name `otto/your-name-here`
   - **Base Branch**: Leave blank or select one (e.g. `main`)
   - **Profile**: Select `prod`
-
+    - NOTE: If you see the message `Error loading profiles`, type in `prod` to the field and we will create the profile in the next step
   3. Click **Save**.
 
-You're all set up! 🎉 To start exploring the project, open the workspace you just created. Here's how:
+### Configuring your Profile
 
   1. Navigate back to your **Homepage** by clicking the Ascend icon in the top left corner.
   2. Click on the **Workspace** you just created.
+  3. Click on the Files icon in the top left to open the File Explorer.
+  4. Click on the Otto's Expeditions project in the File Explorer.
+  5. Navigate to the profiles folder and click on prod.yaml to open the file in the editor.
+  6. There are two possible configuration options presented: Azure + Snowflake, which sets parameters for your Azure Key Vault and Snowflake Data Plane, and GCP + BigQuery, which sets parameters for your GCP Secret Manager and BigQuery Data Plane. You will *delete the set of parameters you do not need* and then *update the values of the set of parameters* you will be using. You can see a sample configuration below:
+
+```
+profile:
+  parameters:
+    # TODO: If you have completed the Ascend Quickstart, you can use the same values here
+
+    # Azure + Snowflake
+    azure_key_vault_name: <your-prod-env-Azure-Key-Vault-name>
+    snowflake_account: <your-prod-env-Snowflake-account-name>
+    snowflake_database: ASCEND_ENV_PROD
+    snowflake_schema: quickstart
+    snowflake_user: ASCEND_ENV_PROD
+    snowflake_role: ASCEND_ENV_PROD
+    snowflake_warehouse: ASCEND_ENV_PROD
+    success_rate_threshold: 50
+
+    # GCP + BigQuery
+    gcp_project_id: <your-prod-env-GCP-project-id>
+    bigquery_dataset: quickstart
+    success_rate_threshold: 50
+
+  defaults:
+    - kind: Flow
+      name:
+        regex: .*
+      spec:
+        data_plane:
+          connection_name: my_data_plane
+```
+  7. You should now have one set of parameters (either GCP + BigQuery or Snowflake + Azure). Click Save to save your changes.
+
 
 <a name="warm-up-project-structure"></a>
 
@@ -136,8 +174,9 @@ Let's Ascend! 🚀
 **Objective**: Analyze customer cohorts to understand booking behaviors and trends.
 
   ### 1. Overview
-  In this expedition, you'll work with customer data to categorize customers into cohorts and update reports for downstream consumers in PowerBI. To start open the `flows/customer_cohort_analysis` folder in the File Explorer on the left.
+  In this expedition, you'll work with customer data to categorize customers into cohorts and update reports for downstream consumers in PowerBI. To start open the `flows/1-customer_cohort_analysis` folder in the File Explorer on the left.
 
+  We'll be using the following:
   - **Data Source**: 
     - `data/customers.csv`
   - **Components**: 
@@ -165,8 +204,9 @@ Let's Ascend! 🚀
 ### 3. Run the Flow
   Now that you've explored the flow, let's run it!
 
-  1. From the **Build Explorer** panel on the bottom of the screen click on the **customer_cohort_analysis** flow.
-  2. Click on the **Run** button from the Actions bar at the top of the **Build Explorer** panel.
+  1. Since we have not built this project before, click the **Build Project** button in the bottom left to build the project. 
+  2. Now, from the **Build Explorer** panel on the bottom of the screen click on the **customer_cohort_analysis** flow.
+  3. Click on the **Run** button from the Actions bar at the top of the **Build Explorer** panel.
 
   You should see the flow run to completion in the **DAG view** of the **Build Explorer** panel. You can click the **Runs** tab within the **Build Explorer** panel to view details about the run including **Config Details**, **Logs**, and a **Timeline view** of the run.
 
@@ -185,7 +225,7 @@ Let's Ascend! 🚀
 ### 1. Overview
 In this flow, you'll work with gear data to analyze how out gear holds up on various trips. We'll also implement data quality checks to ensure the accuracy of our data. We definitely don't want to take any risks with our gear!
 
-To start open the `flows/gear_durability_analysis` folder in the File Explorer on the left.
+To start open the `flows/2-gear_durability_analysis` folder in the File Explorer on the left.
 
 - **Data Sources**: 
   - `data/expeditions.csv`
@@ -254,7 +294,7 @@ Great job! You've completed Expedition 2! Let's keep climbing.
 ### 1. Overview
 In this flow, you'll work with performance data to evaluate guide performance and the success rates of expeditions. We'll also work with Otto to update our transformation logic to create a `guide_name` field by combining first and last names. 
 
-To start, open the `flows/guide_performance_summiting_success_rate` folder in the File Explorer on the left.
+To start, open the `flows/3-guide_performance_summiting_success_rate` folder in the File Explorer on the left.
 
 - **Data Sources**: 
   - `data/expeditions.csv`
@@ -318,7 +358,7 @@ Great job! You've completed Expedition 3! Ready for your next Adventure?
 ### 1. Overview
 In this flow, you'll work with route data to predict the success of expeditions based on route difficulty. We'll also optimize the flow by changing the **materialization type** of one of the components to a **View**.
 
-To start open the `flows/route_difficulty_success_prediction` folder in the File Explorer on the left.
+To start open the `flows/4-route_difficulty_success_prediction` folder in the File Explorer on the left.
 
 - **Data Sources**: 
     - `data/expeditions_outcomes.csv`
@@ -379,7 +419,7 @@ Great job! You've completed Expedition 4! On to the next one!
 ### 1. Overview
 In this flow, you'll work with weather data to assess how weather conditions affect expedition outcomes. We'll also adjust pipeline parameters to refine weather impact insights.
 
-To start open the `flows/weather_impact_analysis` folder in the File Explorer on the left.
+To start open the `flows/5-weather_impact_analysis` folder in the File Explorer on the left.
 
 - **Data Sources**: 
   - `data/expeditions_outcomes.csv`
@@ -429,7 +469,7 @@ Great job! You've completed Expedition 5! Ready to take on the next challenge?
 ### 1. Overview
 In this flow, you'll work with customer journey data to map and optimize the customer journey to help the marketing team boost conversions. We'll also implement data partitioning on our transformed data to optimize the flow.
 
-To start open the `flows/customer_journey_conversion_analysis` folder in the File Explorer on the left.
+To start open the `6-customer_journey_conversion_analysis` folder in the File Explorer on the left.
 
 - **Data Sources**: 
   - `data/orders.csv`
@@ -490,8 +530,8 @@ In this flow, you'll work with revenue and cost data to analyze the financial he
   - `data/financial.csv`
 
 ### 2. Set up the flow
-  - To start, you'll need to create a new folder in the `flows` directory. Let's name it `revenue_cost_analysis`. This folder will host all the assets for this flow.
-  - Inside the `revenue_cost_analysis` folder, create a new folder called `components`. Ascend looks for a `components` folder in each flow directory to understand the components in the flow.
+  - To start, you'll need to create a new folder in the `flows` directory. Let's name it `7-revenue_cost_analysis`. This folder will host all the assets for this flow.
+  - Inside the `7-revenue_cost_analysis` folder, create a new folder called `components`. Ascend looks for a `components` folder in each flow directory to understand the components in the flow.
   <!-- TODO: Don't we need to also have them create a flow definition YAML? -->
 
 ### 3. Create Your Expeditions Read Component
