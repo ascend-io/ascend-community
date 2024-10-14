@@ -383,7 +383,7 @@ As with Expedition 2, since changes have been made, we will need to rebuild the 
 
 
 ### 5. Congratulations!
-Great job! You've completed Expedition 3! Ready for your next Adventure?
+Amazing! You've completed Expedition 3! Ready for the next?
 
 ---
 
@@ -447,7 +447,7 @@ Here's how to do it:
 Repeat the same process as the previous expeditions to build the project. Once the build is complete, run the **route_difficulty_success_prediction** flow to see your changes.
 
 ### 5. Congratulations!
-Great job! You've completed Expedition 4! On to the next one!
+Fantastic job! You've completed Expedition 4! Let's keep going!
 
 ---
 
@@ -507,7 +507,7 @@ To do this, we will change the parameter value located in the `prod.yaml` file i
 Repeat the same process as the previous expeditions to build the project. Once the build is complete, run the **weather_impact_analysis** flow to see your changes.
 
 ### 5. Congratulations!
-Great job! You've completed Expedition 5! Ready to take on the next challenge?
+Sweet! You've completed Expedition 5! Ready to take on the next challenge?
 
 ---
 
@@ -568,7 +568,7 @@ Here's how to do it:
 Repeat the same process as the previous expeditions to build the project. Once the build is complete, run the **customer_journey_conversion_analysis** flow to see your changes.
 
 ### 5. Congratulations!
-Great job! You've completed Expedition 6! Your biggest adventure is on the horizon! Ready for the final expedition?
+You've completed Expedition 6! That was a tricky one, but your biggest adventure is still on the horizon! Ready for the final expedition?
 
 ---
 
@@ -666,7 +666,7 @@ Great job! You've completed Expedition 7!
 ![Congratulations!](https://storage.googleapis.com/external-docs-assets/v3/ottos-expeditions/8.png)
 
 ## Congratulations! You've completed all the expeditions!
-Great job! You've successfully navigated through the challenges and conquered all the expeditions. Now you're ready to take on new adventures. Here's a few places to start:
+Wow, way to go! You've successfully navigated through the challenges and conquered all the expeditions. Now you're ready to take on new adventures. Here's a few places to start:
 
 ### 🧑‍🤝‍🧑 Join the Expedition Team
 Become a contributor and help us scale new heights! Follow the steps in `CONTRIBUTING.md` to get started.
