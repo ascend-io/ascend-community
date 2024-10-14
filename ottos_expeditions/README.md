@@ -184,6 +184,7 @@ Let's Ascend! 🚀
       - `customers.yaml`
     - Transforms:
       - `customer_cohort_analysis_transform.sql.jinja`
+    - Python Tasks:
       - `refresh_report.py`
 
   ### 2. Flow Walkthrough
