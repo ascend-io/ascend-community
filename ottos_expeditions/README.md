@@ -578,13 +578,13 @@ In this flow, you'll work with revenue and cost data to analyze the financial he
 
       ```yaml
       component:
-      read:
-        connection: local_files
-        local_file:
-          path: /expeditions.csv
-          parser:
-            csv:
-              has_header: true
+        read:
+          connection: local_files
+          local_file:
+            path: /expeditions.csv
+            parser:
+              csv:
+                has_header: true
       ```
   You'll notice that this is the same code we've used in previous flows for reading the Expeditions data. In many cases, you'll be able to reuse components from other flows so there is no need to re-ingest data. But for this flow we're keeping things simple and ingesting the data again.
 
@@ -596,13 +596,13 @@ In this flow, you'll work with revenue and cost data to analyze the financial he
 
       ```yaml
       component:
-      read:
-        connection: local_files
-        local_file:
-          path: /financial.csv
-          parser:
-            csv:  
-              has_header: true
+        read:
+          connection: local_files
+          local_file:
+            path: /financial.csv
+            parser:
+              csv:  
+                has_header: true
       ```
   - Click **Save** to save the changes.
 
