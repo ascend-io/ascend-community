@@ -182,7 +182,7 @@ Let's Ascend! 🚀
   - **Components**: 
     - `customers.yaml`
     - `customer_cohort_analysis_transform.sql.jinja`
-    - `refresh_powerbi.py`
+    - `refresh_report.py`
 
   ### 2. Flow Walkthrough
   1. **Read Component**:
@@ -197,7 +197,7 @@ Let's Ascend! 🚀
     In this simple SQL transformation component, we're transforming the data to categorize cohorts based on booking dates and behaviors.
 
   3. **Python Task**
-      - Open `components/refresh_powerbi.py`.
+      - Open `components/refresh_report.py`.
 
       Our end point for this dataset is a Power BI report. This script refreshes a Power BI dataset by authenticating with Azure Active Directory and triggering the refresh through the Power BI REST API.
 
