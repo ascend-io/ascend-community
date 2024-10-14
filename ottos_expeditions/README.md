@@ -180,9 +180,11 @@ Let's Ascend! 🚀
   - **Data Source**: 
     - `data/customers.csv`
   - **Components**: 
-    - `customers.yaml`
-    - `customer_cohort_analysis_transform.sql.jinja`
-    - `refresh_report.py`
+    - Read Connectors:
+      - `customers.yaml`
+    - Transforms:
+      - `customer_cohort_analysis_transform.sql.jinja`
+      - `refresh_report.py`
 
   ### 2. Flow Walkthrough
   1. **Read Component**:
@@ -231,23 +233,26 @@ To start open the `flows/2-gear_durability_analysis` folder in the File Explorer
   - `data/expeditions.csv`
   - `data/gear_rentals.csv`
   - `data/routes.csv`
-- **Components**: 
-  - `expeditions.yaml`
-  - `gear_durability_analysis_transform.sql.jinja`
-  - `gear_rentals.yaml`
-  - `routes.yaml`
+- **Components**:
+  - Read Connectors:
+    - `expeditions.yaml`
+    - `gear_rentals.yaml`
+    - `routes.yaml`
+    - `expedition_outcomes.yaml`
+  - Transforms:
+    - `gear_durability_analysis_transform.sql.jinja`
 
 ### 2. Flow Walkthrough
   - **Read Components**:
 
-      In this flow we're reading data from 3 different tables. Let's take a look at each of the components for these tables.
+      In this flow we're reading data from 4 different tables. Let's take a look at each of the components for these tables:
 
     - Open `components/expeditions.yaml`. 
     - Open `components/gear_rentals.yaml`. 
     - Open `components/routes.yaml`. 
+    - Open `components/expedition_outcomes.yaml`.
   
       These components read data from our local files. We define the connection type as `local_files` and the path to the files in the data folder. We also define the parser as a CSV parser that expects a header row for each CSV file.
-
 
   - **Data Transformation**:
 
@@ -301,15 +306,17 @@ To start, open the `flows/3-guide_performance_summiting_success_rate` folder in 
   - `data/expeditions_outcomes.csv`
   - `data/guides.csv`
 - **Components**: 
-  - `expeditions.yaml`
-  - `expeditions_outcomes.yaml`
-  - `guide_performance_summiting_success_rate_transform.sql.jinja`
-  - `guides.yaml`
+  - Read Components:
+    - `expeditions.yaml`
+    - `expeditions_outcomes.yaml`
+    - `guides.yaml`
+  - Transforms:
+    - `guide_performance_summiting_success_rate_transform.sql.jinja`
 
 ### 2. Flow Walkthrough
   -  **Read Components**
 
-      In this flow we're reading data from 3 different tables. Let's take a look at each of the components for these tables.
+      In this flow we're reading data from 3 different tables. Let's take a look at each of the components for these tables:
 
       - Open `components/expeditions.yaml`. 
       - Open `components/expeditions_outcomes.yaml`. 
@@ -364,20 +371,24 @@ To start open the `flows/4-route_difficulty_success_prediction` folder in the Fi
     - `data/expeditions_outcomes.csv`
     - `data/expeditions.csv`
     - `data/routes.csv`
-
-  - **Components**: 
+- **Components**: 
+  - Read Components:
     - `expeditions_outcomes.yaml`
     - `expeditions.yaml`
     - `routes.yaml`
+  - Transforms:
     - `route_difficulty_success_prediction_transform.sql.jinja`
 
 ### 2. Flow Walkthrough
 - **Read Components**
+
+  In this flow we're reading data from 3 different tables. Let's take a look at each of the components for these tables:
+
   - Open `components/expeditions_outcomes.yaml`. 
   - Open `components/expeditions.yaml`. 
   - Open `components/routes.yaml`. 
 
-      These components read data from our local files. We define the connection type as `local_files` and the path to the files in the data folder. We also define the parser as a CSV parser that expects a header row for each CSV file.
+  These components read data from our local files. We define the connection type as `local_files` and the path to the files in the data folder. We also define the parser as a CSV parser that expects a header row for each CSV file.
 
 - **Data Transformation**
     - Open `components/route_difficulty_success_prediction_transform.sql.jinja`.
@@ -426,18 +437,23 @@ To start open the `flows/5-weather_impact_analysis` folder in the File Explorer 
   - `data/expeditions.csv`
   - `data/weather.csv`
 - **Components**: 
-  - `expeditions_outcomes.yaml`
-  - `expeditions.yaml`
-  - `weather.yaml`
-  - `weather_impact_analysis_transform.sql.jinja`
+  - Read Components:
+    - `expeditions_outcomes.yaml`
+    - `expeditions.yaml`
+    - `weather.yaml`
+  - Transforms:
+    - `weather_impact_analysis_transform.sql.jinja`
 
 ### 2. Flow Walkthrough
 - **Read Components**
+
+  In this flow we're reading data from 3 different tables. Let's take a look at each of the components for these tables:
+
   - Open `components/expeditions_outcomes.yaml`. 
   - Open `components/expeditions.yaml`. 
   - Open `components/weather.yaml`. 
       
-    These components read data from our local files. We define the connection type as `local_files` and the path to the files in the data folder. We also define the parser as a CSV parser that expects a header row for each CSV file.
+  These components read data from our local files. We define the connection type as `local_files` and the path to the files in the data folder. We also define the parser as a CSV parser that expects a header row for each CSV file.
 
 - **Data Transformation**
   - Open `components/weather_impact_analysis_transform.sql.jinja`.
@@ -475,16 +491,21 @@ To start open the `6-customer_journey_conversion_analysis` folder in the File Ex
   - `data/orders.csv`
   - `data/web_traffic.csv`
 - **Components**: 
-  - `customer_journey_conversion_analysis_transform.sql.jinja`
-  - `orders.yaml`
-  - `web_traffic.yaml`
+  - Read Connectors:
+    - `orders.yaml`
+    - `web_traffic.yaml`
+  - Transforms:
+    - `customer_journey_conversion_analysis_transform.sql.jinja`
 
 ### 2. Flow Walkthrough
-- **Read Components**
+- **Read Components**  
+
+  In this flow we're reading data from 2 different tables. Let's take a look at each of the components for these tables:
+  
   - Open `components/orders.yaml`. 
   - Open `components/web_traffic.yaml`. 
 
-    These components read data from our local files. We define the connection type as `local_files` and the path to the files in the data folder. We also define the parser as a CSV parser that expects a header row for each CSV file.
+  These components read data from our local files. We define the connection type as `local_files` and the path to the files in the data folder. We also define the parser as a CSV parser that expects a header row for each CSV file.
 
 - **Data Transformation**
   - Open `components/customer_journey_conversion_analysis_transform.sql.jinja`.
