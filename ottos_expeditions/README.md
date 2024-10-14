@@ -209,6 +209,7 @@ Let's Ascend! 🚀
 
   1. Since we have not built this project before, we will need to build this project.
   2. In the **Build Explorer** panel on the bottom of the screen, click on the **Build Project** button in the middle of the panel. 
+      - In the case where the **Build Explorer** panel is not already open, click on **Show Build Panel** in the bottom right.
   3. Once the build completes, click on the **customer_cohort_analysis** flow on the left side of the panel.
   4. Click on the **Run** button from the Actions bar in the top right of the **Build Explorer** panel.
 
@@ -266,7 +267,7 @@ To start open the `flows/2-gear_durability_analysis` folder in the File Explorer
 
 Let's add a data quality test to our `gear_rentals` component.
 
-  - To add data quality tests, add the following code to the `gear_rentals.yaml` file:
+  - To add data quality tests, add the following code to the bottom of the `gear_rentals.yaml` file:
 
       ```yaml
         tests:
@@ -307,6 +308,7 @@ Since changes have been made to the project, we will need to rebuild the project
       - `Build failed`
   3. On the window that pops up, click **Build Project**.
   4. Once the project finishes building, click on **gear_durability_analysis** in the **Build Explorer** panel and run the flow to see the results.
+      - In the case where the **Build Explorer** panel is not already open, click on **Show Build Panel** in the bottom right.
 
 ### 5. Congratulations!
 Great job! You've completed Expedition 2! Let's keep climbing.
@@ -381,6 +383,7 @@ As with Expedition 2, since changes have been made, we will need to rebuild the 
       - `Build failed`
   3. On the window that pops up, click **Build Project**.
   4. Once the project finishes building, click on **guide_performance_summiting_success_rates** in the **Build Explorer** panel and run the flow to see the results.
+      - In the case where the **Build Explorer** panel is not already open, click on **Show Build Panel** in the bottom right.
 
 
 ### 5. Congratulations!
