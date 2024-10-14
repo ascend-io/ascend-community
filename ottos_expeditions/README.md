@@ -267,12 +267,29 @@ Let's add a data quality test to our `gear_rentals` component.
   - To add data quality tests, add the following code to the `gear_rentals.yaml` file:
 
       ```yaml
-      tests:
-        columns:
-          rental_date:
-            - not_null
+        tests:
+          columns:
+            rental_date:
+              - not_null
       ```
-  With this test, we're ensuring the `rental_date` column is not null.  
+    With this test, we're ensuring the `rental_date` column is not null.
+
+  - The code in `gear_rentals.yaml` should now look like the following:
+      ```yaml
+      component:
+        read:
+          connection: local_files
+          local_file:
+            path: /gear_rentals.csv
+            parser:
+              csv:
+                has_header: true
+        tests:
+          columns:
+            rental_date:
+              - not_null
+      ```
+
 
   - Click **Save** to save the changes.
 
@@ -501,7 +518,7 @@ To start open the `6-customer_journey_conversion_analysis` folder in the File Ex
 - **Read Components**  
 
   In this flow we're reading data from 2 different tables. Let's take a look at each of the components for these tables:
-  
+
   - Open `components/orders.yaml`. 
   - Open `components/web_traffic.yaml`. 
 
