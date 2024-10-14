@@ -215,7 +215,13 @@ Let's Ascend! 🚀
 
   You should see the flow run to completion in the **DAG view** of the **Build Explorer** panel. You can click the **Runs** tab within the **Build Explorer** panel to view details about the run including **Config Details**, **Logs**, and a **Timeline view** of the run.
 
-### 4. Congratulations! 
+### 4. Takeaways
+
+  1. How to define a basic read connector, transform, and Python task with code
+  2. How to build an Ascend project with no prior working build
+  3. How to run an Ascend flow
+
+### 5. Congratulations! 
   Great job! Expedition 1 was a breeze! Ready to take it to the next level? Let's try another one.
 
 ---
@@ -293,9 +299,7 @@ Let's add a data quality test to our `gear_rentals` component.
               - not_null
       ```
 
-
   - Click **Save** to save the changes.
-
 
 ### 4. Build & Run the Project
 
@@ -310,7 +314,12 @@ Since changes have been made to the project, we will need to rebuild the project
   4. Once the project finishes building, click on **gear_durability_analysis** in the **Build Explorer** panel and run the flow to see the results.
       - In the case where the **Build Explorer** panel is not already open, click on **Show Build Panel** in the bottom right.
 
-### 5. Congratulations!
+### 5. Takeaways
+
+  1. How to write basic data quality tests in Ascend
+  2. How to build an Ascend project with a previously working build
+
+### 6. Congratulations!
 Great job! You've completed Expedition 2! Let's keep climbing.
 
 ---
@@ -385,8 +394,11 @@ As with Expedition 2, since changes have been made, we will need to rebuild the 
   4. Once the project finishes building, click on **guide_performance_summiting_success_rates** in the **Build Explorer** panel and run the flow to see the results.
       - In the case where the **Build Explorer** panel is not already open, click on **Show Build Panel** in the bottom right.
 
+### 5. Takeaways
 
-### 5. Congratulations!
+  1. How to use Otto, the Ascend AI!
+
+### 6. Congratulations!
 Amazing! You've completed Expedition 3! Ready for the next?
 
 ---
@@ -450,7 +462,11 @@ Here's how to do it:
 
 Repeat the same process as the previous expeditions to build the project. Once the build is complete, run the **route_difficulty_success_prediction** flow to see your changes.
 
-### 5. Congratulations!
+### 5. Takeaways
+
+  1. How to change the materialization type in a SQL query
+
+### 6. Congratulations!
 Fantastic job! You've completed Expedition 4! Let's keep going!
 
 ---
@@ -510,7 +526,12 @@ To do this, we will change the parameter value located in the `prod.yaml` file i
 
 Repeat the same process as the previous expeditions to build the project. Once the build is complete, run the **weather_impact_analysis** flow to see your changes.
 
-### 5. Congratulations!
+
+### 5. Takeaways
+
+  1. How to change a flow's parameters
+
+### 6. Congratulations!
 Sweet! You've completed Expedition 5! Ready to take on the next challenge?
 
 ---
@@ -571,7 +592,11 @@ Here's how to do it:
 
 Repeat the same process as the previous expeditions to build the project. Once the build is complete, run the **customer_journey_conversion_analysis** flow to see your changes.
 
-### 5. Congratulations!
+### 5. Takeaways
+
+  1. How to implement Ascend Data Partitioning in a SQL transform
+
+### 6. Congratulations!
 You've completed Expedition 6! That was a tricky one, but your biggest adventure is still on the horizon! Ready for the final expedition?
 
 ---
@@ -662,7 +687,13 @@ This query joins data from the two read components to analyze the financial heal
 
 Repeat the same process as the previous expeditions to build the project. Once the build is complete, run the **revenue_cost_analysis** flow to see your changes.
 
-### 6. Congratulations!
+### 6. Takeaways
+
+  1. How to create and write the code of a new Read Component
+  2. How to create and write the code of a new SQL transform
+  3. How to create and make your own fully functioning Ascend pipeline!
+
+### 7. Congratulations!
 Great job! You've completed Expedition 7! 
 
 ---
