@@ -206,9 +206,10 @@ Let's Ascend! 🚀
 ### 3. Run the Flow
   Now that you've explored the flow, let's run it!
 
-  1. Since we have not built this project before, click the **Build Project** button in the bottom left to build the project. 
-  2. Now, from the **Build Explorer** panel on the bottom of the screen click on the **customer_cohort_analysis** flow.
-  3. Click on the **Run** button from the Actions bar at the top of the **Build Explorer** panel.
+  1. Since we have not built this project before, we will need to build this project.
+  2. In the **Build Explorer** panel on the bottom of the screen, click on the **Build Project** button in the middle of the panel. 
+  3. Once the build completes, click on the **customer_cohort_analysis** flow on the left side of the panel.
+  4. Click on the **Run** button from the Actions bar in the top right of the **Build Explorer** panel.
 
   You should see the flow run to completion in the **DAG view** of the **Build Explorer** panel. You can click the **Runs** tab within the **Build Explorer** panel to view details about the run including **Config Details**, **Logs**, and a **Timeline view** of the run.
 
@@ -294,12 +295,17 @@ Let's add a data quality test to our `gear_rentals` component.
   - Click **Save** to save the changes.
 
 
-### 4. Build the Project
+### 4. Build & Run the Project
 
-To build the project with the changes you made, click on the **Build Project** button from the **Build Explorer** panel. Once the build is complete, you can run the flow to see the results.
+Since changes have been made to the project, we will need to rebuild the project:
 
-<!-- TODO: Do we ever actually define the Build Explorer panel? I know we can get to Build Project by clicking the bottom-left Build Successful/Failed option and that opens to Build Project. If that's what it's referring to that's fine but I don't think I'd expect that to be the Build Explorer panel if I was the customer. I think we either need to refer to it explicitly/detail how to do it in the instructions or make a more obvious sign on the UI for a customer to easily understand there's something there. -->
-
+  1. Navigate to the bottom bar of your browser. Here, you should see a couple of items such as the build status, what branch you're on, and the last commit. 
+  2. Click on the build status, which should be one of the following:
+      - `No build`
+      - `Build successful`
+      - `Build failed`
+  3. On the window that pops up, click **Build Project**.
+  4. Once the project finishes building, click on **gear_durability_analysis** in the **Build Explorer** panel and run the flow to see the results.
 
 ### 5. Congratulations!
 Great job! You've completed Expedition 2! Let's keep climbing.
@@ -363,9 +369,17 @@ To do this, let's try asking our trusty AI pal Otto for help.
   - Otto will provide you with the code to update the transformation component. You can copy and paste the change or let Otto update the file directly for you (you just need to confirm the changes you want him to make).
   - Once the file is updated, click **Save** to save the changes.
 
-### 4. Build the Project
+### 4. Build & Run the Project
 
-To build the project with the changes you made, click on the **Build Project** button from the **Build Explorer** panel. Once the build is complete, you can run the flow to see the results.
+As with Expedition 2, since changes have been made, we will need to rebuild the project. The steps have been restated here but are the same process:
+
+  1. Navigate to the bottom bar of your browser. Here, you should see a couple of items such as the build status, what branch you're on, and the last commit. 
+  2. Click on the build status, which should be one of the following:
+      - `No build`
+      - `Build successful`
+      - `Build failed`
+  3. On the window that pops up, click **Build Project**.
+  4. Once the project finishes building, click on **guide_performance_summiting_success_rates** in the **Build Explorer** panel and run the flow to see the results.
 
 
 ### 5. Congratulations!
@@ -428,9 +442,9 @@ Here's how to do it:
 
 - Click **Save** to save the changes.
 
-### 4. Build the Project
+### 4. Build & Run the Project
 
-To build the project with the changes you made, click on the **Build Project** button from the **Build Explorer** panel. Once the build is complete, you can run the flow to see the results.
+Repeat the same process as the previous expeditions to build the project. Once the build is complete, run the **route_difficulty_success_prediction** flow to see your changes.
 
 ### 5. Congratulations!
 Great job! You've completed Expedition 4! On to the next one!
@@ -487,7 +501,12 @@ To do this, we will change the parameter value located in the `prod.yaml` file i
     ```yaml
         success_rate_threshold: 75
     ```
-### 4. Congratulations!
+
+### 4. Build & Run the Project
+
+Repeat the same process as the previous expeditions to build the project. Once the build is complete, run the **weather_impact_analysis** flow to see your changes.
+
+### 5. Congratulations!
 Great job! You've completed Expedition 5! Ready to take on the next challenge?
 
 ---
@@ -544,9 +563,9 @@ Here's how to do it:
 
 - Click **Save** to save the changes.
 
-### 4. Build the Project
+### 4. Build & Run the Project
 
-To build the project with the changes you made, click on the **Build Project** button from the **Build Explorer** panel. Once the build is complete, you can run the flow to see the results.
+Repeat the same process as the previous expeditions to build the project. Once the build is complete, run the **customer_journey_conversion_analysis** flow to see your changes.
 
 ### 5. Congratulations!
 Great job! You've completed Expedition 6! Your biggest adventure is on the horizon! Ready for the final expedition?
@@ -637,7 +656,7 @@ This query joins data from the two read components to analyze the financial heal
 
 ### 5. Build & Run the Project
 
-To build the project with the changes you made, click on the **Build Project** button from the **Build Explorer** panel. Once the build is complete, you can run the flow to see the results.
+Repeat the same process as the previous expeditions to build the project. Once the build is complete, run the **revenue_cost_analysis** flow to see your changes.
 
 ### 6. Congratulations!
 Great job! You've completed Expedition 7! 
