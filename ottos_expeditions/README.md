@@ -174,7 +174,7 @@ Let's Ascend! 🚀
 **Objective**: Analyze customer cohorts to understand booking behaviors and trends.
 
   ### 1. Overview
-  In this expedition, you'll work with customer data to categorize customers into cohorts and update reports for downstream consumers in PowerBI. To start open the `flows/1-customer_cohort_analysis` folder in the File Explorer on the left.
+  In this expedition, you'll work with customer data to categorize customers into cohorts and update reports for downstream consumers in PowerBI. To start, open the `flows/1-customer_cohort_analysis` folder in the File Explorer on the left.
 
   We'll be learning about the following concepts:
     1. How to define a basic read connector, transform, and Python task with code
@@ -220,7 +220,7 @@ Let's Ascend! 🚀
 
   You should see the flow run to completion in the **DAG view** of the **Build Explorer** panel. You can click the **Runs** tab within the **Build Explorer** panel to view details about the run including **Config Details**, **Logs**, and a **Timeline view** of the run.
 
-### 4. Congratulations! 
+### 4. Congratulations!
   Great job! Expedition 1 was a breeze! You not only learned how to build various basic components, but you can even build and run Ascend flows now! Ready to take it to the next level? Let's try another one.
 
 ---
@@ -396,7 +396,7 @@ As with Expedition 2, since changes have been made, we will need to rebuild the 
       - In the case where the **Build Explorer** panel is not already open, click on **Show Build Panel** in the bottom right.
 
 ### 5. Congratulations!
-Amazing! You've completed Expedition 3 and on the way, made friends with Otto, the ever helpful AI! Ready for the next adventure?
+Amazing! You've completed Expedition 3 and on the way, made friends with Otto, your ever helpful AI assistant! Ready for the next adventure?
 
 ---
 
@@ -480,7 +480,7 @@ In this flow, you'll work with weather data to assess how weather conditions aff
 We'll be learning about the following concepts:
   1. How to change a flow's parameters
 
-To start open the `flows/5-weather_impact_analysis` folder in the File Explorer on the left.
+To start, open the `flows/5-weather_impact_analysis` folder in the File Explorer on the left.
 
 - **Data Sources**: 
   - `data/expeditions_outcomes.csv`
@@ -543,7 +543,7 @@ In this flow, you'll work with customer journey data to map and optimize the cus
 We'll be learning about the following concepts:
   1. How to implement Ascend Data Partitioning in a SQL transform
 
-To start open the `6-customer_journey_conversion_analysis` folder in the File Explorer on the left.
+To start, open the `6-customer_journey_conversion_analysis` folder in the File Explorer on the left.
 
 - **Data Sources**: 
   - `data/orders.csv`
@@ -607,7 +607,7 @@ In this flow, you'll work with revenue and cost data to analyze the financial he
 We'll be learning about the following concepts:
   1. How to create and write the code of a new Read Component
   2. How to create and write the code of a new SQL transform
-  3. How to create and make your own fully functioning Ascend Flow!
+  3. How to build and run your own fully functioning Ascend Flow!
 
 - **Data Sources**: 
   - `data/expeditions.csv`
@@ -693,7 +693,7 @@ Great job! You've completed Expedition 7 and made your own fully functioning Asc
 ![Congratulations!](https://storage.googleapis.com/external-docs-assets/v3/ottos-expeditions/8.png)
 
 ## Congratulations! You've completed all the expeditions!
-Wow, way to go! You've successfully navigated through the challenges and conquered all the expeditions. Now you're ready to take on new adventures. Here's a few places to start:
+Wow, way to go! You've successfully navigated through the challenges and conquered all the expeditions. Now you're ready to take on new adventures. Here are a few places where you can get started:
 
 ### 🧑‍🤝‍🧑 Join the Expedition Team
 Become a contributor and help us scale new heights! Follow the steps in `CONTRIBUTING.md` to get started.
