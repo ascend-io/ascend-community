@@ -1,0 +1,9 @@
+component:
+  read:
+    connection: local_files
+    local_file:
+      path: /web_traffic.csv
+      parser:
+        csv:
+          has_header: true
+

@@ -1,0 +1,9 @@
+component:
+  read:
+    connection: local_files
+    local_file:
+      path: /expeditions.csv
+      parser:
+        csv:
+          has_header: true
+

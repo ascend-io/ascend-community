@@ -1,0 +1,26 @@
+WITH weather_impact AS (
+    SELECT
+        w.weather_conditions,
+        COUNT(e.expedition_id) AS total_expeditions,
+        SUM(CASE WHEN eo.summit_reached = TRUE THEN 1 ELSE 0 END) AS total_successes,
+        ROUND(SUM(CASE WHEN eo.summit_reached = TRUE THEN 1 ELSE 0 END) * 100.0 / COUNT(e.expedition_id), 2) AS success_rate
+    FROM
+        {{ ref('weather') }} w
+    JOIN
+        {{ ref('expeditions') }} e ON w.expedition_id = e.expedition_id
+    JOIN
+        {{ ref('expedition_outcomes') }} eo ON e.expedition_id = eo.expedition_id
+    GROUP BY
+        w.weather_conditions
+)
+SELECT
+    weather_conditions,
+    total_expeditions,
+    success_rate,
+    CASE WHEN weather_conditions IN ('Sunny', 'Cloudy')
+    AND success_rate > ${parameter.success_rate_threshold} THEN 'Good' ELSE 'Bad'
+    END AS weather_impact
+FROM
+    weather_impact
+ORDER BY
+    success_rate DESC
