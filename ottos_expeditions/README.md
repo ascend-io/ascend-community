@@ -44,10 +44,13 @@ Before we make our ascent, let's make sure we're fully equipped for the journey 
 
 ### 🔧 Prerequisites 
   - **A Configured Ascend Instance**: To request an instance, reach out to your Ascend.io representative. For details on how to configure and set up your Ascend instance, refer to the [Ascend.io Setup Guide](https://docs.ascend.io/gettingstarted/setup/).
+    - A configured Ascend Instance includes the following:
+      - Vault
+      - Instance Store
+      - Data Plane Connection
 
   - **A Git Repository**: You'll need a Git repository to clone the project into. 
     - NOTE: You will need to set up local SSH keys associated with this Git repository
-
 
 ### 📁 Cloning the Project into your Repository
   To get you started, clone the [Otto's Expeditions Project](https://github.com/ascend-io/ascend-community/tree/main/ottos_expeditions) into your repository. 
@@ -82,7 +85,7 @@ Before we make our ascent, let's make sure we're fully equipped for the journey 
 First, let's set up your Project in Ascend.
 
   1. Log in to your Ascend Instance and navigate to your Project Settings (steps listed below).
-      - Click on your profile in the top right
+      - Click on your user profile in the top right
       - Click on **Settings**
       - Once the Settings menu is open, click the **Projects** tab in the sidebar.
   2. Click on **Add Project**.
@@ -102,13 +105,48 @@ Next, let's set up your Workspace.
   - **Branch**: Create a new Branch with the name `otto/your-name-here`
   - **Base Branch**: Leave blank or select one (e.g. `main`)
   - **Profile**: Select `prod`
-
+    - NOTE: If you see the message `Error loading profiles`, type in `prod` to the field and we will create the profile in the next step
   3. Click **Save**.
 
-You're all set up! 🎉 To start exploring the project, open the workspace you just created. Here's how:
+### Configuring your Profile
 
   1. Navigate back to your **Homepage** by clicking the Ascend icon in the top left corner.
   2. Click on the **Workspace** you just created.
+  3. Click on the Files icon in the top left to open the File Explorer.
+  4. Click on the Otto's Expeditions project in the File Explorer.
+  5. Navigate to the profiles folder and click on prod.yaml to open the file in the editor.
+  6. There are two possible configuration options presented: Azure + Snowflake, which sets parameters for your Azure Key Vault and Snowflake Data Plane, and GCP + BigQuery, which sets parameters for your GCP Secret Manager and BigQuery Data Plane. You will *delete the set of parameters you do not need* and then *update the values of the set of parameters* you will be using. You can see a sample configuration below:
+
+```
+profile:
+  parameters:
+    # TODO: If you have completed the Ascend Quickstart, you can use the same values here
+
+    # Azure + Snowflake
+    azure_key_vault_name: <your-prod-env-Azure-Key-Vault-name>
+    snowflake_account: <your-prod-env-Snowflake-account-name>
+    snowflake_database: ASCEND_ENV_PROD
+    snowflake_schema: quickstart
+    snowflake_user: ASCEND_ENV_PROD
+    snowflake_role: ASCEND_ENV_PROD
+    snowflake_warehouse: ASCEND_ENV_PROD
+    success_rate_threshold: 50
+
+    # GCP + BigQuery
+    gcp_project_id: <your-prod-env-GCP-project-id>
+    bigquery_dataset: quickstart
+    success_rate_threshold: 50
+
+  defaults:
+    - kind: Flow
+      name:
+        regex: .*
+      spec:
+        data_plane:
+          connection_name: my_data_plane
+```
+  7. You should now have one set of parameters (either GCP + BigQuery or Snowflake + Azure). Click **Save** to save your changes.
+
 
 <a name="warm-up-project-structure"></a>
 
@@ -136,14 +174,23 @@ Let's Ascend! 🚀
 **Objective**: Analyze customer cohorts to understand booking behaviors and trends.
 
   ### 1. Overview
-  In this expedition, you'll work with customer data to categorize customers into cohorts and update reports for downstream consumers in PowerBI. To start open the `flows/customer_cohort_analysis` folder in the File Explorer on the left.
+  In this expedition, you'll work with customer data to categorize customers into cohorts and update reports for downstream consumers in PowerBI. To start, open the `flows/1-customer_cohort_analysis` folder in the File Explorer on the left.
 
+  We'll be learning about the following concepts:
+    1. How to define a basic read connector, transform, and Python task with code
+    2. How to build an Ascend project with no prior working build
+    3. How to run an Ascend flow
+
+  To do so, we'll be using the following:
   - **Data Source**: 
     - `data/customers.csv`
   - **Components**: 
-    - `customers.yaml`
-    - `customer_cohort_analysis_transform.sql.jinja`
-    - `refresh_powerbi.py`
+    - Read Connectors:
+      - `customers.yaml`
+    - Transforms:
+      - `customer_cohort_analysis_transform.sql.jinja`
+    - Python Tasks:
+      - `refresh_report.py`
 
   ### 2. Flow Walkthrough
   1. **Read Component**:
@@ -158,20 +205,23 @@ Let's Ascend! 🚀
     In this simple SQL transformation component, we're transforming the data to categorize cohorts based on booking dates and behaviors.
 
   3. **Python Task**
-      - Open `components/refresh_powerbi.py`.
+      - Open `components/refresh_report.py`.
 
       Our end point for this dataset is a Power BI report. This script refreshes a Power BI dataset by authenticating with Azure Active Directory and triggering the refresh through the Power BI REST API.
 
 ### 3. Run the Flow
   Now that you've explored the flow, let's run it!
 
-  1. From the **Build Explorer** panel on the bottom of the screen click on the **customer_cohort_analysis** flow.
-  2. Click on the **Run** button from the Actions bar at the top of the **Build Explorer** panel.
+  1. Since we have not built this project before, we will need to build this project.
+  2. In the **Build Explorer** panel on the bottom of the screen, click on the **Build Project** button in the middle of the panel. 
+      - In the case where the **Build Explorer** panel is not already open, click on **Show Build Panel** in the bottom right.
+  3. Once the build completes, click on the **customer_cohort_analysis** flow on the left side of the panel.
+  4. Click on the **Run** button from the Actions bar in the top right of the **Build Explorer** panel.
 
   You should see the flow run to completion in the **DAG view** of the **Build Explorer** panel. You can click the **Runs** tab within the **Build Explorer** panel to view details about the run including **Config Details**, **Logs**, and a **Timeline view** of the run.
 
-### 4. Congratulations! 
-  Great job! Expedition 1 was a breeze! Ready to take it to the next level? Let's try another one.
+### 4. Congratulations!
+  Great job! Expedition 1 was a breeze! You not only learned how to build various basic components, but you can even build and run Ascend flows now! Ready to take it to the next level? Let's try another one.
 
 ---
 
@@ -185,29 +235,36 @@ Let's Ascend! 🚀
 ### 1. Overview
 In this flow, you'll work with gear data to analyze how out gear holds up on various trips. We'll also implement data quality checks to ensure the accuracy of our data. We definitely don't want to take any risks with our gear!
 
-To start open the `flows/gear_durability_analysis` folder in the File Explorer on the left.
+We'll be learning about the following concepts:
+  1. How to write basic data quality tests in Ascend
+  2. How to build an Ascend project with a previously working build
+
+To start, open the `flows/2-gear_durability_analysis` folder in the File Explorer on the left.
 
 - **Data Sources**: 
   - `data/expeditions.csv`
   - `data/gear_rentals.csv`
   - `data/routes.csv`
-- **Components**: 
-  - `expeditions.yaml`
-  - `gear_durability_analysis_transform.sql.jinja`
-  - `gear_rentals.yaml`
-  - `routes.yaml`
+- **Components**:
+  - Read Connectors:
+    - `expeditions.yaml`
+    - `gear_rentals.yaml`
+    - `routes.yaml`
+    - `expedition_outcomes.yaml`
+  - Transforms:
+    - `gear_durability_analysis_transform.sql.jinja`
 
 ### 2. Flow Walkthrough
   - **Read Components**:
 
-      In this flow we're reading data from 3 different tables. Let's take a look at each of the components for these tables.
+      In this flow we're reading data from 4 different tables. Let's take a look at each of the components for these tables:
 
     - Open `components/expeditions.yaml`. 
     - Open `components/gear_rentals.yaml`. 
     - Open `components/routes.yaml`. 
+    - Open `components/expedition_outcomes.yaml`.
   
       These components read data from our local files. We define the connection type as `local_files` and the path to the files in the data folder. We also define the parser as a CSV parser that expects a header row for each CSV file.
-
 
   - **Data Transformation**:
 
@@ -219,28 +276,49 @@ To start open the `flows/gear_durability_analysis` folder in the File Explorer o
 
 Let's add a data quality test to our `gear_rentals` component.
 
-  - To add data quality tests, add the following code to the `gear_rentals.yaml` file:
+  - To add data quality tests, add the following code to the bottom of the `gear_rentals.yaml` file:
 
       ```yaml
-      tests:
-        columns:
-          rental_date:
-            - not_null
+        tests:
+          columns:
+            rental_date:
+              - not_null
       ```
-  With this test, we're ensuring the `rental_date` column is not null.  
+    With this test, we're ensuring the `rental_date` column is not null.
+
+  - The code in `gear_rentals.yaml` should now look like the following:
+      ```yaml
+      component:
+        read:
+          connection: local_files
+          local_file:
+            path: /gear_rentals.csv
+            parser:
+              csv:
+                has_header: true
+        tests:
+          columns:
+            rental_date:
+              - not_null
+      ```
 
   - Click **Save** to save the changes.
 
+### 4. Build & Run the Project
 
-### 4. Build the Project
+Since changes have been made to the project, we will need to rebuild the project:
 
-To build the project with the changes you made, click on the **Build Project** button from the **Build Explorer** panel. Once the build is complete, you can run the flow to see the results.
-
-<!-- TODO: Do we ever actually define the Build Explorer panel? I know we can get to Build Project by clicking the bottom-left Build Successful/Failed option and that opens to Build Project. If that's what it's referring to that's fine but I don't think I'd expect that to be the Build Explorer panel if I was the customer. I think we either need to refer to it explicitly/detail how to do it in the instructions or make a more obvious sign on the UI for a customer to easily understand there's something there. -->
-
+  1. Navigate to the bottom bar of your browser. Here, you should see a couple of items such as the build status, what branch you're on, and the last commit. 
+  2. Click on the build status, which should be one of the following:
+      - `No build`
+      - `Build successful`
+      - `Build failed`
+  3. On the window that pops up, click **Build Project**.
+  4. Once the project finishes building, click on **gear_durability_analysis** in the **Build Explorer** panel and run the flow to see the results.
+      - In the case where the **Build Explorer** panel is not already open, click on **Show Build Panel** in the bottom right.
 
 ### 5. Congratulations!
-Great job! You've completed Expedition 2! Let's keep climbing.
+Great job! You've completed Expedition 2! Better yet, now that you know how to create data quality checks, you can make sure your data is always clean and ready to use. Can't stop here though, let's keep climbing!
 
 ---
 
@@ -254,22 +332,27 @@ Great job! You've completed Expedition 2! Let's keep climbing.
 ### 1. Overview
 In this flow, you'll work with performance data to evaluate guide performance and the success rates of expeditions. We'll also work with Otto to update our transformation logic to create a `guide_name` field by combining first and last names. 
 
-To start, open the `flows/guide_performance_summiting_success_rate` folder in the File Explorer on the left.
+We'll be learning about the following concepts:
+  1. How to use Otto, the Ascend AI!
+
+To start, open the `flows/3-guide_performance_summiting_success_rate` folder in the File Explorer on the left.
 
 - **Data Sources**: 
   - `data/expeditions.csv`
   - `data/expeditions_outcomes.csv`
   - `data/guides.csv`
 - **Components**: 
-  - `expeditions.yaml`
-  - `expeditions_outcomes.yaml`
-  - `guide_performance_summiting_success_rate_transform.sql.jinja`
-  - `guides.yaml`
+  - Read Components:
+    - `expeditions.yaml`
+    - `expeditions_outcomes.yaml`
+    - `guides.yaml`
+  - Transforms:
+    - `guide_performance_summiting_success_rate_transform.sql.jinja`
 
 ### 2. Flow Walkthrough
   -  **Read Components**
 
-      In this flow we're reading data from 3 different tables. Let's take a look at each of the components for these tables.
+      In this flow we're reading data from 3 different tables. Let's take a look at each of the components for these tables:
 
       - Open `components/expeditions.yaml`. 
       - Open `components/expeditions_outcomes.yaml`. 
@@ -299,13 +382,21 @@ To do this, let's try asking our trusty AI pal Otto for help.
   - Otto will provide you with the code to update the transformation component. You can copy and paste the change or let Otto update the file directly for you (you just need to confirm the changes you want him to make).
   - Once the file is updated, click **Save** to save the changes.
 
-### 4. Build the Project
+### 4. Build & Run the Project
 
-To build the project with the changes you made, click on the **Build Project** button from the **Build Explorer** panel. Once the build is complete, you can run the flow to see the results.
+As with Expedition 2, since changes have been made, we will need to rebuild the project. The steps have been restated here but are the same process:
 
+  1. Navigate to the bottom bar of your browser. Here, you should see a couple of items such as the build status, what branch you're on, and the last commit. 
+  2. Click on the build status, which should be one of the following:
+      - `No build`
+      - `Build successful`
+      - `Build failed`
+  3. On the window that pops up, click **Build Project**.
+  4. Once the project finishes building, click on **guide_performance_summiting_success_rates** in the **Build Explorer** panel and run the flow to see the results.
+      - In the case where the **Build Explorer** panel is not already open, click on **Show Build Panel** in the bottom right.
 
 ### 5. Congratulations!
-Great job! You've completed Expedition 3! Ready for your next Adventure?
+Amazing! You've completed Expedition 3 and on the way, made friends with Otto, your ever helpful AI assistant! Ready for the next adventure?
 
 ---
 
@@ -318,26 +409,33 @@ Great job! You've completed Expedition 3! Ready for your next Adventure?
 ### 1. Overview
 In this flow, you'll work with route data to predict the success of expeditions based on route difficulty. We'll also optimize the flow by changing the **materialization type** of one of the components to a **View**.
 
-To start open the `flows/route_difficulty_success_prediction` folder in the File Explorer on the left.
+We'll be learning about the following concepts:
+  1. How to change the materialization type in a SQL query
+
+To start, open the `flows/4-route_difficulty_success_prediction` folder in the File Explorer on the left.
 
 - **Data Sources**: 
     - `data/expeditions_outcomes.csv`
     - `data/expeditions.csv`
     - `data/routes.csv`
-
-  - **Components**: 
+- **Components**: 
+  - Read Components:
     - `expeditions_outcomes.yaml`
     - `expeditions.yaml`
     - `routes.yaml`
+  - Transforms:
     - `route_difficulty_success_prediction_transform.sql.jinja`
 
 ### 2. Flow Walkthrough
 - **Read Components**
+
+  In this flow we're reading data from 3 different tables. Let's take a look at each of the components for these tables:
+
   - Open `components/expeditions_outcomes.yaml`. 
   - Open `components/expeditions.yaml`. 
   - Open `components/routes.yaml`. 
 
-      These components read data from our local files. We define the connection type as `local_files` and the path to the files in the data folder. We also define the parser as a CSV parser that expects a header row for each CSV file.
+  These components read data from our local files. We define the connection type as `local_files` and the path to the files in the data folder. We also define the parser as a CSV parser that expects a header row for each CSV file.
 
 - **Data Transformation**
     - Open `components/route_difficulty_success_prediction_transform.sql.jinja`.
@@ -360,12 +458,12 @@ Here's how to do it:
 
 - Click **Save** to save the changes.
 
-### 4. Build the Project
+### 4. Build & Run the Project
 
-To build the project with the changes you made, click on the **Build Project** button from the **Build Explorer** panel. Once the build is complete, you can run the flow to see the results.
+Repeat the same process as the previous expeditions to build the project. Once the build is complete, run the **route_difficulty_success_prediction** flow to see your changes.
 
 ### 5. Congratulations!
-Great job! You've completed Expedition 4! On to the next one!
+Fantastic job making it to the end of expedition 4! The different "views" on the way to the top sure are great, huh? Let's keep going!
 
 ---
 
@@ -379,25 +477,33 @@ Great job! You've completed Expedition 4! On to the next one!
 ### 1. Overview
 In this flow, you'll work with weather data to assess how weather conditions affect expedition outcomes. We'll also adjust pipeline parameters to refine weather impact insights.
 
-To start open the `flows/weather_impact_analysis` folder in the File Explorer on the left.
+We'll be learning about the following concepts:
+  1. How to change a flow's parameters
+
+To start, open the `flows/5-weather_impact_analysis` folder in the File Explorer on the left.
 
 - **Data Sources**: 
   - `data/expeditions_outcomes.csv`
   - `data/expeditions.csv`
   - `data/weather.csv`
 - **Components**: 
-  - `expeditions_outcomes.yaml`
-  - `expeditions.yaml`
-  - `weather.yaml`
-  - `weather_impact_analysis_transform.sql.jinja`
+  - Read Components:
+    - `expeditions_outcomes.yaml`
+    - `expeditions.yaml`
+    - `weather.yaml`
+  - Transforms:
+    - `weather_impact_analysis_transform.sql.jinja`
 
 ### 2. Flow Walkthrough
 - **Read Components**
+
+  In this flow we're reading data from 3 different tables. Let's take a look at each of the components for these tables:
+
   - Open `components/expeditions_outcomes.yaml`. 
   - Open `components/expeditions.yaml`. 
   - Open `components/weather.yaml`. 
       
-    These components read data from our local files. We define the connection type as `local_files` and the path to the files in the data folder. We also define the parser as a CSV parser that expects a header row for each CSV file.
+  These components read data from our local files. We define the connection type as `local_files` and the path to the files in the data folder. We also define the parser as a CSV parser that expects a header row for each CSV file.
 
 - **Data Transformation**
   - Open `components/weather_impact_analysis_transform.sql.jinja`.
@@ -414,8 +520,13 @@ To do this, we will change the parameter value located in the `prod.yaml` file i
     ```yaml
         success_rate_threshold: 75
     ```
-### 4. Congratulations!
-Great job! You've completed Expedition 5! Ready to take on the next challenge?
+
+### 4. Build & Run the Project
+
+Repeat the same process as the previous expeditions to build the project. Once the build is complete, run the **weather_impact_analysis** flow to see your changes.
+
+### 5. Congratulations!
+Sweet! You've completed Expedition 5! Plus, you now know how to use parameters in your Ascend flows, meaning you can always have the flow run with the exact specifications you want. Ready to take on the next challenge?
 
 ---
 
@@ -429,22 +540,30 @@ Great job! You've completed Expedition 5! Ready to take on the next challenge?
 ### 1. Overview
 In this flow, you'll work with customer journey data to map and optimize the customer journey to help the marketing team boost conversions. We'll also implement data partitioning on our transformed data to optimize the flow.
 
-To start open the `flows/customer_journey_conversion_analysis` folder in the File Explorer on the left.
+We'll be learning about the following concepts:
+  1. How to implement Ascend Data Partitioning in a SQL transform
+
+To start, open the `6-customer_journey_conversion_analysis` folder in the File Explorer on the left.
 
 - **Data Sources**: 
   - `data/orders.csv`
   - `data/web_traffic.csv`
 - **Components**: 
-  - `customer_journey_conversion_analysis_transform.sql.jinja`
-  - `orders.yaml`
-  - `web_traffic.yaml`
+  - Read Connectors:
+    - `orders.yaml`
+    - `web_traffic.yaml`
+  - Transforms:
+    - `customer_journey_conversion_analysis_transform.sql.jinja`
 
 ### 2. Flow Walkthrough
-- **Read Components**
+- **Read Components**  
+
+  In this flow we're reading data from 2 different tables. Let's take a look at each of the components for these tables:
+
   - Open `components/orders.yaml`. 
   - Open `components/web_traffic.yaml`. 
 
-    These components read data from our local files. We define the connection type as `local_files` and the path to the files in the data folder. We also define the parser as a CSV parser that expects a header row for each CSV file.
+  These components read data from our local files. We define the connection type as `local_files` and the path to the files in the data folder. We also define the parser as a CSV parser that expects a header row for each CSV file.
 
 - **Data Transformation**
   - Open `components/customer_journey_conversion_analysis_transform.sql.jinja`.
@@ -466,12 +585,12 @@ Here's how to do it:
 
 - Click **Save** to save the changes.
 
-### 4. Build the Project
+### 4. Build & Run the Project
 
-To build the project with the changes you made, click on the **Build Project** button from the **Build Explorer** panel. Once the build is complete, you can run the flow to see the results.
+Repeat the same process as the previous expeditions to build the project. Once the build is complete, run the **customer_journey_conversion_analysis** flow to see your changes.
 
 ### 5. Congratulations!
-Great job! You've completed Expedition 6! Your biggest adventure is on the horizon! Ready for the final expedition?
+You've completed Expedition 6! That was a tricky one, but definitely a worthwhile one. You've learned about a big concept in Ascend, data partitioning, which will definitely come in handy in the future. Hold on though, your biggest adventure is still on the horizon! Ready for the final expedition?
 
 ---
 
@@ -485,14 +604,19 @@ Great job! You've completed Expedition 6! Your biggest adventure is on the horiz
 ### 1. Overview
 In this flow, you'll work with revenue and cost data to analyze the financial health of the company. Now that you've got a good grasp on the basics of the platform, you'll be building this flow from scratch. But don't worry, we've got you covered with step-by-step instructions.
 
+We'll be learning about the following concepts:
+  1. How to create and write the code of a new Read Component
+  2. How to create and write the code of a new SQL transform
+  3. How to build and run your own fully functioning Ascend Flow!
+
 - **Data Sources**: 
   - `data/expeditions.csv`
   - `data/financial.csv`
 
 ### 2. Set up the flow
-  - To start, you'll need to create a new folder in the `flows` directory. Let's name it `revenue_cost_analysis`. This folder will host all the assets for this flow.
-  - Inside the `revenue_cost_analysis` folder, create a new folder called `components`. Ascend looks for a `components` folder in each flow directory to understand the components in the flow.
-  <!-- TODO: Don't we need to also have them create a flow definition YAML? -->
+  - To start, you'll need to create a new folder in the `flows` directory. Let's name it `7-revenue_cost_analysis`. This folder will host all the assets for this flow.
+  - Inside the `7-revenue_cost_analysis` folder, create a new folder called `components`. Ascend looks for a `components` folder in each flow directory to understand the components in the flow.
+  - Inside the `7-revenue_cost_analysis` folder, create a new yaml file named `7-revenue_cost_analysis.yaml`. This  file will define the flow. In advance use cases, you can use these flow definition files to define parameters for a specific flow. For now, we'll leave this empty. 
 
 ### 3. Create Your Expeditions Read Component
   - Create a new file called `expeditions.yaml` in the `components` folder.
@@ -500,13 +624,13 @@ In this flow, you'll work with revenue and cost data to analyze the financial he
 
       ```yaml
       component:
-      read:
-        connection: local_files
-        local_file:
-          path: /expeditions.csv
-          parser:
-            csv:
-              has_header: true
+        read:
+          connection: local_files
+          local_file:
+            path: /expeditions.csv
+            parser:
+              csv:
+                has_header: true
       ```
   You'll notice that this is the same code we've used in previous flows for reading the Expeditions data. In many cases, you'll be able to reuse components from other flows so there is no need to re-ingest data. But for this flow we're keeping things simple and ingesting the data again.
 
@@ -518,13 +642,13 @@ In this flow, you'll work with revenue and cost data to analyze the financial he
 
       ```yaml
       component:
-      read:
-        connection: local_files
-        local_file:
-          path: /financial.csv
-          parser:
-            csv:  
-              has_header: true
+        read:
+          connection: local_files
+          local_file:
+            path: /financial.csv
+            parser:
+              csv:  
+                has_header: true
       ```
   - Click **Save** to save the changes.
 
@@ -559,17 +683,17 @@ This query joins data from the two read components to analyze the financial heal
 
 ### 5. Build & Run the Project
 
-To build the project with the changes you made, click on the **Build Project** button from the **Build Explorer** panel. Once the build is complete, you can run the flow to see the results.
+Repeat the same process as the previous expeditions to build the project. Once the build is complete, run the **revenue_cost_analysis** flow to see your changes.
 
 ### 6. Congratulations!
-Great job! You've completed Expedition 7! 
+Great job! You've completed Expedition 7 and made your own fully functioning Ascend flow! You did it!
 
 ---
 
 ![Congratulations!](https://storage.googleapis.com/external-docs-assets/v3/ottos-expeditions/8.png)
 
 ## Congratulations! You've completed all the expeditions!
-Great job! You've successfully navigated through the challenges and conquered all the expeditions. Now you're ready to take on new adventures. Here's a few places to start:
+Wow, way to go! You've successfully navigated through the challenges and conquered all the expeditions. Now you're ready to take on new adventures. Here are a few places where you can get started:
 
 ### 🧑‍🤝‍🧑 Join the Expedition Team
 Become a contributor and help us scale new heights! Follow the steps in `CONTRIBUTING.md` to get started.
