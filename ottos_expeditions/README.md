@@ -145,7 +145,7 @@ Next, let's set up your Workspace.
           data_plane:
             connection_name: my_data_plane
   ```
-  
+
   7. You should now have one set of parameters (either GCP + BigQuery or Snowflake + Azure). Click **Save** to save your changes.
 
 ### Configuring your Vault
@@ -247,7 +247,17 @@ Let's Ascend! 🚀
   3. Once the build completes, click on the **customer_cohort_analysis** flow on the left side of the panel.
   4. Click on the **Run** button from the Actions bar in the top right of the **Build Explorer** panel.
 
-  You should see the flow run to completion in the **graph view** of the **Build Explorer** panel. You can click the **Runs** tab within the **Build Explorer** panel to view details about the run including **Config Details**, **Logs**, and a **Timeline view** of the run.
+  You should see the flow run to completion in the **graph view** of the **Build Explorer** panel. 
+  
+### 4. View Run Details
+
+  After running a flow, you may also be interested to see what the results were. To do so, you can click the **Runs** tab at the top of the **Build Explorer** panel to view details about the run including **Config Details**, **Logs**, and a **Timeline view** of the run.
+
+  For now, we're going to focus on viewing the records that were processed in a particular run:
+
+  1. There may be a couple runs that have an `error` status but let's click on the flow name of a run with a `success` status (the flow name is underlined).
+  2. In the graph view of the run on your main panel, click on the 3 dot button at the top right of any component.
+  3. From the dropdown menu that appears, select the **Records** option from the dropdown menu to see all the records going through the pipeline!
 
 ### 4. Congratulations!
   Great job! Expedition 1 was a breeze! You not only learned how to build various basic components, but you can even build and run Ascend flows now! Ready to take it to the next level? Let's try another one.
@@ -348,6 +358,7 @@ Let's Ascend! 🚀
   3. In the menu that pops up, click **Build Project**.
   4. Once the project finishes building, click on **gear_durability_analysis** in the **Build Explorer** panel and run the flow to see the results.
       - In the case where the **Build Explorer** panel is not already open, click on **Show Build Panel** in the bottom right.
+  5. After the flow runs, view the records of the successful run to see how this data quality test changed which records are being processed.
 
 ### 6. Congratulations!
   
@@ -459,6 +470,7 @@ Let's Ascend! 🚀
   2. Click on the **Current Build** section in the top left of the Build Explorer panel.
   3. At the top of the box to the right, you should see the line `File changes have been made since the last build`, with the **Build Project** button next to it.
   4. Click the **Build Project** button to create your new build.
+  5. Once the build completes, click on **guide_performance_summiting_success_rate** in the **Build Explorer** panel and run the flow to see the results. Take a peek at the records after to see what may have changed.
 
 ### 6. Congratulations!
 
@@ -531,7 +543,7 @@ Let's Ascend! 🚀
 
 ### 5. Build & Run the Project
 
-  Build the project using either of the methods from Expedition 2 or 3. Once the build is complete, you can run the **route_difficulty_success_prediction** flow.
+  Build the project using either of the methods from Expedition 2 or 3. Once the build is complete, you can run the **route_difficulty_success_prediction** flow and view the results and records after.
 
 ### 6. Congratulations!
   
