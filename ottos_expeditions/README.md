@@ -397,16 +397,12 @@ Let's Ascend! 🚀
 
 ### 5. Build & Run the Project
 
-  As with Expedition 2, since changes have been made, we will need to rebuild the project. The steps have been restated here but are the same process:
+  As with Expedition 2, since changes have been made, we will need to rebuild the project. There's another way to build a project once you have saved new changes:
 
-  1. Navigate to the bottom bar of your browser. Here, you should see a couple of items such as the build status, what branch you're on, and the last commit. 
-  2. Click on the build status, which should be one of the following:
-      - `No build`
-      - `Build successful`
-      - `Build failed`
-  3. On the window that pops up, click **Build Project**.
-  4. Once the project finishes building, click on **guide_performance_summiting_success_rates** in the **Build Explorer** panel and run the flow to see the results.
-      - In the case where the **Build Explorer** panel is not already open, click on **Show Build Panel** in the bottom right.
+  1. If your Build Explorer panel is not open, you can open it by clicking the **Show Build Panel** button in the bottom right.
+  2. Click on the **Current Build** section in the top left of the Build Explorer panel.
+  3. At the top of the box to the right, you should see the line `File changes have been made since the last build`, with the **Build Project** button next to it.
+  4. Click the **Build Project** button to create your new build.
 
 ### 6. Congratulations!
 
@@ -479,7 +475,7 @@ Let's Ascend! 🚀
 
 ### 5. Build & Run the Project
 
-  Repeat the same process as the previous expeditions to build the project. Once the build is complete, you can run the **route_difficulty_success_prediction** flow.
+  Build the project using either of the methods from Expedition 2 or 3. Once the build is complete, you can run the **route_difficulty_success_prediction** flow.
 
 ### 6. Congratulations!
   
