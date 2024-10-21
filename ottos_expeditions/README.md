@@ -196,7 +196,7 @@ Let's Ascend! 🚀
   1. **Read Component**:
       - Open `components/customers.yaml`.
     
-      This simple yaml file defines the connection to our local files so we can grab customer data. We define the connection type as `local_files` and the path to the file as `customers.csv`. We also define the parser as a csv with a header.
+      This simple yaml file defines the connection to our local files so we can grab customer data. We define the connection type as `local_file` and the path to the file as `customers.csv`. Note that the *name* of the connection we are using is `local_files` while the *type* of connection is `local_file`. We also define the parser as a CSV with a header.
 
 
 2. **Data Transformation**:
@@ -218,7 +218,7 @@ Let's Ascend! 🚀
   3. Once the build completes, click on the **customer_cohort_analysis** flow on the left side of the panel.
   4. Click on the **Run** button from the Actions bar in the top right of the **Build Explorer** panel.
 
-  You should see the flow run to completion in the **DAG view** of the **Build Explorer** panel. You can click the **Runs** tab within the **Build Explorer** panel to view details about the run including **Config Details**, **Logs**, and a **Timeline view** of the run.
+  You should see the flow run to completion in the **graph view** of the **Build Explorer** panel. You can click the **Runs** tab within the **Build Explorer** panel to view details about the run including **Config Details**, **Logs**, and a **Timeline view** of the run.
 
 ### 4. Congratulations!
   Great job! Expedition 1 was a breeze! You not only learned how to build various basic components, but you can even build and run Ascend flows now! Ready to take it to the next level? Let's try another one.
@@ -233,7 +233,7 @@ Let's Ascend! 🚀
 **Objective**: Ensure the reliability of our gear by analyzing durability metrics.
 
 ### 1. Overview
-In this flow, you'll work with gear data to analyze how out gear holds up on various trips. We'll also implement data quality checks to ensure the accuracy of our data. We definitely don't want to take any risks with our gear!
+In this flow, you'll work with gear data to analyze how our gear holds up on various trips. We'll also implement data quality checks to ensure the accuracy of our data. We definitely don't want to take any risks with our gear!
 
 We'll be learning about the following concepts:
   1. How to write basic data quality tests in Ascend
@@ -313,7 +313,7 @@ Since changes have been made to the project, we will need to rebuild the project
       - `No build`
       - `Build successful`
       - `Build failed`
-  3. On the window that pops up, click **Build Project**.
+  3. In the menu that pops up, click **Build Project**.
   4. Once the project finishes building, click on **gear_durability_analysis** in the **Build Explorer** panel and run the flow to see the results.
       - In the case where the **Build Explorer** panel is not already open, click on **Show Build Panel** in the bottom right.
 
@@ -518,7 +518,7 @@ Let's say we want to adjust the pipeline parameters to enhance analysis precisio
 
 To do this, we will change the parameter value located in the `prod.yaml` file in the `profiles` folder. Change the value from 50 to 75.
     ```yaml
-        success_rate_threshold: 75
+    success_rate_threshold: 75
     ```
 
 ### 4. Build & Run the Project
