@@ -392,7 +392,39 @@ Let's Ascend! 🚀
       Hey Otto, can you help me update the transformation component to create a `guide_name` field by combining first and last names?
       ```
 
-  - Otto will provide you with the code to update the transformation component. You can copy and paste the change or let Otto update the file directly for you (you just need to confirm the changes you want him to make).
+  - Otto will provide you with the code to update the transformation component. You can copy and paste the change or let Otto update the file directly for you (you just need to confirm the changes you want him to make). Below is an example of the code Otto may provide. If Otto doesn't provide something similar or is missing parts of the query, try to prompt him to fix his code for you!
+
+    ```sql
+      WITH guide_success_rate AS (
+          SELECT
+              g.guide_id,
+              g.first_name,
+              g.last_name,
+              COUNT(e.expedition_id) AS total_expeditions,
+              SUM(CASE WHEN eo.summit_reached = TRUE THEN 1 ELSE 0 END) AS total_successes,
+              ROUND(SUM(CASE WHEN eo.summit_reached = TRUE THEN 1 ELSE 0 END) * 100.0 / COUNT(e.expedition_id), 2) AS success_rate
+          FROM
+              {{ ref('guides') }} g
+          JOIN
+              {{ ref('expeditions') }} e ON g.guide_id = e.guide_id
+          JOIN
+              {{ ref('expedition_outcomes') }} eo ON e.expedition_id = eo.expedition_id
+          GROUP BY
+              g.guide_id, g.first_name, g.last_name
+      )
+      SELECT
+          guide_id,
+          first_name,
+          last_name,
+          total_expeditions,
+          total_successes,
+          success_rate
+      FROM
+          guide_success_rate
+      ORDER BY
+          success_rate DESC
+    ```
+
   - Once the file is updated, click **Save** to save the changes.
 
 ### 5. Build & Run the Project
