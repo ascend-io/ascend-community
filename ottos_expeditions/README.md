@@ -460,7 +460,7 @@ Here's how to do it:
 
 ### 4. Build & Run the Project
 
-Repeat the same process as the previous expeditions to build the project. Once the build is complete, run the **route_difficulty_success_prediction** flow to see your changes.
+Repeat the same process as the previous expeditions to build the project. Once the build is complete, you can run the **route_difficulty_success_prediction** flow.
 
 ### 5. Congratulations!
 Fantastic job making it to the end of expedition 4! The different "views" on the way to the top sure are great, huh? Let's keep going!
