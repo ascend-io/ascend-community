@@ -115,38 +115,62 @@ Next, let's set up your Workspace.
   3. Click on the Files icon in the top left to open the File Explorer.
   4. Click on the Otto's Expeditions project in the File Explorer.
   5. Navigate to the profiles folder and click on prod.yaml to open the file in the editor.
-  6. There are two possible configuration options presented: Azure + Snowflake, which sets parameters for your Azure Key Vault and Snowflake Data Plane, and GCP + BigQuery, which sets parameters for your GCP Secret Manager and BigQuery Data Plane. You will *delete the set of parameters you do not need* and then *update the values of the set of parameters* you will be using. You can see a sample configuration below:
+  6. There are two possible configuration options presented: Azure + Snowflake, which sets parameters for your Azure Key Vault and Snowflake Data Plane, and GCP + BigQuery, which sets parameters for your GCP Secret Manager and BigQuery Data Plane. You will ***delete the set of parameters you do not need*** and then ***update the values of the set of parameters*** you will be using. You can see a sample configuration below:
 
-```
-profile:
-  parameters:
-    # TODO: If you have completed the Ascend Quickstart, you can use the same values here
+  ```yaml
+  profile:
+    parameters:
+      # TODO: If you have completed the Ascend Quickstart, you can use the same values here
 
-    # Azure + Snowflake
-    azure_key_vault_name: <your-prod-env-Azure-Key-Vault-name>
-    snowflake_account: <your-prod-env-Snowflake-account-name>
-    snowflake_database: ASCEND_ENV_PROD
-    snowflake_schema: quickstart
-    snowflake_user: ASCEND_ENV_PROD
-    snowflake_role: ASCEND_ENV_PROD
-    snowflake_warehouse: ASCEND_ENV_PROD
-    success_rate_threshold: 50
+      # Azure + Snowflake
+      azure_key_vault_name: <your-prod-env-Azure-Key-Vault-name>
+      snowflake_account: <your-prod-env-Snowflake-account-name>
+      snowflake_database: ASCEND_ENV_PROD
+      snowflake_schema: quickstart
+      snowflake_user: ASCEND_ENV_PROD
+      snowflake_role: ASCEND_ENV_PROD
+      snowflake_warehouse: ASCEND_ENV_PROD
+      success_rate_threshold: 50
 
-    # GCP + BigQuery
-    gcp_project_id: <your-prod-env-GCP-project-id>
-    bigquery_dataset: quickstart
-    success_rate_threshold: 50
+      # GCP + BigQuery
+      gcp_project_id: <your-prod-env-GCP-project-id>
+      bigquery_dataset: quickstart
+      success_rate_threshold: 50
 
-  defaults:
-    - kind: Flow
-      name:
-        regex: .*
-      spec:
-        data_plane:
-          connection_name: my_data_plane
-```
+    defaults:
+      - kind: Flow
+        name:
+          regex: .*
+        spec:
+          data_plane:
+            connection_name: my_data_plane
+  ```
+  
   7. You should now have one set of parameters (either GCP + BigQuery or Snowflake + Azure). Click **Save** to save your changes.
 
+### Configuring your Vault
+
+  1. Return to the open File Explorer, navigate to the vaults folder, and open the `my_vaults.yaml` file.
+  2. Here, keep the code of the vault option you are using and delete the other.
+  * If you are using GCP, delete the `azure_key_vault` block such that your file looks like this:
+
+  ```yaml
+  vault:
+    gcp_secret_manager:
+      project: ${parameter.gcp_project_id}
+  ```
+  * If you are using Azure, delete the `gcp_secret_manager` block such that your file looks like this:
+
+  ```yaml
+  vault:
+    azure_key_vault:
+      vault_name: ${parameter.azure_key_vault_name}
+  ```
+
+  And now you're done! You actually don't have to input the value of the vault because you did that earlier! Here's a breakdown of why (and a little bit of a sneak peek into some cool features of Ascend):
+    
+  * The `${}` syntax in Ascend is a way of you passing variable values around
+  * The `parameter.<vault_name>` value is being drawn from the values you gave us in your profile. If you look closely, you'll notice `gcp_project_id` or `azure_key_vault_name` are values in the parameter list of the profile you chose.
 
 <a name="warm-up-project-structure"></a>
 
