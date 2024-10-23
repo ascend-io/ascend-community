@@ -114,7 +114,7 @@ Next, let's set up your Workspace.
   2. Click on the **Workspace** you just created.
   3. Click on the Files icon in the top left to open the File Explorer.
   4. Click on the Otto's Expeditions project in the File Explorer.
-  5. Navigate to the profiles folder and click on prod.yaml to open the file in the editor.
+  5. Navigate to the `profiles` folder and click on `prod.yaml` to open the file in the editor.
   6. There are two possible configuration options presented: Azure + Snowflake, which sets parameters for your Azure Key Vault and Snowflake Data Plane, and GCP + BigQuery, which sets parameters for your GCP Secret Manager and BigQuery Data Plane. You will ***delete the set of parameters you do not need*** and then ***update the values of the set of parameters*** you will be using. You can see a sample configuration below:
 
   ```yaml
@@ -150,7 +150,7 @@ Next, let's set up your Workspace.
 
 ### Configuring your Vault
 
-  1. Return to the open File Explorer, navigate to the vaults folder, and open the `my_vaults.yaml` file.
+  1. Return to the open File Explorer, navigate to the `vaults` folder, and open the `my_vaults.yaml` file.
   2. Here, keep the code of the vault option you are using and delete the other.
   * If you are using GCP, delete the `azure_key_vault` block such that your file looks like this:
 
@@ -169,8 +169,8 @@ Next, let's set up your Workspace.
 
   And now you're done! You actually don't have to input the value of the vault because you did that earlier! Here's a breakdown of why (and a little bit of a sneak peek into some cool features of Ascend):
     
-  * The `${}` syntax in Ascend is a way of you passing variable values around
-  * The `parameter.<vault_name>` value is being drawn from the values you gave us in your profile. If you look closely, you'll notice `gcp_project_id` or `azure_key_vault_name` are values in the parameter list of the profile you chose.
+  * The `${}` syntax in Ascend is a way of you passing variable values around.
+  * The `parameter.<vault_name>` value is being drawn from the values you set in your Profile. If you look closely, you'll notice `gcp_project_id` or `azure_key_vault_name` are values in the parameter list of the Profile you chose.
 
 <a name="warm-up-project-structure"></a>
 
@@ -312,7 +312,7 @@ Let's Ascend! 🚀
 
     Open `components/gear_durability_analysis_transform.sql.jinja`.
 
-    This query joins data from the three read components to analyze the durability of different gear types. By calculating the `damage_rate`, it provides insights into the percentage of gear that was damaged during each expedition so we can ensure we're providing our customers with reliable gear.
+    This query joins data from the four read components to analyze the durability of different gear types. By calculating the `damage_rate`, it provides insights into the percentage of gear that was damaged during each expedition so we can ensure we're providing our customers with reliable gear.
 
 ### 4. Add a Data Quality Test
 
@@ -378,7 +378,7 @@ Let's Ascend! 🚀
   In this flow, you'll work with performance data to evaluate guide performance and the success rates of expeditions. We'll also work with Otto to update our transformation logic to create a `guide_name` field by combining first and last names. 
 
   We'll be learning about the following concepts:
-  1. How to use Otto, the Ascend AI!
+  1. How to use Otto, your AI assistant!
 
 ### 2. Involved Files
 
@@ -605,7 +605,7 @@ Let's Ascend! 🚀
 
   Let's say we want to adjust the pipeline parameters to enhance analysis precision. We can do this by changing the runtime parameters for the the `weather_impact_analysis_transform.sql.jinja` file.
 
-  To do this, we will change the parameter value located in the `prod.yaml` file in the `profiles` folder. Change the value from 50 to 75. The new profile should look like one of the following (the first if you used Azure/Snowflake or the second if you used GCP/BigQuery):
+  To do this, we will change the `success_rate_threshold` parameter value located in the `prod.yaml` file in the `profiles` folder. Change the value from 50 to 75. The new profile should look like one of the following (the first if you used Azure/Snowflake or the second if you used GCP/BigQuery):
 
   ```
     # Azure + Snowflake
