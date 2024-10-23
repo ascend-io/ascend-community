@@ -1,0 +1,18 @@
+SELECT
+    r.route_name,
+    r.difficulty_level,
+    g.gear_type,
+    COUNT(g.rental_id) AS total_rentals,
+    ROUND(SUM(CASE WHEN g.condition_after = 'Damaged' THEN 1 ELSE 0 END) * 100.0 / COUNT(g.rental_id), 2) AS damage_rate
+FROM
+    {{ ref('expeditions') }} e
+JOIN
+    {{ ref('routes') }} r ON e.route_id = r.route_id
+JOIN
+    {{ ref('expedition_outcomes') }} eo ON e.expedition_id = eo.expedition_id
+JOIN
+    {{ ref('gear_rentals') }} g ON eo.climber_id = g.customer_id
+GROUP BY
+    r.route_name, r.difficulty_level, g.gear_type
+ORDER BY
+    damage_rate DESC

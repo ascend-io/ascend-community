@@ -1,0 +1,116 @@
+order_id,customer_id,order_date,expedition_id,gear_type,gear_id,gear_purchase_price,order_quantity,order_amount,order_status
+a4d39ff9-471a-4c5b-8ec0-868d8ae4f20e,5639542a-d72a-4702-aab2-a67deb96a867,2024-09-06,,Goat's Warm Sleeping Bag,SKU-004,120.0,1,120.0,Completed
+f23367d0-41ee-4f6b-b58a-c34407fe9d09,327930aa-b882-4d63-9b14-a16ef281a518,2024-09-03,,Goat's Warm Sleeping Bag,SKU-004,120.0,6,720.0,Completed
+d99e9717-76f9-4e29-aa1f-dc2b154d7489,c4be5a9d-bf0a-4ea9-a3ef-96991c46bf29,2024-09-06,,Otto's Cozy Tent,SKU-001,150.0,10,1500.0,Pending
+dba59b68-c56e-4aa4-be10-d93d7e39fac5,e02f9d6a-4bf7-47bf-9c45-22286366917f,2024-09-03,,Goat's Warm Sleeping Bag,SKU-004,120.0,1,120.0,Pending
+b8f5b9a8-49bd-40a2-8413-6ede17c6aac4,8ef1ce87-35fb-46c2-8e6c-09f6c8a57df8,2024-09-04,,Mountain Goat Ice Axe,SKU-002,100.0,7,700.0,Completed
+56ee4def-a668-4402-ad43-ce76b6040834,a0d5c9fe-44e8-48ee-b58d-86db4c39bbd6,2024-09-03,,Otto's Climbing Crampons,SKU-007,110.0,5,550.0,Canceled
+e3b2e904-b53a-4712-ba89-3b58d3892262,052e2e4f-7614-4213-906b-28cb6d6a1991,2024-09-06,,Goat's Secure Harness,SKU-006,90.0,7,630.0,Completed
+c9ea20d3-048b-4fc5-9ef1-1fff9e510497,83ca5257-8a57-4da0-bba9-f24a79152501,2024-09-04,,Otto's Cozy Tent,SKU-001,150.0,5,750.0,Completed
+1ed88549-5513-46e8-a0a6-ecbaccdb8cd7,783dca77-1ec3-4360-907e-87a30c3fcba6,2024-09-03,,Goat's Warm Sleeping Bag,SKU-004,120.0,10,1200.0,Pending
+5c9d8aac-8594-4847-977f-365e4ae176db,4b5500b7-d313-497a-af6b-5a7e1a3ce585,2024-09-03,,Goat's Warm Sleeping Bag,SKU-004,120.0,9,1080.0,Completed
+b6315bfa-4de5-4aed-87b3-3b6639eb5202,0562bfcb-75de-4daa-9253-e07daf54f0ac,2024-09-06,,Otto's Cozy Tent,SKU-001,150.0,5,750.0,Canceled
+8a99770d-1fa5-4c65-a5ae-d7079d226988,d363d959-f0d2-4e34-a457-bf179729aa94,2024-09-07,,Mountain Goat Ice Axe,SKU-002,100.0,9,900.0,Completed
+d0d5b064-8ce0-459c-8f79-69e4db8e588f,9712aaeb-72bc-4e97-9af1-90d4e014a11a,2024-09-04,,Goat's Secure Harness,SKU-006,90.0,1,90.0,Completed
+cda1fc48-9b69-4be5-904e-5ff7eeedbea9,8df855b6-d417-40f2-95de-264f20389b2a,2024-09-06,,Otto's Safety Helmet,SKU-003,50.0,6,300.0,Completed
+465177ca-849d-456f-9d0f-08eb2a644014,8f040b04-afe6-4131-b01b-ed1e30f57516,2024-09-07,,Otto's Safety Helmet,SKU-003,50.0,2,100.0,Pending
+cd3adc05-5c84-442c-80b9-5855a6d2dda7,d85eeeda-fcce-4464-b8fc-cd2c9ef98756,2024-09-03,,Otto's Cozy Tent,SKU-001,150.0,9,1350.0,Completed
+e8406a5b-fb1a-428a-81db-5a0187708fbe,6e2a2fcb-b779-4caf-968a-7f64c3ce9d73,2024-09-06,,Otto's Safety Helmet,SKU-003,50.0,3,150.0,Canceled
+e087607a-6924-47f7-a4a6-2af804d59e34,b3124b1f-88df-4901-90c3-f1382679efa9,2024-09-07,,Goat's Secure Harness,SKU-006,90.0,9,810.0,Canceled
+cfd303e8-1218-4240-9322-fb9e3b01a372,02c5418f-633f-4343-a05a-ed1a42ade4f0,2024-09-03,,Goat's Warm Sleeping Bag,SKU-004,120.0,2,240.0,Pending
+91f9bc40-55e8-4449-8f7b-9a794b61b658,5e338907-af16-44c2-8c24-9350f899c338,2024-09-04,,Goat's Secure Harness,SKU-006,90.0,8,720.0,Canceled
+a8dadadf-0ed7-4956-baa5-e26facf2cb03,ebe6d855-16b6-4372-b3ce-f9b2b58f9480,2024-09-05,,Otto's Cozy Tent,SKU-001,150.0,9,1350.0,Completed
+f724829e-406e-4be0-8a3e-587c391d6983,4f7d036c-843c-48c4-81f4-d616fcf1a3c2,2024-09-02,,Otto's Climbing Crampons,SKU-007,110.0,7,770.0,Canceled
+2ba3ab2d-0b1f-4273-9387-80330642097e,8a6ba24e-c422-4d09-8a55-be381f7c8eab,2024-09-02,,Mountain Goat Ice Axe,SKU-002,100.0,3,300.0,Canceled
+fe0492f9-3346-43fd-83da-22f108b16fd5,9ff19ee8-9765-420a-871b-f36501e10166,2024-09-06,,Goat's Secure Harness,SKU-006,90.0,9,810.0,Pending
+bc1a9c68-4d42-4c4a-9f2f-598c825e832a,5fef625d-0cd4-4efc-b642-77bedb28db6e,2024-09-07,,Otto's Safety Helmet,SKU-003,50.0,8,400.0,Pending
+0ff3beb9-5498-479d-956e-0e93ece0676d,316bf03c-e7f2-424e-b8f7-4ad18ca76e27,2024-09-08,,Goat's Warm Sleeping Bag,SKU-004,120.0,7,840.0,Completed
+3d706002-36af-47f8-934c-47be167627eb,31ee247b-63ce-465c-a5f1-f233dbff600e,2024-09-04,,Mountain Goat Ice Axe,SKU-002,100.0,9,900.0,Completed
+437afe3e-388c-4ff8-8f4d-2018130686e4,491f9bf2-9d7e-4627-85f8-9bc856a7701b,2024-09-07,,Otto's Climbing Crampons,SKU-007,110.0,1,110.0,Pending
+88de80b7-48ac-4862-9f05-93a443f7b487,1074483b-6cad-4c0f-adee-0c03c6aa0088,2024-09-07,,Otto's Safety Helmet,SKU-003,50.0,5,250.0,Completed
+7fde7633-0cd2-4f54-b959-8ba447ecdf43,3c2a25e1-bcd0-4277-9bd6-f3d0f61934a9,2024-09-02,,Otto's Climbing Crampons,SKU-007,110.0,10,1100.0,Pending
+37806c04-f527-41bb-afe2-7c1420b6d73d,b2e0763a-e337-465b-8191-1e44a3df02e5,2024-09-02,,Otto's Cozy Tent,SKU-001,150.0,1,150.0,Completed
+61a00159-80bd-4dc5-94d5-7863c6c63c1a,fc81497d-a51d-4808-94ed-36540adf830a,2024-09-02,,Otto's Adventure Rope,SKU-005,80.0,4,320.0,Completed
+23797dc6-0de3-4c70-aff4-5c77cc0c19a1,890bc2be-166a-4bee-ab4e-81ca64b3e42c,2024-09-04,,Goat's Secure Harness,SKU-006,90.0,4,360.0,Completed
+9da77133-6dc2-4920-8225-e36d4030c354,fd846e01-7622-4da5-95f1-7ecea93efa4e,2024-09-05,,Otto's Adventure Rope,SKU-005,80.0,6,480.0,Completed
+c4ae840b-af9a-4349-90ab-a2899f33a646,76a86d66-9bf8-467a-bb4e-06ad9dd85482,2024-09-08,,Goat's Secure Harness,SKU-006,90.0,3,270.0,Completed
+720ec358-dfd3-4bfb-8116-34437f5acff5,637de51f-6a23-4998-bf07-617735c387c2,2024-09-08,,Otto's Climbing Crampons,SKU-007,110.0,5,550.0,Canceled
+ea72236c-9941-4840-a78b-e991c3343038,974f87b1-d280-4d43-bde0-1f2f52d57a89,2024-09-04,,Otto's Safety Helmet,SKU-003,50.0,10,500.0,Pending
+2bf888c1-ad88-4032-8557-904b5db09c4c,f9c1ebb5-2fb5-4cee-972d-3b3ae94577bb,2024-09-04,,Otto's Adventure Rope,SKU-005,80.0,3,240.0,Pending
+d6a6c4d9-c338-4e12-81a9-43392e539d94,60419655-4b90-4351-b53e-01c3555f4c72,2024-09-08,,Otto's Climbing Crampons,SKU-007,110.0,6,660.0,Pending
+fe7db74f-db65-429a-8eff-a55a55780cf1,f37be3bd-8ddf-41ea-ba96-27bbd6ab7bc8,2024-09-05,,Otto's Safety Helmet,SKU-003,50.0,9,450.0,Canceled
+cc130b7e-bb2e-4cd9-8175-e69f7b9595de,eb059a5e-43bc-491d-9e7e-9e9f08d526a6,2024-09-06,,Otto's Safety Helmet,SKU-003,50.0,8,400.0,Completed
+c571531b-4b9a-4d2c-bd2c-f924db5e4afa,a6851c7c-1aed-4146-84ae-12c04c2d6967,2024-09-06,,Goat's Secure Harness,SKU-006,90.0,5,450.0,Completed
+9fd74ff0-b62b-4bd5-ab2d-56cd945b097c,247659ba-71e7-4198-bf38-cf9d0d5489d8,2024-09-06,,Otto's Adventure Rope,SKU-005,80.0,8,640.0,Completed
+114a2a08-2854-43e6-9672-07d026c63791,38b3b682-7344-4326-a06f-48813b6a6edf,2024-09-03,,Otto's Cozy Tent,SKU-001,150.0,9,1350.0,Canceled
+9e58ef2c-05c8-4bbe-b27b-d3f7822e5c05,8a781669-1362-4e06-860b-edba89028227,2024-09-07,,Otto's Climbing Crampons,SKU-007,110.0,2,220.0,Pending
+862d8685-2ce6-4854-9218-8ba0bc5df4df,12f5e93a-1618-460c-87b2-156d3095cd97,2024-09-02,,Otto's Safety Helmet,SKU-003,50.0,1,50.0,Pending
+54a43e04-6664-4b10-92f6-f1cc9b70340b,98b44de1-e0f6-4ae3-8047-bc10bd4c339d,2024-09-06,,Goat's Warm Sleeping Bag,SKU-004,120.0,1,120.0,Canceled
+8b7e38d1-14df-48b6-846b-22da7f67cc02,a1e40cfa-6e91-4aee-8310-bfd03058e0ee,2024-09-02,,Otto's Safety Helmet,SKU-003,50.0,6,300.0,Canceled
+20fac427-a907-4f8c-88da-3e2922b1ab82,e52ef033-170c-4e70-a744-b53bf7b631cc,2024-09-04,,Otto's Climbing Crampons,SKU-007,110.0,5,550.0,Completed
+834a3169-c81d-42a8-b962-5775c73f517f,15d3e16a-26e4-475e-ad92-5cdd1fdc2023,2024-09-03,,Goat's Warm Sleeping Bag,SKU-004,120.0,1,120.0,Completed
+b68d9d41-86e9-4ae0-b44d-5ca2b11c53ab,e074e5b9-3a09-4a45-90d3-ae4d4ab16975,2024-09-07,,Otto's Safety Helmet,SKU-003,50.0,8,400.0,Completed
+b45f1e3a-b9a8-4378-be53-5f1658dd7421,c0c797d9-e1ea-47c4-ad27-a52a2b462cd8,2024-09-04,,Goat's Secure Harness,SKU-006,90.0,1,90.0,Canceled
+0973390f-60e1-4f46-a9c1-62853a4b4e0a,95fe491b-5683-46dc-8c5c-817ccbe6d8f6,2024-09-06,,Goat's Warm Sleeping Bag,SKU-004,120.0,9,1080.0,Canceled
+4cd717ae-ded4-4c27-b305-7bcb884df864,eccbd656-6e5a-481f-9a18-c6a5b81d5a0e,2024-09-07,,Otto's Climbing Crampons,SKU-007,110.0,6,660.0,Canceled
+ab1d7e3a-b284-43ef-91ed-5c64a29ee202,1f799fe6-cb37-4091-bdde-a816552b3637,2024-09-01,,Mountain Goat Ice Axe,SKU-002,100.0,9,900.0,Pending
+7e18ad42-8f30-4446-b4af-239aef15bbee,8e892f3d-92f3-47fe-bff0-735e1a1f48d4,2024-09-03,,Mountain Goat Ice Axe,SKU-002,100.0,7,700.0,Completed
+81b82c91-851d-4231-8c9f-68243c87a96d,8fb8a084-bd4a-4de8-8ef2-cf736bf12110,2024-09-01,,Goat's Warm Sleeping Bag,SKU-004,120.0,2,240.0,Canceled
+5b078cd8-4173-480e-afdc-bb9d98e2f65a,7cd933e5-0ec8-45f7-8a15-8b6b916c4fd1,2024-09-04,,Otto's Climbing Crampons,SKU-007,110.0,1,110.0,Canceled
+e164cb2c-d45f-4eea-a115-216e1f0e2295,d44c6475-7d95-46b0-acef-5c5e02d3add2,2024-09-08,,Goat's Warm Sleeping Bag,SKU-004,120.0,5,600.0,Completed
+6caddeff-584b-4f3c-b7c7-46bfd5bbda63,c3c47f09-9ab8-4865-8165-25f633aac42e,2024-09-04,,Goat's Warm Sleeping Bag,SKU-004,120.0,4,480.0,Canceled
+4fecd5ae-6e81-41ff-808d-6a7b38726d18,6d49544e-fedf-485e-87d2-42ed11d2c7eb,2024-09-07,,Otto's Safety Helmet,SKU-003,50.0,5,250.0,Pending
+e0525426-37f7-46f5-bd53-47c46b135031,6856046c-699c-48e1-af9e-d6a19f5e06d9,2024-09-07,,Goat's Warm Sleeping Bag,SKU-004,120.0,2,240.0,Canceled
+8834526c-e0f8-4036-a452-84517ca5e808,4fdbd85a-ca97-4b3d-a629-80ab7073ff9c,2024-09-03,,Mountain Goat Ice Axe,SKU-002,100.0,6,600.0,Completed
+c05a166d-fa90-4bac-a44e-428071f51bb0,31531c26-453c-4988-b397-4e1fb32c341b,2024-09-08,,Otto's Adventure Rope,SKU-005,80.0,5,400.0,Completed
+d536c9f7-b325-44f1-b679-f61cbb9b6099,5a5f84bd-d318-49ee-bd21-e56dc32002af,2024-09-01,,Otto's Safety Helmet,SKU-003,50.0,4,200.0,Canceled
+4d558828-8ebf-48ae-aa98-eb3383e3ce27,8056d66d-3584-4f2e-87b5-f14717c2bf9c,2024-09-02,,Goat's Warm Sleeping Bag,SKU-004,120.0,1,120.0,Canceled
+25292e09-171f-49a0-984a-2d1af8a610ed,77f44105-df9b-4748-87ba-fa08988ab78d,2024-09-07,,Otto's Cozy Tent,SKU-001,150.0,5,750.0,Completed
+23d58879-4660-40de-a0f2-781194aa3227,03c3145e-bd68-40df-b36d-779017527e04,2024-09-06,,Otto's Cozy Tent,SKU-001,150.0,2,300.0,Completed
+cccadb26-996c-488c-a067-e39545d3b1b0,55a440c0-fc83-43ec-b4fc-d7cabb9a9a19,2024-09-07,,Otto's Cozy Tent,SKU-001,150.0,8,1200.0,Completed
+d889ee76-3b1f-474e-8b5b-0789ae789fb0,23aa5107-372c-4ee6-a198-bfb852109035,2024-09-05,,Goat's Warm Sleeping Bag,SKU-004,120.0,1,120.0,Canceled
+5b668d4e-970c-4605-a3ef-e81f8a74ed30,706f9a55-e0c1-4ce5-81d7-f73d643b9390,2024-09-07,,Goat's Secure Harness,SKU-006,90.0,5,450.0,Completed
+57622b39-f5ac-4de5-b42d-99da8413c00d,2e47faaf-b0f4-4589-a77f-af75634ca170,2024-09-02,,Otto's Safety Helmet,SKU-003,50.0,6,300.0,Pending
+d6cf12ca-8f41-41ef-8f36-a1d4dd2d6a77,bec33771-c346-4bfe-b784-9695e89a4605,2024-09-08,,Otto's Cozy Tent,SKU-001,150.0,3,450.0,Completed
+816563ea-446a-439f-a146-2b091b998a44,8633cb21-eeb8-41cd-a571-2255d27374fb,2024-09-05,,Otto's Safety Helmet,SKU-003,50.0,1,50.0,Canceled
+54cd0444-b9ef-48a2-b28d-9994bb2eb5bf,c6a0e95f-ac70-4d17-9c9c-f83ad09f4f85,2024-09-02,,Goat's Secure Harness,SKU-006,90.0,9,810.0,Pending
+186f3b86-8784-40ab-85d9-81bf80840a3f,f7d24f3f-fbb5-4cc7-90ad-c376c7ca1301,2024-09-08,,Goat's Secure Harness,SKU-006,90.0,6,540.0,Canceled
+a9e61bbf-1742-418e-8a51-4985cc345622,97a66de7-df4d-4ea3-a5fe-c8aa98327179,2024-09-01,9d584d7d-f0d2-41fa-ab56-573a32e06d9e,Otto's Safety Helmet,SKU-003,50.0,10,500.0,Canceled
+2971483c-6067-48c9-bdba-f27c69118424,3cadb549-d2df-4cbc-b9cf-1380fed24cbb,2024-09-03,29650635-51c6-4b30-9d9e-72ba24b1f95b,Goat's Secure Harness,SKU-006,90.0,8,720.0,Canceled
+7a1d8f0b-3c38-4c61-8e99-7a7c3756bc00,eac7e98e-8991-4250-8499-1a241a7054ff,2024-09-03,41374fb7-fa17-45b1-8f73-90dd430a9725,Goat's Warm Sleeping Bag,SKU-004,120.0,7,840.0,Completed
+8d9a9f95-57aa-4637-87d5-f083642b9107,d261ad1f-6ce6-4f25-8b30-4e76bc1764cd,2024-09-03,23f159ce-71d9-4e18-8ce6-d59a592a5646,Otto's Cozy Tent,SKU-001,150.0,7,1050.0,Pending
+e7e345eb-6052-4079-ad10-3f102325559e,cb0e4daf-e0f8-4db6-a2a7-55a99ef5c3db,2024-09-01,46f6da0e-4a68-426b-b0a1-66118dd4d897,Otto's Climbing Crampons,SKU-007,110.0,5,550.0,Completed
+7f4bb69d-936c-484b-a2d4-1a55a8df81fc,831139c1-5355-4841-87ea-19e50384b199,2024-09-05,,Goat's Warm Sleeping Bag,SKU-004,120.0,9,1080.0,Pending
+810a5338-be01-44c9-a0f4-316f5704d38f,a022c609-a5d7-4e09-a238-2c8abb3468b8,2024-09-01,,Otto's Safety Helmet,SKU-003,50.0,10,500.0,Canceled
+73d84669-9bb8-47f0-90ab-7637ff0fe109,1a2f8645-f4d2-4cc4-9072-345d8bc80e16,2024-09-01,c44e9cd1-42b0-41a6-83d2-0a781a0f77af,Otto's Climbing Crampons,SKU-007,110.0,10,1100.0,Completed
+f7c13bd3-236d-49c9-9463-31d7b596119e,5b53bb62-eca4-4a4a-bfc0-645912d06c36,2024-09-02,fac8b75c-7eae-4c90-95c4-7ff32612ffe5,Goat's Warm Sleeping Bag,SKU-004,120.0,2,240.0,Completed
+fbc3cbfe-a7bd-48ef-93e0-d3e4ac98e7ab,245c9110-b09e-4423-bca1-89dc29616d7e,2024-09-02,fec5eabf-a062-42da-b768-044be7313b46,Mountain Goat Ice Axe,SKU-002,100.0,3,300.0,Completed
+a386d722-2f4b-436a-8193-c51040229d72,e2db21a1-401a-41bb-984f-0e21d18087d5,2024-09-03,a8961794-8d36-420a-9259-7519acc1dc68,Mountain Goat Ice Axe,SKU-002,100.0,8,800.0,Canceled
+9dea2812-acbe-4fbe-aec8-145eb8e4eee9,743f4d42-8b38-43e4-9a7b-e4e671c83a79,2024-09-08,,Otto's Cozy Tent,SKU-001,150.0,1,150.0,Pending
+5c621e2b-d31c-4333-8d3f-761cab8236cd,ea931e25-dd79-42c4-a47a-27250a5c8451,2024-09-03,f8c23244-02a5-4a35-8515-45e2baeec324,Otto's Climbing Crampons,SKU-007,110.0,7,770.0,Pending
+2a5a52d8-5d19-40f3-940a-e8fa7d1efd1d,3aad2f4c-da5c-4a36-b5f5-7dbd58137814,2024-09-05,,Otto's Climbing Crampons,SKU-007,110.0,3,330.0,Pending
+feace25e-1b61-4303-9935-3f4f1e89b9cf,35d8d719-8e53-4269-9bd2-707d38d1a25a,2024-09-04,,Otto's Cozy Tent,SKU-001,150.0,10,1500.0,Canceled
+eb0d39c0-53ef-4bd9-8099-510372bf876e,be8a3aa3-ceea-4b8a-aeef-2cd6be8cb09c,2024-09-04,bbbc169d-4f0e-41c9-97e1-da48a479075e,Otto's Cozy Tent,SKU-001,150.0,8,1200.0,Pending
+ac1f5aa5-3afc-4e31-aaec-54ee033a4957,790e9007-a464-4818-aba9-7091454e1db2,2024-09-06,,Goat's Warm Sleeping Bag,SKU-004,120.0,8,960.0,Pending
+3928ce57-7374-40be-afb7-d87a3b2ee5e0,91d2321d-be16-47e6-a269-71278add7a9c,2024-09-05,db0ccd3f-6bdf-4889-a257-38cb8a11e49a,Otto's Safety Helmet,SKU-003,50.0,7,350.0,Canceled
+90b57d54-ccf6-4aa8-bf4a-c1c5b265d477,1a3a498a-864f-4ccb-9a67-8bcd61a469b5,2024-09-03,,Goat's Secure Harness,SKU-006,90.0,4,360.0,Completed
+aa6cfd53-9b2d-44de-b873-cb5c4fbce613,a4138d50-3422-460b-bc89-4a44aae1893d,2024-09-06,db0ccd3f-6bdf-4889-a257-38cb8a11e49a,Otto's Safety Helmet,SKU-003,50.0,10,500.0,Canceled
+21cc0958-e126-4437-8864-dffc2d767660,a4138d50-3422-460b-bc89-4a44aae1893d,2024-09-06,,Goat's Warm Sleeping Bag,SKU-004,120.0,9,1080.0,Completed
+49026e2a-19dd-4548-9aa1-def95d09807a,54c4a9fd-c555-428d-a771-d5a0035b4e1a,2024-09-06,a08269e2-a899-4ac2-a232-51d7822c1a21,Otto's Safety Helmet,SKU-003,50.0,9,450.0,Canceled
+eb9e53c1-23fe-4b2c-a468-3b4b96f2cb53,b3e2151e-366c-4a83-bae1-dace39bea3ec,2024-09-01,,Otto's Adventure Rope,SKU-005,80.0,5,400.0,Completed
+eb22c10b-800c-45fe-af2b-868d105ddfaa,d256824c-9278-4a9e-87db-e17b2f49cb3e,2024-09-03,337c8d4c-3693-4bc4-ae5e-8f59b1cdedc6,Mountain Goat Ice Axe,SKU-002,100.0,8,800.0,Completed
+fbd705f7-658c-4e84-ad58-2a33c171e209,6d73f3bd-efde-4c80-9e5a-9ea2ba5c69a7,2024-09-07,337c8d4c-3693-4bc4-ae5e-8f59b1cdedc6,Goat's Warm Sleeping Bag,SKU-004,120.0,4,480.0,Pending
+38a8d9a6-2726-4a05-a12a-b9fba1ef207f,30e97470-5069-4f23-9600-e83b59958ec6,2024-09-06,e8ed0c01-e523-42cc-84a8-0f32393d5f64,Goat's Secure Harness,SKU-006,90.0,2,180.0,Pending
+868f6a7d-258f-4c6c-ad71-f8ec10135527,94e45877-abee-4f41-9452-fec0850789a0,2024-09-08,e8ed0c01-e523-42cc-84a8-0f32393d5f64,Otto's Adventure Rope,SKU-005,80.0,7,560.0,Completed
+e86cad8a-23cd-4f9e-9b3f-4977368803ac,58f5fe9f-5cec-44e7-83ff-ebd5cc4d05fe,2024-09-02,c07f4beb-8a88-4327-9a22-9535086bc486,Otto's Climbing Crampons,SKU-007,110.0,7,770.0,Canceled
+dbe65645-d3a7-49a0-9c1b-a93f812f3095,ed4d3b19-77f0-44be-b395-a5ded437ca87,2024-09-01,c07f4beb-8a88-4327-9a22-9535086bc486,Goat's Secure Harness,SKU-006,90.0,3,270.0,Canceled
+f834cb29-f951-413f-9eea-7f52f7c3bb4d,babc48e7-d482-47fc-b54d-c91a3bab27b9,2024-09-06,533fc961-83c9-4f2b-bb94-e82b2d2eb26e,Otto's Cozy Tent,SKU-001,150.0,8,1200.0,Completed
+8fe9c3ff-bf6d-4cc6-be34-32449f07b271,bf15d4c6-76fd-4741-a3ab-5d1465625143,2024-09-08,,Goat's Warm Sleeping Bag,SKU-004,120.0,2,240.0,Completed
+83810726-4caf-413b-8df7-30348ceb0ea4,e8d6f67b-4ca1-40b6-b118-f79dfe7e67e7,2024-09-04,38b61824-4767-45d2-8719-520c70672793,Goat's Warm Sleeping Bag,SKU-004,120.0,2,240.0,Pending
+69ea3faa-1392-42a7-95cb-82a7ec6a9e37,35fa3670-5a0f-46d8-afff-f7532c4a5cba,2024-09-06,,Otto's Safety Helmet,SKU-003,50.0,4,200.0,Completed
+ef490583-b042-4759-9971-a648c71126e8,17b903fe-9929-4a24-90fd-34ecf158e534,2024-09-02,01e87a0e-5ffe-4fb2-a9e3-8cc53ba799f8,Otto's Safety Helmet,SKU-003,50.0,9,450.0,Completed
+9311c8cd-2b02-4381-84e7-5645174267c1,4f7d036c-843c-48c4-81f4-d616fcf1a3c2,2024-09-07,01e87a0e-5ffe-4fb2-a9e3-8cc53ba799f8,Goat's Secure Harness,SKU-006,90.0,4,360.0,Canceled
+0ca61e96-9657-4969-b017-4d7e9939e3da,53ec8839-08ff-46b2-a33e-06e3b83bd0ea,2024-09-04,65d10328-4d51-42b7-ba0b-da5610b5c9f8,Otto's Climbing Crampons,SKU-007,110.0,7,770.0,Completed
+4d364fc3-053c-4615-85ad-9f63bd7825a4,16cda5e6-9129-431b-9681-2d2c1be32714,2024-09-06,,Goat's Secure Harness,SKU-006,90.0,3,270.0,Completed
+b713d6d8-e935-4e56-8bc6-c4bde3696027,75eda856-e33c-4cbc-8cf7-f6b036940f59,2024-09-07,,Otto's Cozy Tent,SKU-001,150.0,10,1500.0,Completed
+a9f3c92e-ddc4-4955-a3e6-2e01d922ab7b,a466a670-ef3b-427f-afec-08ce55fb2f5e,2024-09-01,9f0ac5cb-a34a-41e0-a1bb-e1de181439a4,Goat's Secure Harness,SKU-006,90.0,6,540.0,Pending
