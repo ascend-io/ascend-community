@@ -4,7 +4,7 @@ connection:
     database: ascend_data_plane_warehouse
     schema: quickstart
     service_principal:
-      client_id: 3a1cefd9-c89e-404d-9dba-076e1d619a81
+      client_id: 5f473780-33ec-4a61-b633-66543a1b1c71
       client_secret: ${vaults.environment.app-password2}
       tenant_id: f3a5598b-e043-4719-80a7-49b23046bdec
     driver: 'ODBC Driver 18 for SQL Server'
