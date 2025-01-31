@@ -1,7 +1,7 @@
 connection:
   fabric:
     host: ${parameters.warehouse.server}
-    database: ${parameters.warehouse.name}
+    warehouse: ${parameters.warehouse.name}
     schema: ${parameters.warehouse.schema}
     service_principal:
       client_id: ${parameters.service_principal.client_id}
