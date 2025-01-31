@@ -5,13 +5,13 @@ connection:
     schema: ${parameters.warehouse.schema}
     service_principal:
       client_id: ${parameters.service_principal.client_id}
+      # update to the secret name you used in the environment vault
       client_secret: ${vaults.environment.app-password2}
       tenant_id: ${parameters.service_principal.tenant_id}
     driver: 'ODBC Driver 18 for SQL Server'
     create_schema_if_not_exists: True
     staging_abfs:
       account: ${parameters.storage_account.name}
-      # change to your storage container if you used a different one
       root: ${parameters.storage_account.path}
-      # set the storage account key in the environment vault
+      # update to the secret name you used in the environment vault
       shared_key: ${vaults.environment.storage-key2}

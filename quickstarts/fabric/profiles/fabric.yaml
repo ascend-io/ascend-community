@@ -8,8 +8,6 @@ profile:
     service_principal:
       # client_id is the same as appId in various places in Azure
       client_id: <your-client-id>
-      # client_secret is the same as password in various places in Azure
-      # set the client secret in the environment vault
       # tenant_id is sometimes tenant or directory id in Azure
       tenant_id: <your-tenant-id>
     storage_account:
