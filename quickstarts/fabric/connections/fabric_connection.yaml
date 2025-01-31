@@ -5,7 +5,7 @@ connection:
     schema: ${parameters.fabric_warehouse_schema}
     service_principal:
       client_id: ${parameters.client_id}
-      client_secret: ${parameters.client_secret}
+      client_secret: ${vaults.environment.<your-secret-name>}
       tenant_id: ${parameters.tenant_id}
     driver: 'ODBC Driver 18 for SQL Server'
     create_schema_if_not_exists: True
@@ -14,4 +14,4 @@ connection:
       # change to your storage container if you used a different one
       root: ${parameters.storage_account_path}
       # set the storage account key in the environment vault
-      shared_key: ${parameters.storage_account_key}
+      storage_account_key: ${vaults.environment.<your-secret-name>}

@@ -13,7 +13,6 @@ profile:
     client_id: <your-client-id>
     # client_secret is the same as password in various places in Azure
     # set the client secret in the environment vault
-    client_secret: ${vaults.environment.<your-secret-name>}
     # tenant_id is sometimes tenant or directory id in Azure
     tenant_id: <your-tenant-id>
 
@@ -22,7 +21,6 @@ profile:
     storage_account_name: <your-storage-account-name>
     # update if you used something else
     storage_account_path: "abfss://ascend-staging"
-    storage_account_key: ${vaults.environment.<your-secret-name>}
 
   defaults:
     - kind: Flow
