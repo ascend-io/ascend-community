@@ -2,18 +2,18 @@ profile:
   parameters:
     warehouse:
       # like 'xxx-yyy.datawarehouse.fabric.microsoft.com'
-      server: <your-warehouse-host>
-      name: <your-warehouse-name>
-      schema: <your-warehouse-schema>
+      server: rnm2l42d4amupafhjgzdarv55q-3hrhjmkduv4ufimdwgauatkyzm.datawarehouse.fabric.microsoft.com
+      name: ascend_instance_store
+      schema: quickstart
     service_principal:
       # client_id is the same as appId in various places in Azure
-      client_id: <your-client-id>
+      client_id: 5f473780-33ec-4a61-b633-66543a1b1c71
       # client_secret is the same as password in various places in Azure
       # set the client secret in the environment vault
       # tenant_id is sometimes tenant or directory id in Azure
-      tenant_id: <your-tenant-id>
+      tenant_id: f3a5598b-e043-4719-80a7-49b23046bdec
     storage_account:
-      name: <your-storage-account-name>
+      name: ascendfabricqs
       # update if you used something else
       path: "abfss://ascend-staging"
 
