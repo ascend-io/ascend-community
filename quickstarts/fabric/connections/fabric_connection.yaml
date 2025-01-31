@@ -1,6 +1,6 @@
 connection:
   fabric:
-    host: ${parameters.fabric_warehouse_host}
+    host: ${parameters.fabric_warehouse_server}
     database: ${parameters.fabric_warehouse_name}
     schema: ${parameters.fabric_warehouse_schema}
     service_principal:
