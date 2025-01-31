@@ -14,4 +14,4 @@ connection:
       # change to your storage container if you used a different one
       root: ${parameters.storage_account_path}
       # set the storage account key in the environment vault
-      storage_account_key: ${vaults.environment.<your-secret-name>}
+      shared_key: ${vaults.environment.<your-secret-name>}
