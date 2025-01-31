@@ -6,4 +6,4 @@ profile:
         regex: .*
       spec:
         data_plane:
-          connection_name: fabric
+          connection_name: fabric_connection
