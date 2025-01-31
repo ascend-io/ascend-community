@@ -11,7 +11,7 @@ profile:
 
     service_principal:
       # client_id is the same as appId in various places in Azure
-      client_id: 080e9ab9-0808-408d-b6e2-25f49a94639e
+      client_id: ef0a50f3-488e-47ae-ad1f-d167805a3463
       # tenant_id is sometimes tenant or directory id in Azure
       tenant_id: f3a5598b-e043-4719-80a7-49b23046bdec
 
