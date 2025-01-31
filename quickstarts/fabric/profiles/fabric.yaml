@@ -1,5 +1,29 @@
 profile:
   parameters:
+    # warehouse
+
+    # like 'xxx-yyy.datawarehouse.fabric.microsoft.com'
+    fabric_warehouse_server: <your-warehouse-host>
+    fabric_warehouse_name: <your-warehouse-name>
+    fabric_warehouse_schema: <your-warehouse-schema>
+
+    # service principal
+
+    # client_id is the same as appId in various places in Azure
+    client_id: <your-client-id>
+    # client_secret is the same as password in various places in Azure
+    # set the client secret in the environment vault
+    client_secret: ${vaults.environment.<your-secret-name>}
+    # tenant_id is sometimes tenant or directory id in Azure
+    tenant_id: <your-tenant-id>
+
+    # storage account
+
+    storage_account_name: <your-storage-account-name>
+    # update if you used something else
+    storage_account_path: "abfss://ascend-staging"
+    storage_account_key: ${vaults.environment.<your-secret-name>}
+
   defaults:
     - kind: Flow
       name:
