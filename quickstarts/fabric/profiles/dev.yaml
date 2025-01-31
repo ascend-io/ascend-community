@@ -7,7 +7,7 @@ profile:
       # If you chose a different name for the warehouse, use that below
       name: ascend_data_plane_warehouse
       # If you chose a different schema for the warehouse, use that below
-      schema: quickstart2
+      schema: quickstart
 
     service_principal:
       # client_id is the same as appId in various places in Azure
