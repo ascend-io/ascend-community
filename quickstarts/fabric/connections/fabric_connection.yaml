@@ -1,16 +1,16 @@
 connection:
   fabric:
-    host: 'rnm2l42d4amupafhjgzdarv55q-3fu5x27sdunu3eozrlhaoegkki.datawarehouse.fabric.microsoft.com'
-    database: ascend_data_plane_wh
+    host: 'rnm2l42d4amupafhjgzdarv55q-3hrhjmkduv4ufimdwgauatkyzm.datawarehouse.fabric.microsoft.com'
+    database: ascend_data_plane_warehouse
     schema: quickstart
     service_principal:
       client_id: 3a1cefd9-c89e-404d-9dba-076e1d619a81
-      client_secret: ${vaults.environment.app-password}
+      client_secret: ${vaults.environment.app-password2}
       tenant_id: f3a5598b-e043-4719-80a7-49b23046bdec
     driver: 'ODBC Driver 18 for SQL Server'
     create_schema_if_not_exists: True
     staging_abfs:
-      account: codyascend
+      account: ascendfabricqs
       root: "abfss://ascend-staging"
-      shared_key: ${vaults.environment.storage-key}
+      shared_key: ${vaults.environment.storage-key2}
 
