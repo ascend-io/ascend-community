@@ -17,5 +17,11 @@ connection:
     staging_abfs:
       account: ${parameters.storage_account.name}
       root: ${parameters.storage_account.path}
+
+      # service principal for accessing the storage account
+      client_id: ${parameters.service_principal.client_id}
       # update to the secret name you used in the environment vault setup
-      shared_key: ${vaults.environment.storage-key2}
+      client_secret: ${vaults.environment.app-password2}
+      tenant_id: ${parameters.service_principal.tenant_id}
+
+      #shared_key: ${vaults.environment.storage-key2}
