@@ -10,7 +10,7 @@ connection:
     service_principal:
       client_id: ${parameters.service_principal.client_id}
       # update to the secret name you used in the environment vault setup
-      client_secret: ${vaults.environment.app-password}
+      client_secret: ${vaults.environment.app-password2}
       tenant_id: ${parameters.service_principal.tenant_id}
 
     # This is the storage account you created
@@ -18,4 +18,4 @@ connection:
       account: ${parameters.storage_account.name}
       root: ${parameters.storage_account.path}
       # update to the secret name you used in the environment vault setup
-      shared_key: ${vaults.environment.storage-key}
+      shared_key: ${vaults.environment.storage-key2}
