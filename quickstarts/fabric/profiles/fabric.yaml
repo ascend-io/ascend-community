@@ -4,7 +4,7 @@ profile:
       # like 'xxx-yyy.datawarehouse.fabric.microsoft.com'
       server: <your-warehouse-host>
       name: <your-warehouse-name>
-      chema: <your-warehouse-schema>
+      schema: <your-warehouse-schema>
     service_principal:
       # client_id is the same as appId in various places in Azure
       client_id: <your-client-id>
