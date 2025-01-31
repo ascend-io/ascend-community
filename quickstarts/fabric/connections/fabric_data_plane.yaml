@@ -17,7 +17,7 @@ connection:
     staging_abfs:
       account: ${parameters.storage_account.name}
       root: ${parameters.storage_account.path}
-      shared_key: ${vaults.environment.storage-key2}
+      shared_key: ${vaults.environment.storage-key3}
 
       #service_principal:
       #  client_id: ${parameters.service_principal.client_id}
