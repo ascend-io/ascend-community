@@ -1,0 +1,9 @@
+profile:
+  parameters:
+  defaults:
+    - kind: Flow
+      name:
+        regex: .*
+      spec:
+        data_plane:
+          connection_name: fabric

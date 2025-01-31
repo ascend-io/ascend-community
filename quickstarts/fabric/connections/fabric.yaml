@@ -1,0 +1,28 @@
+connection:
+  fabric:
+    # host: 'rnm2l42d4amupafhjgzdarv55q-szttyvcmylae7ccxjq7tfcyo3y.datawarehouse.fabric.microsoft.com'
+    host: 'rnm2l42d4amupafhjgzdarv55q-3fu5x27sdunu3eozrlhaoegkki.datawarehouse.fabric.microsoft.com'
+    database: ascend_data_plane_wh
+    schema: quickstart
+    service_principal:
+      client_id: 3a1cefd9-c89e-404d-9dba-076e1d619a81
+      #client_secret: ${vaults.default.fabric-instance-store-password}
+      client_secret: ${vaults.environment.app-password}
+      tenant_id: f3a5598b-e043-4719-80a7-49b23046bdec
+    driver: 'ODBC Driver 18 for SQL Server'
+    create_schema_if_not_exists: True
+    staging_abfs:
+      account: codyascend
+      root: "abfss://ascend-staging"
+      # root: "abfss://ascend-staging-public" # this works w/ anonymous access on the container
+      #shared_key: ${vaults.default.blob-key}
+      shared_key: ${vaults.environment.storage-key}
+
+      # service_principal:
+      #   client_id: 3a1cefd9-c89e-404d-9dba-076e1d619a81
+      #   client_secret: ${vaults.default.fabric-instance-store-password}
+      #   tenant_id: f3a5598b-e043-4719-80a7-49b23046bdec
+
+    #spark:
+      #endpoint: https://api.fabric.microsoft.com/v1/workspaces/543c6796-c24c-4fc0-8857-4c3f328b0ede/lakehouses/0def3528-1706-47d5-a441-1a63e64fdd74
+
