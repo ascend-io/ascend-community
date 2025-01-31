@@ -20,9 +20,9 @@ connection:
 
       #shared_key: ${vaults.environment.storage-key2}
 
-      service_principal:
+      #service_principal:
         # service principal for accessing the storage account
-        client_id: ${parameters.service_principal.client_id}
+        #client_id: ${parameters.service_principal.client_id}
         # update to the secret name you used in the environment vault setup
-        client_secret: ${vaults.environment.app-password2}
-        tenant_id: ${parameters.service_principal.tenant_id}
+        #client_secret: ${vaults.environment.app-password2}
+        #tenant_id: ${parameters.service_principal.tenant_id}
