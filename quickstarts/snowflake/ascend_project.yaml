@@ -1,5 +1,5 @@
 project:
-  name: fabric
+  name: snowflake
   connections: ["connections/"]
   flows: ["flows/"]
   profiles: ["profiles/"]
