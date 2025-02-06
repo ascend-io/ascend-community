@@ -1,12 +1,13 @@
-from ibis import ir
+from ascend.resources import ref, snowpark, test
 
-from ascend.resources import ref, test, transform
 
-@transform(
+@snowpark(
     inputs=[
         ref("raw_expeditions", reshape={"time": {"column": "expedition_start_date", "granularity": "day"}}),
     ],
-    tests=[]
+    tests=[
+        test("count_equal", count=65471), test("count_distinct_equal", column="_ascend_partition_uuid", count=31)
+    ],
 )
-def expeditions_partitioned(raw_expeditions: ir.Table, context) -> ir.Table:
+def expeditions_partitioned(raw_expeditions, context):
     return raw_expeditions
