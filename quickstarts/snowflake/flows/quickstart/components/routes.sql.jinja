@@ -1,9 +1,11 @@
 SELECT
     *,
     snowflake.cortex.complete(
-        'snowflake-arctic',
+        -- 'snowflake-arctic',
+        'llama3.2-3b',
         CONCAT(
-            '[INST]Convert the following name to French: ',ROUTE_NAME,'[/INST]'
+            'Convert the following words to French:\n',
+            ROUTE_NAME
         )
     ) as ROUTE_NAME_FR
 
