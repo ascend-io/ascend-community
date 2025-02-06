@@ -1,0 +1,15 @@
+component:
+  read:
+    connection: local_files
+    local_file:
+      path: /expeditions.csv
+      parser:
+        csv:
+          has_header: true
+  tests:
+    columns:
+      expedition_id:
+        - not_null
+        - unique
+      route_id:
+        - not_null
