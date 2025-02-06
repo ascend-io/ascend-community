@@ -1,4 +1,11 @@
 SELECT
-    *
+    *,
+    snowflake.cortex.complete(
+        'snowflake-arctic',
+        CONCAT(
+            '[INST]Convert the following name to French: ',ROUTE_NAME,'[/INST]'
+        )
+    ) as ROUTE_NAME_FR
+
 FROM
     {{ ref('raw_routes') }}
