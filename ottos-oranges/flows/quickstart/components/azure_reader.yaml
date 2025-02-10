@@ -2,5 +2,5 @@ component:
   read:
     connection: azure_lake
     abfs:
-      path: seed.delta/*.parquet
+      path: seed.delta/part-00001-293719f3-a8ca-43c9-b6c5-37783325fcf2-c000.snappy.parquet
       parser: auto
