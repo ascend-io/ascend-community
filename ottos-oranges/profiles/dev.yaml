@@ -1,0 +1,12 @@
+profile:
+  parameters:
+    duckdb:
+      path: db.ddb
+
+  defaults:
+    - kind: Flow
+      name:
+        regex: .*
+      spec:
+        data_plane:
+          connection_name: duckdb_data_plane

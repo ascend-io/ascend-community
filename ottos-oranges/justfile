@@ -1,0 +1,54 @@
+# justfile
+
+# load environment variables
+set dotenv-load
+
+# variables
+
+# aliases
+alias fmt:=format
+
+# list justfile recipes
+default:
+    just --list
+
+# python things
+setup:
+    @uv venv --python=3.12 --allow-existing
+    just install
+
+install:
+    @uv pip install --upgrade -e '.[dev,test]'
+
+install-core:
+    @uv pip install $HOME/code/ascend-io/core
+
+build-python:
+    @rm -r dist || true
+    @uv build
+
+format:
+    @ruff format .
+
+# preview
+preview:
+    quarto preview website
+
+# build
+build:
+    quarto render website
+
+# cloud stuff
+upload-az:
+    @az storage blob upload-batch --account-name codyascend -d "cody-public" -s data --overwrite
+
+# clean
+clean-data:
+    @rm -rf data
+    @mkdir -p data
+
+clean:
+    rm -rf website/_site
+    rm -rf website/_freeze
+    rm -rf website/.quarto
+

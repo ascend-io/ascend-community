@@ -1,0 +1,29 @@
+# TODO: remove
+notes.md
+
+# virtualenv
+.venv/
+
+# pyenv
+.python-version
+
+# python file
+__pycache__
+*.pyc
+.pytest_cache
+
+# MacOS
+.DS_Store
+
+# JetBrains IDE
+.idea/*
+!.idea/runConfigurations/
+
+# VSCode settings
+.vscode
+
+# Ascend builder output folder
+ascend-out/
+
+# DuckDB database files
+*.ddb

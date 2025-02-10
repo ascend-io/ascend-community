@@ -1,0 +1,4 @@
+connection:
+  duckdb:
+    path: ${parameters.duckdb.path}
+
