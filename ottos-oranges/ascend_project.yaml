@@ -5,3 +5,15 @@ project:
   profiles: ["profiles/"]
   sources: ["src/"]
   vaults: ["vaults/"]
+
+  # TODO: remove in favor of pyproject.toml
+  pip_packages:
+    - rich
+    - typer
+    - shiny
+    - shinyswatch
+    - shinywidgts
+    - 'ibis-framework[sqlite,duckdb,datafusion,polars,deltalake]'
+    - Faker
+    - plotly
+    - pydantic-ai
