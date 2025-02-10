@@ -1,0 +1,7 @@
+component:
+  read:
+    connection: gs_lake
+    gcs:
+      path: ottos-oranges/lakev0/generated/upload/store_feedback.csv/store_id=
+      include:
+        - glob: "*/year=*/month=*/day=*/*.csv"

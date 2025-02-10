@@ -1,0 +1,13 @@
+automation:
+  enabled: true
+  name: weekly
+  triggers:
+    sensors:
+      - type: timer
+        config:
+          schedule:
+            cron: 0 0 * * 0
+  actions:
+    - type: run_flow
+      config:
+        flow: elt

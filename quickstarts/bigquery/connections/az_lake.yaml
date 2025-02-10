@@ -1,0 +1,4 @@
+connection:
+  abfs:
+    root: abfss://ottos-oranges
+    account: ascendiosampledata
