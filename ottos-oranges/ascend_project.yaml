@@ -12,7 +12,7 @@ project:
     - typer
     - shiny
     - shinyswatch
-    - shinywidgts
+    - shinywidgets
     - 'ibis-framework[sqlite,duckdb,datafusion,polars,deltalake]'
     - Faker
     - plotly
