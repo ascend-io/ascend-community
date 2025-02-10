@@ -9,6 +9,14 @@ profile:
       # If you chose a different schema for the warehouse, use that below
       schema: quickstart
 
+    lakehouse:
+      # If you chose a different name for the lakehouse, use that below
+      name: ascend_data_plane_lakehouse
+      # If you chose a different schema for the lakehouse, use that below
+      schema: quickstart
+      # like 'https://api.fabric.microsoft.com/v1/workspaces/<workspace-uid>/lakehouses/<lakehouse-uid>/livyapi/versions/2023-12-01/'
+      endpoint: <your-lakehouse-endpoint>
+
     service_principal:
       # client_id is the same as appId in various places in Azure
       client_id: <your-client-id>
@@ -27,3 +35,18 @@ profile:
       spec:
         data_plane:
           connection_name: fabric_data_plane
+    - kind: Component
+      name:
+        regex: .*
+      flow_name: quickstart
+      spec:
+        data_plane:
+          fabric:
+            spark_session_config:
+              pool: ascendspark
+              driver_memory: 56g
+              driver_cores: 8
+              executor_memory: 56g
+              executor_cores: 8
+              num_executors: 0
+              max_concurrent_sessions: 1
