@@ -3,7 +3,7 @@ from ascend.resources import ref, task
 
 @task(
     dependencies=[
-        ref("expeditions_with_routes"),
+        ref("expeditions"),
     ]
 )
 def my_task(expeditions, context):
