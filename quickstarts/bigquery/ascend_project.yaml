@@ -1,0 +1,7 @@
+project:
+  name: snowflake
+  connections: ["connections/"]
+  flows: ["flows/"]
+  profiles: ["profiles/"]
+  sources: ["src/"]
+  vaults: ["vaults/"]
