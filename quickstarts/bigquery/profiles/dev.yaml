@@ -1,7 +1,7 @@
 profile:
   parameters:
-    gcp_project_id: <your-gcp-project-id>
-    bigquery_dataset: QUICKSTART_DEV
+    gcp_project_id: ascend-io-cody
+    bigquery_dataset: QUICKSTART_DEV_OLD
     bigquery_location: US
 
   defaults:
