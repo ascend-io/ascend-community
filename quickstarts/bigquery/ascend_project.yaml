@@ -1,5 +1,5 @@
 project:
-  name: Ascend BigQuery Quickstart
+  name: Ascend_BigQuery_Quickstart
   connections: ["connections/"]
   flows: ["flows/"]
   profiles: ["profiles/"]
