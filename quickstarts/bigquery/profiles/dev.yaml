@@ -1,17 +1,7 @@
 profile:
   parameters:
-
-    snowflake:
-      # Snowflake account
-      # e.g. account: wvwohks-syb91821
-      account: <your-snowflake-account>
-
-      # adjust the values below if needed
-      user: ASCEND_ENV_DEV
-      database: ASCEND_ENV_DEV
-      schema: ASCEND_ENV_DEV
-      warehouse: ASCEND_ENV_DEV
-      role: ASCEND_ENV_DEV
+    gcp_project_id: ascend-io-dev-sean
+    bigquery_dataset: QUICKSTART_DEV
 
   defaults:
     - kind: Flow
@@ -19,4 +9,4 @@ profile:
         regex: .*
       spec:
         data_plane:
-          connection_name: snowflake_data_plane
+          connection_name: bigquery_data_plane
