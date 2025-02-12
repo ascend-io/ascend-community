@@ -1,5 +1,5 @@
 project:
-  name: snowflake
+  name: Ascend BigQuery Quickstart
   connections: ["connections/"]
   flows: ["flows/"]
   profiles: ["profiles/"]
