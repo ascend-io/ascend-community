@@ -7,6 +7,7 @@ set dotenv-load
 
 # aliases
 alias fmt:=format
+alias install:=sync
 
 # list justfile recipes
 default:
@@ -15,10 +16,10 @@ default:
 # python things
 setup:
     @uv venv --python=3.12 --allow-existing
-    just install
+    just sync
 
-install:
-    @uv pip install --upgrade -e '.[dev,test]'
+sync:
+    @uv sync --all-extras --upgrade
 
 install-core:
     @uv pip install $HOME/code/ascend-io/core
@@ -39,6 +40,7 @@ build:
     quarto render website
 
 # cloud stuff
+# TODO: azcopy or Python code; or ideally Ascend
 upload-az:
     @az storage blob upload-batch --account-name codyascend -d "cody-public" -s data --overwrite
 
