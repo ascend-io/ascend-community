@@ -3,7 +3,7 @@ profile:
 
     warehouse:
       # like 'xxx-yyy.datawarehouse.fabric.microsoft.com'
-      server: <your-warehouse-host>
+      server: rnm2l42d4amupafhjgzdarv55q-2qm4zhqe3m5unlzwncdtu53fyq.datawarehouse.fabric.microsoft.com
       # If you chose a different name for the warehouse, use that below
       name: ascend_data_plane_warehouse
       # If you chose a different schema for the warehouse, use that below
@@ -15,16 +15,16 @@ profile:
       # If you chose a different schema for the lakehouse, use that below
       schema: quickstart
       # like 'https://api.fabric.microsoft.com/v1/workspaces/<workspace-uid>/lakehouses/<lakehouse-uid>/livyapi/versions/2023-12-01/'
-      endpoint: <your-lakehouse-endpoint>
+      endpoint: https://api.fabric.microsoft.com/v1/workspaces/9ecc19d4-db04-463b-af36-68873a7765c4/lakehouses/57ce0146-89ba-4dc0-a1f5-a7fb6fc0007d/livyapi/versions/2023-12-01
 
     service_principal:
       # client_id is the same as appId in various places in Azure
-      client_id: <your-client-id>
+      client_id: 535a9e52-4632-43a1-8056-de743c1b2dde
       # tenant_id is sometimes tenant or directory id in Azure
-      tenant_id: <your-tenant-id>
+      tenant_id: f3a5598b-e043-4719-80a7-49b23046bdec
 
     storage_account:
-      name: <your-storage-account-name>
+      name: codydevfabric
       # If you chose a different path for the storage container name, use that below
       path: "abfss://ascend-staging"
 
