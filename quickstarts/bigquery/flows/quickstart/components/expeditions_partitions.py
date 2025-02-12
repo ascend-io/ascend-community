@@ -1,4 +1,4 @@
-from ascend.resources import ref, snowpark, test
+from ascend.resources import ref, test, transform
 
 
 @transform(
