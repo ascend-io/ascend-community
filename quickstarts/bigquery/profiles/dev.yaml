@@ -2,6 +2,7 @@ profile:
   parameters:
     gcp_project_id: ascend-io-dev-sean
     bigquery_dataset: QUICKSTART_DEV
+    bigquery_location: US
 
   defaults:
     - kind: Flow
