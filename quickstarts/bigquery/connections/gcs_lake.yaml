@@ -1,3 +1,4 @@
 connection:
-    gcs:
-        root: gs://ascend-io-gcs-public
+  gcs:
+    root: gs://ascend-io-gcs-public
+    project: ascend-io-cody
