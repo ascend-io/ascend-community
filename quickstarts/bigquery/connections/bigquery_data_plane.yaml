@@ -2,6 +2,6 @@ connection:
   # For all BigQuery connection options:
   # https://docs.ascend.io/reference/resource/connection/connection-bigquery#bigqueryconnectionoptions
   bigquery:
-    project: ${parameter.gcp_project_id}
-    dataset: ${parameter.bigquery_dataset}
+    project: ${parameters.gcp_project_id}
+    dataset: ${parameters.bigquery_dataset}
     create_dataset_if_not_exists: True
