@@ -1,0 +1,13 @@
+SELECT
+    *,
+    snowflake.cortex.complete(
+        -- 'snowflake-arctic',
+        'llama3.2-3b',
+        CONCAT(
+            'Convert the following words to French. Include nothing other than the translation itself. \n\n',
+            ROUTE_NAME
+        )
+    ) as ROUTE_NAME_FR
+
+FROM
+    {{ ref('raw_routes') }}
