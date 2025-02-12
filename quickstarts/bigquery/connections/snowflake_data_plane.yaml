@@ -1,10 +1,7 @@
 connection:
-  snowflake:
-    account: ${parameters.snowflake.account}
-    user: ${parameters.snowflake.user}
-    password: ${vaults.environment.snowflake-password}
-    database: ${parameters.snowflake.database}
-    schema: ${parameters.snowflake.schema}
-    warehouse: ${parameters.snowflake.warehouse}
-    role: ${parameters.snowflake.role}
-    create_schema_if_not_exists: true
+  # For all BigQuery connection options:
+  # https://docs.ascend.io/reference/resource/connection/connection-bigquery#bigqueryconnectionoptions
+  bigquery:
+    project: ${parameter.gcp_project_id}
+    dataset: ${parameter.bigquery_dataset}
+    create_dataset_if_not_exists: True
