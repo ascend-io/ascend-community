@@ -10,5 +10,5 @@ from ascend.resources import ref, test, transform
         test("count_distinct_equal", column="_ascend_partition_uuid", count=31)
     ],
 )
-def expeditions_partitioned(raw_expeditions, context):
+def expeditions(raw_expeditions, context):
     return raw_expeditions
