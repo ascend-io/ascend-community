@@ -1,7 +1,7 @@
 from ascend.resources import ref, snowpark, test
 
 
-@snowpark(
+@transform(
     inputs=[
         ref("raw_expeditions", reshape={"time": {"column": "expedition_start_date", "granularity": "day"}}),
     ],
