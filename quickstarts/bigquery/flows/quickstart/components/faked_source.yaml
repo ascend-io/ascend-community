@@ -1,0 +1,7 @@
+component:
+  read:
+    connection: gcs_lake
+    gcs:
+      # path: seed.delta/part-00001-293719f3-a8ca-43c9-b6c5-37783325fcf2-c000.snappy.parquet
+      path: seed.delta/part-*.snappy.parquet
+      # parser: auto
