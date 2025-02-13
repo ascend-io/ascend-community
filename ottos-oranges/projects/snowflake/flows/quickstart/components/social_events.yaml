@@ -4,5 +4,6 @@ component:
     gcs:
       #path: lakev0/email_events*/year=*/month=*/day=*/*.parquet
       # path: lakev0/email_events.parquet/year=*/month=*/day=*/*.parquet
-      path: lakev0/social_events.*/year=*/month=*/day=*/*.parquet
+      # path: lakev0/social_events.*/year=*/month=*/day=*/*.parquet
+      path: lakev0/social_events.parquet/year=2025/month=1/day=1/data_0.parquet
       parser: auto
