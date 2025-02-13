@@ -2,7 +2,7 @@ component:
   read:
     connection: gcs_lake
     gcs:
-      path: lakev0/website_events/
+      path: /lakev0/website_events/
       include:
         - glob: "year=*/month=*/day=*/*.parquet"
       parser: auto
