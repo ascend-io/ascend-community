@@ -2,5 +2,5 @@ component:
   read:
     connection: gcs_lake
     gcs:
-      path: penguins.parquet
+      path: lakev0test/testdir1/testdir2/penguins.parquet
       parser: auto
