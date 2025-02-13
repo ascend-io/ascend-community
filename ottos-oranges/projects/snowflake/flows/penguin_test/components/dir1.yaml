@@ -6,5 +6,4 @@ component:
       include:
         - suffix: parquet
         - glob: "**/year=*/month=*/day=*/*.parquet"
-
       parser: auto
