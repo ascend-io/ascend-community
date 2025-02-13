@@ -45,8 +45,11 @@ upload-az:
     @az storage blob upload-batch --account-name codyascend -d "cody-public" -s data --overwrite
 
 
-upload-gcs:
+upload-gs:
     @gsutil -m rsync -r data gs://ascend-io-gcs-public/lakev0
+
+upload-gs-test:
+    @gsutil -m rsync -r datatest gs://ascend-io-gcs-public/lakev0test
 
 # clean
 clean-data:
