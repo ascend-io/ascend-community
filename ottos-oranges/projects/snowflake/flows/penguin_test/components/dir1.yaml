@@ -4,5 +4,5 @@ component:
     gcs:
       path: lakev0/website_events/
       include:
-        - glob: "**/month=*/**/*.parquet"
+        - glob: "year=*/month=*/day=*/*.parquet"
       parser: auto
