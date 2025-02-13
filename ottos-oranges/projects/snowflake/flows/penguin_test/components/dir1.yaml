@@ -1,0 +1,6 @@
+component:
+  read:
+    connection: gcs_lake
+    gcs:
+      path: lakev0test/testdir1/penguins.parquet
+      parser: auto
