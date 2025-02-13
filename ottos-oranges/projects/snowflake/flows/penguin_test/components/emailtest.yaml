@@ -5,9 +5,9 @@ component:
       #path: lakev0/email_events*/year=*/month=*/day=*/*.parquet
       # path: lakev0/email_events.parquet/year=*/month=*/day=*/*.parquet
       # path: lakev0/email_events/*/*/*/*.parquet
-      path: lakev0/email_events/
+      path: lakev0
       #path: lakev0/website_events/year=2025/month=1/day=1/*.parquet
       #path: lakev0test/testdir*/testdir*/testdir*/penguins.parquet
       include:
-        - glob: "year=*/month=*/day=*/*.parquet"
+        - glob: "email_events/year=*/month=*/day=*/*.parquet"
       parser: auto
