@@ -7,11 +7,11 @@ profile:
       account: ascendpartner
 
       # adjust the values below if needed
-      user: ASCEND_CODY_OO_DEV_V0
-      database: ASCEND_CODY_OO_DEV_V0
-      schema: ASCEND_CODY_OO_DEV_V0
-      warehouse: ASCEND_CODY_OO_DEV_V0
-      role: ASCEND_CODY_OO_DEV_V0
+      user: ASCEND_CODY_DEV
+      database: ASCEND_CODY_DEV
+      schema: ASCEND_CODY_DEV
+      warehouse: ASCEND_CODY_DEV
+      role: ASCEND_CODY_DEV
 
   defaults:
     - kind: Flow
