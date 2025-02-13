@@ -7,5 +7,5 @@ component:
       # path: lakev0/email_events/*/*/*/*.parquet
       #path: lakev0/email_events.parquet/year=2025/month=1/day=1/data*.parquet
       #path: lakev0/website_events/year=2025/month=1/day=1/*.parquet
-      path: lakev0test/*/*/*/penguins.parquet
+      path: lakev0test/testdir1/testdir2/testdir3/penguins.parquet
       parser: auto
