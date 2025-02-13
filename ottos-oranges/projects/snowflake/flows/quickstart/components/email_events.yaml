@@ -5,6 +5,6 @@ component:
       #path: lakev0/email_events*/year=*/month=*/day=*/*.parquet
       # path: lakev0/email_events.parquet/year=*/month=*/day=*/*.parquet
       # path: lakev0/email_events/*/*/*/*.parquet
-      path: lakev0/email_events.parquet/year=2025/month=1/day=1/data*.parquet
-      #path: data/seed.delta/*.parquet
+      #path: lakev0/email_events.parquet/year=2025/month=1/day=1/data*.parquet
+      path: data/seed.delta/*.parquet
       parser: auto
