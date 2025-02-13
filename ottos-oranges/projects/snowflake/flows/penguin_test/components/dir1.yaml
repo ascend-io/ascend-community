@@ -1,6 +1,6 @@
 component:
   read:
-    connection: lake_on_gcs
+    connection: gcs_lake
     gcs:
       path: lakev0/website_events/
       include:
