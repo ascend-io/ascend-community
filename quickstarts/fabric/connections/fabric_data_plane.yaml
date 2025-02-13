@@ -19,3 +19,10 @@ connection:
       root: ${parameters.storage_account.path}
       # update to the secret name you used in the environment vault setup
       shared_key: ${vaults.environment.storage-key}
+
+    spark:
+      lakehouse: ${parameters.lakehouse.name}
+      schema: ${parameters.lakehouse.schema}
+      endpoint: ${parameters.lakehouse.endpoint}
+      # update to the secret name you used in the environment vault setup
+      refresh_token: ${vaults.environment.refresh-token}
