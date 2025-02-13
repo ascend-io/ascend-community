@@ -13,7 +13,7 @@ project:
     - shiny
     - shinyswatch
     - shinywidgets
-    - 'ibis-framework[sqlite,duckdb,datafusion,polars,deltalake]'
+    - 'ibis-framework[sqlite,duckdb,datafusion,polars,deltalake]==9.5.0'
     - Faker
     - plotly
     - pydantic-ai

@@ -39,7 +39,7 @@ test = ["pytest"]
 "Bug Tracker" = "https://github.com/ascend-io/ascend-community/issues"
 
 [project.scripts]
-"ottos-oranges" = "ottos_oranges.cli:app"
+"ottos-oranges" = "ottos_oranges.ui.cli:app"
 
 [build-system]
 # TODO: update to uv build system once available
