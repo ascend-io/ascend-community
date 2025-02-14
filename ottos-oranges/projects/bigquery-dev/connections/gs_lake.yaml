@@ -1,0 +1,8 @@
+#connection:
+#  gcs:
+#    root: gs://${parameters.lake.gcs_bucket}
+#    project: ${parameters.lake.gcp_project}
+connection:
+  gcs:
+    root: gs://ascend-io-gcs-public
+    project: ascend-io-cody

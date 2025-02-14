@@ -1,0 +1,7 @@
+component:
+  read:
+    connection: gs_lake
+    gcs:
+      path: lakev1/store_events/year=
+      include:
+        - glob: "*/month=*/day=*/*.parquet"

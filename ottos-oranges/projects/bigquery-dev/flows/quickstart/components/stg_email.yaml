@@ -1,0 +1,11 @@
+component:
+  read:
+    connection: gs_lake
+    gcs:
+      #path: lakev0/penguins.parquet
+
+      #path: lakev1/email_events/year=2025/month=1/day=1/data_0.parquet
+      path: lakev1/email_events/year=
+      include:
+        - glob: "*/month=*/day=*/*.parquet"
+      # parser: auto

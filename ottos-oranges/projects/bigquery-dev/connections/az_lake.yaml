@@ -1,0 +1,4 @@
+connection:
+  abfs:
+    root: abfss://cody-public
+    account: codyascend
