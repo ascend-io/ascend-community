@@ -3,6 +3,8 @@ component:
     connection: gs_lake
     gcs:
       path: lakev0/email_events/year=2025/month=
-      include:
-        - glob: "*/day=*/*.parquet"
+      path: lakev0/email_events/year=2025/month=1/day=1/data_0.parquet
+
+      #include:
+      #  - glob: "*/day=*/*.parquet"
       # parser: auto
