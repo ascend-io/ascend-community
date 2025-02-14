@@ -1,4 +1,4 @@
 connection:
   abfs:
-    root: abfss://${parameters.lake.az_container}
+    root: abfss://cody-public
     account: ${parameters.lake.az_account}
