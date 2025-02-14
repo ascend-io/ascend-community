@@ -2,7 +2,7 @@ component:
   read:
     connection: az_lake
     abfs:
-      path: website_events.parquet/year=
+      path: lakev0/website_events.parquet/year=
       include:
         - glob: "2025/month=*/day=*/*.parquet"
       parser: auto
