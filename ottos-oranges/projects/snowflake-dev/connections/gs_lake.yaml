@@ -4,5 +4,5 @@
 #    project: ${parameters.lake.gcp_project}
 connection:
   gcs:
-    root: ascend-io-gcs-public
+    root: gs://ascend-io-gcs-public
     project: ${parameters.lake.gcp_project}
