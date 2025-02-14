@@ -1,6 +1,6 @@
 component:
   read:
-    connection: gs_lake
+    connection: az_lake
     gcs:
       path: website_events.parquet/year=
       include:
