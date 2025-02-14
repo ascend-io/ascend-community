@@ -1,15 +1,17 @@
+# ruff: noqa
 import ibis
+import ibis.selectors as s
 
 from faker import Faker
 
-from ottos_oranges.lib.synthetic.common import *  # noqa
+from ottos_oranges.lib.synthetic.common import *
 
-from ottos_oranges.lib.synthetic.email import *  # noqa
-from ottos_oranges.lib.synthetic.store import *  # noqa
-from ottos_oranges.lib.synthetic.social import *  # noqa
-from ottos_oranges.lib.synthetic.common import *  # noqa
-from ottos_oranges.lib.synthetic.website import *  # noqa
-from ottos_oranges.lib.synthetic.telemetry import *  # noqa
+from ottos_oranges.lib.synthetic.email import *
+from ottos_oranges.lib.synthetic.store import *
+from ottos_oranges.lib.synthetic.social import *
+from ottos_oranges.lib.synthetic.common import *
+from ottos_oranges.lib.synthetic.website import *
+from ottos_oranges.lib.synthetic.telemetry import *
 
 ibis.options.interactive = True
 ibis.options.repr.interactive.max_rows = 40

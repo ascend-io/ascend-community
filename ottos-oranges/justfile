@@ -5,7 +5,7 @@ set dotenv-load
 
 # variables
 datadir:="data"
-lakedir:="lakev0"
+lakedir:="lakev1"
 
 # aliases
 alias fmt:=format
