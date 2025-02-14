@@ -2,7 +2,7 @@ component:
   read:
     connection: gs_lake
     gcs:
-      path: email_events.parquet/year=
+      path: lakev0/email_events.parquet/year=
       include:
         - glob: "2025/month=*/day=*/*.parquet"
       parser: auto
