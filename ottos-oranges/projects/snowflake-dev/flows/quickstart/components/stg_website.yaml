@@ -5,4 +5,4 @@ component:
       path: lakev0/website_events/year=2025/month=1/day=1/data_0.parquet
       #include:
       #  - glob: "*/day=*/*.parquet"
-      parser: auto
+      # parser: auto
