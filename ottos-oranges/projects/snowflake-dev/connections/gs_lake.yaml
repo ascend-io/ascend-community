@@ -4,5 +4,5 @@
 #    project: ${parameters.lake.gcp_project}
 connection:
   gcs:
-    root: gs://${parameters.lake.gcs_bucket}
+    root: gs://${parameters.lake.gcs_bucket}/
     project: ${parameters.lake.gcp_project}
