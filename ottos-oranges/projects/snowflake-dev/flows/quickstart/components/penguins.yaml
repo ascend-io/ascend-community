@@ -2,7 +2,5 @@ component:
   read:
     connection: gs_lake
     gcs:
-      path: website_events.parquet/year=
-      include:
-        - glob: "2025/month=*/day=*/*.parquet"
+      path: penguins.parquet
       parser: auto
