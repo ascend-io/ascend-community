@@ -1,9 +1,0 @@
-component:
-  write:
-    connection: az_lake
-    input:
-      name: int_telemetry
-      flow: quickstart
-    abfs:
-      path: /ascend-out
-      formatter: parquet
