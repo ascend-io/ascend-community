@@ -11,6 +11,8 @@ classifiers = [
   "Operating System :: OS Independent",
 ]
 dependencies = [
+  # secrets
+  'python-dotenv',
   # CLI
   'rich',
   'typer',
@@ -21,7 +23,7 @@ dependencies = [
   # data
   # TODO: unpin
   # https://github.com/ibis-project/ibis/issues/10829
-  'ibis-framework[sqlite,duckdb,datafusion,polars,deltalake]==9.5.0',
+  'ibis-framework[sqlite,duckdb,datafusion,polars,bigquery,snowflake,deltalake]==9.5.0',
   # synthetic data
   'Faker',
   # viz
