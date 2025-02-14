@@ -4,5 +4,5 @@ component:
     gcs:
       path: lakev0/email_events.parquet/year=
       include:
-        - glob: "2025/month=*/day=*/*.parquet"
+        - glob: "*/month=*/day=*/*.parquet"
       parser: auto
