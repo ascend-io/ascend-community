@@ -1,0 +1,8 @@
+component:
+  write:
+    connection: gs_lake
+    input:
+      name: int_telemetry
+    gcs:
+      path: ascend-out
+      formatter: parquet
