@@ -7,7 +7,7 @@ profile:
       az_account: codyascend
       az_container: cody-public
 
-      gcs_bucket: ascend-io-gcs-public
+      gcs_bucket: "gs://ascend-io-gcs-public"
       gcp_project: ascend-io-cody
 
     snowflake:
