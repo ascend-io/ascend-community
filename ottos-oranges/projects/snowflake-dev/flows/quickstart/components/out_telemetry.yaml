@@ -1,9 +1,9 @@
 component:
   write:
-    connection: gs_lake
+    connection: az_lake
     input:
       name: int_telemetry
       flow: quickstart
-    gcs:
+    abfs:
       path: ascend-out
       formatter: parquet
