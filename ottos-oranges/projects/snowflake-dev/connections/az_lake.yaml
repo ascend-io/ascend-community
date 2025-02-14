@@ -1,4 +1,4 @@
 connection:
   abfs:
     root: abfss://cody-public
-    account: ${parameters.lake.az_account}
+    account: codyascend
