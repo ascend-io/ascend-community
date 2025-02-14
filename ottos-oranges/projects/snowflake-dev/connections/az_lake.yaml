@@ -1,0 +1,4 @@
+connection:
+  az:
+    root: abfss://${parameters.lake.az_container}/${parameters.lake.root}
+    account: ${parameters.lake.az_account}

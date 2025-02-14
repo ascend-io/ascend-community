@@ -1,0 +1,4 @@
+connection:
+  gcs:
+    root: gs://${parameters.lake.gcs_bucket}/${parameters.lake.root}
+    project: ${parameters.lake.gcp_project}

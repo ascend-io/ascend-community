@@ -1,0 +1,31 @@
+profile:
+  parameters:
+
+    lake:
+      root: lakev0
+
+      az_account: codyascend
+      az_container: cody-public
+
+      gcs_bucket: ascend-io-gcs-public
+      gcp_project: ascend-io-cody
+
+    snowflake:
+      # Snowflake account
+      # e.g. account: wvwohks-syb91821
+      account: ascendpartner
+
+      # adjust the values below if needed
+      user: ASCEND_CODY_DEV
+      database: ASCEND_CODY_DEV
+      schema: ASCEND_CODY_DEV
+      warehouse: ASCEND_CODY_DEV
+      role: ASCEND_CODY_DEV
+
+  defaults:
+    - kind: Flow
+      name:
+        regex: .*
+      spec:
+        data_plane:
+          connection_name: snowflake_data_plane

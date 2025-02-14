@@ -4,6 +4,8 @@
 set dotenv-load
 
 # variables
+datadir:="data"
+lakedir:="lakev0"
 
 # aliases
 alias fmt:=format
@@ -42,14 +44,16 @@ build:
 # cloud stuff
 # TODO: azcopy or Python code; or ideally Ascend
 upload-az:
-    @az storage blob upload-batch --account-name codyascend -d "cody-public" -s data --overwrite
-
+    @azcopy sync {{datadir}} "https://codyascend.blob.core.windows.net/cody-public/{{lakedir}}"
 
 upload-gs:
-    @gsutil -m rsync -r data gs://ascend-io-gcs-public/lakev0
+    @gsutil -m rsync -r {{datadir}} gs://ascend-io-gcs-public/{{lakedir}}
 
-upload-gs-test:
-    @gsutil -m rsync -r datatest gs://ascend-io-gcs-public/lakev0test
+upload:
+    @echo "uploading to az..."
+    just upload-az
+    @echo "\n\nuploading to gs..."
+    just upload-gs
 
 # clean
 clean-data:
