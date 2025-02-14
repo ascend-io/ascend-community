@@ -3,6 +3,7 @@ component:
     connection: gs_lake
     input:
       name: int_telemetry
+      flow: quickstart
     gcs:
       path: ascend-out
       formatter: parquet
