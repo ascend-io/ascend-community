@@ -4,5 +4,5 @@ component:
     abfs:
       path: lakev0/website_events.parquet/year=
       include:
-        - glob: "2025/month=*/day=*/*.parquet"
+        - glob: "*/month=*/day=*/*.parquet"
       parser: auto
