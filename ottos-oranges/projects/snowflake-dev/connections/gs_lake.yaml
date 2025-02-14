@@ -5,4 +5,4 @@
 connection:
   gcs:
     root: gs://ascend-io-gcs-public
-    project: ${parameters.lake.gcp_project}
+    project: ascend-io-cody
