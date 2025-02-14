@@ -5,5 +5,5 @@ component:
       name: int_telemetry
       flow: quickstart
     abfs:
-      path: ascend-out
+      path: /ascend-out
       formatter: parquet
