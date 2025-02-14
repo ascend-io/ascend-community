@@ -18,7 +18,7 @@ profile:
       # adjust the values below if needed
       user: ASCEND_CODY_DEV
       database: ASCEND_CODY_DEV
-      schema: ASCEND_CODY_DEV
+      schema: ASCEND_CODY_DEV3
       warehouse: ASCEND_CODY_DEV
       role: ASCEND_CODY_DEV
 
