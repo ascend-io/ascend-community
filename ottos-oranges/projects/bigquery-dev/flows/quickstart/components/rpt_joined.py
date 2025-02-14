@@ -13,7 +13,7 @@ from ascend.resources import ref, transform
 def rpt_joined(int_store, int_social, int_email, int_website, int_telemetry, context):
     return (
         int_store.join(int_social, "event_id")
-        .join(int_email, "event_id")
-        .join(int_website, "event_id")
-        .join(int_telemetry, "event_id")
+        # .join(int_email, "event_id")
+        # .join(int_website, "event_id")
+        # .join(int_telemetry, "event_id")
     )
