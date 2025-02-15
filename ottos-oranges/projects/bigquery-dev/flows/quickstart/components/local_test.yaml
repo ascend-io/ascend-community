@@ -1,6 +1,6 @@
 component:
   read:
-    connection: output_csvs
+    connection: local_lake
     local_file:
       parser: auto
       path: test.csv
