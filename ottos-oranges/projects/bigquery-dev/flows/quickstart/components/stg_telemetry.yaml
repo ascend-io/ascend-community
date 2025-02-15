@@ -2,6 +2,6 @@ component:
   read:
     connection: az_lake
     abfs:
-      path: lakev1/telemetry_events/year=
+      path: lakev2/telemetry_events/year=
       include:
         - glob: "*/month=*/day=*/*.parquet"
