@@ -1,6 +1,0 @@
-component:
-  read:
-    connection: output_csvs
-    local_file:
-      parser: auto
-      path: test.csv
