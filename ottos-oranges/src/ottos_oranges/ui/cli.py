@@ -16,20 +16,13 @@ app = typer.Typer(help="ottos-oranges", **default_kwargs)
 # commands
 @app.command()
 @app.command("d", hidden=True)
-def datagen(
-    lookback_days: int = typer.Option(
-        None, "-l", "--lookback-days", help="lookback days"
-    ),
-    interval_seconds: int = typer.Option(
-        None, "-i", "--interval-seconds", help="interval seconds"
-    ),
-):
+def datagen(days: int = typer.Option(365, help="days", show_default=True)):
     """
     datagen
     """
-    from ottos_oranges.lib.synthetic.run import run_simulation
+    from ottos_oranges.lib.synthetic import run_simulation
 
-    run_simulation(lookback_days=lookback_days, interval_seconds=interval_seconds)
+    run_simulation(days=days)
 
 
 @app.command()

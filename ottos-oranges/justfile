@@ -5,7 +5,7 @@ set dotenv-load
 
 # variables
 locallakedir:="lake"
-remotelakedir:="lakev2"
+remotelakedir:="lakev3"
 
 # aliases
 alias fmt:=format
@@ -57,8 +57,11 @@ upload:
 
 # clean
 clean-lake:
-    @rm -rf {{locallakedir}}
+    @rm -rf {{locallakedir}}/generated
     @mkdir -p {{locallakedir}}
+    @mkdir -p {{locallakedir}}/seed
+    @mkdir -p {{locallakedir}}/generated
+    @mkdir -p {{locallakedir}}/generated/events
 
 clean:
     rm -rf website/_site

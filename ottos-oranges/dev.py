@@ -7,20 +7,13 @@ import ibis.selectors as s
 from faker import Faker
 from dotenv import load_dotenv
 
-from ottos_oranges.lib.synthetic.common import *
-
-from ottos_oranges.lib.synthetic.email import *
-from ottos_oranges.lib.synthetic.store import *
-from ottos_oranges.lib.synthetic.social import *
-from ottos_oranges.lib.synthetic.common import *
-from ottos_oranges.lib.synthetic.website import *
-from ottos_oranges.lib.synthetic.telemetry import *
+from ottos_oranges.lib.synthetic import *
 
 # setup
 load_dotenv()
 
 ibis.options.interactive = True
-ibis.options.repr.interactive.max_rows = 40
+ibis.options.repr.interactive.max_rows = 4
 ibis.options.repr.interactive.max_depth = 8
 ibis.options.repr.interactive.max_columns = None
 

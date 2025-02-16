@@ -1,0 +1,5 @@
+component:
+  read:
+    connection: gs_lake
+    gcs:
+      path: lakev3/seed/orange_stores.csv

@@ -1,0 +1,7 @@
+component:
+  read:
+    connection: gs_lake
+    gcs:
+      path: lakev3/generated/events/marketing_emails.parquet/year=
+      include:
+        - glob: "*/month=*/day=*/*.parquet"
