@@ -42,12 +42,14 @@ build:
     quarto render website
 
 # cloud stuff
-# TODO: azcopy or Python code; or ideally Ascend
 upload-az:
     @azcopy sync {{locallakedir}} "https://ascendiosampledata.blob.core.windows.net/ottos-oranges/{{remotelakedir}}"
 
 upload-gs:
     @gsutil -m rsync -r {{locallakedir}} gs://ascend-io-gcs-public/ottos-oranges/{{remotelakedir}}
+
+upload-az-seed:
+    @azcopy sync {{locallakedir}}/seed "https://ascendiosampledata.blob.core.windows.net/ottos-oranges/{{remotelakedir}}/seed"
 
 upload:
     @echo "uploading to az..."

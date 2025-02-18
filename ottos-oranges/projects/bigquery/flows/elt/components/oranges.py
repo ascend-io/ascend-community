@@ -10,6 +10,7 @@ from ascend.resources import ref, transform
         ref("int_orange_telemetry"),
         ref("sales"),
         ref("feedback"),
+        ref("staff"),
     ]
 )
 def oranges(
@@ -20,6 +21,7 @@ def oranges(
     int_orange_telemetry,
     sales,
     feedback,
+    staff,
     context,
 ):
     oranges = int_orange_telemetry
