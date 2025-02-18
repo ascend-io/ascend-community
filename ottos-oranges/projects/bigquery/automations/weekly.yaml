@@ -1,12 +1,12 @@
 automation:
   enabled: true
-  name: test
+  name: weekly
   triggers:
     sensors:
       - type: timer
         config:
           schedule:
-            cron: 45 0 * * 0
+            cron: 0 0 * * 0
   actions:
     - type: run_flow
       config:
