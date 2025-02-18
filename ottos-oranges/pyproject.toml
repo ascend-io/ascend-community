@@ -1,0 +1,48 @@
+[project]
+name = "ottos-oranges"
+version = "0.0.1"
+authors = [{ name = "Ascend", email = "hello@ascend.io" }]
+description = "Otto's Oranges"
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+dependencies = [
+  # secrets
+  'python-dotenv',
+  # CLI
+  'rich',
+  'typer',
+  # GUI
+  'shiny',
+  'shinyswatch',
+  'shinywidgets',
+  # data
+  'ibis-framework[sqlite,duckdb,datafusion,polars,bigquery,snowflake,deltalake]',
+  # synthetic data
+  'Faker',
+  # viz
+  'plotly',
+  # AI
+  'pydantic-ai',
+]
+
+[project.optional-dependencies]
+dev = ["ruff", "ipython", "jupyter", "nbclient", "ipykernel"]
+test = ["pytest"]
+
+[project.urls]
+"Homepage" = "https://github.com/ascend-io/ascend-community"
+"Bug Tracker" = "https://github.com/ascend-io/ascend-community/issues"
+
+[project.scripts]
+"ottos-oranges" = "ottos_oranges.ui.cli:app"
+
+[build-system]
+# TODO: update to uv build system once available
+# lmao: https://github.com/astral-sh/uv/issues/3957
+requires = ["hatchling"]
+build-backend = "hatchling.build"

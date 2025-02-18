@@ -1,0 +1,86 @@
+# justfile
+
+# load environment variables
+set dotenv-load
+
+# variables
+locallakedir:="lake"
+remotelakedir:="lakev0"
+
+# aliases
+alias fmt:=format
+alias install:=sync
+
+# list justfile recipes
+default:
+    just --list
+
+# python things
+setup:
+    @uv venv --python=3.12 --allow-existing
+    just sync
+
+sync:
+    @uv sync --all-extras --upgrade
+
+install-core:
+    @uv pip install $HOME/code/ascend-io/core
+
+build-python:
+    @rm -r dist || true
+    @uv build
+
+format:
+    @ruff format .
+
+# preview
+preview:
+    quarto preview website
+
+# build
+build:
+    quarto render website
+
+# cloud stuff
+upload-az:
+    @azcopy sync {{locallakedir}} "https://ascendiosampledata.blob.core.windows.net/ottos-oranges/{{remotelakedir}}"
+
+upload-gs:
+    @gsutil -m rsync -r {{locallakedir}} gs://ascend-io-gcs-public/ottos-oranges/{{remotelakedir}}
+
+upload-az-seed:
+    @azcopy sync {{locallakedir}}/seed "https://ascendiosampledata.blob.core.windows.net/ottos-oranges/{{remotelakedir}}/seed"
+
+upload:
+    @echo "uploading to az..."
+    just upload-az
+    @echo "\n\nuploading to gs..."
+    just upload-gs
+
+# clean
+clean-gs:
+    @gsutil -m rm -r gs://ascend-io-gcs-public/ottos-oranges/{{remotelakedir}}
+
+clean-lake:
+    @rm -rf {{locallakedir}}/generated
+    @mkdir -p {{locallakedir}}
+    @mkdir -p {{locallakedir}}/seed
+    @mkdir -p {{locallakedir}}/generated
+    @mkdir -p {{locallakedir}}/generated/events
+    @mkdir -p {{locallakedir}}/generated/upload
+
+clean:
+    rm -rf website/_site
+    rm -rf website/_freeze
+    rm -rf website/.quarto
+
+# release-test
+release-test:
+    just build-python
+    @uv publish --publish-url https://test.pypi.org/legacy/ --token ${PYPI_TEST_TOKEN}
+
+# release
+release:
+    just build-python
+    @uv publish --token ${PYPI_TOKEN}
+
