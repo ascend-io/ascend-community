@@ -1,5 +1,5 @@
 component:
   read:
-    connection: gs_lake
-    gcs:
+    connection: az_lake
+    abfs:
       path: ottos-oranges/lakev0/seed/orange_farms.csv
