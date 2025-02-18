@@ -21,9 +21,7 @@ dependencies = [
   'shinyswatch',
   'shinywidgets',
   # data
-  # TODO: unpin
-  # https://github.com/ibis-project/ibis/issues/10829
-  'ibis-framework[sqlite,duckdb,datafusion,polars,bigquery,snowflake,deltalake]==9.5.0',
+  'ibis-framework[sqlite,duckdb,datafusion,polars,bigquery,snowflake,deltalake]',
   # synthetic data
   'Faker',
   # viz

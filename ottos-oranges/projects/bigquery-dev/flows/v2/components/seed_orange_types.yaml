@@ -1,5 +1,0 @@
-component:
-  read:
-    connection: az_lake
-    abfs:
-      path: lakev3/seed/orange_types.csv

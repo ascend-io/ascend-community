@@ -5,7 +5,7 @@ set dotenv-load
 
 # variables
 locallakedir:="lake"
-remotelakedir:="lakev3"
+remotelakedir:="lakev0"
 
 # aliases
 alias fmt:=format
@@ -44,10 +44,10 @@ build:
 # cloud stuff
 # TODO: azcopy or Python code; or ideally Ascend
 upload-az:
-    @azcopy sync {{locallakedir}} "https://codyascend.blob.core.windows.net/cody-public/{{remotelakedir}}"
+    @azcopy sync {{locallakedir}} "https://ascendiosampledata.blob.core.windows.net/ottos-oranges/{{remotelakedir}}"
 
 upload-gs:
-    @gsutil -m rsync -r {{locallakedir}} gs://ascend-io-gcs-public/{{remotelakedir}}
+    @gsutil -m rsync -r {{locallakedir}} gs://ascend-io-gcs-public/ottos-oranges/{{remotelakedir}}
 
 upload:
     @echo "uploading to az..."
@@ -62,6 +62,7 @@ clean-lake:
     @mkdir -p {{locallakedir}}/seed
     @mkdir -p {{locallakedir}}/generated
     @mkdir -p {{locallakedir}}/generated/events
+    @mkdir -p {{locallakedir}}/generated/upload
 
 clean:
     rm -rf website/_site

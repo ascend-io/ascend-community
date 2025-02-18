@@ -1,7 +1,0 @@
-component:
-  read:
-    connection: az_lake
-    abfs:
-      path: lakev2/telemetry_events/year=
-      include:
-        - glob: "*/month=*/day=*/*.parquet"

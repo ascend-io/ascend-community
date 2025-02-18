@@ -1,8 +1,0 @@
-component:
-  read:
-    connection: gs_lake
-    gcs:
-      path: lakev2/email_events/year=
-      include:
-        - glob: "*/month=*/day=*/*.parquet"
-      # parser: auto
