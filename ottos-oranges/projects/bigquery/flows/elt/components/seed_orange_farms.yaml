@@ -2,4 +2,4 @@ component:
   read:
     connection: az_lake
     abfs:
-      path: ottos-oranges/lakev0/seed/orange_farms.csv
+      path: lakev0/seed/orange_farms.csv
