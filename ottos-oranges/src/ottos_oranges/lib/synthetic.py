@@ -75,13 +75,16 @@ def downsample(t: ibis.Table, downsample_factor: float) -> ibis.Table:
     t = t.mutate(_downsample_on=ibis.random())
     t = t.filter(t["_downsample_on"] < downsample_factor)
     t = t.drop("_downsample_on")
-    return t
+    # goofy
+    return t.cache()
 
 
 def duplicate(t: ibis.Table, duplicate_factor: float) -> ibis.Table:
     assert 0 < duplicate_factor < 1, "duplicate factor must be between 0 and 1"
     t2 = downsample(t, duplicate_factor)
-    return t.union(t2)
+    t = t.union(t2)
+    # goofy
+    return t.cache()
 
 
 ## modify randomness
@@ -413,6 +416,16 @@ def run_simulation(days: int = 365):
         )
         feedback_t = duplicate(feedback_t, 0.23)
 
+        # explicitly cast all columns
+        feedback_t = feedback_t.mutate(
+            timestamp=ibis._["timestamp"].cast("timestamp"),
+            id=ibis._["id"].cast("string"),
+            store_id=ibis._["store_id"].cast("int32"),
+            orange_id=ibis._["orange_id"].cast("string"),
+            feedback=ibis._["feedback"].cast("string"),
+            feedback_comment=ibis._["feedback_comment"].cast("string"),
+        )
+
         ## website feedback
         tablename = "website_feedback.parquet"
         filename = "data.parquet"
@@ -426,16 +439,6 @@ def run_simulation(days: int = 365):
                 os.path.join(EVENTS_DIR, tablename, partition_path), exist_ok=True
             )
             feedback_t.filter(ibis._["store_id"] == 0).to_parquet(filepath)
-
-        # explicitly cast all columns
-        feedback_t = feedback_t.mutate(
-            timestamp=ibis._["timestamp"].cast("timestamp"),
-            id=ibis._["id"].cast("string"),
-            store_id=ibis._["store_id"].cast("int32"),
-            orange_id=ibis._["orange_id"].cast("string"),
-            feedback=ibis._["feedback"].cast("string"),
-            feedback_comment=ibis._["feedback_comment"].cast("string"),
-        )
 
         ## store feedback
         tablename = "store_feedback.csv"
