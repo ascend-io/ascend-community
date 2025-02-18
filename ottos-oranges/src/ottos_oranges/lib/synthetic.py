@@ -72,17 +72,39 @@ def add_random_col(t: ibis.Table, col: str = "rand") -> ibis.Table:
 ## modify number of rows
 def downsample(t: ibis.Table, downsample_factor: float) -> ibis.Table:
     assert 0 < downsample_factor < 1, "downsample factor must be between 0 and 1"
+    # goofier
+    original_schema = t.schema()
+
+    # downsample logic
     t = t.mutate(_downsample_on=ibis.random())
     t = t.filter(t["_downsample_on"] < downsample_factor)
     t = t.drop("_downsample_on")
+
+    # goofier
+    t = t.mutate(
+        **{col: ibis._[col].cast(_type) for col, _type in dict(original_schema).items()}
+    )
+
     # goofy
     return t.cache()
 
 
 def duplicate(t: ibis.Table, duplicate_factor: float) -> ibis.Table:
     assert 0 < duplicate_factor < 1, "duplicate factor must be between 0 and 1"
+    # goofier
+    original_schema = t.schema()
+
+    # duplicate logic
     t2 = downsample(t, duplicate_factor)
+
+    # goofier
+    t2 = t2.mutate(
+        **{col: ibis._[col].cast(_type) for col, _type in dict(original_schema).items()}
+    )
+
+    # add the downsampled table to the original table
     t = t.union(t2)
+
     # goofy
     return t.cache()
 
