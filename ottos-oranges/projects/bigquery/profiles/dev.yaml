@@ -1,7 +1,7 @@
 profile:
   parameters:
     gcp_project_id: ascend-io-cody
-    bigquery_dataset: DEV15
+    bigquery_dataset: DEV1
     bigquery_location: US
 
   defaults:

@@ -58,6 +58,9 @@ upload:
     just upload-gs
 
 # clean
+clean-gs:
+    @gsutil -m rm -r gs://ascend-io-gcs-public/ottos-oranges/{{remotelakedir}}
+
 clean-lake:
     @rm -rf {{locallakedir}}/generated
     @mkdir -p {{locallakedir}}
