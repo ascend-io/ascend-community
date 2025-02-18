@@ -1,4 +1,4 @@
 connection:
   abfs:
-    root: abfss://cody-public
-    account: codyascend
+    root: abfss://ottos-oranges
+    account: ascendiosampledata
