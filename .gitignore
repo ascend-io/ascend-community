@@ -14,7 +14,7 @@ dist/
 downloads/
 eggs/
 .eggs/
-# lib/
+# lib/ # used in a module name in ottos_oranges
 lib64/
 parts/
 sdist/
