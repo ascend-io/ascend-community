@@ -1,0 +1,10 @@
+component:
+  write:
+    connection: bigquery_data_plane
+    input:
+      name: social_media
+      flow: elt
+    bigquery:
+      table:
+        name: elt_social_media
+        dataset: ${parameters.bigquery_dataset}

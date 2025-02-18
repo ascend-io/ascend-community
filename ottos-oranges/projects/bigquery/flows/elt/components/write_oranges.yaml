@@ -5,4 +5,6 @@ component:
       name: oranges
       flow: elt
     bigquery:
-      # enter your bigquery specific config here
+      table:
+        name: elt_oranges
+        dataset: ${parameters.bigquery_dataset}
