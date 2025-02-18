@@ -1,0 +1,8 @@
+component:
+  write:
+    connection: bigquery_data_plane
+    input:
+      name: oranges
+      flow: elt
+    bigquery:
+      # enter your bigquery specific config here
