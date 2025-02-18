@@ -18,6 +18,7 @@ def staff(
         int_orange_farms.select(contact="farm_owner")
         .union(int_orange_stores.select(contact="store_owner"))
         .union(int_orange_warehouses.select(contact="warehouse_owner"))
+        .distinct(on="contact")
     )
 
     return staff

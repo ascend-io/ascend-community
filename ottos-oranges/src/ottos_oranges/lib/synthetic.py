@@ -597,9 +597,6 @@ def run_simulation(days: int = 365):
             .select("timestamp", "id", "user_id", "inlinked_content")
         )
 
-        inlinked_t = downsample(inlinked_t, 0.5)
-        inlinked_t = downsample(inlinked_t, 0.6)
-
         # explicitly cast all columns
         inlinked_t = inlinked_t.mutate(
             timestamp=ibis._["timestamp"].cast("timestamp"),
@@ -607,6 +604,9 @@ def run_simulation(days: int = 365):
             user_id=ibis._["user_id"].cast("string"),
             inlinked_content=ibis._["inlinked_content"].cast("string"),
         )
+
+        inlinked_t = downsample(inlinked_t, 0.5)
+        inlinked_t = downsample(inlinked_t, 0.6)
 
         filepath = os.path.join(EVENTS_DIR, tablename, partition_path, filename)
         if os.path.exists(filepath):
