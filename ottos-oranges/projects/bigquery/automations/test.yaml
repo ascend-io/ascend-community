@@ -2,10 +2,6 @@ automation:
   enabled: true
   name: test
   triggers:
-    events:
-      - sql_filter: json_extract_string(event, '$.data.flow') = 'elt'
-        types:
-          - FlowRunSuccess
     sensors:
       - type: timer
         config:
@@ -15,4 +11,3 @@ automation:
     - type: run_flow
       config:
         flow: elt
-    - type: run_flow
