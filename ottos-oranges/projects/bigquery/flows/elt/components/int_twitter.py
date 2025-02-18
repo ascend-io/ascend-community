@@ -5,4 +5,5 @@ from ascend.resources import ref, transform
 def int_twitter(stg_twitter, context):
     int_twitter = stg_twitter
     int_twitter = int_twitter.rename("snake_case")
+    int_twitter = int_twitter.distinct()
     return int_twitter

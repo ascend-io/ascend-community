@@ -11,10 +11,14 @@ from ascend.resources import ref, transform
 )
 def feedback(int_store_feedback, int_website_feedback, context):
     feedback = int_store_feedback.mutate(
+        id=ibis._["id"].cast(int),
+        orange_id=ibis._["orange_id"].cast(int),
         store_id=ibis._["store_id"].cast(int),
         timestamp=ibis._["timestamp"].cast("timestamp"),
     ).union(
         int_website_feedback.mutate(
+            id=ibis._["id"].cast(int),
+            orange_id=ibis._["orange_id"].cast(int),
             store_id=ibis._["store_id"].cast(int),
             timestamp=ibis._["timestamp"].cast("timestamp"),
         )

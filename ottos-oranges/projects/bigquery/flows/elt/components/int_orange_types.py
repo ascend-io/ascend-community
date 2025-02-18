@@ -5,4 +5,5 @@ from ascend.resources import ref, transform
 def int_orange_types(seed_orange_types, context):
     int_orange_types = seed_orange_types
     int_orange_types = int_orange_types.rename("snake_case")
+    int_orange_types = int_orange_types.distinct()
     return int_orange_types

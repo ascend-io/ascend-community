@@ -5,4 +5,5 @@ from ascend.resources import ref, transform
 def int_website_feedback(stg_website_feedback, context):
     int_website_feedback = stg_website_feedback
     int_website_feedback = int_website_feedback.rename("snake_case")
+    int_website_feedback = int_website_feedback.distinct()
     return int_website_feedback
