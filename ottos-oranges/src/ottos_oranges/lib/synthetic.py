@@ -272,13 +272,6 @@ def run_simulation(days: int = 365):
             .mutate(origin_farm_id=farm_id_cases.cast("int32"))
             .select(*finalcols)
         )
-
-        ## randomly drop some data
-        o_telemetry_t = downsample(o_telemetry_t, 0.9)
-
-        ## randomly duplicate some data
-        o_telemetry_t = duplicate(o_telemetry_t, 0.02)
-
         ## check for previous day's data
         if os.path.exists(prev_filepath):
             ## read previous day's data
@@ -328,6 +321,12 @@ def run_simulation(days: int = 365):
             origin_farm_id=ibis._["origin_farm_id"].cast("int32"),
         )
 
+        ## randomly drop some data
+        o_telemetry_t = downsample(o_telemetry_t, 0.9)
+
+        ## randomly duplicate some data
+        o_telemetry_t = duplicate(o_telemetry_t, 0.02)
+
         if os.path.exists(filepath):
             print(f"\tskipping {filepath}...")
         else:
@@ -353,8 +352,6 @@ def run_simulation(days: int = 365):
         sales_t = sales_t.mutate(price=ibis.random() * 10)
         sales_t = sales_t.select("timestamp", "id", "store_id", "orange_id", "price")
 
-        sales_t = duplicate(sales_t, 0.03)
-
         # explicitly cast all columns
         sales_t = sales_t.mutate(
             timestamp=ibis._["timestamp"].cast("timestamp"),
@@ -363,6 +360,8 @@ def run_simulation(days: int = 365):
             orange_id=ibis._["orange_id"].cast("string"),
             price=ibis._["price"].cast("double"),
         )
+
+        sales_t = duplicate(sales_t, 0.03)
 
         ## website sales
         tablename = "website_sales.parquet"
@@ -414,7 +413,6 @@ def run_simulation(days: int = 365):
         feedback_t = feedback_t.select(
             "timestamp", "id", "store_id", "orange_id", "feedback", "feedback_comment"
         )
-        feedback_t = duplicate(feedback_t, 0.23)
 
         # explicitly cast all columns
         feedback_t = feedback_t.mutate(
@@ -425,6 +423,8 @@ def run_simulation(days: int = 365):
             feedback=ibis._["feedback"].cast("string"),
             feedback_comment=ibis._["feedback_comment"].cast("string"),
         )
+
+        feedback_t = duplicate(feedback_t, 0.23)
 
         ## website feedback
         tablename = "website_feedback.parquet"
@@ -474,10 +474,6 @@ def run_simulation(days: int = 365):
             .select("timestamp", "id", "user_id", "tweet_content")
         )
 
-        twitter_t = downsample(twitter_t, 0.8)
-        twitter_t = downsample(twitter_t, 0.9)
-        twitter_t = duplicate(twitter_t, 0.13)
-
         # explicitly cast all columns
         twitter_t = twitter_t.mutate(
             timestamp=ibis._["timestamp"].cast("timestamp"),
@@ -485,6 +481,10 @@ def run_simulation(days: int = 365):
             user_id=ibis._["user_id"].cast("string"),
             tweet_content=ibis._["tweet_content"].cast("string"),
         )
+
+        twitter_t = downsample(twitter_t, 0.8)
+        twitter_t = downsample(twitter_t, 0.9)
+        twitter_t = duplicate(twitter_t, 0.13)
 
         filepath = os.path.join(EVENTS_DIR, tablename, partition_path, filename)
         if os.path.exists(filepath):
@@ -508,10 +508,6 @@ def run_simulation(days: int = 365):
             .select("timestamp", "id", "user_id", "metabook_content")
         )
 
-        metabook_t = downsample(metabook_t, 0.8)
-        metabook_t = downsample(metabook_t, 0.9)
-        metabook_t = duplicate(metabook_t, 0.13)
-
         # explicitly cast all columns
         metabook_t = metabook_t.mutate(
             timestamp=ibis._["timestamp"].cast("timestamp"),
@@ -519,6 +515,10 @@ def run_simulation(days: int = 365):
             user_id=ibis._["user_id"].cast("string"),
             metabook_content=ibis._["metabook_content"].cast("string"),
         )
+
+        metabook_t = downsample(metabook_t, 0.8)
+        metabook_t = downsample(metabook_t, 0.9)
+        metabook_t = duplicate(metabook_t, 0.13)
 
         filepath = os.path.join(EVENTS_DIR, tablename, partition_path, filename)
         if os.path.exists(filepath):
@@ -542,9 +542,6 @@ def run_simulation(days: int = 365):
             .select("timestamp", "id", "user_id", "metagram_content")
         )
 
-        metagram_t = downsample(metagram_t, 0.8)
-        metagram_t = duplicate(metagram_t, 0.13)
-
         # explicitly cast all columns
         metagram_t = metagram_t.mutate(
             timestamp=ibis._["timestamp"].cast("timestamp"),
@@ -552,6 +549,9 @@ def run_simulation(days: int = 365):
             user_id=ibis._["user_id"].cast("string"),
             metagram_content=ibis._["metagram_content"].cast("string"),
         )
+
+        metagram_t = downsample(metagram_t, 0.8)
+        metagram_t = duplicate(metagram_t, 0.13)
 
         filepath = os.path.join(EVENTS_DIR, tablename, partition_path, filename)
         if os.path.exists(filepath):
