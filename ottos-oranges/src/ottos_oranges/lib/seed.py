@@ -1,3 +1,30 @@
+orange_farms_csv = """
+Farm ID;Farm Name;Farm Location;Farm Owner
+1;Orlando's Own Oranges; Orlando, FL;orlando@ottosoranges.com
+2;Tampa's Tempting Oranges;Tampa, FL;boat@ottosoranges.com
+3;Land O' Lakes and Oranges Oranges;Land O' Lakes, FL;welikebutter@ottosoranges.com
+""".strip()
+
+orange_warehouses_csv = """
+Warehouse ID;Warehouse Name;Warehouse Location;Warehouse Owner
+1;warehouseA;Las Vegas, NV;otto@ottosoranges.com
+2;warehouseB;Palo Alto, CA;alice@ottosoranges.com
+3;warehouseC;Seattle, WA;bob@ottosoranges.com
+4;warehouseD;Orlando, FL;steve@ottosoranges.com
+5;warehouseE;New York, NY;steve2@ottosoranges.com
+""".strip()
+
+orange_stores_csv = """
+Store ID|Store Name|Store Location|Store Owner
+0|website|Internet|support@ottosoranges.com
+1|Otto's Oranges (classic)|Las Vegas, NV|otto@ottosoranges.com
+2|Otto's Oranges (original)|Palo Alto, CA|naes@ottosoranges.com
+3|Coffee But It's Orange Juice|Seattle, WA|zebos@ottosoranges.com
+4|Orlando's Orange Juice|Orlando, FL|orlando@ottosoranges.com
+5|Oranges in the Big Apple|New York, NY|star@ottosoranges.com
+""".strip()
+
+orange_types_csv = """
 Orange SKU,Description
 VAL001,Valencia Sun Burst - Sweet and exceptionally juicy
 MID002,Midnight Blood - Deep crimson flesh with notes of raspberry
@@ -112,3 +139,4 @@ RAN110,Ranger's Rest - Forest-dwelling variety
 WAR111,Warrior's Watch - Protective rind type
 ROG112,Rogue's Relief - Quick-growing stealth variety
 CLE113,Cleric's Care - Blessing-enhanced growth
+""".strip()

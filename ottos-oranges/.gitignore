@@ -1,4 +1,4 @@
-lake/generated
+lake
 
 .env
 .venv/
