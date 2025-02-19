@@ -1,3 +1,13 @@
 automation:
   enabled: true
   name: test-automation
+  actions:
+    - type: run_flow
+      config:
+        flow: elt
+  triggers:
+    sensors:
+      - type: timer
+        config:
+          schedule:
+            cron: 0 0 * * *
