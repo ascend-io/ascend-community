@@ -4,10 +4,12 @@ automation:
   triggers:
     sensors:
       - type: timer
+        name: mytimer
         config:
           schedule:
             cron: 0 4 * * *
   actions:
     - type: run_flow
+      name: myrunflow
       config:
         flow: elt
