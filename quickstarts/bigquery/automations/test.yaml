@@ -1,3 +1,13 @@
 automation:
   enabled: true
   name: test
+  triggers:
+    events:
+      - sql_filter: (json_extract_string(event, '$.data.flow') = 'elt') and (json_extract_string(event, '$.data.component') = 'write_social_media')
+        types:
+          - ComponentRunSuccess
+      - sql_filter: json_extract_string(event, '$.data.flow') = 'elt'
+        types:
+          - FlowRunSuccess
+    sensors:
+      - type: timer
