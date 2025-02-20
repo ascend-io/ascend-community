@@ -1,8 +1,0 @@
-vault:
-  # Below are two vault options: choose the one you used in the quickstart and delete the other.
-
-  azure_key_vault:
-    vault_name: ${parameter.azure_key_vault_name}
-
-  gcp_secret_manager:
-    project: ${parameter.gcp_project_id}

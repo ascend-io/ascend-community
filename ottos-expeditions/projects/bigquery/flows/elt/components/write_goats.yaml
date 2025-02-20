@@ -1,0 +1,10 @@
+component:
+  write:
+    connection: bigquery_data_plane
+    input:
+      name: goats
+      flow: elt
+    bigquery:
+      table:
+        name: elt_goats
+        dataset: ${parameters.bigquery.dataset}

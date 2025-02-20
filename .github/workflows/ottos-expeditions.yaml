@@ -1,0 +1,36 @@
+name: ottos-expeditions
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 4 * * *"
+  # push:
+  #   branches: ["main"]
+  #   paths:
+  #     - "ottos-expeditions/**"
+  #     - ".github/workflows/ottos-expeditions.yaml"
+
+concurrency:
+  group: "ottos-expeditions"
+  cancel-in-progress: false
+
+jobs:
+  datagen:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      # install just and uv
+      - uses: extractions/setup-just@v1
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.12
+      - uses: astral-sh/setup-uv@v5
+
+      # install ottos-expeditions
+      - run: just install
+
+      # run datagen
+      - run: ottos-expeditions datagen --days 7
+

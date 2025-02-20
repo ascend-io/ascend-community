@@ -1,9 +1,14 @@
-# The Ascend.io Community
+# Ascend community repository
 
-This repository contains examples, sample code, and other goodies to use within your Ascend platform.
-This repository is maintained by Ascend.io. If you would like to contribute or give feedback,
-please see the [contribution guide](CONTRIBUTE.md). We'd love your input.
+Welcome to the Ascend community! This repository contains example projects, sample code, and other goodies to use with Ascend. If you would like to contribute, please see the [contributing guide](CONTRIBUTE.md) -- we'd love your input!
 
+## Projects
 
-## Ascend.io Resources
-* [Documentation](https://docs.ascend.io/)
+| Path | Description |
+| --- | --- |
+| [`quickstarts/`](quickstarts) | Minimal example projects for each supported data plane |
+| [`ottos-expeditions/`](ottos-expeditions) | Otto's Expeditions, our premier example project |
+
+## Resources
+
+- [Documentation](https://docs.ascend.io/)
