@@ -29,6 +29,7 @@ def feedback(
         )
         .union(
             feedback_website.mutate(
+                feedback=ibis.literal(None, type=str),
                 ascender_id=ibis.literal(None, type=str),
                 store_id=ibis.literal("website", type=str),
             )
