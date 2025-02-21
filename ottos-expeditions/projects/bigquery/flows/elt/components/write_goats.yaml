@@ -6,5 +6,5 @@ component:
       flow: elt
     bigquery:
       table:
-        name: goats
+        name: elt_goats
         dataset: ${parameters.bigquery_dataset}
