@@ -1,3 +1,5 @@
+import ibis
+
 from ascend.resources import ref, transform
 
 
@@ -12,8 +14,11 @@ def weather(
     weather_sensors,
     context,
 ):
-    weather = weather_routes.mutate(location=None).union(
-        weather_sensors.mutate(ascender_id=None, route_id=None)
+    weather = weather_routes.mutate(location=ibis.literal(None, type=str)).union(
+        weather_sensors.mutate(
+            ascender_id=ibis.literal(None, type=str),
+            route_id=ibis.literal(None, type=str),
+        )
     )
 
     return weather
