@@ -1,8 +1,0 @@
-component:
-  read:
-    connection: local_files
-    local_file:
-      path: /guides.csv
-      parser:
-        csv:
-          has_header: true

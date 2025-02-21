@@ -1,0 +1,13 @@
+profile:
+  parameters:
+    gcp_project_id: ascend-io-cody
+    bigquery_dataset: OTTOS_EXPEDITIONS
+    bigquery_location: US
+
+  defaults:
+    - kind: Flow
+      name:
+        regex: .*
+      spec:
+        data_plane:
+          connection_name: bigquery_data_plane

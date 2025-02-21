@@ -1,7 +1,0 @@
-project:
-  name: fabric
-  connections: ["connections/"]
-  flows: ["flows/"]
-  profiles: ["profiles/"]
-  sources: ["src/"]
-  vaults: ["vaults/"]

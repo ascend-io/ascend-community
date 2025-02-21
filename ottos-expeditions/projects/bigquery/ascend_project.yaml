@@ -1,0 +1,4 @@
+project:
+  name: ottos-expeditions
+  pip_packages:
+    - ottos-expeditions

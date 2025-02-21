@@ -1,0 +1,12 @@
+WITH twitter AS (
+    SELECT
+        *
+    FROM
+        {{ ref('read_twitter') }}
+)
+SELECT
+    *
+FROM
+    twitter
+ORDER BY
+    timestamp DESC

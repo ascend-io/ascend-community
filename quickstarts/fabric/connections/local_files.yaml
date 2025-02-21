@@ -1,3 +1,0 @@
-connection:
-  local_file:
-    root: ./data

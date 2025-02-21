@@ -1,6 +1,0 @@
-component:
-  read:
-    connection: local_lake
-    local_file:
-      parser: auto
-      path: test.csv

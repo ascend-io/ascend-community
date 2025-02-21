@@ -1,5 +1,0 @@
-component:
-  read:
-    connection: gs_lake
-    gcs:
-      path: ottos-oranges/lakev0/seed/orange_types.csv
