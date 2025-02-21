@@ -12,5 +12,6 @@ def goats(
     ascenders,
     routes,
     telemetry,
+    context,
 ):
     return ascenders.sample(0.01)
