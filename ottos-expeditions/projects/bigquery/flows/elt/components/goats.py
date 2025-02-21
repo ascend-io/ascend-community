@@ -8,7 +8,7 @@ from ascend.resources import ref, transform
         ref("telemetry"),
     ]
 )
-def gaots(
+def goats(
     ascenders,
     routes,
     telemetry,
