@@ -6,7 +6,7 @@ from ascend.resources import ref, task
         ref("social_media"),
     ]
 )
-def task_send_goats_prizes(
+def task_respond_on_socials(
     social_media,
     context,
 ):
