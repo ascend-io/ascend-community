@@ -13,4 +13,4 @@ def goats(
     routes,
     telemetry,
 ):
-    return ascenders.sample(frac=0.01)
+    return ascenders.sample(0.01)
