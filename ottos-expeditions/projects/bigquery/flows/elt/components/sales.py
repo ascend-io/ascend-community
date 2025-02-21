@@ -24,7 +24,12 @@ def sales(
                 store_id=ibis.literal(0, type=str),
             )
         )
-        .union(sales_vendors.mutate(store_id=ibis.literal(0, type=str)))
+        .union(
+            sales_vendors.mutate(
+                store_id=ibis.literal(0, type=str),
+                ascender_id=ibis.literal(None, type=str),
+            )
+        )
     )
 
     return sales
