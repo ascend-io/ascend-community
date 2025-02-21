@@ -1,3 +1,5 @@
+import ibis
+
 from ascend.resources import ref, transform
 
 
