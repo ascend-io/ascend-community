@@ -6,4 +6,4 @@ def ascenders_neutral(
     ascenders,
     context,
 ):
-    return ascenders.sample(frac=0.3)
+    return ascenders.sample(0.3)

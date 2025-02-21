@@ -1,0 +1,16 @@
+from ascend.resources import ref, transform
+
+
+@transform(
+    inputs=[
+        ref("ascenders"),
+        ref("routes"),
+        ref("telemetry"),
+    ]
+)
+def gaots(
+    ascenders,
+    routes,
+    telemetry,
+):
+    return ascenders.sample(frac=0.01)

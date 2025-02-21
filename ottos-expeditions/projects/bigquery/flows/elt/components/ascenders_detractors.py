@@ -6,4 +6,4 @@ def ascenders_detractors(
     ascenders,
     context,
 ):
-    return ascenders.sample(frac=0.1)
+    return ascenders.sample(0.1)

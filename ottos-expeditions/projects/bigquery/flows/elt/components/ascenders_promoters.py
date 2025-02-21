@@ -6,4 +6,4 @@ def ascenders_promoters(
     ascenders,
     context,
 ):
-    return ascenders.sample(frac=0.6)
+    return ascenders.sample(0.6)
