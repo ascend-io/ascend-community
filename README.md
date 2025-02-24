@@ -1,6 +1,6 @@
 # Ascend community repository
 
-Welcome to the Ascend community! This repository contains example projects, sample code, and other goodies to use with Ascend. If you would like to contribute, please see the [contributing guide](CONTRIBUTE.md) -- we'd love your input!
+Welcome to the Ascend community! This repository contains example projects, sample code, and other goodies to use with Ascend. If you would like to contribute, please see the [contributing guide](CONTRIBUTING.md) -- we'd love your input!
 
 ## Projects
 
