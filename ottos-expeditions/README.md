@@ -16,11 +16,11 @@ Python package and Ascend Projects for Otto's Expeditions!
 | [`dev.py`](dev.py) | Development script |
 | [`README.md`](README.md) | This file! |
 
-## Running the project
+## Running the Ascend projects
 
 See [Ascend's getting started documentation](https://docs.ascend.io/getting-started) to get started with Ascend.
 
-## Installation
+## Python installation
 
 Using `uv` is recommended.
 
@@ -67,7 +67,7 @@ just setup
 Source the Python vritual environment:
 
 ```bash
-source .venv/bin/activate
+. .venv/bin/activate
 ```
 
 Run the data generation:
