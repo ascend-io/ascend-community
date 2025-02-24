@@ -9,7 +9,7 @@ Python package and Ascend Projects for Otto's Expeditions!
 | Path | Description |
 | --- | --- |
 | [`src/`](src) | Python package source code |
-| [`projects/`](projects) | Ascend projects source code
+| [`projects/`](projects) | Ascend projects source code |
 | [`pyproject.toml`](pyproject.toml) | Python project configuration |
 | [`uv.lock`](uv.lock) | Python package lock file |
 | [`justfile`](justfile) | Justfile for running tasks |
