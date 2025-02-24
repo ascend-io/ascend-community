@@ -14,7 +14,7 @@ dist/
 downloads/
 eggs/
 .eggs/
-# lib/ # used as a module named in ottos_oranges.lib
+# lib/ # used as a module named in ottos_expeditions.lib
 lib64/
 parts/
 sdist/
