@@ -1,6 +1,5 @@
-# Ascend Quickstart
+# Otto's Expeditions on Snowflake
 
-Welcome to the Ascend Quickstart! This guide will help you get started with your Ascend platform.
+This directory contains an example project for Otto's Expeditions on Snowflake.
 
-You can find [the documentation here](https://docs.ascend.io/getting-started/quickstart-bigquery).
-
+You can find [the quickstart document here](https://docs.ascend.io/getting-started/quickstart-snowflake).
