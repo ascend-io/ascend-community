@@ -4,3 +4,5 @@ connection:
     dataset: ${parameters.bigquery.dataset}
     location: ${parameters.bigquery.location}
     create_dataset_if_not_exists: true
+    max_concurrent_queries: 50
+
