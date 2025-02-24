@@ -26,20 +26,12 @@ sync:
 install-core:
     @uv pip install $HOME/code/ascend-io/core
 
-build-python:
+build:
     @rm -r dist || true
     @uv build
 
 format:
     @ruff format .
-
-# preview
-preview:
-    quarto preview website
-
-# build
-build:
-    quarto render website
 
 # cloud stuff
 upload-az:
@@ -61,21 +53,16 @@ upload:
 clean-gs:
     @gsutil -m rm -r gs://ascend-io-gcs-public/ottos-expeditions/{{remotelakedir}}
 
-clean-lake:
+clean-local:
     @rm -rf {{locallakedir}}
-
-clean:
-    rm -rf website/_site
-    rm -rf website/_freeze
-    rm -rf website/.quarto
 
 # release-test
 release-test:
-    just build-python
+    just build
     @uv publish --publish-url https://test.pypi.org/legacy/ --token ${PYPI_TEST_TOKEN}
 
 # release
 release:
-    just build-python
+    just build
     @uv publish --token ${PYPI_TOKEN}
 
