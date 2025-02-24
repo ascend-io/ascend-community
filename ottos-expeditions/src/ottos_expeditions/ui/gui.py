@@ -1,11 +1,9 @@
+# TODO: work in progress
 # imports
 from shiny import App, ui, module, reactive
 from shinyswatch import theme
 
-# state
-
 # gui
-
 gui = ui.page_sidebar(
     ui.sidebar("settings", "settings"),
     ui.h1("Otto's Expeditions"),
