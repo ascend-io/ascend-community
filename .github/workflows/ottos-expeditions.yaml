@@ -18,14 +18,15 @@ jobs:
   datagen:
     runs-on: ubuntu-latest
     steps:
+      # checkout the repository
       - name: checkout
         uses: actions/checkout@v4
 
-      # install just and uv
-      - uses: extractions/setup-just@v1
+      # install Python and just and uv
       - uses: actions/setup-python@v4
         with:
           python-version: 3.12
+      - uses: extractions/setup-just@v1
       - uses: astral-sh/setup-uv@v5
 
       # install ottos-expeditions
