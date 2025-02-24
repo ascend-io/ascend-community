@@ -75,4 +75,3 @@ Run the data generation:
 ```bash
 ottos-expeditions datagen --days 7
 ```
-
