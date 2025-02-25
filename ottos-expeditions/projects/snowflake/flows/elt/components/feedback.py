@@ -18,20 +18,20 @@ def feedback(
 ):
     feedback = (
         feedback_ascenders.mutate(
-            store_id=ibis.literal(None, type=str), user_id=ibis.literal(None, type=str)
+            STORE_ID=ibis.literal(None, type=str), USER_ID=ibis.literal(None, type=str)
         )
         .union(
             feedback_stores.mutate(
-                ascender_id=ibis.literal(None, type=str),
-                user_id=ibis.literal(None, type=str),
-                store_id=ibis._["store_id"].cast("string"),
+                ASCENDER_ID=ibis.literal(None, type=str),
+                USER_ID=ibis.literal(None, type=str),
+                STORE_ID=ibis._["STORE_ID"].cast("string"),
             )
         )
         .union(
             feedback_website.mutate(
-                feedback=ibis.literal(None, type=str),
-                ascender_id=ibis.literal(None, type=str),
-                store_id=ibis.literal("website", type=str),
+                FEEDBACK=ibis.literal(None, type=str),
+                ASCENDER_ID=ibis.literal(None, type=str),
+                STORE_ID=ibis.literal("website", type=str),
             )
         )
     )
