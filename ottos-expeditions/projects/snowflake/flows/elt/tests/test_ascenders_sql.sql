@@ -5,5 +5,5 @@ FROM
 WHERE
     ID IN (
         SELECT
-            "1" as ID
+            '"1"' as ID
     )
