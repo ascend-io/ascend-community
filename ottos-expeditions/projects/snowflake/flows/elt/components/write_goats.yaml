@@ -2,7 +2,7 @@ component:
   write:
     connection: snowflake_data_plane
     input:
-      name: GOATS
+      name: goats
       flow: elt
     snowflake:
       table:
