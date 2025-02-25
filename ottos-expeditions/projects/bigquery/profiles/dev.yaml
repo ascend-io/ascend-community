@@ -1,7 +1,7 @@
 profile:
   parameters:
     gcp:
-      project_id: ascend-io-cody
+      project_id: <your-gcp-project>
     bigquery:
       dataset: OTTOS_EXPEDITIONS_DEV
       location: US
