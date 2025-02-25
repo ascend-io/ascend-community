@@ -1,0 +1,17 @@
+profile:
+  parameters:
+    snowflake:
+      account: ascendpartner
+      user: ASCEND_CODY_DEV
+      database: ASCEND_CODY_DEV
+      schema: ASCEND_CODY_DEV_OE4
+      warehouse: ASCEND_CODY_DEV
+      role: ASCEND_CODY_DEV
+
+  defaults:
+    - kind: Flow
+      name:
+        regex: .*
+      spec:
+        data_plane:
+          connection_name: snowflake_data_plane
