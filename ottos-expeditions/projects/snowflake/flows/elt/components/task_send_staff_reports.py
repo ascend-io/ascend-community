@@ -14,5 +14,5 @@ def task_send_staff_reports(
     sales,
     context,
 ):
-    for contact in staff["contact"].to_pyarrow().to_pylist():
+    for contact in staff["CONTACT"].to_pyarrow().to_pylist():
         print(f"{contact}: good job!")

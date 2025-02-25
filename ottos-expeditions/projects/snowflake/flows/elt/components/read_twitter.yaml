@@ -7,8 +7,7 @@ component:
         - glob: "*/month=*/day=*/*.parquet"
   tests:
     columns:
-      timestamp:
+      TIMESTAMP:
         - not_null
-      id:
+      ID:
         - not_null
-

@@ -17,17 +17,17 @@ def sales(
     context,
 ):
     sales = (
-        sales_stores.mutate(vendor_id=ibis.literal(None, type=str))
+        sales_stores.mutate(VENDOR_ID=ibis.literal(None, type=str))
         .union(
             sales_website.mutate(
-                vendor_id=ibis.literal(None, type=str),
-                store_id=ibis.literal(0, type=str),
+                VENDOR_ID=ibis.literal(None, type=str),
+                STORE_ID=ibis.literal(0, type=str),
             )
         )
         .union(
             sales_vendors.mutate(
-                store_id=ibis.literal(0, type=str),
-                ascender_id=ibis.literal(None, type=str),
+                STORE_ID=ibis.literal(0, type=str),
+                ASCENDER_ID=ibis.literal(None, type=str),
             )
         )
     )

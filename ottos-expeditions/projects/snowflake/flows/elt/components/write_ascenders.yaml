@@ -8,4 +8,3 @@ component:
       table:
         name: elt_ascenders
         schema: ${parameters.snowflake.schema}
-

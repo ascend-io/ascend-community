@@ -13,9 +13,9 @@ def staff(
     context,
 ):
     staff = (
-        stores.select(contact="owner")
-        .union(warehouses.select(contact="owner"))
-        .distinct(on="contact")
+        stores.select(CONTACT="owner")
+        .union(warehouses.select(CONTACT="owner"))
+        .distinct(on="CONTACT")
     )
 
     return staff
