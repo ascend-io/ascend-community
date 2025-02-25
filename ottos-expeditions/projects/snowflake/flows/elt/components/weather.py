@@ -14,10 +14,10 @@ def weather(
     weather_sensors,
     context,
 ):
-    weather = weather_routes.mutate(LOCATION=ibis.literal(None, type=str)).union(
+    weather = weather_routes.mutate(location=ibis.literal(None, type=str)).union(
         weather_sensors.mutate(
-            ASCENDER_ID=ibis.literal(None, type=str),
-            ROUTE_ID=ibis.literal(None, type=str),
+            ascender_id=ibis.literal(None, type=str),
+            route_id=ibis.literal(None, type=str),
         )
     )
 

@@ -18,22 +18,22 @@ def feedback(
 ):
     feedback = (
         feedback_ascenders.mutate(
-            STORE_ID=ibis.literal(None, type=str), USER_ID=ibis.literal(None, type=str)
+            store_id=ibis.literal(None, type=str), user_id=ibis.literal(None, type=str)
         )
         .union(
             feedback_stores.mutate(
-                ASCENDER_ID=ibis.literal(None, type=str),
-                USER_ID=ibis.literal(None, type=str),
-                STORE_ID=ibis._["STORE_ID"].cast("string"),
+                ascender_id=ibis.literal(None, type=str),
+                user_id=ibis.literal(None, type=str),
+                store_id=ibis._["store_id"].cast("string"),
             )
         )
         .union(
             feedback_website.mutate(
-                FEEDBACK=ibis.literal(None, type=str),
-                ASCENDER_ID=ibis.literal(None, type=str),
-                STORE_ID=ibis.literal("website", type=str),
+                feedback=ibis.literal(None, type=str),
+                ascender_id=ibis.literal(None, type=str),
+                store_id=ibis.literal("website", type=str),
             )
         )
     )
 
-    return feedback.distinct()
+    return feedback

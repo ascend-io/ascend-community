@@ -8,3 +8,4 @@ component:
       table:
         name: elt_goats
         schema: ${parameters.snowflake.schema}
+

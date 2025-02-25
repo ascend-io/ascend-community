@@ -13,11 +13,11 @@ def telemetry(
     context,
 ):
     telemetry = (
-        telemetry_guides.rename(PERSON_ID="guide_id")
-        .mutate(IS_GUIDE=True, IS_ASCENDER=False)
+        telemetry_guides.rename(person_id="guide_id")
+        .mutate(is_guide=True, is_ascender=False)
         .union(
-            telemetry_ascenders.rename(PERSON_ID="ascender_id").mutate(
-                IS_GUIDE=False, IS_ASCENDER=True
+            telemetry_ascenders.rename(person_id="ascender_id").mutate(
+                is_guide=False, is_ascender=True
             )
         )
     )

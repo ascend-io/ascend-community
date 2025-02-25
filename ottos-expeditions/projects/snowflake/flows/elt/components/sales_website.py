@@ -1,4 +1,5 @@
 import ibis
+import local_code.transform as T
 
 from ascend.resources import ref, transform, test
 
@@ -14,5 +15,5 @@ from ascend.resources import ref, transform, test
     tests=[test("not_null", column="TIMESTAMP")],
 )
 def sales_website(read_sales_website: ibis.Table, context) -> ibis.Table:
-    sales_website = read_sales_website.distinct()
+    sales_website = T.clean(read_sales_website)
     return sales_website
