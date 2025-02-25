@@ -1,9 +1,9 @@
 from ascend.resources import ref, transform
 
 
-@transform(inputs=[ref("ascenders_alias")])
+@transform(inputs=[ref("ascenders_analytics")])
 def ascenders_promoters(
-    ascenders_alias,
+    ascenders_analytics,
     context,
 ):
-    return ascenders_alias.sample(0.6)
+    return ascenders_analytics.sample(0.6)
