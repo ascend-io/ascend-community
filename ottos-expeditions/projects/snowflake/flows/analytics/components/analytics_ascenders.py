@@ -1,7 +1,7 @@
 from ascend.resources import ref, transform
 
 
-@transform(inputs=[ref("alias_ascenders")])
-def analytics_ascenders(alias_ascenders, context):
+@transform(inputs=[ref("ascenders_alias")])
+def analytics_ascenders(ascenders_alias, context):
     # add your Transform logic here
-    return alias_ascenders
+    return ascenders_alias
