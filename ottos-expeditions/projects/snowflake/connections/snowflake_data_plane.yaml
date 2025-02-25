@@ -8,4 +8,4 @@ connection:
     warehouse: ${parameters.snowflake.warehouse}
     role: ${parameters.snowflake.role}
     create_schema_if_not_exists: true
-    # max_concurrent_queries: 20
+    max_concurrent_queries: 20
