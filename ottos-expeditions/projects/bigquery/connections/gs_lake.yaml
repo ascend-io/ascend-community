@@ -2,4 +2,4 @@ connection:
   gcs:
     root: gs://ascend-io-gcs-public
     # TODO: update
-    project: ascend-io-cody
+    # project: ascend-io-cody
