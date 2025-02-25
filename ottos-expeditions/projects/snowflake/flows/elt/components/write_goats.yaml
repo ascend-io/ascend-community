@@ -2,9 +2,9 @@ component:
   write:
     connection: snowflake_data_plane
     input:
-      name: goats
+      name: GOATS
       flow: elt
     snowflake:
       table:
-        name: elt_goats
+        name: ELT_GOATS
         schema: ${parameters.snowflake.schema}
