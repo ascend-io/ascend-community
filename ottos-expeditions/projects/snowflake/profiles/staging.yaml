@@ -1,7 +1,7 @@
 profile:
   parameters:
     snowflake:
-      account: ascendpartner
+      account: <your-snowflake-account>
       user: ASCEND_CODY_STAGING
       database: ASCEND_CODY_STAGING
       schema: ASCEND_CODY_STAGING
