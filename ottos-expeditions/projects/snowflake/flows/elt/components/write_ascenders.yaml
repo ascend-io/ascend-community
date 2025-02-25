@@ -2,7 +2,7 @@ component:
   write:
     connection: snowflake_data_plane
     input:
-      name: ASCENDERS
+      name: ascenders
       flow: elt
     snowflake:
       table:
