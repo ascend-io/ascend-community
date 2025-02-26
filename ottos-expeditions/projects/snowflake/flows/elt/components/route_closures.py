@@ -1,5 +1,5 @@
 import ibis
-import ottos_expeditions.lib.transform as T
+import local_code.transform as T
 
 from ascend.resources import ref, transform
 

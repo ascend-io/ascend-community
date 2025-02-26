@@ -11,9 +11,9 @@ from ascend.resources import ref, transform
 )
 def social_media(inlinked, metabook, metagram, twitter, context):
     social_media = (
-        inlinked.rename(content="inlinked_content")
-        .union(metabook.rename(content="metabook_content"))
-        .union(metagram.rename(content="metagram_content"))
-        .union(twitter.rename(content="tweet_content"))
+        inlinked.rename(CONTENT="INLINKED_CONTENT")
+        .union(metabook.rename(CONTENT="METABOOK_CONTENT"))
+        .union(metagram.rename(CONTENT="METAGRAM_CONTENT"))
+        .union(twitter.rename(CONTENT="TWEET_CONTENT"))
     )
     return social_media

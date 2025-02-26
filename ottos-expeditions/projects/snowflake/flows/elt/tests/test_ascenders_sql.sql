@@ -3,7 +3,7 @@ SELECT
 FROM
     {{ ref("ascenders") }}
 WHERE
-    id IN (
+    ID IN (
         SELECT
-            "1" as id
+            "1" as ID
     )

@@ -8,11 +8,11 @@ from ascend.resources import ref, transform, test
     inputs=[
         ref(
             "read_sales_website",
-            reshape={"time": {"column": "timestamp", "granularity": "day"}},
+            reshape={"time": {"column": "TIMESTAMP", "granularity": "day"}},
         )
     ],
     materialized="table",
-    tests=[test("not_null", column="timestamp")],
+    tests=[test("not_null", column="TIMESTAMP")],
 )
 def sales_website(read_sales_website: ibis.Table, context) -> ibis.Table:
     sales_website = T.clean(read_sales_website)
