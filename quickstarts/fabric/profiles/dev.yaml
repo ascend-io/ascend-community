@@ -3,7 +3,7 @@ profile:
 
     warehouse:
       # like 'xxx-yyy.datawarehouse.fabric.microsoft.com'
-      server: rnm2l42d4amupafhjgzdarv55q-jsly3d2ybywuflccw3fjzkmjja.datawarehouse.fabric.microsoft.com
+      server: https://rnm2l42d4amupafhjgzdarv55q-jsly3d2ybywuflccw3fjzkmjja.datawarehouse.fabric.microsoft.com
       # If you chose a different name for the warehouse, use that below
       name: ascend_data_plane_warehouse
       # If you chose a different schema for the warehouse, use that below
@@ -15,7 +15,7 @@ profile:
       # If you chose a different schema for the lakehouse, use that below
       schema: quickstart
       # like 'https://api.fabric.microsoft.com/v1/workspaces/<workspace-uid>/lakehouses/<lakehouse-uid>/livyapi/versions/2023-12-01/'
-      endpoint: rnm2l42d4amupafhjgzdarv55q-jsly3d2ybywuflccw3fjzkmjja.datawarehouse.fabric.microsoft.com
+      endpoint: https://rnm2l42d4amupafhjgzdarv55q-jsly3d2ybywuflccw3fjzkmjja.datawarehouse.fabric.microsoft.com
 
     service_principal:
       # client_id is the same as appId in various places in Azure
