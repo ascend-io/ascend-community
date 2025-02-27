@@ -1,0 +1,3 @@
+component:
+  alias:
+    location: "${parameters.warehouse.name}.${parameters.warehouse.schema}.ascenders"

@@ -1,0 +1,53 @@
+profile:
+  parameters:
+
+    warehouse:
+      # like 'xxx-yyy.datawarehouse.fabric.microsoft.com'
+      server: rnm2l42d4amupafhjgzdarv55q-jsly3d2ybywuflccw3fjzkmjja.datawarehouse.fabric.microsoft.com
+      # If you chose a different name for the warehouse, use that below
+      name: ascend_data_plane_warehouse
+      # If you chose a different schema for the warehouse, use that below
+      schema: ottos_expeditions
+
+    lakehouse:
+      # If you chose a different name for the lakehouse, use that below
+      name: ascend_data_plane_lakehouse
+      # If you chose a different schema for the lakehouse, use that below
+      schema: ottos_expeditions
+      # like 'https://api.fabric.microsoft.com/v1/workspaces/<workspace-uid>/lakehouses/<lakehouse-uid>/livyapi/versions/2023-12-01/'
+      endpoint: https://api.fabric.microsoft.com/v1/workspaces/8f8d974c-0e58-422d-ac42-b6ca9ca98948/lakehouses/c8998a65-184e-495b-a2b8-1a92c6bdbb69/livyapi/versions/2023-12-01/sessions
+
+    service_principal:
+      # client_id is the same as appId in various places in Azure
+      client_id: 58570075-69e0-4cd3-80fd-9fd44a414001
+      # tenant_id is sometimes tenant or directory id in Azure
+      tenant_id: f3a5598b-e043-4719-80a7-49b23046bdec
+
+    storage_account:
+      name: codydevfabric
+      # If you chose a different path for the storage container name, use that below
+      path: "abfss://ascend-staging"
+
+  defaults:
+    - kind: Flow
+      name:
+        regex: .*
+      spec:
+        data_plane:
+          connection_name: fabric_data_plane
+    - kind: Component
+      name:
+        regex: .*
+      flow_name: quickstart
+      spec:
+        data_plane:
+          fabric:
+            spark_session_config:
+              pool: ascendspark
+              driver_memory: 56g
+              driver_cores: 8
+              executor_memory: 56g
+              executor_cores: 8
+              num_executors: 0
+              max_concurrent_sessions: 1
+
