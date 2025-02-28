@@ -17,6 +17,9 @@ concurrency:
 jobs:
   datagen:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ottos-expeditions
     steps:
       # checkout the repository
       - name: checkout
