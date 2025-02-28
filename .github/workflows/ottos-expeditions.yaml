@@ -36,5 +36,7 @@ jobs:
       - run: just install
 
       # run datagen
-      - run: ottos-expeditions datagen --days 7
+      - run: |
+          . .venv/bin/activate
+          ottos-expeditions datagen --days 7
 
