@@ -1,3 +1,4 @@
+# project yaml
 project:
   name: ottos-expeditions
   pip_packages:
