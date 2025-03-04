@@ -1,0 +1,3 @@
+component:
+  alias:
+    location: "${parameters.snowflake.database}.${parameters.snowflake.schema}.ASCENDERS"

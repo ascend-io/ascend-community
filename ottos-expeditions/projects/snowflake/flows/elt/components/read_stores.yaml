@@ -1,0 +1,5 @@
+component:
+  read:
+    connection: az_lake
+    abfs:
+      path: lakev0/seed/stores.csv

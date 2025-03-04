@@ -25,6 +25,7 @@ dependencies = [
   'shinywidgets',
   # data
   'ibis-framework[sqlite,duckdb,datafusion,polars,bigquery,snowflake,deltalake]',
+  'snowflake-snowpark-python',
   # synthetic data
   'Faker',
   # viz
