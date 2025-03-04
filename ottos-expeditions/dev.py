@@ -1,3 +1,11 @@
+"""
+This file is used for local development and testing. Typically, in IPython:
+
+```python
+$ ipython -i dev.py
+```
+"""
+
 # ruff: noqa
 # imports
 import os
