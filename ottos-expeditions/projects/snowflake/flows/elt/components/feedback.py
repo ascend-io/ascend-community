@@ -1,9 +1,10 @@
-import ibis
+from ascend.resources import ref, snowpark
 
-from ascend.resources import ref, transform
+from snowflake.snowpark.types import StringType
+from snowflake.snowpark.functions import lit
 
 
-@transform(
+@snowpark(
     inputs=[
         ref("feedback_ascenders"),
         ref("feedback_stores"),
@@ -17,21 +18,28 @@ def feedback(
     context,
 ):
     feedback = (
-        feedback_ascenders.mutate(
-            STORE_ID=ibis.literal(None, type=str), USER_ID=ibis.literal(None, type=str)
+        feedback_ascenders.with_columns(
+            ["STORE_ID", "USER_ID"],
+            [lit(None, StringType()), lit(None, StringType())],
         )
         .union(
-            feedback_stores.mutate(
-                ASCENDER_ID=ibis.literal(None, type=str),
-                USER_ID=ibis.literal(None, type=str),
-                STORE_ID=ibis._["STORE_ID"].cast("string"),
+            feedback_stores.with_columns(
+                ["ASCENDER_ID", "USER_ID", "STORE_ID"],
+                [
+                    lit(None, StringType()),
+                    lit(None, StringType()),
+                    feedback_stores["STORE_ID"].cast(StringType()),
+                ],
             )
         )
         .union(
-            feedback_website.mutate(
-                FEEDBACK=ibis.literal(None, type=str),
-                ASCENDER_ID=ibis.literal(None, type=str),
-                STORE_ID=ibis.literal("website", type=str),
+            feedback_website.with_columns(
+                ["FEEDBACK", "ASCENDER_ID", "STORE_ID"],
+                [
+                    lit(None, StringType()),
+                    lit(None, StringType()),
+                    lit("website", StringType()),
+                ],
             )
         )
     )
