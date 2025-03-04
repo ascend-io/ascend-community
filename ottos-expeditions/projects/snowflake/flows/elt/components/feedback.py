@@ -17,11 +17,13 @@ def feedback(
     feedback_website,
     context,
 ):
+    cols = ["ID", "TIMESTAMP", "FEEDBACK_CONTENT", "STORE_ID", "ASCENDER_ID", "USER_ID"]
     feedback = (
         feedback_ascenders.with_columns(
             ["STORE_ID", "USER_ID"],
             [lit(None, StringType()), lit(None, StringType())],
         )
+        .select(cols)
         .union(
             feedback_stores.with_columns(
                 ["ASCENDER_ID", "USER_ID", "STORE_ID"],
@@ -30,7 +32,7 @@ def feedback(
                     lit(None, StringType()),
                     feedback_stores["STORE_ID"].cast(StringType()),
                 ],
-            )
+            ).select(cols)
         )
         .union(
             feedback_website.with_columns(
@@ -40,7 +42,7 @@ def feedback(
                     lit(None, StringType()),
                     lit("website", StringType()),
                 ],
-            )
+            ).select(cols)
         )
     )
 
