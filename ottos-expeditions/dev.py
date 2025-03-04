@@ -11,6 +11,8 @@ from faker import Faker
 from dotenv import load_dotenv
 
 from ottos_expeditions.lib.synthetic import *
+from snowflake.snowpark import Session
+
 
 # setup
 load_dotenv()
@@ -46,12 +48,15 @@ bq_con = ibis.bigquery.connect(project_id=project_id, dataset_id=dataset_id)
 snow_dev_profile = yaml.safe_load(
     open(os.path.join("projects", "snowflake", "profiles", "dev.yaml"))
 )
-snow_con = ibis.snowflake.connect(
-    account=snow_dev_profile["profile"]["parameters"]["snowflake"]["account"],
-    user=snow_dev_profile["profile"]["parameters"]["snowflake"]["user"],
-    database=snow_dev_profile["profile"]["parameters"]["snowflake"]["database"],
-    schema=snow_dev_profile["profile"]["parameters"]["snowflake"]["schema"],
-    warehouse=snow_dev_profile["profile"]["parameters"]["snowflake"]["warehouse"],
-    role=snow_dev_profile["profile"]["parameters"]["snowflake"]["role"],
-    password=os.getenv("SNOWFLAKE_PASSWORD"),
-)
+
+snow_params = {
+    "account": snow_dev_profile["profile"]["parameters"]["snowflake"]["account"],
+    "user": snow_dev_profile["profile"]["parameters"]["snowflake"]["user"],
+    "password": os.getenv("SNOWFLAKE_PASSWORD"),
+    "role": snow_dev_profile["profile"]["parameters"]["snowflake"]["role"],
+    "warehouse": snow_dev_profile["profile"]["parameters"]["snowflake"]["warehouse"],
+    "database": snow_dev_profile["profile"]["parameters"]["snowflake"]["database"],
+    "schema": snow_dev_profile["profile"]["parameters"]["snowflake"]["schema"],
+}
+snow_con = ibis.snowflake.connect(**snow_params)
+snow_ses = Session.builder.configs(snow_params).create()
