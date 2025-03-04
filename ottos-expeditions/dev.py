@@ -10,9 +10,11 @@ from io import BytesIO, StringIO
 from faker import Faker
 from dotenv import load_dotenv
 
-from ottos_expeditions.lib.synthetic import *
 from snowflake.snowpark import Session
+from snowflake.snowpark.types import StringType
+from snowflake.snowpark.functions import lit
 
+from ottos_expeditions.lib.synthetic import *
 
 # setup
 load_dotenv()
