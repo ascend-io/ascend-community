@@ -1,7 +1,10 @@
-from ascend.resources import ref, snowpark
+import snowflake
 
 from snowflake.snowpark.types import StringType
 from snowflake.snowpark.functions import lit
+
+from ascend.resources import ref, snowpark
+from ascend.application.context import ComponentExecutionContext
 
 
 @snowpark(
@@ -12,11 +15,11 @@ from snowflake.snowpark.functions import lit
     ]
 )
 def feedback(
-    feedback_ascenders,
-    feedback_stores,
-    feedback_website,
-    context,
-):
+    feedback_ascenders: snowflake.snowpark.Table,
+    feedback_stores: snowflake.snowpark.Table,
+    feedback_website: snowflake.snowpark.Table,
+    context: ComponentExecutionContext,
+) -> snowflake.snowpark.Table:
     cols = ["ID", "TIMESTAMP", "FEEDBACK_CONTENT", "STORE_ID", "ASCENDER_ID", "USER_ID"]
     feedback = (
         feedback_ascenders.with_columns(
