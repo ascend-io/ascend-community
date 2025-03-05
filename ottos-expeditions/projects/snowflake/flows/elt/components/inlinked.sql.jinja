@@ -2,7 +2,7 @@ WITH inlinked AS (
     SELECT
         *
     FROM
-        {{ ref('read_inlinked') }}
+        {{ ref("read_inlinked") }}
 )
 SELECT
     *

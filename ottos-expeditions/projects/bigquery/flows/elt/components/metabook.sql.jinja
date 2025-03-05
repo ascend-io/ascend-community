@@ -2,7 +2,7 @@ WITH metabook AS (
     SELECT
         *
     FROM
-        {{ ref('read_metabook') }}
+        {{ ref("read_metabook") }}
 )
 SELECT
     *

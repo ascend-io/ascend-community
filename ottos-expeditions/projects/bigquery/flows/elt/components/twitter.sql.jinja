@@ -2,7 +2,7 @@ WITH twitter AS (
     SELECT
         *
     FROM
-        {{ ref('read_twitter', reshape="map") }}
+        {{ ref("read_twitter", reshape="map") }}
 )
 SELECT
     *

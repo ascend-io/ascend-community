@@ -2,7 +2,7 @@ WITH feedback_stores AS (
     SELECT
         *
     FROM
-        {{ ref('read_feedback_stores') }}
+        {{ ref("read_feedback_stores") }}
 )
 SELECT
     *
