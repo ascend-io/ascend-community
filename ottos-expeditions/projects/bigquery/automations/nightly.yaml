@@ -10,6 +10,6 @@ automation:
             cron: 0 4 * * *
   actions:
     - type: run_flow
-      name: run-etl
+      name: run-elt
       config:
         flow: elt
