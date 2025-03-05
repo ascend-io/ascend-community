@@ -1,10 +1,12 @@
-import ibis
+import snowflake
+
 import local_code.transform as T
 
-from ascend.resources import ref, transform, test
+from ascend.resources import ref, snowpark, test
+from ascend.application.context import ComponentExecutionContext
 
 
-@transform(
+@snowpark(
     inputs=[
         ref(
             "read_sales_website",
@@ -14,6 +16,8 @@ from ascend.resources import ref, transform, test
     materialized="table",
     tests=[test("not_null", column="TIMESTAMP")],
 )
-def sales_website(read_sales_website: ibis.Table, context) -> ibis.Table:
+def sales_website(
+    read_sales_website: snowflake.snowpark.Table, context: ComponentExecutionContext
+) -> snowflake.snowpark.Table:
     sales_website = T.clean(read_sales_website)
     return sales_website

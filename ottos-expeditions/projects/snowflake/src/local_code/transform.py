@@ -1,7 +1,7 @@
 # imports
-import ibis
+import snowflake
 
 
 # functions
-def clean(t: ibis.Table) -> ibis.Table:
-    return t.rename("snake_case").rename("ALL_CAPS").distinct()
+def clean(t: snowflake.snowpark.Table) -> snowflake.snowpark.Table:
+    return t.distinct()
