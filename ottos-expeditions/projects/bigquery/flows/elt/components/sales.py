@@ -16,6 +16,7 @@ def sales(
     sales_vendors,
     context,
 ):
+    # this is a random comment
     sales = (
         sales_stores.mutate(vendor_id=ibis.literal(None, type=str))
         .union(
