@@ -1,4 +1,7 @@
+import ibis
+
 from ascend.resources import ref, task
+from ascend.application.context import ComponentExecutionContext
 
 
 @task(
@@ -9,10 +12,10 @@ from ascend.resources import ref, task
     ]
 )
 def task_send_staff_reports(
-    staff,
-    ascenders,
-    sales,
-    context,
+    staff: ibis.Table,
+    ascenders: ibis.Table,
+    sales: ibis.Table,
+    context: ComponentExecutionContext,
 ):
     for contact in staff["contact"].to_pyarrow().to_pylist():
         print(f"{contact}: good job!")

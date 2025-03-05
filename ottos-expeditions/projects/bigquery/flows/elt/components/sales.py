@@ -1,6 +1,7 @@
 import ibis
 
 from ascend.resources import ref, transform
+from ascend.application.context import ComponentExecutionContext
 
 
 @transform(
@@ -11,11 +12,11 @@ from ascend.resources import ref, transform
     ]
 )
 def sales(
-    sales_stores,
-    sales_website,
-    sales_vendors,
-    context,
-):
+    sales_stores: ibis.Table,
+    sales_website: ibis.Table,
+    sales_vendors: ibis.Table,
+    context: ComponentExecutionContext,
+) -> ibis.Table:
     sales = (
         sales_stores.mutate(vendor_id=ibis.literal(None, type=str))
         .union(

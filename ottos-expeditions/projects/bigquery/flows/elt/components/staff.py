@@ -1,4 +1,7 @@
+import ibis
+
 from ascend.resources import ref, transform
+from ascend.application.context import ComponentExecutionContext
 
 
 @transform(
@@ -8,10 +11,10 @@ from ascend.resources import ref, transform
     ]
 )
 def staff(
-    stores,
-    warehouses,
-    context,
-):
+    stores: ibis.Table,
+    warehouses: ibis.Table,
+    context: ComponentExecutionContext,
+) -> ibis.Table:
     staff = (
         stores.select(contact="owner")
         .union(warehouses.select(contact="owner"))

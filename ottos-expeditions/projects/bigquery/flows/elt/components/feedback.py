@@ -1,6 +1,7 @@
 import ibis
 
 from ascend.resources import ref, transform
+from ascend.application.context import ComponentExecutionContext
 
 
 @transform(
@@ -11,11 +12,11 @@ from ascend.resources import ref, transform
     ]
 )
 def feedback(
-    feedback_ascenders,
-    feedback_stores,
-    feedback_website,
-    context,
-):
+    feedback_ascenders: ibis.Table,
+    feedback_stores: ibis.Table,
+    feedback_website: ibis.Table,
+    context: ComponentExecutionContext,
+) -> ibis.Table:
     feedback = (
         feedback_ascenders.mutate(
             store_id=ibis.literal(None, type=str), user_id=ibis.literal(None, type=str)

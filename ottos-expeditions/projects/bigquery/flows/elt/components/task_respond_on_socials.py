@@ -1,4 +1,7 @@
+import ibis
+
 from ascend.resources import ref, task
+from ascend.application.context import ComponentExecutionContext
 
 
 @task(
@@ -7,8 +10,7 @@ from ascend.resources import ref, task
     ]
 )
 def task_respond_on_socials(
-    social_media,
-    context,
-):
+    social_media: ibis.Table, context: ComponentExecutionContext
+) -> None:
     for i in range(1000):
         print("Thank you for your comment!")

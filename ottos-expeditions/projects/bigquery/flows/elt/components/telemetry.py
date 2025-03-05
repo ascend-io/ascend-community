@@ -1,4 +1,7 @@
+import ibis
+
 from ascend.resources import ref, transform
+from ascend.application.context import ComponentExecutionContext
 
 
 @transform(
@@ -8,10 +11,10 @@ from ascend.resources import ref, transform
     ]
 )
 def telemetry(
-    telemetry_guides,
-    telemetry_ascenders,
-    context,
-):
+    telemetry_guides: ibis.Table,
+    telemetry_ascenders: ibis.Table,
+    context: ComponentExecutionContext,
+) -> ibis.Table:
     telemetry = (
         telemetry_guides.rename(person_id="guide_id")
         .mutate(is_guide=True, is_ascender=False)

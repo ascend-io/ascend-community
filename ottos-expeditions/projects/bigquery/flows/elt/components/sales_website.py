@@ -2,6 +2,7 @@ import ibis
 import local_code.transform as T
 
 from ascend.resources import ref, transform, test
+from ascend.application.context import ComponentExecutionContext
 
 
 @transform(
@@ -14,6 +15,8 @@ from ascend.resources import ref, transform, test
     materialized="table",
     tests=[test("not_null", column="timestamp")],
 )
-def sales_website(read_sales_website: ibis.Table, context) -> ibis.Table:
+def sales_website(
+    read_sales_website: ibis.Table, context: ComponentExecutionContext
+) -> ibis.Table:
     sales_website = T.clean(read_sales_website)
     return sales_website

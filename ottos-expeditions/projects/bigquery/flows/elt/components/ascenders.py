@@ -1,4 +1,7 @@
+import ibis
+
 from ascend.resources import ref, transform
+from ascend.application.context import ComponentExecutionContext
 
 
 @transform(
@@ -15,15 +18,16 @@ from ascend.resources import ref, transform
     ]
 )
 def ascenders(
-    staff,
-    routes,
-    guides,
-    route_closures,
-    telemetry,
-    weather,
-    sales,
-    social_media,
-    feedback,
-    context,
-):
+    staff: ibis.Table,
+    routes: ibis.Table,
+    guides: ibis.Table,
+    route_closures: ibis.Table,
+    telemetry: ibis.Table,
+    weather: ibis.Table,
+    sales: ibis.Table,
+    social_media: ibis.Table,
+    feedback: ibis.Table,
+    context: ComponentExecutionContext,
+) -> ibis.Table:
+    # TODO: more interesting logic here
     return telemetry

@@ -1,4 +1,7 @@
+import ibis
+
 from ascend.resources import ref, transform
+from ascend.application.context import ComponentExecutionContext
 
 
 @transform(
@@ -9,7 +12,13 @@ from ascend.resources import ref, transform
         ref("twitter"),
     ]
 )
-def social_media(inlinked, metabook, metagram, twitter, context):
+def social_media(
+    inlinked: ibis.Table,
+    metabook: ibis.Table,
+    metagram: ibis.Table,
+    twitter: ibis.Table,
+    context: ComponentExecutionContext,
+) -> ibis.Table:
     social_media = (
         inlinked.rename(content="inlinked_content")
         .union(metabook.rename(content="metabook_content"))

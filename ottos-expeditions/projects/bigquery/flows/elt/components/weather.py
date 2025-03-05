@@ -1,6 +1,7 @@
 import ibis
 
 from ascend.resources import ref, transform
+from ascend.application.context import ComponentExecutionContext
 
 
 @transform(
@@ -10,10 +11,10 @@ from ascend.resources import ref, transform
     ]
 )
 def weather(
-    weather_routes,
-    weather_sensors,
-    context,
-):
+    weather_routes: ibis.Table,
+    weather_sensors: ibis.Table,
+    context: ComponentExecutionContext,
+) -> ibis.Table:
     weather = weather_routes.mutate(location=ibis.literal(None, type=str)).union(
         weather_sensors.mutate(
             ascender_id=ibis.literal(None, type=str),
