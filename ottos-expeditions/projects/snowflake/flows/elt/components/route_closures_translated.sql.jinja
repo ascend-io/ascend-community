@@ -6,7 +6,7 @@ WITH route_closures AS (
 )
 SELECT
     *,
-    SNOWFLAKE.CORTEX.TRANSLATE(REASON, "en", "es") as TRANSLATED
+    SNOWFLAKE.CORTEX.TRANSLATE(REASON, 'en', 'es') as TRANSLATED
 FROM
     route_closures
 -- as-is, the source table has fewer than 10 rows
