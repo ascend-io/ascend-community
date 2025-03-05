@@ -20,5 +20,4 @@ def weather(
             route_id=ibis.literal(None, type=str),
         )
     )
-
     return weather
