@@ -1,5 +1,5 @@
 component:
   read:
-    connection: az_lake
+    connection: abfss_lake
     abfs:
       path: lakev0/seed/stores.csv

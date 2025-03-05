@@ -1,5 +1,5 @@
 component:
   read:
-    connection: gs_lake
+    connection: gcs_lake
     gcs:
       path: ottos-expeditions/lakev0/seed/guides.csv
