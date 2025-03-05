@@ -18,6 +18,7 @@ from io import BytesIO, StringIO
 from faker import Faker
 from dotenv import load_dotenv
 
+from snowflake import snowpark
 from snowflake.snowpark import Session
 from snowflake.snowpark.types import StringType
 from snowflake.snowpark.functions import lit
