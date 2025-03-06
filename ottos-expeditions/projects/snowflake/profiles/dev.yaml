@@ -1,12 +1,12 @@
 profile:
   parameters:
     snowflake:
-      account: <your-snowflake-account>
-      user: ASCEND_ENV_DEV
-      database: ASCEND_ENV_DEV
-      schema: ASCEND_ENV_DEV
-      warehouse: ASCEND_ENV_DEV
-      role: ASCEND_ENV_DEV
+      account: PIAGRRP-ASCENDPARTNER
+      user: SEAN_DEV_ENV_DEV
+      database: SEAN_DEV
+      schema: OTTOS_EXPEDITIONS
+      warehouse: SEAN_DEV
+      role: SEAN_DEV_ENV_DEV
 
   defaults:
     - kind: Flow
