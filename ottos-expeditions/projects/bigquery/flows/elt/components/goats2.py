@@ -11,7 +11,7 @@ from ascend.application.context import ComponentExecutionContext
         ref("telemetry"),
     ]
 )
-def goats(
+def goats3(
     ascenders: ibis.Table,
     routes: ibis.Table,
     telemetry: ibis.Table,
@@ -27,7 +27,7 @@ def goats(
         ref("telemetry"),
     ]
 )
-def goats2(
+def goats4(
     ascenders: ibis.Table,
     routes: ibis.Table,
     telemetry: ibis.Table,
