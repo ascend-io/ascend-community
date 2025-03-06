@@ -3,8 +3,8 @@ profile:
     snowflake:
       account: ascendpartner
       user: nandan_inception_test
-      database: nandan_inception_test
-      schema: nandan_inception_test
+      database: ottos_expeditions
+      schema: ottos_expeditions
       warehouse: nandan_inception_test
       role: nandan_inception_test
 
