@@ -1,12 +1,12 @@
 profile:
   parameters:
     snowflake:
-      account: <your-snowflake-account>
-      user: ASCEND_ENV_DEV
-      database: ASCEND_ENV_DEV
-      schema: ASCEND_ENV_DEV
-      warehouse: ASCEND_ENV_DEV
-      role: ASCEND_ENV_DEV
+      account: ascendpartner
+      user: nandan_inception_test
+      database: nandan_inception_test
+      schema: nandan_inception_test
+      warehouse: nandan_inception_test
+      role: nandan_inception_test
 
   defaults:
     - kind: Flow
