@@ -2,7 +2,7 @@ connection:
   snowflake:
     account: ${parameters.snowflake.account}
     user: ${parameters.snowflake.user}
-    password: ${vaults.gcp.snowflake_instance_store}
+    password: ${vaults.gcp.snowflake_data_plane}
     database: ${parameters.snowflake.database}
     schema: ${parameters.snowflake.schema}
     warehouse: ${parameters.snowflake.warehouse}

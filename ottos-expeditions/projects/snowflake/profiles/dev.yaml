@@ -2,11 +2,11 @@ profile:
   parameters:
     snowflake:
       account: ascendpartner
-      user: nandan_inception_test
+      user: ASCEND_IO_SAMPLE_DATA
       database: ottos_expeditions
       schema: ottos_expeditions
-      warehouse: nandan_inception_test
-      role: nandan_inception_test
+      warehouse: test
+      role: ""
 
   defaults:
     - kind: Flow
