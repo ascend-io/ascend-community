@@ -9,3 +9,8 @@ component:
         - suffix: parquet
       time_based_file_selection:
         pattern: 'partition_column=(?P<year>\d{4})-(?P<month>\d{2})-(?P<day>\d{2})'
+    strategy:
+      on_schema_change: sync_all_columns
+      partitioned:
+        output_type: table
+        enable_substitution_by_partition_name: false
