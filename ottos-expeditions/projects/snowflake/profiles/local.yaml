@@ -1,0 +1,17 @@
+profile:
+  parameters:
+    snowflake:
+      account: <your-snowflake-account>
+      user: ASCEND_IO_SAMPLE_DATA
+      database: ascend_pipeline_test
+      schema: rui
+      warehouse: ASCEND_ENV_DEV
+      role: ASCEND_ENV_DEV
+
+  defaults:
+    - kind: Flow
+      name:
+        regex: .*
+      spec:
+        data_plane:
+          connection_name: snowflake_data_plane
