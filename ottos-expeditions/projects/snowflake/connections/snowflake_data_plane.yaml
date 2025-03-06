@@ -2,7 +2,7 @@ connection:
   snowflake:
     account: ${parameters.snowflake.account}
     user: ${parameters.snowflake.user}
-    password: ${vaults.environment.snowflake-password-sean-dev}
+    password: ${vaults.environment.snowflake-password-sean-dev2333}
     database: ${parameters.snowflake.database}
     schema: ${parameters.snowflake.schema}
     warehouse: ${parameters.snowflake.warehouse}
