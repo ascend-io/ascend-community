@@ -2,7 +2,7 @@ WITH metagram AS (
     SELECT
         *
     FROM
-        {{ ref("read_metagram", reshape={"map"}) }}
+        {{ ref("read_metagram", reshape="map") }}
 )
 SELECT
     *
