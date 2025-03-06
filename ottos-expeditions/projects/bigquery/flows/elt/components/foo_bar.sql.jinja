@@ -4,6 +4,5 @@
     dependencies=[ref("feedback_website")]
   )
 }}
-/* add your Task logic here, you can reference name for this component by using {{ this }} */
-DROP TABLE IF EXISTS {{ this }};
-CREATE TABLE {{ this }} AS (SELECT * FROM {{ ref("feedback_website") }})
+
+SELECT 1;
