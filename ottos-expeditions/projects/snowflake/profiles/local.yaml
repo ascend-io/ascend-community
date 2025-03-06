@@ -5,8 +5,7 @@ profile:
       user: ASCEND_IO_SAMPLE_DATA
       database: ascend_pipeline_test
       schema: rui
-      warehouse: ASCEND_ENV_DEV
-      role: ASCEND_ENV_DEV
+      warehouse: TEST
 
   defaults:
     - kind: Flow
