@@ -1,6 +1,6 @@
 component:
   read:
-    connection: local_fs
+    connection: local_files
     event_time: pickup_datetime
     local_file:
       path: cab_rides/
