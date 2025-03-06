@@ -1,7 +1,7 @@
 profile:
   parameters:
     gcp:
-      project_id: <your-gcp-project>
+      project_id: ascend-io-dev-andreysiunov
     bigquery:
       dataset: OTTOS_EXPEDITIONS_DEV
       location: US
