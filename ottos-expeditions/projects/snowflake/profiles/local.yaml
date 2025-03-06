@@ -1,11 +1,12 @@
 profile:
   parameters:
     snowflake:
-      account: <your-snowflake-account>
+      account: ascendpartner
       user: ASCEND_IO_SAMPLE_DATA
       database: ascend_pipeline_test
       schema: rui
       warehouse: TEST
+      role: ""
 
   defaults:
     - kind: Flow
