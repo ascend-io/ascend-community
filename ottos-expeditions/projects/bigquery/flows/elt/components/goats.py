@@ -27,7 +27,7 @@ def goats(
         ref("telemetry"),
     ]
 )
-def goats6(
+def goats7(
     ascenders: ibis.Table,
     routes: ibis.Table,
     telemetry: ibis.Table,
