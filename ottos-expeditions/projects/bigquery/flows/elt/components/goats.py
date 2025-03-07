@@ -27,7 +27,23 @@ def goats(
         ref("telemetry"),
     ]
 )
-def goats11(
+def goats2(
+    ascenders: ibis.Table,
+    routes: ibis.Table,
+    telemetry: ibis.Table,
+    context: ComponentExecutionContext,
+) -> ibis.Table:
+    return ascenders.sample(0.01)
+
+
+@transform(
+    inputs=[
+        ref("ascenders"),
+        ref("routes"),
+        ref("telemetry"),
+    ]
+)
+def goats3(
     ascenders: ibis.Table,
     routes: ibis.Table,
     telemetry: ibis.Table,
