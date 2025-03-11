@@ -1,1 +1,5 @@
+{{
+    config(type='task')
+}}
+
 SELECT 1 AS baz
