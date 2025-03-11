@@ -1,12 +1,12 @@
 profile:
   parameters:
     snowflake:
-      account: <your-snowflake-account>
-      user: ASCEND_ENV_PROD
-      database: ASCEND_ENV_PROD
-      schema: ASCEND_ENV_PROD
-      warehouse: ASCEND_ENV_PROD
-      role: ASCEND_ENV_PROD
+      account: ascendpartner
+      user: KYLE_INSTANCE
+      database: KYLE_OSBORNE_DEMO
+      schema: INCEPTION_LOCAL_DEV_OTTO_EXPEDITIONS
+      warehouse: TEST
+      role: KYLE_LOCAL_DEV
 
   defaults:
     - kind: Flow
