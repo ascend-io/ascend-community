@@ -1,6 +1,0 @@
-component:
-  compound:
-    application: flow_template
-    application_config:
-      template_name: foo
-      parameters: {}
