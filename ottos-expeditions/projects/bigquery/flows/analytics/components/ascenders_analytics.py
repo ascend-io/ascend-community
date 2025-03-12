@@ -8,5 +8,5 @@ from ascend.application.context import ComponentExecutionContext
 def ascenders_analytics(
     ascenders: ibis.Table, context: ComponentExecutionContext
 ) -> ibis.Table:
-    ascenders_analytics = alias_ascenders
+    ascenders_analytics = ascenders
     return ascenders_analytics
