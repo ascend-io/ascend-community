@@ -6,7 +6,7 @@ from ascend.application.context import ComponentExecutionContext
 
 @transform(inputs=[ref("ascenders", flow="elt")])
 def ascenders_analytics(
-    alias_ascenders: ibis.Table, context: ComponentExecutionContext
+    ascenders: ibis.Table, context: ComponentExecutionContext
 ) -> ibis.Table:
     ascenders_analytics = alias_ascenders
     return ascenders_analytics
