@@ -3,7 +3,7 @@ profile:
     gcp:
       project_id: ascend-io-cody
     bigquery:
-      dataset: OTTOS_EXPEDITIONS_DEV_2
+      dataset: OTTOS_EXPEDITIONS_DEV_APP_DEV
       location: US
 
   defaults:
