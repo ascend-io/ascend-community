@@ -1,4 +1,4 @@
 connection:
   abfs:
-    root: abfss://ottos-expeditions
+    root: abfss://ottos-expeditions/
     account: ascendiosampledata

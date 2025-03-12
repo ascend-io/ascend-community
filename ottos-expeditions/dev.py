@@ -12,6 +12,7 @@ import os
 import yaml
 import ibis
 import polars as pl
+import pandas as pd
 import ibis.selectors as s
 
 from io import BytesIO, StringIO
