@@ -26,4 +26,4 @@ def read_sales_stores(context: ComponentExecutionContext):
     t = ibis.read_parquet(
         "gs://ascend-io-gcs-public/ottos-expeditions/lakev0/generated/events/sales_store.parquet/year=*/month=*/day=*/*.parquet"
     )
-    return t.to_pandas()
+    return t
