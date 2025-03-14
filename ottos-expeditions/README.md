@@ -2,7 +2,7 @@
 
 [![PyPI](https://img.shields.io/pypi/v/ottos-expeditions.svg)](https://pypi.org/project/ottos-expeditions)
 
-Python package and Ascend Projects for Otto's Expeditions!
+This directory is where you'll find the Python package and Ascend Projects for Otto's Expeditions, an Ascend adventure! ✨
 
 ## Layout
 
@@ -19,9 +19,11 @@ Python package and Ascend Projects for Otto's Expeditions!
 
 See [Ascend's getting started documentation](https://docs.ascend.io/getting-started) to get started with Ascend.
 
-## Python installation
+Install `just` and `uv`:
 
-Using `uv` is recommended.
+```
+brew install just uv
+```
 
 ### PyPI
 
@@ -49,12 +51,6 @@ Change into the directory:
 
 ```bash
 cd ascend-community/ottos-expeditions
-```
-
-Install `just` and `uv`:
-
-```
-brew install just uv
 ```
 
 `just setup`:
