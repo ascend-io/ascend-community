@@ -27,6 +27,13 @@ brew install just uv
 
 ### PyPI
 
+Use UV virtual environment:
+
+```bash
+uv venv ottos_env
+source ottos_env/bin/activate
+```
+
 Install the package:
 
 ```bash
