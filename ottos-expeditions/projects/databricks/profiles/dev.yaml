@@ -1,10 +1,10 @@
 profile:
   parameters:
     databricks:
-      workspace_url: <your-databricks-workspace-url>
-      cluster_id: <your-databricks-cluster-id>
-      client_id: <your-databricks-client-id>
-      http_path: <your-databricks-http-path>
+      workspace_url: "https://adb-1729693556114940.0.azuredatabricks.net/"
+      cluster_id: 0314-194752-2b9dq1rs
+      client_id: c112eca7-cf7f-4736-83f6-971462f8a62d
+      http_path: sql/protocolv1/o/1729693556114940/0314-194752-2b9dq1rs
       catalog: dbx_catalog
       schema: dev
 
