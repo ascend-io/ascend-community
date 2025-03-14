@@ -59,7 +59,7 @@ cd ascend-community/ottos-expeditions
 just setup
 ```
 
-Source the Python vritual environment:
+Source the Python virtual environment:
 
 ```bash
 . .venv/bin/activate
