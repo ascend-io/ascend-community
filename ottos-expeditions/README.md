@@ -2,7 +2,8 @@
 
 [![PyPI](https://img.shields.io/pypi/v/ottos-expeditions.svg)](https://pypi.org/project/ottos-expeditions)
 
-Welcome to Otto's Expeditions, an Ascend adventure! 🚀 This repository contains both the Python package and Ascend Projects that power Otto's journey.
+Welcome to Otto's Expeditions, an Ascend adventure! 🚀
+This repository contains both the Python package and Ascend Projects that power Otto's journey.
 
 ## Repository Structure
 
