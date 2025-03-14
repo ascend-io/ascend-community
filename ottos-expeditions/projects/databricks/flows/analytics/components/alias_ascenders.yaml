@@ -1,0 +1,3 @@
+component:
+  alias:
+    location: "${parameters.databricks.catalog}.${parameters.databricks.schema}.ascenders"
