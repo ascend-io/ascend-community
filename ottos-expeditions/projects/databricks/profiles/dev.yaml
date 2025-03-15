@@ -5,8 +5,8 @@ profile:
       cluster_id: 0315-222445-af3qxcth
       client_id: fa4b95e8-0bb8-4828-9774-9b783508add4
       http_path: sql/protocolv1/o/3441600212559531/0315-222445-af3qxcth
-      catalog: ascend_dbx
-      schema: dev
+      catalog: ascend_data_plane_dev
+      schema: default
 
   defaults:
     - kind: Flow
