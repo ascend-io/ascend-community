@@ -1,7 +1,7 @@
 profile:
   parameters:
     databricks:
-      workspace_url: "https://adb-3886704123539288.8.azuredatabricks.net/"
+      workspace_url: "https://adb-1816522682616843.3.azuredatabricks.net/"
       cluster_id: 0316-012221-c3ry39je
       client_id: 3b282853-9717-424c-8d04-9afda9c62c2f
       http_path: sql/protocolv1/o/1816522682616843/0316-012221-c3ry39je
