@@ -60,3 +60,4 @@ jobs:
           . .venv/bin/activate
           ottos-expeditions datagen --days 7
 
+      - run: just upload-gs
