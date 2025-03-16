@@ -4,12 +4,11 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "0 4 * * *"
-  on:
-    pull_request:
-      types: [opened, reopened]
-      paths:
-        - "ottos-expeditions/**"
-        - ".github/workflows/ottos-expeditions.yaml"
+  pull_request:
+    types: [opened, reopened]
+    paths:
+      - "ottos-expeditions/**"
+      - ".github/workflows/ottos-expeditions.yaml"
 
   # push:
   #   branches: ["main"]
