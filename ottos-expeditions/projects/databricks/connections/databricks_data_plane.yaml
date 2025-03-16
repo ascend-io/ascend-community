@@ -4,7 +4,7 @@ connection:
     cluster_id: ${parameters.databricks.cluster_id}
     client_id: ${parameters.databricks.client_id}
     # environment
-    client_secret: ${vaults.gsm.databricks_data_plane_client_secret}
+    client_secret: ${vaults.gsm.databricks_data_plane_client_secret_v2}
     http_path: ${parameters.databricks.http_path}
     catalog: ${parameters.databricks.catalog}
     schema: ${parameters.databricks.schema}
