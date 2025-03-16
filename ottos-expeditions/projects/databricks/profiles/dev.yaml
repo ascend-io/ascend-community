@@ -4,7 +4,7 @@ profile:
       workspace_url: "https://adb-3886704123539288.8.azuredatabricks.net/"
       cluster_id: 0315-003230-p3sjg0zc
       client_id: ff29eec7-aba2-4132-b8c5-b23adbc42a7e
-      http_path: sql/protocolv1/o/1729693556114940/0314-194752-2b9dq1rs
+      http_path: sql/protocolv1/o/3886704123539288/0315-003230-p3sjg0zc
       catalog: ascend_dbx
       schema: dev
 
