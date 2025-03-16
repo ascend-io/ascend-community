@@ -4,6 +4,13 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "0 4 * * *"
+  on:
+    pull_request:
+      types: [opened, reopened]
+      paths:
+        - "ottos-expeditions/**"
+        - ".github/workflows/ottos-expeditions.yaml"
+
   # push:
   #   branches: ["main"]
   #   paths:
@@ -16,6 +23,7 @@ concurrency:
 
 jobs:
   datagen:
+    if: ${{ github.event.label.name == 'run_datagen_on_pr' }}
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -24,6 +32,15 @@ jobs:
       # checkout the repository
       - name: checkout
         uses: actions/checkout@v4
+
+      # setup gcloud
+      - id: 'GCP auth'
+        uses: 'google-github-actions/auth@v2'
+        with:
+          credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
+
+      - name: 'GCP SDK'
+        uses: 'google-github-actions/setup-gcloud@v2'
 
       # install Python and just and uv
       - uses: actions/setup-python@v4
