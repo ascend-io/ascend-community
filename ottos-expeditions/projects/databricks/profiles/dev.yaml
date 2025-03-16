@@ -1,11 +1,11 @@
 profile:
   parameters:
     databricks:
-      workspace_url: "https://adb-1816522682616843.3.azuredatabricks.net/"
-      cluster_id: 0316-012221-c3ry39je
-      client_id: 3b282853-9717-424c-8d04-9afda9c62c2f
-      http_path: sql/protocolv1/o/1816522682616843/0316-012221-c3ry39je
-      catalog: ascend_data_plane_dev
+      workspace_url: "https://adb-1449496082990571.11.azuredatabricks.net/"
+      cluster_id: 0316-223040-ecq4yzcn
+      client_id: 76c19ed6-c550-4284-968b-c1350cb96885
+      http_path: sql/protocolv1/o/1449496082990571/0316-223040-ecq4yzcn
+      catalog: ascend_data_plane_dev_sean
       schema: default
 
   defaults:
