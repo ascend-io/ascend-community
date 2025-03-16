@@ -5,7 +5,7 @@ on:
   schedule:
     - cron: "0 4 * * *"
   pull_request:
-    types: [opened, reopened, labeled]
+    types: [opened, reopened, synchronize, labeled]
     paths:
       - "ottos-expeditions/**"
       - ".github/workflows/ottos-expeditions.yaml"
