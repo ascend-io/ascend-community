@@ -17,8 +17,8 @@ on:
   #     - ".github/workflows/ottos-expeditions.yaml"
 
 concurrency:
-  group: "ottos-expeditions"
-  cancel-in-progress: false
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   datagen:
