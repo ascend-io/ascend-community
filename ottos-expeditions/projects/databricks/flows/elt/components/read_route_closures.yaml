@@ -3,4 +3,4 @@ component:
     connection: local_files
     local_file:
       parser: auto
-      path: router_closures.csv
+      path: route_closures.csv
