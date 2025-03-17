@@ -1,0 +1,6 @@
+component:
+  read:
+    connection: gcs_lake
+    gcs:
+      parser: auto
+      path: ottos-expeditions/lakev0/seed/guides.csv
