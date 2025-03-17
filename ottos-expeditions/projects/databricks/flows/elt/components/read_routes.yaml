@@ -3,3 +3,7 @@ component:
     connection: abfss_lake
     abfs:
       path: lakev0/seed/routes.csv
+  data_plane:
+    databricks:
+      table_properties:
+        delta.columnMapping.mode: name

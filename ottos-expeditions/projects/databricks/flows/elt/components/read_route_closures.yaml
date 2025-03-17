@@ -4,3 +4,7 @@ component:
     local_file:
       parser: auto
       path: router_closures.csv
+  data_plane:
+    databricks:
+      table_properties:
+        delta.columnMapping.mode: name
