@@ -29,5 +29,5 @@ def ascenders(
     feedback: ibis.Table,
     context: ComponentExecutionContext,
 ) -> ibis.Table:
-    # TODO: more interesting logic here please
+    # TODO: more interesting logic here pretty please
     return telemetry
