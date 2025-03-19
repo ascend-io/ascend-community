@@ -1,7 +1,12 @@
-from ascend.resources import ref, transform
+import snowflake
+
+from ascend.resources import ref, snowpark
+from ascend.application.context import ComponentExecutionContext
 
 
-@transform(inputs=[ref("alias_ascenders")])
-def ascenders_analytics(alias_ascenders, context):
+@snowpark(inputs=[ref("alias_ascenders")])
+def ascenders_analytics(
+    alias_ascenders: snowflake.snowpark.Table, context: ComponentExecutionContext
+) -> snowflake.snowpark.Table:
     ascenders_analytics = alias_ascenders
     return ascenders_analytics

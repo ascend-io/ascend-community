@@ -1,7 +1,10 @@
-from ascend.resources import ref, transform
+import snowflake
+
+from ascend.resources import ref, snowpark
+from ascend.application.context import ComponentExecutionContext
 
 
-@transform(
+@snowpark(
     inputs=[
         ref("ascenders"),
         ref("routes"),
@@ -9,9 +12,9 @@ from ascend.resources import ref, transform
     ]
 )
 def goats(
-    ascenders,
-    routes,
-    telemetry,
-    context,
-):
+    ascenders: snowflake.snowpark.Table,
+    routes: snowflake.snowpark.Table,
+    telemetry: snowflake.snowpark.Table,
+    context: ComponentExecutionContext,
+) -> snowflake.snowpark.Table:
     return ascenders.sample(0.01)

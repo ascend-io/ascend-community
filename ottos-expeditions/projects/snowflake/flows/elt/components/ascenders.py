@@ -1,7 +1,10 @@
-from ascend.resources import ref, transform
+import snowflake
+
+from ascend.resources import ref, snowpark
+from ascend.application.context import ComponentExecutionContext
 
 
-@transform(
+@snowpark(
     inputs=[
         ref("staff"),
         ref("routes"),
@@ -15,15 +18,16 @@ from ascend.resources import ref, transform
     ]
 )
 def ascenders(
-    staff,
-    routes,
-    guides,
-    route_closures,
-    telemetry,
-    weather,
-    sales,
-    social_media,
-    feedback,
-    context,
-):
+    staff: snowflake.snowpark.Table,
+    routes: snowflake.snowpark.Table,
+    guides: snowflake.snowpark.Table,
+    route_closures: snowflake.snowpark.Table,
+    telemetry: snowflake.snowpark.Table,
+    weather: snowflake.snowpark.Table,
+    sales: snowflake.snowpark.Table,
+    social_media: snowflake.snowpark.Table,
+    feedback: snowflake.snowpark.Table,
+    context: ComponentExecutionContext,
+) -> snowflake.snowpark.Table:
+    # TODO: more interesting logic here
     return telemetry

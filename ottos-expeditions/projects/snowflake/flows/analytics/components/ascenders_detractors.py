@@ -1,9 +1,11 @@
-from ascend.resources import ref, transform
+import snowflake
+
+from ascend.resources import ref, snowpark
+from ascend.application.context import ComponentExecutionContext
 
 
-@transform(inputs=[ref("ascenders_analytics")])
+@snowpark(inputs=[ref("ascenders_analytics")])
 def ascenders_detractors(
-    ascenders_analytics,
-    context,
-):
+    ascenders_analytics: snowflake.snowpark.Table, context: ComponentExecutionContext
+) -> snowflake.snowpark.Table:
     return ascenders_analytics.sample(0.1)
