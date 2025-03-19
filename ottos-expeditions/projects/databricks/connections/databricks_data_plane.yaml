@@ -1,0 +1,10 @@
+connection:
+  databricks:
+    workspace_url: ${parameters.databricks.workspace_url}
+    cluster_id: ${parameters.databricks.cluster_id}
+    client_id: ${parameters.databricks.client_id}
+    client_secret: ${vaults.environment.app-password}
+    http_path: ${parameters.databricks.http_path}
+    catalog: ${parameters.databricks.catalog}
+    schema: ${parameters.databricks.schema}
+    max_concurrent_queries: 50

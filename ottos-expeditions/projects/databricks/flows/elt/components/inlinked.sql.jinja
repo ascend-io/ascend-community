@@ -1,0 +1,12 @@
+WITH inlinked AS (
+    SELECT
+        *
+    FROM
+        {{ ref("read_inlinked") }}
+)
+SELECT
+    *
+FROM
+    inlinked
+ORDER BY
+    timestamp DESC

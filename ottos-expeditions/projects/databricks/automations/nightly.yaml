@@ -1,0 +1,15 @@
+automation:
+  enabled: true
+  name: nightly
+  triggers:
+    sensors:
+      - type: timer
+        name: nightly-timer
+        config:
+          schedule:
+            cron: 0 4 * * *
+  actions:
+    - type: run_flow
+      name: run-elt
+      config:
+        flow: elt
