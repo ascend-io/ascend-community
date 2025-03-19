@@ -2,75 +2,76 @@
 
 [![PyPI](https://img.shields.io/pypi/v/ottos-expeditions.svg)](https://pypi.org/project/ottos-expeditions)
 
-Python package and Ascend Projects for Otto's Expeditions!
+Welcome to Otto's Expeditions, an Ascend adventure! 🚀
+This repository contains both the Python package and Ascend Projects that power Otto's journey.
 
-## Layout
+## Repository Structure
 
 | Path | Description |
 | --- | --- |
-| [`src/`](src) | Python package source code. |
-| [`projects/`](projects) | Ascend projects source code. |
-| [`pyproject.toml`](pyproject.toml) | Python project configuration. |
-| [`uv.lock`](uv.lock) | Python package lock file. |
-| [`justfile`](justfile) | Justfile for running tasks. |
-| [`dev.py`](dev.py) | Development script. |
+| [`src/`](src) | Core Python package source code |
+| [`projects/`](projects) | Ascend projects implementation |
+| [`pyproject.toml`](pyproject.toml) | Python project configuration |
+| [`uv.lock`](uv.lock) | Python package dependency lock file |
+| [`justfile`](justfile) | Task automation configuration |
+| [`dev.py`](dev.py) | Development utilities script |
 
-## Running the Ascend projects
+## Getting Started
 
-See [Ascend's getting started documentation](https://docs.ascend.io/getting-started) to get started with Ascend.
+Before running the Ascend projects, ensure you have a working Ascend instance. New to Ascend? Check out the [Ascend Getting Started Guide](https://docs.ascend.io/getting-started).
 
-## Python installation
+### Prerequisites
 
-Using `uv` is recommended.
+Install the required tools:
 
-### PyPI
+```bash
+brew install just uv
+```
 
-Install the package:
+### Installation Options
 
+#### Option 1: Install from PyPI
+
+1. Create and activate a UV virtual environment:
+```bash
+uv venv ottos_env
+source ottos_env/bin/activate
+```
+
+2. Install the package:
 ```bash
 uv pip install ottos-expeditions
 ```
 
-### Development
+#### Option 2: Development Setup
 
-Clone the repo:
-
+1. Clone the repository:
 ```bash
+# Using SSH
 git clone git@github.com:ascend-io/ascend-community.git
-```
 
-or:
-
-```bash
+# Or using GitHub CLI
 gh repo clone ascend-io/ascend-community
 ```
 
-Change into the directory:
-
+2. Navigate to the project directory:
 ```bash
 cd ascend-community/ottos-expeditions
 ```
 
-Install `just` and `uv`:
-
-```
-brew install just uv
-```
-
-`just setup`:
-
+3. Set up the development environment:
 ```bash
 just setup
 ```
 
-Source the Python vritual environment:
-
+4. Activate the virtual environment:
 ```bash
 . .venv/bin/activate
 ```
 
-Run the data generation:
+### Generate Sample Data
 
+To generate sample data for testing:
 ```bash
 ottos-expeditions datagen --days 7
 ```
