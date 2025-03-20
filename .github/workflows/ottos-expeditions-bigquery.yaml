@@ -8,7 +8,7 @@ on:
     types: [opened, reopened, synchronize, labeled]
     paths:
       - "ottos-expeditions/**"
-      - ".github/workflows/ottos-expeditions.yaml"
+      - ".github/actions/ottos-expeditions/**"
       - ".github/workflows/ottos-expeditions-bigquery.yaml"
 
 concurrency:
@@ -23,7 +23,7 @@ jobs:
         working-directory: ottos-expeditions
     steps:
       # common setup
-      - uses: ./.github/workflows/ottos-expeditions.yaml
+      - uses: ./.github/workflows/ottos-expeditions
 
       # run bigquery test
       - run: just test-bigquery
