@@ -34,7 +34,7 @@ def setup_bigquery_cicd(reverse: bool = False):
     if reverse:
         to_find, to_replace = to_replace, to_find
 
-    find_replace(staging_profile, to_find[0], to_replace[0])
+    find_replace(staging_profile, to_find, to_replace)
 
     to_find = "OTTOS_EXPEDITIONS_STAGING"
     to_replace = "ASCEND_COMMUNITY_OTTOS_EXPEDITIONS_STAGING_CICD"
