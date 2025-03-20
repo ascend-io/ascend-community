@@ -42,8 +42,9 @@ jobs:
       - uses: extractions/setup-just@v1
       - uses: astral-sh/setup-uv@v5
 
-      # install ottos-expeditions
+      # install ottos-expeditions and ascend-core
       - run: just install
+      - run: just install-core
 
       # run bigquery test
       - run: |
