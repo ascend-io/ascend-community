@@ -48,6 +48,8 @@ jobs:
       - run: just install
 
       # run datagen
-      - run: just datagen
+      - run: |
+        . .venv/bin/activate
+        just datagen
       - run: just upload-gs
 
