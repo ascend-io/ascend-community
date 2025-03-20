@@ -35,7 +35,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["ruff", "ipython", "jupyter", "nbclient", "ipykernel"]
+dev = ["ruff", "ipython"]
 test = ["pytest"] # for appearance only
 
 [project.urls]
