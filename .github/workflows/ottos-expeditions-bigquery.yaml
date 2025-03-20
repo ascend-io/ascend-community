@@ -8,7 +8,6 @@ on:
     types: [opened, reopened, synchronize, labeled]
     paths:
       - "ottos-expeditions/**"
-      - ".github/actions/ottos-expeditions/**"
       - ".github/workflows/ottos-expeditions-bigquery.yaml"
 
 concurrency:
