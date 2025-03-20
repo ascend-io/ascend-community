@@ -16,11 +16,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  datagen:
-    # to check if the event was labelling...
-    # if: ${{ github.event.label.name == 'run_datagen_on_pr' }}
-    # to check if the PR has the label...
-    if: contains(github.event.pull_request.labels.*.name, 'run_datagen_on_pr')
+  bigquery:
     runs-on: ubuntu-latest
     defaults:
       run:
