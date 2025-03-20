@@ -23,6 +23,7 @@ jobs:
         working-directory: ottos-expeditions
     steps:
       # common setup
+      - uses: actions/checkout@v4
       - uses: ./.github/actions/ottos-expeditions
 
       # run bigquery test
