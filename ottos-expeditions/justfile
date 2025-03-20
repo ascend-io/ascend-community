@@ -33,7 +33,6 @@ format:
 
 # datagen
 datagen:
-    source .venv/bin/activate
     @ottos-expeditions datagen --days 7
 
 # cloud stuff
@@ -66,7 +65,6 @@ install-core:
     uv pip install --upgrade ascend-core
 
 test-bigquery:
-    source .venv/bin/activate
     @ottos-expeditions cicd
     @ascend run flow projects/bigquery elt --task-threads {{taskthreads}} --profile staging
     @ascend run flow projects/bigquery analytics --task-threads {{taskthreads}} --profile staging
