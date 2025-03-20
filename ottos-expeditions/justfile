@@ -31,6 +31,11 @@ build:
 format:
     @ruff format .
 
+# datagen
+datagen:
+    . .venv/bin/activate
+    @ottos-expeditions datagen --days 7
+
 # cloud stuff
 upload-az:
     @azcopy sync {{locallakedir}} "https://ascendiosampledata.blob.core.windows.net/ottos-expeditions/{{remotelakedir}}"
