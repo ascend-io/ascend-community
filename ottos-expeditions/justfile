@@ -61,6 +61,8 @@ install-core:
     export UV_KEYRING_PROVIDER=subprocess
     export UV_DEFAULT_INDEX=https://oauth2accesstoken@us-python.pkg.dev/ascend-io-ops-artifacts/private-pypi/simple/
     export UV_INDEX=https://pypi.org/simple/
+    export UV_INDEX_STRATEGY=unsafe-best-match
+    export UV_PRERELEASE=allow
 
     uv pip install --upgrade ascend-core
 
