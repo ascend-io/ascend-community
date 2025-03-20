@@ -1,4 +1,4 @@
-name: ottos-expeditions
+name: ottos-expeditions-datagen
 
 on:
   workflow_dispatch:
