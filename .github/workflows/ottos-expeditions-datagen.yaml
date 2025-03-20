@@ -24,7 +24,7 @@ jobs:
         working-directory: ottos-expeditions
     steps:
       # install ottos-expeditions
-      - uses: ./.github/actions/ottos-expeditions
+      - uses: ./actions/ottos-expeditions
 
       # run datagen
       - run: |
