@@ -47,6 +47,6 @@ jobs:
 
       # run bigquery test
       - run: |
-        . .venv/bin/activate
-        just test-bigquery
+          . .venv/bin/activate
+          just test-bigquery
 

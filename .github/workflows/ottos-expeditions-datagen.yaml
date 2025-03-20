@@ -48,7 +48,7 @@ jobs:
 
       # run datagen
       - run: |
-        . .venv/bin/activate
-        just datagen
+          . .venv/bin/activate
+          just datagen
       - run: just upload-gs
 
