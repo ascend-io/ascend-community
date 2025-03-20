@@ -1,8 +1,6 @@
 import os
 
 
-from pathlib import PathLike
-
 gcp_vault = """
 vault:
   gcp_secret_manager:
@@ -10,7 +8,7 @@ vault:
 """.strip()
 
 
-def find_replace(file: PathLike, find: str, replace: str):
+def find_replace(file: str, find: str, replace: str):
     file = os.path.expanduser(file)
     with open(file, "r") as f:
         content = f.read()
@@ -19,7 +17,7 @@ def find_replace(file: PathLike, find: str, replace: str):
         f.write(content)
 
 
-def write_file(file: PathLike, content: str):
+def write_file(file: str, content: str):
     file = os.path.expanduser(file)
     with open(file, "w") as f:
         f.write(content)

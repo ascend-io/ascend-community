@@ -1,9 +1,9 @@
 profile:
   parameters:
     gcp:
-      project_id: <your-gcp-project>
+      project_id: ayour-gcp-project>
     bigquery:
-      dataset: OTTOS_EXPEDITIONS_STAGING
+      dataset: ASCEND_COMMUNITY_OTTOS_EXPEDITIONS_STAGING_CICD
       location: US
 
   defaults:
