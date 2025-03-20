@@ -66,6 +66,7 @@ install-core:
     uv pip install --upgrade ascend-core
 
 test-bigquery:
+    . .venv/bin/activate
     @ottos-expeditions cicd
     @ascend run flow projects/bigquery elt --task-threads {{taskthreads}} --profile staging
     @ascend run flow projects/bigquery analytics --task-threads {{taskthreads}} --profile staging
