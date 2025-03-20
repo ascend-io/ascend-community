@@ -23,7 +23,7 @@ jobs:
         working-directory: ottos-expeditions
     steps:
       # common setup
-      - uses: ./actions/ottos-expeditions
+      - uses: ./.github/actions/ottos-expeditions
 
       # run bigquery test
       - run: just test-bigquery
