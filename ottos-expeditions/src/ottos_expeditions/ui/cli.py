@@ -26,6 +26,16 @@ def datagen(days: int = typer.Option(365, help="days", show_default=True)):
 
 
 @app.command()
+def cicd(reverse: bool = typer.Option(False, help="reverse?", show_default=True)):
+    """
+    run cicd setup
+    """
+    from ottos_expeditions.utils.cicd import run_cicd_setup
+
+    run_cicd_setup(reverse=reverse)
+
+
+@app.command()
 @app.command("g", hidden=True)
 def gui(
     port: int = typer.Option(1913, help="port", show_default=True),

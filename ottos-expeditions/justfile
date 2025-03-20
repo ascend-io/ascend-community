@@ -6,6 +6,7 @@ set dotenv-load
 # variables
 locallakedir:="lake"
 remotelakedir:="lakev0"
+taskthreads:="12"
 
 # aliases
 alias fmt:=format
@@ -23,15 +24,16 @@ setup:
 sync:
     @uv sync --all-extras --upgrade
 
-install-core:
-    @uv pip install $HOME/code/ascend-io/core
-
 build:
     @rm -r dist || true
     @uv build
 
 format:
     @ruff format .
+
+# datagen
+datagen:
+    @ottos-expeditions datagen --days 7
 
 # cloud stuff
 upload-az:
@@ -48,6 +50,30 @@ upload:
     just upload-az
     @echo "\n\nuploading to gs..."
     just upload-gs
+
+# ascend things
+install-core:
+    echo "installing ascend-core..."
+    echo "warning: this is for Ascend internal use only"
+
+    uv tool install keyring --with keyrings.google-artifactregistry-auth
+
+    export UV_KEYRING_PROVIDER=subprocess
+    export UV_DEFAULT_INDEX=https://oauth2accesstoken@us-python.pkg.dev/ascend-io-ops-artifacts/private-pypi/simple/
+    export UV_INDEX=https://pypi.org/simple/
+    export UV_INDEX_STRATEGY=unsafe-best-match
+    export UV_PRERELEASE=allow
+
+    uv pip install --upgrade ascend-core
+
+test-bigquery:
+    @ottos-expeditions cicd
+    @ascend run flow projects/bigquery elt --task-threads {{taskthreads}} --profile staging
+    @ascend run flow projects/bigquery analytics --task-threads {{taskthreads}} --profile staging
+    @ottos-expeditions cicd --reverse
+
+test-snowflake:
+    @echo "TODO"
 
 # clean
 clean-gs:

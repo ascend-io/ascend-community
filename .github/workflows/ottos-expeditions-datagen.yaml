@@ -1,4 +1,4 @@
-name: ottos-expeditions
+name: ottos-expeditions-datagen
 
 on:
   workflow_dispatch:
@@ -8,13 +8,7 @@ on:
     types: [opened, reopened, synchronize, labeled]
     paths:
       - "ottos-expeditions/**"
-      - ".github/workflows/ottos-expeditions.yaml"
-
-  # push:
-  #   branches: ["main"]
-  #   paths:
-  #     - "ottos-expeditions/**"
-  #     - ".github/workflows/ottos-expeditions.yaml"
+      - ".github/workflows/ottos-expeditions-datagen.yaml"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -22,10 +16,7 @@ concurrency:
 
 jobs:
   datagen:
-    # to check if the event was labelling...
-    # if: ${{ github.event.label.name == 'run_datagen_on_pr' }}
-    # to check if the PR has the label...
-    if: contains(github.event.pull_request.labels.*.name, 'run_datagen_on_pr')
+    if: ${{ github.event_name == 'pull_request' && contains(github.event.pull_request.labels.*.name, 'run_datagen_on_pr') }}
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -58,6 +49,6 @@ jobs:
       # run datagen
       - run: |
           . .venv/bin/activate
-          ottos-expeditions datagen --days 7
-
+          just datagen
       - run: just upload-gs
+
