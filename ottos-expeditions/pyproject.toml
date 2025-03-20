@@ -24,7 +24,7 @@ dependencies = [
   'shinyswatch',
   'shinywidgets',
   # data
-  'ibis-framework[sqlite,duckdb,datafusion,polars,bigquery,snowflake,deltalake]',
+  'ibis-framework[sqlite,duckdb,datafusion,polars,bigquery,snowflake,deltalake]>=9,<10',
   'snowflake-snowpark-python',
   # synthetic data
   'Faker',
