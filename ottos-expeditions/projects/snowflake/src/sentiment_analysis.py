@@ -29,30 +29,32 @@ class SentimentAnalysis(Application):
   def components(self, config: dict[str, Any], context: ApplicationBuildContext) -> list[Component | ComponentBuilder]:
     categories: list[Category] = config["categories"]
     assert isinstance(categories, list), f"Expected categories to be of type 'list[Category]', got '{type(categories)}'"
-    env = jinja2.Environment()
     components = []
     for category in categories:
-      tmpl = env.from_string(template_sql.replace("REPLACE_WITH_INPUT_NAME", config["input_name"]))
-      tmpl.globals["ref"] = pass_ref
-      tmpl.globals["pass_config"] = pass_config
-      flow_name, compound_component_name = context.flow_build_context.flow_name, context.compound_component_name
-      component = Component(**yaml.safe_load(tmpl.render(category=category, input_name=config["input_name"], flow_name=flow_name, compound_component_name=compound_component_name).strip()))
+      sql = template_sql.format(
+        compound_component_name=context.compound_component_name,
+        category_name=category.name,
+        flow_name=context.flow_build_context.flow_name,
+        input_name=config["input_name"],
+        category_percent=category.percent
+      )
+      component = Component(**yaml.safe_load(sql.strip()))
       components.append(component)
     return components
 
 template_sql = """
 component:
-  name: {{ compound_component_name }}_{{ category.name }}
+  name: {compound_component_name}_{category_name}
   transform:
     strategy:
       partitioned:
         enable_substitution_by_partition_name: false
         output_type: table
     inputs:
-    - flow: {{ flow_name }}
-      name: {{ input_name }}
+    - flow: {flow_name}
+      name: {input_name}
       partition_spec: full_reduction
     sql: |-
       SELECT *
-      FROM {{ ref("REPLACE_WITH_INPUT_NAME") }} TABLESAMPLE ({{ category.percent }})
+      FROM {{{{ ref("{input_name}") }}}} TABLESAMPLE ({category_percent})
 """
