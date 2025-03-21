@@ -2,8 +2,8 @@ profile:
   parameters:
     databricks:
       workspace_url: <your-databricks-workspace-url>
-      cluster_id: <your-databricks-cluster-id>
       client_id: <your-databricks-client-id>
+      cluster_id: <your-databricks-cluster-id>
       http_path: <your-databricks-http-path>
       catalog: dbx_catalog
       schema: prod
