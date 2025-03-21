@@ -1,0 +1,17 @@
+profile:
+  parameters:
+    databricks:
+      workspace_url: "https://adb-1729693556114940.0.azuredatabricks.net/"
+      cluster_id: 0314-194752-2b9dq1rs
+      client_id: c112eca7-cf7f-4736-83f6-971462f8a62d
+      http_path: sql/protocolv1/o/1729693556114940/0314-194752-2b9dq1rs
+      catalog: dbx_catalog
+      schema: dev
+
+  defaults:
+    - kind: Flow
+      name:
+        regex: .*
+      spec:
+        data_plane:
+          connection_name: databricks_data_plane
