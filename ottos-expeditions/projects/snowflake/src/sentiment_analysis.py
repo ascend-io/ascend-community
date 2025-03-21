@@ -23,16 +23,15 @@ class SentimentAnalysis(Application):
   model_class: type[BaseModel] = AnalysisConfig
 
   def components(self, config: dict[str, Any], context: ApplicationBuildContext) -> list[Component | ComponentBuilder]:
-    categories: list[Category] = config["categories"]
-    assert isinstance(categories, list), f"Expected categories to be of type 'list[Category]', got '{type(categories)}'"
+    validated = AnalysisConfig.model_validate(config)
     components = []
-    for category in categories:
+    for category in validated.categories:
       component_yaml = component_template.format(
         compound_component_name=context.compound_component_name,
-        category_name=category["name"],
+        category_name=category.name,
         flow_name=context.flow_build_context.flow_name,
-        input_name=config["input_name"],
-        category_percent=category["percent"]
+        input_name=validated.input_name,
+        category_percent=category.percent,
       )
       component = Component(**yaml.safe_load(component_yaml.strip()))
       components.append(component)
