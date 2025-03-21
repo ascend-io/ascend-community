@@ -1,48 +1,44 @@
-"""
-Application to generate sentiment analysis
-"""
 from typing import Any
 
-import jinja2
 import yaml
 from pydantic import BaseModel
 
 from ascend.application.application import Application, ApplicationBuildContext, application
-from ascend.common.jinja_util import pass_config, pass_ref
 from ascend.models.component.component import Component
 from ascend.resources import ComponentBuilder
 
 class Category(BaseModel):
+  """Parameters relevant for particular sentiment analysis"""
   name: str
   percent: int
-  # Parameters relevant for particular sentiment analysis
 
-class Config(BaseModel):
+class AnalysisConfig(BaseModel):
+  """Configuration for sentiment analysis"""
   input_name: str
   categories: list[Category]
 
 
 @application(name="sentiment_analysis")
 class SentimentAnalysis(Application):
-  model_class: type[BaseModel] = Config
+  model_class: type[BaseModel] = AnalysisConfig
 
   def components(self, config: dict[str, Any], context: ApplicationBuildContext) -> list[Component | ComponentBuilder]:
     categories: list[Category] = config["categories"]
     assert isinstance(categories, list), f"Expected categories to be of type 'list[Category]', got '{type(categories)}'"
     components = []
     for category in categories:
-      sql = template_sql.format(
+      component_yaml = component_template.format(
         compound_component_name=context.compound_component_name,
         category_name=category.name,
         flow_name=context.flow_build_context.flow_name,
         input_name=config["input_name"],
         category_percent=category.percent
       )
-      component = Component(**yaml.safe_load(sql.strip()))
+      component = Component(**yaml.safe_load(component_yaml.strip()))
       components.append(component)
     return components
 
-template_sql = """
+component_template = """
 component:
   name: {compound_component_name}_{category_name}
   transform:
