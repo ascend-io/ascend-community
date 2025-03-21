@@ -32,7 +32,7 @@ class SentimentAnalysis(Application):
     env = jinja2.Environment()
     components = []
     for category in categories:
-      tmpl = env.from_string(template_sql.replace("REPLACE_WITH_INPUT_NAME", config["input_name"]))
+      tmpl = env.from_string(template_sql)
       tmpl.globals["ref"] = pass_ref
       tmpl.globals["pass_config"] = pass_config
       flow_name, compound_component_name = context.flow_build_context.flow_name, context.compound_component_name
@@ -54,6 +54,5 @@ component:
       partition_spec: full_reduction
     sql: |-
       SELECT *
-      FROM {{ ref("REPLACE_WITH_INPUT_NAME") }}
-      TABLESAMPLE({{ category.percent }} PERCENT)
+      FROM {{ ref("{{ input_name }}") }}  TABLESAMPLE ({{ category.percent }})
 """
