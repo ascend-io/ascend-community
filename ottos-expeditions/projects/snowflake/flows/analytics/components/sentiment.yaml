@@ -1,0 +1,12 @@
+component:
+  compound:
+    application: sentiment_analysis
+    application_config:
+      input_name: ascenders_analytics
+      categories:
+        - name: promoters
+          percent: 60
+        - name: detractors
+          percent: 10
+        - name: neutral
+          percent: 30
