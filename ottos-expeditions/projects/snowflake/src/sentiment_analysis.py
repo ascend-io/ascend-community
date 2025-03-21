@@ -29,10 +29,10 @@ class SentimentAnalysis(Application):
     for category in categories:
       component_yaml = component_template.format(
         compound_component_name=context.compound_component_name,
-        category_name=category['name'],
+        category_name=category["name"],
         flow_name=context.flow_build_context.flow_name,
         input_name=config["input_name"],
-        category_percent=category['percent']
+        category_percent=category["percent"]
       )
       component = Component(**yaml.safe_load(component_yaml.strip()))
       components.append(component)
