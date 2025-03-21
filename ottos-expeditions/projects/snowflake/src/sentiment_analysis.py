@@ -55,5 +55,5 @@ component:
     sql: |-
       SELECT *
       FROM {{ ref("{{ input_name }}") }}
-      TABLESAMPLE({{ category.percent }} PERCENT);
+      TABLESAMPLE({{ category.percent }} PERCENT)
 """
