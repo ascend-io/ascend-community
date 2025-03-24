@@ -1,10 +1,10 @@
-import ibis
+from pyspark.sql import DataFrame
 
-from ascend.resources import ref, transform
+from ascend.resources import ref, pyspark
 from ascend.application.context import ComponentExecutionContext
 
 
-@transform(
+@pyspark(
     inputs=[
         ref("staff"),
         ref("routes"),
@@ -18,16 +18,16 @@ from ascend.application.context import ComponentExecutionContext
     ]
 )
 def ascenders(
-    staff: ibis.Table,
-    routes: ibis.Table,
-    guides: ibis.Table,
-    route_closures: ibis.Table,
-    telemetry: ibis.Table,
-    weather: ibis.Table,
-    sales: ibis.Table,
-    social_media: ibis.Table,
-    feedback: ibis.Table,
+    staff: DataFrame,
+    routes: DataFrame,
+    guides: DataFrame,
+    route_closures: DataFrame,
+    telemetry: DataFrame,
+    weather: DataFrame,
+    sales: DataFrame,
+    social_media: DataFrame,
+    feedback: DataFrame,
     context: ComponentExecutionContext,
-) -> ibis.Table:
+) -> DataFrame:
     # TODO: more interesting logic here
     return telemetry
