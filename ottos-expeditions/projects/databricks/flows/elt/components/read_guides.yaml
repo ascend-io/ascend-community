@@ -1,0 +1,9 @@
+component:
+  read:
+    connection: gcs_lake
+    gcs:
+      path: ottos-expeditions/lakev0/seed/guides.csv
+  data_plane:
+    databricks:
+      table_properties:
+        delta.columnMapping.mode: name
