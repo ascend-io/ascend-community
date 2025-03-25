@@ -5,8 +5,8 @@ profile:
       cluster_id: <your-databricks-cluster-id>
       client_id: <your-databricks-client-id>
       http_path: <your-databricks-http-path>
-      catalog: dbx_catalog
-      schema: staging
+      catalog: ascend_data_plane_staging
+      schema: default
 
   defaults:
     - kind: Flow
