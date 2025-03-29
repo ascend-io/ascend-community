@@ -1,0 +1,17 @@
+profile:
+  parameters:
+    snowflake:
+      account: <your-snowflake-account>
+      user: ASCEND_DEV
+      role: ASCEND_DEV
+      warehouse: ASCEND_DEV
+      database: OTTOS_EXPEDITIONS_DEV
+      schema: DEFAULT
+
+  defaults:
+    - kind: Flow
+      name:
+        regex: .*
+      spec:
+        data_plane:
+          connection_name: data_plane_snowflake

@@ -6,8 +6,8 @@ Welcome to the Ascend community! This repository contains example projects, samp
 
 | Path | Description |
 | --- | --- |
-| [`quickstarts/`](quickstarts) | Minimal example projects for each supported data plane. |
 | [`ottos-expeditions/`](ottos-expeditions) | Otto's Expeditions, our premier example project. |
+| [`quickstarts/`](quickstarts) | Minimal example projects for each supported data plane. |
 
 ## Resources
 

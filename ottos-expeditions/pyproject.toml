@@ -1,6 +1,6 @@
 [project]
 name = "ottos-expeditions"
-version = "0.0.3"
+version = "0.0.5"
 authors = [{ name = "Ascend", email = "support@ascend.io" }]
 description = "Otto's Expeditions"
 readme = "README.md"
@@ -26,12 +26,12 @@ dependencies = [
   # data
   'ibis-framework[sqlite,duckdb,datafusion,polars,bigquery,snowflake,deltalake]',
   'snowflake-snowpark-python',
+  'gcsfs',
+  'fsspec',
   # synthetic data
   'Faker',
   # viz
   'plotly',
-  # AI
-  'pydantic-ai',
 ]
 
 [project.optional-dependencies]

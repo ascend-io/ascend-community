@@ -1,0 +1,13 @@
+automation:
+  enabled: true
+  name: transform
+  triggers:
+    events:
+      - sql_filter: json_extract_string(event, '$.data.flow') = 'extract-load'
+        types:
+          - FlowRunSuccess
+  actions:
+    - type: run_flow
+      name: run-transform
+      config:
+        flow: transform

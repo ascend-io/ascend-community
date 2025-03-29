@@ -1,0 +1,15 @@
+profile:
+  parameters:
+    gcp:
+      project_id: <your-gcp-project-id>
+    bigquery:
+      dataset: OTTOS_EXPEDITIONS_STAGING
+      location: US
+
+  defaults:
+    - kind: Flow
+      name:
+        regex: .*
+      spec:
+        data_plane:
+          connection_name: data_plane_bigquery
