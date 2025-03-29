@@ -15,33 +15,34 @@ alias install:=sync
 default:
     just --list
 
+# unmesh the mesh project into data plane projects
+unmesh:
+    cd oeutils && go run . unmesh
+
 # python things
 setup:
-    @uv venv --python=3.12 --allow-existing
+    uv venv --python=3.12 --allow-existing
     just sync
 
 sync:
-    @uv sync --all-extras --upgrade
-
-install-core:
-    @uv pip install $HOME/code/ascend-io/core
+    uv sync --all-extras --upgrade
 
 build:
-    @rm -r dist || true
-    @uv build
+    rm -r dist || true
+    uv build
 
 format:
-    @ruff format .
+    ruff format .
 
 # cloud stuff
 upload-az:
-    @azcopy sync {{locallakedir}} "https://ascendiosampledata.blob.core.windows.net/ottos-expeditions/{{remotelakedir}}"
+    azcopy sync {{locallakedir}} "https://ascendiosampledata.blob.core.windows.net/ottos-expeditions/{{remotelakedir}}"
 
 upload-gs:
-    @gsutil -m rsync -r {{locallakedir}} gs://ascend-io-gcs-public/ottos-expeditions/{{remotelakedir}}
+    gsutil -m rsync -r {{locallakedir}} gs://ascend-io-gcs-public/ottos-expeditions/{{remotelakedir}}
 
 upload-az-seed:
-    @azcopy sync {{locallakedir}}/seed "https://ascendiosampledata.blob.core.windows.net/ottos-expeditions/{{remotelakedir}}/seed"
+    azcopy sync {{locallakedir}}/seed "https://ascendiosampledata.blob.core.windows.net/ottos-expeditions/{{remotelakedir}}/seed"
 
 upload:
     @echo "uploading to az..."
@@ -51,18 +52,18 @@ upload:
 
 # clean
 clean-gs:
-    @gsutil -m rm -r gs://ascend-io-gcs-public/ottos-expeditions/{{remotelakedir}}
+    gsutil -m rm -r gs://ascend-io-gcs-public/ottos-expeditions/{{remotelakedir}}
 
 clean-local:
-    @rm -rf {{locallakedir}}
+    rm -rf {{locallakedir}}
 
-# release-test
-release-test:
+# release-test-pypi
+release-test-pypi:
     just build
-    @uv publish --publish-url https://test.pypi.org/legacy/ --token ${PYPI_TEST_TOKEN}
+    uv publish --publish-url https://test.pypi.org/legacy/ --token ${PYPI_TEST_TOKEN}
 
-# release
-release:
+# release-pypi
+release-pypi:
     just build
-    @uv publish --token ${PYPI_TOKEN}
+    uv publish --token ${PYPI_TOKEN}
 

@@ -1,4 +1,7 @@
 project:
-  name: ottos-expeditions
+  name: "Otto's Expeditions"
+  # additional packages to install from PyPI
+  # https://pypi.org/project/ottos-expeditions/
+  # you can use a Flow bootstrap command to install private packages
   pip_packages:
     - ottos-expeditions
