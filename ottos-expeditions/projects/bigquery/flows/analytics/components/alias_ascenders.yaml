@@ -1,3 +1,0 @@
-component:
-  alias:
-    location: "${parameters.gcp.project_id}.${parameters.bigquery.dataset}.elt_ascenders"

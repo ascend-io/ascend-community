@@ -1,0 +1,13 @@
+automation:
+  enabled: true
+  name: downstreams
+  triggers:
+    events:
+      - sql_filter: json_extract_string(event, '$.data.flow') = 'transform'
+        types:
+          - FlowRunSuccess
+  actions:
+    - type: run_flow
+      name: run-metrics
+      config:
+        flow: metrics

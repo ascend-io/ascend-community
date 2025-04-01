@@ -1,0 +1,7 @@
+component:
+  read:
+    connection: read_gcs_lake
+    gcs:
+      path: ottos-expeditions/lakev0/generated/events/weather_routes.parquet/year=
+      include:
+        - glob: "*/month=*/day=*/*.parquet"
