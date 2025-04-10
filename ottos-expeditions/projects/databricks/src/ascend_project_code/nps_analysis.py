@@ -27,20 +27,19 @@ class AnalysisConfig(BaseModel):
 
 
 @application(name="nps_analysis")
-class NPSAnalysis(Application):
-    model_class: type[BaseModel] = AnalysisConfig
+class NPSAnalysis(Application[AnalysisConfig]):
+    config_model: type[AnalysisConfig] = AnalysisConfig
 
     def components(
-        self, config: dict[str, Any], context: ApplicationBuildContext
+        self, config: AnalysisConfig, context: ApplicationBuildContext
     ) -> list[Component | ComponentBuilder]:
-        validated = AnalysisConfig.model_validate(config)
         components = []
-        for category in validated.categories:
+        for category in config.categories:
             component_yaml = component_template.format(
                 compound_component_name=context.compound_component_name,
                 category_name=category.name,
                 flow_name=context.flow_build_context.flow_name,
-                input_name=validated.input_name,
+                input_name=config.input_name,
                 category_threshold=category.threshold,
             )
             component = Component(**yaml.safe_load(component_yaml.strip()))
