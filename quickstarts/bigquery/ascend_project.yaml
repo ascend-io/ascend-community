@@ -1,7 +1,0 @@
-project:
-  name: Ascend_BigQuery_Quickstart
-  connections: ["connections/"]
-  flows: ["flows/"]
-  profiles: ["profiles/"]
-  sources: ["src/"]
-  vaults: ["vaults/"]

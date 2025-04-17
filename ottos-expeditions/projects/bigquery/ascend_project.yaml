@@ -1,5 +1,6 @@
 project:
-  name: "Otto's Expeditions"
+  # only alphanumeric characters, dashes, and underscores are allowed for the name
+  name: ottos-expeditions
   # additional packages to install from PyPI
   # https://pypi.org/project/ottos-expeditions/
   # you can use a Flow bootstrap command to install private packages

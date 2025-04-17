@@ -11,3 +11,7 @@ automation:
       name: run-metrics
       config:
         flow: metrics
+    - type: run_flow
+      name: run-pyspark
+      config:
+        flow: pyspark
