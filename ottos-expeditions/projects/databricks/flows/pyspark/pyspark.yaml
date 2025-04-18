@@ -3,4 +3,4 @@ flow:
   parameters:
     databricks:
       schema: PYSPARK
-      http_path: ${parameters.databricks.warehouse_http_path}
+      http_path: ${parameters.databricks.cluster_http_path}

@@ -1,17 +1,5 @@
 profile:
   parameters:
     snowflake:
-      account: <your-snowflake-account>
-      user: <your-snowflake-user>
-      role: <your-snowflake-role>
-      warehouse: <your-snowflake-warehouse>
-      database: OTTOS_EXPEDITIONS_WORKSPACE_<your-name>
+      $<: $parameters.data_planes.snowflake
       schema: DEFAULT
-      max_concurrent_queries: 20
-  defaults:
-    - kind: Flow
-      name:
-        regex: .*
-      spec:
-        data_plane:
-          connection_name: data_plane_snowflake

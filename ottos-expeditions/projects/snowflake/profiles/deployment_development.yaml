@@ -8,10 +8,3 @@ profile:
       database: OTTOS_EXPEDITIONS_DEVELOPMENT
       schema: DEFAULT
       max_concurrent_queries: 20
-  defaults:
-    - kind: Flow
-      name:
-        regex: .*
-      spec:
-        data_plane:
-          connection_name: data_plane_snowflake
