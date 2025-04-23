@@ -1,4 +1,0 @@
-connection:
-  duckdb:
-    path: ${parameters.duckdb.path}
-    max_concurrent_queries: ${parameters.duckdb.max_concurrent_queries}

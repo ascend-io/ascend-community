@@ -1,7 +1,0 @@
-flow:
-  version: 0.1.0
-  parameters:
-    databricks:
-      schema: TRANSFORM
-      http_path: ${parameters.databricks.warehouse_http_path}
-  bootstrap: echo "hello!"

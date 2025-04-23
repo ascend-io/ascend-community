@@ -18,8 +18,7 @@ def feedback(
     context: ComponentExecutionContext,
 ) -> ibis.Table:
     feedback = (
-        feedback_ascenders.drop("raw_uri", "ingested_at")
-        .mutate(
+        feedback_ascenders.mutate(
             store_id=ibis.literal(None, type=str), user_id=ibis.literal(None, type=str)
         )
         .union(

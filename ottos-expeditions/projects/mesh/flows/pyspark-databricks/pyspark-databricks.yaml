@@ -1,6 +1,0 @@
-flow:
-  version: 0.1.0
-  parameters:
-    databricks:
-      schema: PYSPARK
-      http_path: ${parameters.databricks.cluster_http_path}

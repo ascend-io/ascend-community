@@ -1,7 +1,0 @@
-profile:
-  parameters:
-    duckdb: $parameters.data_planes.duckdb
-    gcp: $parameters.data_planes.gcp
-    bigquery: $parameters.data_planes.bigquery
-    databricks: $parameters.data_planes.databricks
-    snowflake: $parameters.data_planes.snowflake
