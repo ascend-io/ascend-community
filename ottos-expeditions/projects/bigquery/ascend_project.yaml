@@ -14,6 +14,8 @@ project:
   # -- for all Flows in this project. Profiles are typically used to override Parameters
   parameters:
     data_planes:
+      gcp:
+        project_id: <your-gcp-project-id>
       bigquery:
         dataset: OTTOS_EXPEDITIONS_DEVELOPMENT
         location: US
