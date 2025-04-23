@@ -68,3 +68,36 @@ release-pypi:
     just build
     uv publish --token ${PYPI_TOKEN}
 
+# release-repo
+release-repo:
+    #!/usr/bin/env bash
+
+    # change up
+    cd ..
+
+    # clone public repo
+    gh repo clone ascend-io/ascend-community public-repo
+
+    # change into it
+    cd public-repo
+
+    # remove ottos-expeditions
+    rm -r ottos-expeditions
+
+    # copy ottos-expeditions from internal repo
+    cp -r ../ottos-expeditions .
+
+    # delete internal stuff
+    rm -r ottos-expeditions/projects/mesh
+    rm -r ottos-expeditions/oeutils
+    rm -r ottos-expeditions/codex.md
+
+    # commit and push
+    git add .
+    git commit -m "sync from internal repo"
+    git push
+
+    # cleanup
+    cd ..
+    rm -rf public-repo
+    cd ottos-expeditions

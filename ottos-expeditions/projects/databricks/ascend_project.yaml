@@ -15,11 +15,11 @@ project:
   parameters:
     data_planes:
       databricks:
-        workspace_url: "https://adb-331203153589870.10.azuredatabricks.net/"
-        client_id: 61ed841f-69d3-4fa4-8256-aa05c7214281
-        cluster_id: 0329-215355-4kz8sqso
-        cluster_http_path: sql/protocolv1/o/331203153589870/0329-215355-4kz8sqso
-        warehouse_http_path: /sql/1.0/warehouses/34548a67f1781087
+        workspace_url: "<your-databricks-workspace-url>"
+        client_id: <your-databricks-client-id>
+        cluster_id: <your-databricks-cluster-id>
+        cluster_http_path: <your-databricks-cluster-http-path>
+        warehouse_http_path: <your-databricks-warehouse-http-path>
         catalog: OTTOS_EXPEDITIONS_DEVELOPMENT
         schema: DEFAULT
   # defaults are typically used to specify the default Data Plane Connection
