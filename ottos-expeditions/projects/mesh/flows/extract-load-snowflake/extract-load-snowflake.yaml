@@ -1,0 +1,5 @@
+flow:
+  version: 0.1.0
+  parameters:
+    snowflake:
+      schema: ${parameters.snowflake.schema}_EXTRACT_LOAD

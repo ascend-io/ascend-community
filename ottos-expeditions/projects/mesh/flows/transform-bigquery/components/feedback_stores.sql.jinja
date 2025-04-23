@@ -1,0 +1,14 @@
+{% from 'macros/utils.sql.jinja' import col %}
+
+WITH feedback_stores AS (
+    SELECT
+        *
+    FROM
+        {{ ref("read_feedback_stores", flow="extract-load-bigquery") }}
+)
+SELECT
+    {{ col('*') }}
+FROM
+    feedback_stores
+ORDER BY
+    timestamp DESC

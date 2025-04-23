@@ -1,0 +1,14 @@
+component:
+  read:
+    connection: read_gcs_lake
+    gcs:
+      path: ottos-expeditions/lakev0/generated/events/metabook.parquet/year=
+      include:
+        - glob: "*/month=*/day=*/*.parquet"
+  tests:
+    columns:
+      timestamp:
+        - not_null
+      id:
+        - not_null
+

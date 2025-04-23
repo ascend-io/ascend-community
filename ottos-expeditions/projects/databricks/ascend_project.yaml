@@ -14,14 +14,6 @@ project:
   # -- for all Flows in this project. Profiles are typically used to override Parameters
   parameters:
     data_planes:
-      duckdb:
-        path: /tmp/ottos-expeditions.ddb
-        max_concurrent_queries: 128
-      gcp:
-        project_id: ottos-expeditions-development
-      bigquery:
-        dataset: OTTOS_EXPEDITIONS_DEVELOPMENT
-        location: US
       databricks:
         workspace_url: "https://adb-331203153589870.10.azuredatabricks.net/"
         client_id: 61ed841f-69d3-4fa4-8256-aa05c7214281
@@ -30,14 +22,6 @@ project:
         warehouse_http_path: /sql/1.0/warehouses/34548a67f1781087
         catalog: OTTOS_EXPEDITIONS_DEVELOPMENT
         schema: DEFAULT
-      snowflake:
-        account: ascendpartner
-        user: OTTOS_EXPEDITIONS_DEVELOPMENT
-        role: OTTOS_EXPEDITIONS_DEVELOPMENT
-        warehouse: OTTOS_EXPEDITIONS_DEVELOPMENT
-        database: OTTOS_EXPEDITIONS_DEVELOPMENT
-        schema: DEFAULT
-        max_concurrent_queries: 20
   # defaults are typically used to specify the default Data Plane Connection
   # used for Flows, specified by a regex pattern on the Flow name
   defaults:
@@ -46,23 +30,4 @@ project:
         regex: .*
       spec:
         data_plane:
-          connection_name: data_plane_duckdb
-    - kind: Flow
-      name:
-        regex: .*-bigquery
-      spec:
-        data_plane:
-          connection_name: data_plane_bigquery
-    - kind: Flow
-      name:
-        regex: .*-databricks
-      spec:
-        data_plane:
           connection_name: data_plane_databricks
-    - kind: Flow
-      name:
-        regex: .*-snowflake
-      spec:
-        data_plane:
-          connection_name: data_plane_snowflake
-

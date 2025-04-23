@@ -16,8 +16,8 @@ default:
     just --list
 
 # unmesh the mesh project into data plane projects
-unmesh:
-    cd oeutils && go run . unmesh
+unmesh *args:
+    cd oeutils && just run unmesh {{ args }}
 
 # python things
 setup:
@@ -33,6 +33,7 @@ build:
 
 format:
     ruff format .
+    cd oeutils && just format
 
 # cloud stuff
 upload-az:

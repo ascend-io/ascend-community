@@ -1,0 +1,7 @@
+component:
+  read:
+    connection: read_gcs_lake
+    gcs:
+      path: ottos-expeditions/lakev0/generated/events/feedback_store.csv/store_id=
+      include:
+        - glob: "*/year=*/month=*/day=*/*.csv"

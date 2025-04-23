@@ -1,0 +1,13 @@
+component:
+  compound:
+    application: nps_analysis
+    application_config:
+      input_name: ascenders_metrics
+      random_func: "random()"
+      categories:
+        - name: promoters
+          threshold: 60
+        - name: neutral
+          threshold: 30
+        - name: detractors
+          threshold: 10

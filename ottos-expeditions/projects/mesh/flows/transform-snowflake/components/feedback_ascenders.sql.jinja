@@ -1,0 +1,12 @@
+WITH feedback_ascenders AS (
+    SELECT
+        *
+    FROM
+        {{ ref("read_feedback_ascenders", flow="extract-load-snowflake") }}
+)
+SELECT
+    *
+FROM
+    feedback_ascenders
+ORDER BY
+    'TIMESTAMP' DESC

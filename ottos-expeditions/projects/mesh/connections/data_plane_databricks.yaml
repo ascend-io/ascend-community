@@ -1,0 +1,11 @@
+connection:
+  databricks:
+    workspace_url: ${parameters.databricks.workspace_url}
+    client_id: ${parameters.databricks.client_id}
+    client_secret: ${vaults.google_secret_manager.DATABRICKS_SECRET}
+    cluster_id: ${parameters.databricks.cluster_id}
+    http_path: ${parameters.databricks.warehouse_http_path}
+    catalog: ${parameters.databricks.catalog}
+    schema: ${parameters.databricks.schema}
+    max_concurrent_queries: 50
+ 

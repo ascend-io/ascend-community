@@ -1,0 +1,21 @@
+profile:
+  parameters:
+    duckdb: $parameters.data_planes.duckdb
+    gcp:
+      project_id: ottos-expeditions-production
+    bigquery:
+      $<: $parameters.data_planes.bigquery
+      dataset: OTTOS_EXPEDITIONS_PRODUCTION
+    databricks:
+      $<: $parameters.data_planes.databricks
+      client_id: e083e782-3a94-44ed-8758-8eff2a505502
+      cluster_id: 0329-215437-433cyrn2
+      cluster_http_path: sql/protocolv1/o/331203153589870/0329-215437-433cyrn2
+      warehouse_http_path: /sql/1.0/warehouses/6b6165e4fc12361f
+      catalog: OTTOS_EXPEDITIONS_PRODUCTION
+    snowflake:
+      $<: $parameters.data_planes.snowflake
+      user: OTTOS_EXPEDITIONS_PRODUCTION
+      role: OTTOS_EXPEDITIONS_PRODUCTION
+      warehouse: OTTOS_EXPEDITIONS_PRODUCTION
+      database: OTTOS_EXPEDITIONS_PRODUCTION

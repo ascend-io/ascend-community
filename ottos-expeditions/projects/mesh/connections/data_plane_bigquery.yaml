@@ -1,0 +1,6 @@
+connection:
+  bigquery:
+    project: ${parameters.gcp.project_id}
+    dataset: ${parameters.bigquery.dataset}
+    location: ${parameters.bigquery.location}
+    create_dataset_if_not_exists: true

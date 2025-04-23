@@ -1,0 +1,10 @@
+WITH guides AS (
+    SELECT
+        *
+    FROM
+        {{ ref("read_guides", flow="extract-load-snowflake") }}
+)
+SELECT
+    *
+FROM
+    guides

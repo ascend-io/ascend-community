@@ -1,0 +1,12 @@
+WITH metagram AS (
+    SELECT
+        *
+    FROM
+        {{ ref("read_metagram", flow="extract-load-duckdb") }}
+)
+SELECT
+    *
+FROM
+    metagram
+ORDER BY
+    timestamp DESC

@@ -1,0 +1,17 @@
+automation:
+  enabled: true
+  name: downstreams-snowflake
+  triggers:
+    events:
+      - sql_filter: json_extract_string(event, '$.data.flow') = 'transform-snowflake'
+        types:
+          - FlowRunSuccess
+  actions:
+    - type: run_flow
+      name: run-metrics-snowflake
+      config:
+        flow: metrics-snowflake
+    - type: run_flow
+      name: run-llm-snowflake
+      config:
+        flow: llm-snowflake

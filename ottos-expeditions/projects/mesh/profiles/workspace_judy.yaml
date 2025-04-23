@@ -1,0 +1,14 @@
+profile:
+  parameters:
+    duckdb: $parameters.data_planes.duckdb
+    gcp: $parameters.data_planes.gcp
+    bigquery:
+      $<: $parameters.data_planes.bigquery
+      dataset: OTTOS_EXPEDITIONS_WORKSPACE_JUDY
+    databricks:
+      $<: $parameters.data_planes.databricks
+      catalog: OTTOS_EXPEDITIONS_WORKSPACE_JUDY
+    snowflake:
+      $<: $parameters.data_planes.snowflake
+      schema: WORKSPACE_JUDY
+
