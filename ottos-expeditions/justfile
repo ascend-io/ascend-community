@@ -69,8 +69,23 @@ release-pypi:
     uv publish --token ${PYPI_TOKEN}
 
 # release-repo
-release-repo:
+release-repo: unmesh
     #!/usr/bin/env bash
+
+    # check `just unmesh` resulted in no changes
+    [ -z "$(git status --porcelain)" ] || exit 1
+
+    # check if we are on the main branch
+    if [ "$(git rev-parse --abbrev-ref HEAD)" != "main" ]; then
+        echo "You must be on the main branch to release."
+        exit 1
+    fi
+
+    # check if we are up to date with origin/main
+    if [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ]; then
+        echo "You must be up to date with origin/main to release."
+        exit 1
+    fi
 
     # change up
     cd ..
