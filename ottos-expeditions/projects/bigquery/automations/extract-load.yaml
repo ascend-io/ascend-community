@@ -7,7 +7,7 @@ automation:
         name: cron-timer
         config:
           schedule:
-            cron: 0 * * * *
+            cron: '0 * * * *'
   actions:
     - type: run_flow
       name: run-extract-load
