@@ -1,0 +1,11 @@
+component:
+  application:
+    application_id: simple
+    config:
+      template_path: templates/flows/sentiment
+      parameters:
+        input_name: ascenders_metrics
+        random_func: "rand()"
+        threshold_promoters: 45
+        threshold_neutral: 30
+        threshold_detractors: 15
