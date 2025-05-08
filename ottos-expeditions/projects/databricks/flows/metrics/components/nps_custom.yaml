@@ -1,8 +1,9 @@
 component:
-  compound:
-    application: nps_analysis
-    application_config:
+  application:
+    application_id: nps_analysis
+    config:
       input_name: ascenders_metrics
+      random_func: "random()"
       categories:
         - name: promoters
           threshold: 60
