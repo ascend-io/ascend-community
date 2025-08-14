@@ -1,5 +1,0 @@
-flow:
-  version: 0.1.0
-  parameters:
-    bigquery:
-      dataset: ${parameters.bigquery.dataset}_EXTRACT_LOAD

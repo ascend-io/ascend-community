@@ -1,13 +1,12 @@
-# Ascend community repository
+# Ascend Community
 
-Welcome to the Ascend community! This repository contains example projects, sample code, and other goodies to use with Ascend. If you would like to contribute, please see the [contributing guide](CONTRIBUTING.md) -- we'd love your input!
+Welcome to the Ascend Community GitHub repository!
 
-## Layout
+## Structure
 
-| Path | Description |
-| --- | --- |
-| [`ottos-expeditions/`](ottos-expeditions) | Otto's Expeditions, our premier example project. |
+This repository is organized into the following directories:
 
-## Resources
+| Directory | Description |
+|---|---|
+| [`projects`](projects/) | Ascend Project templates. |
 
-- [Documentation](https://docs.ascend.io/)

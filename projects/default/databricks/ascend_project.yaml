@@ -1,0 +1,20 @@
+project:
+  name: ottos-expeditions
+  pip_packages:
+  - ottos-expeditions
+  parameters:
+    databricks:
+      workspace_url: YOUR_WORKSPACE_URL
+      client_id: YOUR_CLIENT_ID
+      cluster_id: YOUR_CLUSTER_ID
+      cluster_http_path: YOUR_CLUSTER_HTTP_PATH
+      warehouse_http_path: YOUR_WAREHOUSE_HTTP_PATH
+      catalog: YOUR_CATALOG
+      schema: DEFAULT
+  defaults:
+  - kind: Flow
+    name:
+      regex: .*
+    spec:
+      data_plane:
+        connection_name: data_plane_databricks

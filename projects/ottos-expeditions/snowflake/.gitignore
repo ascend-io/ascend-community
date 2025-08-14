@@ -1,0 +1,9 @@
+# Python
+.venv/
+.ruff_cache/
+__pycache__
+*.pyc
+.pytest_cache
+
+# Ascend output folder
+ascend-out/

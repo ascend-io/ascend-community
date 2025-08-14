@@ -1,4 +1,0 @@
-profile:
-  parameters:
-    gcp: $parameters.data_planes.gcp
-    bigquery: $parameters.data_planes.bigquery

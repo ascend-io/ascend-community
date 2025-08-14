@@ -1,0 +1,11 @@
+connection:
+  snowflake:
+    account: ${parameters.snowflake.account}
+    user: ${parameters.snowflake.user}
+    password: ${vaults.environment.SNOWFLAKE_SECRET} 
+    role: ${parameters.snowflake.role}
+    warehouse: ${parameters.snowflake.warehouse}
+    database: ${parameters.snowflake.database}
+    schema: ${parameters.snowflake.schema}
+    max_concurrent_queries: ${parameters.snowflake.max_concurrent_queries}
+    create_schema_if_not_exists: true

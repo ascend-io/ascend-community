@@ -1,0 +1,6 @@
+flow:
+  version: 0.1.0
+  parameters:
+    bigquery:
+      dataset: ${parameters.gcp.bigquery.dataset}_TRANSFORM
+  bootstrap: echo "hello!"

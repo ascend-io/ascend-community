@@ -1,5 +1,0 @@
-profile:
-  parameters:
-    databricks:
-      $<: $parameters.data_planes.databricks
-      catalog: OTTOS_EXPEDITIONS_DEVELOPMENT

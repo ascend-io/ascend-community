@@ -1,0 +1,20 @@
+project:
+  name: ottos-expeditions
+  pip_packages:
+  - ottos-expeditions
+  parameters:
+    snowflake:
+      account: YOUR_ACCOUNT
+      user: YOUR_USER
+      role: YOUR_ROLE
+      warehouse: YOUR_WAREHOUSE
+      database: YOUR_DATABASE
+      schema: DEFAULT
+      max_concurrent_queries: 20
+  defaults:
+  - kind: Flow
+    name:
+      regex: .*
+    spec:
+      data_plane:
+        connection_name: data_plane_snowflake

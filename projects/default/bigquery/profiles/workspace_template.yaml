@@ -1,0 +1,7 @@
+profile:
+  parameters:
+    gcp:
+      $<: $parameters.gcp
+      bigquery:
+        $<: $parameters.gcp.bigquery
+        dataset: OTTOS_EXPEDITIONS_WORKSPACE_YOUR_NAME

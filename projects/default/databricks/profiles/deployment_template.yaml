@@ -1,0 +1,4 @@
+profile:
+  parameters:
+    databricks:
+      $<: $parameters.databricks

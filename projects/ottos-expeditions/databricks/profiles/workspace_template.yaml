@@ -1,0 +1,5 @@
+profile:
+  parameters:
+    databricks:
+      $<: $parameters.databricks
+      catalog: OTTOS_EXPEDITIONS_WORKSPACE_YOUR_NAME

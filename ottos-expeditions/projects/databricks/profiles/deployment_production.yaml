@@ -1,9 +1,0 @@
-profile:
-  parameters:
-    databricks:
-      $<: $parameters.data_planes.databricks
-      client_id: <your-databricks-client-id>
-      cluster_id: <your-databricks-cluster-id>
-      cluster_http_path: <your-databricks-cluster-http-path>
-      warehouse_http_path: <your-databricks-warehouse-http-path>
-      catalog: OTTOS_EXPEDITIONS_PRODUCTION

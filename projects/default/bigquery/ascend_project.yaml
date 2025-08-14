@@ -1,0 +1,16 @@
+project:
+  name: ottos-expeditions
+  pip_packages:
+  - ottos-expeditions
+  parameters:
+    gcp:
+      project_id: YOUR_PROJECT_ID
+      bigquery:
+        dataset: YOUR_DATASET
+  defaults:
+  - kind: Flow
+    name:
+      regex: .*
+    spec:
+      data_plane:
+        connection_name: data_plane_bigquery

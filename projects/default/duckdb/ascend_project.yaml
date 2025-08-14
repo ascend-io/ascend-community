@@ -1,0 +1,13 @@
+project:
+  name: ottos-expeditions
+  pip_packages:
+  - ottos-expeditions
+  parameters:
+    duckdb: {}
+  defaults:
+  - kind: Flow
+    name:
+      regex: .*
+    spec:
+      data_plane:
+        connection_name: data_plane_duckdb

@@ -1,0 +1,4 @@
+profile:
+  parameters:
+    duckdb:
+      $<: $parameters.duckdb

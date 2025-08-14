@@ -1,3 +1,0 @@
-profile:
-  parameters:
-    databricks: $parameters.data_planes.databricks

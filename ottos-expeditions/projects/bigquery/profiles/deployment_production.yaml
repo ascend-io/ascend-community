@@ -1,7 +1,0 @@
-profile:
-  parameters:
-    gcp:
-      project_id: <your-gcp-project-id>
-    bigquery:
-      $<: $parameters.data_planes.bigquery
-      dataset: OTTOS_EXPEDITIONS_PRODUCTION

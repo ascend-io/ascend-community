@@ -1,7 +1,0 @@
-.env
-.venv/
-
-*.ddb
-*.cache*
-
-lake
