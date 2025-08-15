@@ -1,9 +1,8 @@
 import polars as pl
 import pyarrow as pa
-
-from ascend.resources import read
-from ascend.common.events import log
 from ascend.application.context import ComponentExecutionContext
+from ascend.common.events import log
+from ascend.resources import read
 
 
 @read(

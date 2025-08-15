@@ -1,7 +1,6 @@
 import pandas as pd
-
-from ascend.resources import read
 from ascend.application.context import ComponentExecutionContext
+from ascend.resources import read
 
 
 @read()

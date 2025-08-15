@@ -1,8 +1,8 @@
-import pandas as pd
 import re
 
-from ascend.resources import read
+import pandas as pd
 from ascend.application.context import ComponentExecutionContext
+from ascend.resources import read
 
 
 @read()

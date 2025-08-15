@@ -1,8 +1,7 @@
 import ibis
-
-from ascend.resources import ref, task
-from ascend.common.events import log
 from ascend.application.context import ComponentExecutionContext
+from ascend.common.events import log
+from ascend.resources import ref, task
 
 
 @task(

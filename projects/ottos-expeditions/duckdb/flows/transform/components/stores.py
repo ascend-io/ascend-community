@@ -1,8 +1,7 @@
-import ibis
 import ascend_project_code.transform as T
-
-from ascend.resources import ref, transform
+import ibis
 from ascend.application.context import ComponentExecutionContext
+from ascend.resources import ref, transform
 
 
 @transform(inputs=[ref("read_stores", flow="extract-load")])

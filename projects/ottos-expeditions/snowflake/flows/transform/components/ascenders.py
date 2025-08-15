@@ -1,7 +1,6 @@
 import snowflake.snowpark as sp
-
-from ascend.resources import ref, snowpark
 from ascend.application.context import ComponentExecutionContext
+from ascend.resources import ref, snowpark
 
 
 @snowpark(

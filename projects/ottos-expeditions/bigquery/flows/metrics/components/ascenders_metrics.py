@@ -1,7 +1,6 @@
 import ibis
-
-from ascend.resources import ref, transform
 from ascend.application.context import ComponentExecutionContext
+from ascend.resources import ref, transform
 
 
 @transform(inputs=[ref("ascenders", flow="transform")])

@@ -2,18 +2,17 @@
 Python code for an Ascend Application that generates a compound component.
 """
 
-import yaml
-
 from typing import Optional
-from pydantic import BaseModel
 
-from ascend.resources import ComponentBuilder
+import yaml
 from ascend.application.application import (
     Application,
     ApplicationBuildContext,
     application,
 )
 from ascend.models.component.component import Component
+from ascend.resources import ComponentBuilder
+from pydantic import BaseModel
 
 
 class Category(BaseModel):

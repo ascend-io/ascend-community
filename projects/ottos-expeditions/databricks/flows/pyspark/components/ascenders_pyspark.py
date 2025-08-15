@@ -1,8 +1,7 @@
-from pyspark.sql import DataFrame, SparkSession
-
-from ascend.resources import ref, pyspark
-from ascend.common.events import log
 from ascend.application.context import ComponentExecutionContext
+from ascend.common.events import log
+from ascend.resources import pyspark, ref
+from pyspark.sql import DataFrame, SparkSession
 
 
 @pyspark(
