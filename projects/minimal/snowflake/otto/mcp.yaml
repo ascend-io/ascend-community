@@ -1,34 +1,36 @@
 mcpServers:
-  # TODO: we need to comment these out...
-  slack:
-    command: npx
-    args:
-      - --cache
-      - /tmp/npm-cache
-      - -y
-      - "@modelcontextprotocol/server-slack"
-    env:
-      SLACK_BOT_TOKEN: ${vaults.environment.SLACK_APP_TOKEN}
-      # TODO: move to secrets
-      SLACK_TEAM_ID: T0BCHLMFS
-      SLACK_CHANNEL_IDS: C092B7QGW03
+  # TODO: better examples + decomplect code to ensure
+  # our internal examples work publicly (e.g. commenting out
+  # as done below programatically)
+  # slack:
+  #   command: npx
+  #   args:
+  #     - --cache
+  #     - /tmp/npm-cache
+  #     - -y
+  #     - "@modelcontextprotocol/server-slack"
+  #   env:
+  #     SLACK_BOT_TOKEN: ${vaults.environment.SLACK_APP_TOKEN}
+  #     # TODO: move to secrets
+  #     SLACK_TEAM_ID: T0BCHLMFS
+  #     SLACK_CHANNEL_IDS: C092B7QGW03
 
-  github:
-    command: npx
-    args:
-      - -y
-      - "@modelcontextprotocol/server-github"
-    env:
-      GITHUB_TOKEN: ${vaults.environment.GITHUB_TOKEN}
-      GITHUB_TOOLSETS: "repos,issues,pull_requests"
+  # github:
+  #   command: npx
+  #   args:
+  #     - -y
+  #     - "@modelcontextprotocol/server-github"
+  #   env:
+  #     GITHUB_TOKEN: ${vaults.environment.GITHUB_TOKEN}
+  #     GITHUB_TOOLSETS: "repos,issues,pull_requests"
 
-  pagerduty:
-    command: uvx
-    args:
-      - "pagerduty-mcp"
-      - "--enable-write-tools"
-    env:
-      PAGERDUTY_API_HOST: "https://api.pagerduty.com"
-      PAGERDUTY_USER_API_KEY: "${vaults.environment.PAGERDUTY_SECRET}"
-      UV_CACHE_DIR: /tmp/uv-cache/
-      UV_TOOL_DIR: /tmp/uv-tools/
+  # pagerduty:
+  #   command: uvx
+  #   args:
+  #     - "pagerduty-mcp"
+  #     - "--enable-write-tools"
+  #   env:
+  #     PAGERDUTY_API_HOST: "https://api.pagerduty.com"
+  #     PAGERDUTY_USER_API_KEY: "${vaults.environment.PAGERDUTY_SECRET}"
+  #     UV_CACHE_DIR: /tmp/uv-cache/
+  #     UV_TOOL_DIR: /tmp/uv-tools/
