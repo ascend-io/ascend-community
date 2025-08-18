@@ -1,4 +1,5 @@
 mcpServers:
+  {}
   # TODO: better examples + decomplect code to ensure
   # our internal examples work publicly (e.g. commenting out
   # as done below programatically)
