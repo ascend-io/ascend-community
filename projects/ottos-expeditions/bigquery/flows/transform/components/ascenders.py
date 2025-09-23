@@ -1,6 +1,6 @@
 import ibis
 from ascend.application.context import ComponentExecutionContext
-from ascend.resources import ref, transform
+from ascend.resources import ref, test, transform
 
 
 @transform(
@@ -14,7 +14,10 @@ from ascend.resources import ref, transform
         ref("sales"),
         ref("social_media"),
         ref("feedback"),
-    ]
+    ],
+    tests=[
+        test("count_greater_than_or_equal", count=0, severity="error"),
+    ],
 )
 def ascenders(
     staff: ibis.Table,

@@ -1,6 +1,6 @@
 import ibis
 from ascend.application.context import ComponentExecutionContext
-from ascend.resources import ref, transform
+from ascend.resources import ref, test, transform
 
 
 @transform(
@@ -8,7 +8,11 @@ from ascend.resources import ref, transform
         ref("feedback_ascenders"),
         ref("feedback_stores"),
         ref("feedback_website"),
-    ]
+    ],
+    tests=[
+        test("not_null", column="ID", severity="error"),
+        test("count_greater_than", count=0, severity="error"),
+    ],
 )
 def feedback(
     feedback_ascenders: ibis.Table,

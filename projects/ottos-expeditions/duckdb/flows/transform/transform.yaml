@@ -1,2 +1,9 @@
 flow:
   version: 0.1.0
+  defaults:
+  - kind: Component
+    name:
+      regex: ".*"
+    spec:
+      retry_strategy:
+        stop_after_attempt: 5

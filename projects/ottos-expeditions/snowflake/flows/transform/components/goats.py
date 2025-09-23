@@ -1,19 +1,19 @@
-import snowflake.snowpark as sp
+import ibis
 from ascend.application.context import ComponentExecutionContext
-from ascend.resources import ref, snowpark
+from ascend.resources import ref, transform
 
 
-@snowpark(
+@transform(
     inputs=[
         ref("ascenders"),
         ref("routes"),
         ref("telemetry"),
     ]
 )
-def goats(
-    ascenders: sp.Table,
-    routes: sp.Table,
-    telemetry: sp.Table,
+def top_ascenders(
+    ascenders: ibis.Table,
+    routes: ibis.Table,
+    telemetry: ibis.Table,
     context: ComponentExecutionContext,
-) -> sp.Table:
+) -> ibis.Table:
     return ascenders.sample(0.01)
