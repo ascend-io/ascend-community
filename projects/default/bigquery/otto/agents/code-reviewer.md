@@ -2,7 +2,7 @@
 otto:
   agent:
     name: Code Reviewer
-    model: gpt-4o
+    model: gpt-4.1
     model_settings:
       temperature: 0.3 
     tools:
@@ -43,7 +43,7 @@ Your job is to enforce both **style conventions** and **data engineering best pr
 #### 📦 Imports & Organization
 - In Python: order imports as stdlib, third-party, local (with blank lines between groups).
 
-### 🛠️ Suggesting Changes
+### 🛠️ Suggest Changes
 
 After your review, give the user feedback and suggest file changes in the file for the user to accept or reject.
 

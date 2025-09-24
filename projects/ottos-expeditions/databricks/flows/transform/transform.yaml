@@ -4,4 +4,10 @@ flow:
     databricks:
       schema: TRANSFORM
       http_path: ${parameters.databricks.warehouse_http_path}
-  bootstrap: echo "hello!"
+  defaults:
+    - kind: Component
+      name:
+        regex: ".*"
+      spec:
+        retry_strategy:
+          stop_after_attempt: 5

@@ -8,5 +8,7 @@ SELECT
     *
 FROM
     feedback_ascenders
+
+{{ with_test("count_greater_than_or_equal", count=0) }}
 ORDER BY
     timestamp DESC

@@ -1,6 +1,6 @@
 import snowflake.snowpark as sp
 from ascend.application.context import ComponentExecutionContext
-from ascend.resources import ref, snowpark
+from ascend.resources import ref, snowpark, test
 
 
 @snowpark(
@@ -14,7 +14,10 @@ from ascend.resources import ref, snowpark
         ref("sales"),
         ref("social_media"),
         ref("feedback"),
-    ]
+    ],
+    tests=[
+        test("count_greater_than_or_equal", count=0, severity="error"),
+    ],
 )
 def ascenders(
     staff: sp.Table,

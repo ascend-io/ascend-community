@@ -10,7 +10,7 @@ from ascend.resources import ref, transform
         ref("telemetry"),
     ]
 )
-def goats(
+def top_ascenders(
     ascenders: ibis.Table,
     routes: ibis.Table,
     telemetry: ibis.Table,

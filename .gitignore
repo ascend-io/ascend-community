@@ -1,7 +1,8 @@
 # Python
-.ruff_cache
-.venv
+.ruff_cache/
+.venv/
 dist/
+__pycache__/
 
 # Local AscendLake
 ascendlake/
