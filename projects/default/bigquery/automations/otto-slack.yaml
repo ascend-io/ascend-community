@@ -1,0 +1,66 @@
+automation:
+  name: otto-slack
+  enabled: true
+  triggers:
+    events:
+    - sql_filter: json_extract_string(event, '$.data.flow') = 'extract-load'
+      types:
+        - FlowRunError
+    - sql_filter: json_extract_string(event, '$.data.flow') = 'transform'
+      types:
+        - FlowRunError
+    - sql_filter: json_extract_string(event, '$.data.flow') = 'metrics'
+      types:
+        - FlowRunError
+  actions:
+    - type: run_otto
+      name: slack-summary
+      config:
+        agent_name: slack-summary-notification
+        prompt: >-
+          # Instructions
+                    
+          A Flow run has just failed. Your objective is to investigate the failure, 
+          gather pertinent information, and post a summary message to Slack to keep 
+          other users updated.
+
+          You cannot ask for help or clarification; you must complete this investigation 
+          end-to-end on your own. Your last action must always be to post a message to Slack.
+
+          ## Investigation Steps
+          
+          Follow these steps in order to gather context and analyze the failure:
+          
+          1. Fetch Flow run history: Get the last 20 runs of the failing Flow to understand patterns
+          
+          2. Check failure frequency: Determine if this Flow has been failing consistently or if this is a new issue
+          
+          3. Analyze current failure: Examine the specific error details from the current failed run
+          
+          4. Check for similar past failures: Look for any previous failures with the same or similar error messages
+          
+          5. Review recent Git changes: Check recent commits to identify any code changes that might have caused the failure
+          
+          6. Read relevant files: Examine Flow configuration files and any related code that might be relevant to the failure
+          
+          7. Write and post Slack message: Summarize your findings in a clear, actionable message
+             
+          ## Slack message requirements
+
+          Post your analysis to Slack in the appropriate channel. Your message must include:
+          - Clear identification of the failed Flow
+          - Root cause analysis based on your investigation
+          - Impact assessment
+          - Proposed fix with specific next steps
+          - Link to the Flow run: https://[runtime.link_url]/flows/[flow_name]/[run_name]
+          
+          ## Example Slack message format
+          :rotating_light: PIPELINE FAILURE: extract-load :rotating_light:
+          Root Cause: The Flow failed during BigQuery data plane initialization due to insufficient permissions. The service account or user running this pipeline does not have the bigquery.jobs.create permission in the GCP project ottos-expeditions-development.
+          Impact: No data was processed or loaded. All downstream Components in this flow are blocked. This may impact any analytics, reporting, or dependent pipelines relying on this data.
+          Proposed fix: Grant the bigquery.jobs.create permission to the service account or user configured in the BigQuery connection for this environment. This is typically done by updating IAM roles in the GCP console for the project ottos-expeditions-development.
+          Next steps:
+            • Update IAM permissions for the service account/user in GCP
+            • Re-run the flow to validate successful execution
+            • Review all other environments/connections for similar permission gaps to prevent recurrence
+          Flow run: https://sean.app-dev.ascend.io/project/otto-s-expeditions-all/dev
