@@ -9,7 +9,7 @@ mcpServers:
   #     - --cache
   #     - /tmp/npm-cache
   #     - -y
-  #     - "@zencoder/slack-mcp-server"
+  #     - "@zencoderai/slack-mcp-server"
   #   env:
   #     SLACK_BOT_TOKEN: ${vaults.environment.SLACK_APP_TOKEN}
   #     # TODO: move to secrets
