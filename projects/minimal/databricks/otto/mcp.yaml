@@ -1,37 +1,34 @@
+# This is your MCP Servers file. Below you can add any number of MCP server definitions.
+# Then, to give Otto access to your MCP servers, grant access in `otto.yaml`
+
+# To use any of these common MCP servers, simply add the appropriate token or api key into
+# your environment (or your own custom) vault, and you're all set!
 mcpServers:
-  {}
-  # TODO: better examples + decomplect code to ensure
-  # our internal examples work publicly (e.g. commenting out
-  # as done below programatically)
-  # slack:
-  #   command: npx
-  #   args:
-  #     - --cache
-  #     - /tmp/npm-cache
-  #     - -y
-  #     - "@zencoderai/slack-mcp-server"
-  #   env:
-  #     SLACK_BOT_TOKEN: ${vaults.environment.SLACK_APP_TOKEN}
-  #     # TODO: move to secrets
-  #     SLACK_TEAM_ID: T0BCHLMFS
-  #     SLACK_CHANNEL_IDS: C092B7QGW03
+  slack:
+    command: npx
+    args:
+      - --cache
+      - /tmp/npm-cache
+      - -y
+      - "@zencoderai/slack-mcp-server"
+    env:
+      SLACK_BOT_TOKEN: ${vaults.environment.SLACK_APP_TOKEN}
+      SLACK_TEAM_ID: [REPLACE_ME]
+      SLACK_CHANNEL_IDS: [REPLACE_ME]
 
-  # github:
-  #   command: npx
-  #   args:
-  #     - -y
-  #     - "@modelcontextprotocol/server-github"
-  #   env:
-  #     GITHUB_TOKEN: ${vaults.environment.GITHUB_TOKEN}
-  #     GITHUB_TOOLSETS: "repos,issues,pull_requests"
+  github:
+    type: http
+    url: https://api.githubcopilot.com/mcp/
+    headers:
+      Authorization: Bearer ${vaults.environment.GITHUB_TOKEN}
 
-  # pagerduty:
-  #   command: uvx
-  #   args:
-  #     - "pagerduty-mcp"
-  #     - "--enable-write-tools"
-  #   env:
-  #     PAGERDUTY_API_HOST: "https://api.pagerduty.com"
-  #     PAGERDUTY_USER_API_KEY: "${vaults.environment.PAGERDUTY_SECRET}"
-  #     UV_CACHE_DIR: /tmp/uv-cache/
-  #     UV_TOOL_DIR: /tmp/uv-tools/
+  pagerduty:
+    command: uvx
+    args:
+      - "pagerduty-mcp"
+      - "--enable-write-tools"
+    env:
+      PAGERDUTY_API_HOST: https://api.pagerduty.com
+      PAGERDUTY_USER_API_KEY: ${vaults.environment.PAGERDUTY_SECRET}
+      UV_CACHE_DIR: /tmp/uv-cache/
+      UV_TOOL_DIR: /tmp/uv-tools/
