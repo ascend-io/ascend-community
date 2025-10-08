@@ -1,4 +1,3 @@
-# TODO: update to snowpark
 import ibis
 from ascend.application.context import ComponentExecutionContext
 from ascend.resources import ref, transform

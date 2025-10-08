@@ -31,5 +31,4 @@ def ascenders(
     feedback: sp.Table,
     context: ComponentExecutionContext,
 ) -> sp.Table:
-    # TODO: more interesting logic here
     return telemetry
