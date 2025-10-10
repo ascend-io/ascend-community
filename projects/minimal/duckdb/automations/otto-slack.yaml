@@ -3,42 +3,8 @@ automation:
   enabled: true
   triggers:
     events:
-    - sql_filter: json_extract_string(event, '$.data.flow') = 'extract-load'
-      types:
-        - FlowRunError
-    - sql_filter: json_extract_string(event, '$.data.flow') = 'extract-load'
-      types:
-        - FlowRunError
-    - sql_filter: json_extract_string(event, '$.data.flow') = 'extract-load'
-      types:
-        - FlowRunError
-    - sql_filter: json_extract_string(event, '$.data.flow') = 'extract-load'
-      types:
-        - FlowRunError
-    - sql_filter: json_extract_string(event, '$.data.flow') = 'transform'
-      types:
-        - FlowRunError
-    - sql_filter: json_extract_string(event, '$.data.flow') = 'transform'
-      types:
-        - FlowRunError
-    - sql_filter: json_extract_string(event, '$.data.flow') = 'transform'
-      types:
-        - FlowRunError
-    - sql_filter: json_extract_string(event, '$.data.flow') = 'transform'
-      types:
-        - FlowRunError
-    - sql_filter: json_extract_string(event, '$.data.flow') = 'metrics'
-      types:
-        - FlowRunError
-    - sql_filter: json_extract_string(event, '$.data.flow') = 'metrics'
-      types:
-        - FlowRunError
-    - sql_filter: json_extract_string(event, '$.data.flow') = 'metrics'
-      types:
-        - FlowRunError
-    - sql_filter: json_extract_string(event, '$.data.flow') = 'metrics'
-      types:
-        - FlowRunError
+      - types:
+            - FlowRunError
   actions:
     - type: run_otto
       name: slack-summary
