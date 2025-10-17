@@ -1,0 +1,22 @@
+import ascend_project_code.transform as T
+import ibis
+from ascend.application.context import ComponentExecutionContext
+from ascend.resources import ref, test, transform
+
+
+@transform(
+    inputs=[
+        ref(
+            "read_sales_website",
+            flow="extract-load",
+            reshape={"time": {"column": "timestamp", "granularity": "year"}},
+        )
+    ],
+    materialized="table",
+    tests=[test("not_null", column="timestamp")],
+)
+def sales_website(
+    read_sales_website: ibis.Table, context: ComponentExecutionContext
+) -> ibis.Table:
+    sales_website = T.clean(read_sales_website)
+    return sales_website
