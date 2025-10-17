@@ -1,0 +1,15 @@
+automation:
+  enabled: true
+  name: sales
+  triggers:
+    sensors:
+      - type: timer
+        name: cron-timer
+        config:
+          schedule:
+            cron: 'R(0-59) */4 * * *'
+  actions:
+    - type: run_flow
+      name: run-sales
+      config:
+        flow: sales

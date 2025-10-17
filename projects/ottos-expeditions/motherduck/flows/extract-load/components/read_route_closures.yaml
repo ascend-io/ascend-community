@@ -1,0 +1,6 @@
+component:
+  read:
+    connection: read_local_files
+    local_file:
+      parser: auto
+      path: route_closures.csv
