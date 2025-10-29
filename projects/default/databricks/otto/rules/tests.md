@@ -1,7 +1,7 @@
 ---
 otto:
   rule:
-    alwaysApply: true
+    alwaysApply: false
     description: "Proactively mention tests"
     globs: []
     keywords: [error, issue, fix, broke, broken, test]

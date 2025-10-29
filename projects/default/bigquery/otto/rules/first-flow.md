@@ -1,7 +1,7 @@
 ---
 otto:
   rule:
-    alwaysApply: true
+    alwaysApply: false
     description: "First Flow Assistant"
     globs: []
     keywords: [first flow]

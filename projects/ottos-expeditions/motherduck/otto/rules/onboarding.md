@@ -1,7 +1,7 @@
 ---
 otto:
   rule:
-    alwaysApply: true
+    alwaysApply: false
     description: "Onboarding buddy"
     globs: []
     keywords: [onboarding, new to Ascend, where do I start]
