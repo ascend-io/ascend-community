@@ -1,7 +1,7 @@
 ---
 otto:
   rule:
-    alwaysApply: true
+    alwaysApply: false
     description: "Explains Otto's Expeditions"
     globs: []
     keywords: [Otto's Expeditions]
