@@ -1,8 +1,7 @@
 otto:
   agents:
-    "Otto Chat":
-      mcp_servers:
-        []
+    otto_chat:
+      mcp_servers: []
         # - github
         # - pagerduty
         # - slack
