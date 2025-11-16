@@ -1,0 +1,24 @@
+component:
+  read:
+    connection: read_local_files
+    local_file:
+      path: goats.csv
+      parser: csv
+  tests:
+    component:
+      - count_equal:
+          count: 150
+    columns:
+      id:
+        - not_null
+        - unique
+      name:
+        - not_null
+      breed:
+        - not_null
+      age:
+        - not_null
+        - greater_than:
+            value: 0
+      route:
+        - not_null

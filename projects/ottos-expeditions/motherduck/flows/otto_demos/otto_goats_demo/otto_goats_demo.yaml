@@ -1,0 +1,3 @@
+flow:
+  name: otto_goats_demo
+  description: "Otto's first data pipeline demo - processing goat data with YAML Read, Python Read, and SQL Transform components"
