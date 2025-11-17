@@ -2,9 +2,9 @@
 otto:
   rule:
     alwaysApply: false
-    description: "Create your first data pipeline in Ascend with Otto."
+    description: "Create a first, demo data pipeline for new users."
     globs: []
-    keywords: ["TDWI"]
+    keywords: ["TDWI", "Orlando", "otto-demos-first-pipeline"]
 ---
 
 # Create your first data pipeline in Ascend with Otto
