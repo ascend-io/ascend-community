@@ -4,7 +4,7 @@ otto:
     alwaysApply: false
     description: "Create a first, demo data pipeline for new users."
     globs: []
-    keywords: ["TDWI", "Orlando", "otto-demos-first-pipeline"]
+    keywords: ["otto-demo-1", "otto-demos-1", "otto-demos-first-pipeline"]
 ---
 
 # Create your first data pipeline in Ascend with Otto
@@ -56,7 +56,7 @@ Create the following file:
 ```yaml
 -- flows/otto_demo/otto_goats_demo/components/transform_goats.sql
 -- TODO: code to union & run distinct
--- Note: Use `SELECT DISTINCT [COLUMNS] FROM [UNION OF REF'D READ COMPONENTS]`
+-- IMPORTANT: Note the two upstream Components may yield different schemas (column order)
 ```
 
 ## Ensure the build is passing and run the Flow (agent mode)
