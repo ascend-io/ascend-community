@@ -7,3 +7,6 @@ __pycache__/
 # Local AscendLake
 ascendlake/
 
+# JetBrains IDE
+.idea/*
+!.idea/runConfigurations/
