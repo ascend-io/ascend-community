@@ -1,0 +1,3 @@
+flow:
+  description: A flow demonstrating ascend integration with dbt using a sandbox project for a fictional e-commerce store called the Jaffle Shop.
+  version: 0.0.1
