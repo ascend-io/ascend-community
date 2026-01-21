@@ -15,4 +15,4 @@ project:
       regex: .*
     spec:
       data_plane:
-        connection_name: data_plane_snowflake
+        connection_name: data_plane_duckdb

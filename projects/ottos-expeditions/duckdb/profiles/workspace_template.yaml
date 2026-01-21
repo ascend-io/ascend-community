@@ -1,2 +1,7 @@
 profile:
-  parameters: {}
+  parameters:
+    duckdb:
+      ducklake:
+        $<: $ascend_managed.duckdb_ducklake
+      automations:
+        $<: $parameters.duckdb.automations

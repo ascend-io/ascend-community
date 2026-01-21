@@ -3,7 +3,9 @@ project:
   pip_packages:
   - ottos-expeditions
   parameters:
-    duckdb: {}
+    duckdb:
+      automations:
+        duckdb_schedule: R(0-59) */4 * * *
   defaults:
   - kind: Flow
     name:
