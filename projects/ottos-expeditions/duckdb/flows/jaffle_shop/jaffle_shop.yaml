@@ -1,0 +1,5 @@
+flow:
+  description: dbt jaffle_shop example - fictional e-commerce analytics
+  version: 0.0.1
+  data_plane:
+    connection_name: data_plane_duckdb_postgres

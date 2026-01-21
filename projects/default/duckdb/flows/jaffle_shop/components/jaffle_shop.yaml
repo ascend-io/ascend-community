@@ -1,0 +1,5 @@
+component:
+  application:
+    application_id: dbt
+    config:
+      project_dir: dbt/jaffle-shop

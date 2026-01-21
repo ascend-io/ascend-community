@@ -7,7 +7,7 @@ automation:
         name: cron-timer
         config:
           schedule:
-            cron: "R(0-59) */4 * * *"
+            cron: ${parameters.duckdb.automations.duckdb_schedule}
   actions:
     - type: run_flow
       name: run-extract-load

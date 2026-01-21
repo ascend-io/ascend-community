@@ -3,7 +3,9 @@ project:
   pip_packages:
   - ottos-expeditions
   parameters:
-    duckdb: {}
+    duckdb:
+      automations:
+        duckdb_schedule: R(0-59) */4 * * *
   defaults:
   - kind: Flow
     name:
@@ -11,3 +13,9 @@ project:
     spec:
       data_plane:
         connection_name: data_plane_duckdb
+  - kind: Flow
+    name:
+      regex: .*-postgres
+    spec:
+      data_plane:
+        connection_name: data_plane_duckdb_postgres
