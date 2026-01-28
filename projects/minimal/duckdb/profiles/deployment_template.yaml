@@ -3,4 +3,4 @@ profile:
     duckdb:
       $<: $parameters.duckdb
       ducklake:
-        $<: $ascend_managed.ducklake
+        $<: $ascend_managed.duckdb_ducklake

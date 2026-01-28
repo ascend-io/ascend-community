@@ -1,5 +1,0 @@
-default:
-  target: ascend_data_plane
-  outputs:
-    ascend_data_plane:
-      type: duckdb

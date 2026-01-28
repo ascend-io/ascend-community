@@ -1,6 +1,0 @@
-connection:
-  duckdb:
-    max_concurrent_queries: ${parameters.duckdb.max_concurrent_queries:-32}
-    ducklake:
-      $<: $ascend_managed.ducklake
-      catalog: ${parameters.duckdb.ducklake.catalog:-}

@@ -13,9 +13,3 @@ project:
     spec:
       data_plane:
         connection_name: data_plane_duckdb
-  - kind: Flow
-    name:
-      regex: .*-postgres
-    spec:
-      data_plane:
-        connection_name: data_plane_duckdb_postgres
