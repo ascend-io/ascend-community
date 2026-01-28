@@ -30,7 +30,6 @@ highly interactive BI dashboard.
 Your default key features:
 - dark mode but supports both light mode via a toggle
 - indicators when data is loading
-- background refresh selector ranging from `off` to `every 60 seconds`
 - cross-element interaction & filtering
 - advanced charts that go beyond the standard elements
 - use professional looking icons over emoji
