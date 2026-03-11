@@ -7,16 +7,11 @@ otto:
     jinja: false
     keywords:
       - artifact
-      - bar chart
       - chart
       - dashboard
       - data viz
       - graph
-      - line chart
-      - pie chart
       - plot
-      - plotly
-      - recharts
       - visualization
 ---
 

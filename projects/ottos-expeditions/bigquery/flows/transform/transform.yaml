@@ -1,9 +1,9 @@
 flow:
-  version: 0.1.0
   parameters:
-    bigquery:
-      dataset: ${parameters.gcp.bigquery.dataset}_TRANSFORM
-    defaults:
+    gcp:
+      bigquery:
+        dataset: ${parameters.gcp.bigquery.dataset_prefix}_TRANSFORM
+  defaults:
       - kind: Component
         name:
           regex: ".*"

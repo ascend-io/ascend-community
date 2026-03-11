@@ -1,0 +1,16 @@
+# This is your MCP Servers file. Below you can add any number of MCP server definitions.
+# Then, to give Otto access to your MCP servers, grant access in `otto.yaml`
+
+# To use any of these common MCP servers, simply add the appropriate token or api key into
+# your environment (or your own custom) vault, and you're all set!
+mcpServers:
+  github:
+    type: http
+    url: https://api.githubcopilot.com/mcp/
+    headers:
+      Authorization: Bearer ${vaults.environment.GITHUB_TOKEN}
+
+  motherduck:
+    url: https://api.motherduck.com/mcp
+    headers:
+      Authorization: Bearer ${vaults.environment.MOTHERDUCK_API_KEY}

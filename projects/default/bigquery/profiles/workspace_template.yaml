@@ -4,4 +4,4 @@ profile:
       $<: $parameters.gcp
       bigquery:
         $<: $parameters.gcp.bigquery
-        dataset: OTTOS_EXPEDITIONS_WORKSPACE_YOUR_NAME
+        dataset_prefix: OTTOS_EXPEDITIONS_WORKSPACE_YOUR_NAME

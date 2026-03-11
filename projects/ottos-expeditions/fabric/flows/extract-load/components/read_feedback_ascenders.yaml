@@ -1,0 +1,15 @@
+component:
+  read:
+    connection: read_gcs_lake
+    gcs:
+      path: lakev0/generated/events/feedback_ascenders.parquet/year=
+      include:
+        - glob: "*/month=*/day=*/*.parquet"
+    columns:
+      - "*"
+      - _ascend_source:
+          cast: varchar(8000)
+          as: raw_uri
+      - _ascend_ingested_at:
+          cast: datetime2
+          as: ingested_at
