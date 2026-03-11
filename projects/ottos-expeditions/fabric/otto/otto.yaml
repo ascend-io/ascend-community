@@ -1,0 +1,8 @@
+otto:
+  agents:
+    # Otto is that "chat" agent
+    chat:
+      # Adjust to enable MCP servers Otto has access to
+      mcp_servers: []
+        # - github
+        # - motherduck

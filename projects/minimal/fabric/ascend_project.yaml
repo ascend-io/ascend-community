@@ -1,0 +1,13 @@
+project:
+  name: ottos-expeditions
+  pip_packages:
+  - ottos-expeditions
+  parameters:
+    fabric: {}
+  defaults:
+  - kind: Flow
+    name:
+      regex: .*
+    spec:
+      data_plane:
+        connection_name: data_plane_fabric

@@ -13,7 +13,7 @@ from ascend.resources import read
 )
 def read_metabook(context: ComponentExecutionContext) -> pa.Table:
     df = pl.read_parquet(
-        "gs://ascend-io-gcs-public/ottos-expeditions/lakev0/generated/events/metabook.parquet/year=*/month=*/day=*/*.parquet"
+        "gs://ascend-ottos-expeditions/lakev0/generated/events/metabook.parquet/year=*/month=*/day=*/*.parquet"
     )
     current_data = context.current_data()
     if current_data is not None:

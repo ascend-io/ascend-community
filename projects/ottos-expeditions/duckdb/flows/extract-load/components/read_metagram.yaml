@@ -2,6 +2,6 @@ component:
   read:
     connection: read_gcs_lake
     gcs:
-      path: ottos-expeditions/lakev0/generated/events/metagram.parquet/year=
+      path: lakev0/generated/events/metagram.parquet/year=
       include:
         - glob: "*/month=*/day=*/*.parquet"

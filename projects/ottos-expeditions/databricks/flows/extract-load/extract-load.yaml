@@ -1,5 +1,4 @@
 flow:
-  version: 0.1.0
   parameters:
     databricks:
       schema: EXTRACT_LOAD
