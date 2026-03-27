@@ -1,3 +1,4 @@
 connection:
   fabric:
     $<: $parameters.fabric
+

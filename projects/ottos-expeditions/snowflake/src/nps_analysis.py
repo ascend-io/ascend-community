@@ -1,14 +1,14 @@
 """
-Python code for an Ascend Application that generates a compound component.
+Python code for an Ascend Module that generates a compound component.
 """
 
 from typing import Optional
 
 import yaml
 from ascend.application.application import (
-    Application,
-    ApplicationBuildContext,
-    application,
+    Module,
+    ModuleBuildContext,
+    module,
 )
 from ascend.models.component.component import Component
 from ascend.resources import ComponentBuilder
@@ -30,17 +30,17 @@ class AnalysisConfig(BaseModel):
     categories: list[Category]
 
 
-@application(name="nps_analysis")
-class NPSAnalysis(Application[AnalysisConfig]):
+@module(name="nps_analysis")
+class NPSAnalysis(Module[AnalysisConfig]):
     config_model: type[AnalysisConfig] = AnalysisConfig
 
     def components(
-        self, config: AnalysisConfig, context: ApplicationBuildContext
+        self, config: AnalysisConfig, context: ModuleBuildContext
     ) -> list[Component | ComponentBuilder]:
         components = []
         for category in config.categories:
             component_yaml = component_template.format(
-                compound_component_name=context.compound_component_name,
+                module_component_name=context.module_component_name,
                 category_name=category.name,
                 flow_name=context.flow_build_context.flow_name,
                 input_name=config.input_name,
@@ -56,7 +56,7 @@ class NPSAnalysis(Application[AnalysisConfig]):
 
 component_template = """
 component:
-  name: {compound_component_name}_{category_name}
+  name: {module_component_name}_{category_name}
   transform:
     strategy:
       partitioned:

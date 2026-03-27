@@ -1,8 +1,8 @@
 component:
-  application:
-    application_id: simple
+  module:
+    module_id: blueprint
     config:
-      template_path: templates/flows/sentiment
+      blueprint_path: blueprints/flows/sentiment
       parameters:
         input_name: ascenders_metrics
         random_func: "random()"
