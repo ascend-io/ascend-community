@@ -12,7 +12,7 @@ Reusable transformation utilities:
 
 ### `nps_analysis.py`
 
-Ascend Application for generating NPS analysis compound components. Configurable categories and thresholds for customer satisfaction analysis.
+Ascend Module for generating NPS analysis compound components. Configurable categories and thresholds for customer satisfaction analysis.
 
 ## Usage
 

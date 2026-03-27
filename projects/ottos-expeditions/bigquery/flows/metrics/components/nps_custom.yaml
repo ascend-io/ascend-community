@@ -1,6 +1,6 @@
 component:
-  application:
-    application_id: nps_analysis
+  module:
+    module_id: nps_analysis
     config:
       input_name: ascenders_metrics
       random_func: "rand()"

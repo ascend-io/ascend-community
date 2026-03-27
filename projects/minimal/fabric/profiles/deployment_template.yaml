@@ -1,2 +1,4 @@
 profile:
-  parameters: {}
+  parameters:
+    fabric:
+      $<: $ascend_managed.fabric
