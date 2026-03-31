@@ -1,0 +1,6 @@
+annual_energy_kwh,avg_carbon_intensity_gco2,city,facility_id,facility_name,latitude,longitude,region
+12500000,180,Manchester,FAC_001,Manchester Production Hub,53.4808,-2.2426,North West England
+8900000,175,Birmingham,FAC_002,Birmingham Assembly Plant,52.4862,-1.8904,West Midlands
+10200000,185,Leeds,FAC_003,Leeds Manufacturing Center,53.8008,-1.5491,Yorkshire
+6700000,165,Bristol,FAC_004,Bristol Tech Facility,51.4545,-2.5879,South West England
+4500000,170,London,FAC_005,London Distribution Hub,51.5074,-0.1278,London
