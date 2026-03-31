@@ -1,0 +1,126 @@
+facility_id,kwh_per_hour,machine_id,machine_name,machine_type,max_daily_runtime_hours,min_runtime_hours,schedulable
+FAC_001,2500,MCH_001,Stamping Press 1,Stamping,16,4,false
+FAC_001,2200,MCH_002,Stamping Press 2,Stamping,16,4,false
+FAC_001,1800,MCH_003,Stamping Press 3,Stamping,16,4,false
+FAC_001,500,MCH_004,Welding Line A,Welding,20,6,false
+FAC_001,500,MCH_005,Welding Line B,Welding,20,6,false
+FAC_001,450,MCH_006,Welding Line C,Welding,20,6,false
+FAC_001,300,MCH_007,Assembly Line 1,Assembly,24,8,false
+FAC_001,4500,MCH_008,Paint Oven 1,Paint Shop,12,6,true
+FAC_001,4200,MCH_009,Paint Oven 2,Paint Shop,12,6,true
+FAC_001,800,MCH_010,Battery Assembly 1,Battery,18,4,false
+FAC_001,800,MCH_011,Battery Assembly 2,Battery,18,4,false
+FAC_001,600,MCH_012,Sensor Calibration,AV Testing,20,3,true
+FAC_001,1200,MCH_013,HIL Test Rig 1,AV Testing,24,4,true
+FAC_001,1200,MCH_014,HIL Test Rig 2,AV Testing,24,4,true
+FAC_001,700,MCH_015,Perception Training,AI Training,24,6,true
+FAC_002,2800,MCH_016,Stamping Press 4,Stamping,16,4,false
+FAC_002,2400,MCH_017,Stamping Press 5,Stamping,16,4,false
+FAC_002,500,MCH_018,Welding Line D,Welding,20,6,false
+FAC_002,500,MCH_019,Welding Line E,Welding,20,6,false
+FAC_002,450,MCH_020,Welding Line F,Welding,20,6,false
+FAC_002,300,MCH_021,Assembly Line 2,Assembly,24,8,false
+FAC_002,5000,MCH_022,Paint Oven 3,Paint Shop,12,6,true
+FAC_002,4800,MCH_023,Paint Oven 4,Paint Shop,12,6,true
+FAC_002,3500,MCH_024,Curing Oven,Paint Shop,10,6,true
+FAC_002,900,MCH_025,Battery Assembly 3,Battery,18,4,false
+FAC_002,900,MCH_026,Battery Assembly 4,Battery,18,4,false
+FAC_002,1500,MCH_027,Dyno Test Cell 1,Testing,16,4,true
+FAC_002,1500,MCH_028,Dyno Test Cell 2,Testing,16,4,true
+FAC_002,800,MCH_029,Simulation Cluster 1,AI Training,24,8,true
+FAC_002,800,MCH_030,Simulation Cluster 2,AI Training,24,8,true
+FAC_003,2600,MCH_031,Stamping Press 6,Stamping,16,4,false
+FAC_003,2300,MCH_032,Stamping Press 7,Stamping,16,4,false
+FAC_003,550,MCH_033,Welding Line G,Welding,20,6,false
+FAC_003,550,MCH_034,Welding Line H,Welding,20,6,false
+FAC_003,500,MCH_035,Welding Line I,Welding,20,6,false
+FAC_003,300,MCH_036,Assembly Line 3,Assembly,24,8,false
+FAC_003,4700,MCH_037,Paint Oven 5,Paint Shop,12,6,true
+FAC_003,1000,MCH_038,Battery Assembly 5,Battery,18,4,false
+FAC_003,1000,MCH_039,Battery Assembly 6,Battery,18,4,false
+FAC_003,700,MCH_040,Sensor Calibration 2,AV Testing,20,3,true
+FAC_003,1300,MCH_041,HIL Test Rig 3,AV Testing,24,4,true
+FAC_003,1300,MCH_042,HIL Test Rig 4,AV Testing,24,4,true
+FAC_003,1500,MCH_043,ML Training Cluster,AI Training,24,6,true
+FAC_003,600,MCH_044,Vision System Test,AV Testing,20,4,true
+FAC_003,2000,MCH_045,Foundry Furnace,Casting,12,6,true
+FAC_004,2700,MCH_046,Stamping Press 8,Stamping,16,4,false
+FAC_004,2500,MCH_047,Stamping Press 9,Stamping,16,4,false
+FAC_004,2200,MCH_048,Stamping Press 10,Stamping,16,4,false
+FAC_004,600,MCH_049,Welding Line J,Welding,20,6,false
+FAC_004,600,MCH_050,Welding Line K,Welding,20,6,false
+FAC_004,550,MCH_051,Welding Line L,Welding,20,6,false
+FAC_004,300,MCH_052,Assembly Line 4,Assembly,24,8,false
+FAC_004,5200,MCH_053,Paint Oven 6,Paint Shop,12,6,true
+FAC_004,4900,MCH_054,Paint Oven 7,Paint Shop,12,6,true
+FAC_004,3200,MCH_055,Pretreatment Line,Paint Shop,16,6,true
+FAC_004,1100,MCH_056,Battery Assembly 7,Battery,18,4,false
+FAC_004,1100,MCH_057,Battery Assembly 8,Battery,18,4,false
+FAC_004,1600,MCH_058,Dyno Test Cell 3,Testing,16,4,true
+FAC_004,1600,MCH_059,Dyno Test Cell 4,Testing,16,4,true
+FAC_004,900,MCH_060,Simulation Cluster 3,AI Training,24,8,true
+FAC_004,900,MCH_061,Simulation Cluster 4,AI Training,24,8,true
+FAC_004,1400,MCH_062,Planner Training,AI Training,24,6,true
+FAC_004,700,MCH_063,Sensor Calibration 3,AV Testing,20,3,true
+FAC_005,2900,MCH_064,Stamping Press 11,Stamping,16,4,false
+FAC_005,2600,MCH_065,Stamping Press 12,Stamping,16,4,false
+FAC_005,650,MCH_066,Welding Line M,Welding,20,6,false
+FAC_005,650,MCH_067,Welding Line N,Welding,20,6,false
+FAC_005,600,MCH_068,Welding Line O,Welding,20,6,false
+FAC_005,300,MCH_069,Assembly Line 5,Assembly,24,8,false
+FAC_005,5500,MCH_070,Paint Oven 8,Paint Shop,12,6,true
+FAC_005,5200,MCH_071,Paint Oven 9,Paint Shop,12,6,true
+FAC_005,3800,MCH_072,Curing Oven 2,Paint Shop,10,6,true
+FAC_005,1200,MCH_073,Battery Assembly 9,Battery,18,4,false
+FAC_005,1200,MCH_074,Battery Assembly 10,Battery,18,4,false
+FAC_005,1700,MCH_075,Dyno Test Cell 5,Testing,16,4,true
+FAC_005,1700,MCH_076,Dyno Test Cell 6,Testing,16,4,true
+FAC_005,1000,MCH_077,Simulation Cluster 5,AI Training,24,8,true
+FAC_005,1000,MCH_078,Simulation Cluster 6,AI Training,24,8,true
+FAC_005,1600,MCH_079,Prediction Training,AI Training,24,6,true
+FAC_005,800,MCH_080,Sensor Calibration 4,AV Testing,20,3,true
+FAC_005,1400,MCH_081,HIL Test Rig 5,AV Testing,24,4,true
+FAC_005,1400,MCH_082,HIL Test Rig 6,AV Testing,24,4,true
+FAC_005,700,MCH_083,Vision System Test 2,AV Testing,20,4,true
+FAC_001,400,MCH_084,CNC Mill 1,Machining,16,3,true
+FAC_001,400,MCH_085,CNC Mill 2,Machining,16,3,true
+FAC_001,350,MCH_086,Laser Cutter 1,Machining,18,3,true
+FAC_002,450,MCH_087,CNC Mill 3,Machining,16,3,true
+FAC_002,450,MCH_088,CNC Mill 4,Machining,16,3,true
+FAC_002,380,MCH_089,Laser Cutter 2,Machining,18,3,true
+FAC_003,420,MCH_090,CNC Mill 5,Machining,16,3,true
+FAC_003,420,MCH_091,CNC Mill 6,Machining,16,3,true
+FAC_003,360,MCH_092,Laser Cutter 3,Machining,18,3,true
+FAC_004,480,MCH_093,CNC Mill 7,Machining,16,3,true
+FAC_004,480,MCH_094,CNC Mill 8,Machining,16,3,true
+FAC_004,400,MCH_095,Laser Cutter 4,Machining,18,3,true
+FAC_005,500,MCH_096,CNC Mill 9,Machining,16,3,true
+FAC_005,500,MCH_097,CNC Mill 10,Machining,16,3,true
+FAC_005,420,MCH_098,Laser Cutter 5,Machining,18,3,true
+FAC_001,250,MCH_099,Injection Molder 1,Plastics,20,4,true
+FAC_002,250,MCH_100,Injection Molder 2,Plastics,20,4,true
+FAC_003,250,MCH_101,Injection Molder 3,Plastics,20,4,true
+FAC_004,250,MCH_102,Injection Molder 4,Plastics,20,4,true
+FAC_005,250,MCH_103,Injection Molder 5,Plastics,20,4,true
+FAC_001,180,MCH_104,3D Printer Farm 1,Prototyping,24,6,true
+FAC_002,180,MCH_105,3D Printer Farm 2,Prototyping,24,6,true
+FAC_003,180,MCH_106,3D Printer Farm 3,Prototyping,24,6,true
+FAC_004,180,MCH_107,3D Printer Farm 4,Prototyping,24,6,true
+FAC_005,180,MCH_108,3D Printer Farm 5,Prototyping,24,6,true
+FAC_001,600,MCH_109,Real-time Inference 1,AI Inference,24,2,false
+FAC_002,600,MCH_110,Real-time Inference 2,AI Inference,24,2,false
+FAC_003,600,MCH_111,Real-time Inference 3,AI Inference,24,2,false
+FAC_004,600,MCH_112,Real-time Inference 4,AI Inference,24,2,false
+FAC_005,600,MCH_113,Real-time Inference 5,AI Inference,24,2,false
+FAC_001,300,MCH_114,Data Pipeline 1,Data Processing,24,4,false
+FAC_002,300,MCH_115,Data Pipeline 2,Data Processing,24,4,false
+FAC_003,300,MCH_116,Data Pipeline 3,Data Processing,24,4,false
+FAC_004,300,MCH_117,Data Pipeline 4,Data Processing,24,4,false
+FAC_005,300,MCH_118,Data Pipeline 5,Data Processing,24,4,false
+FAC_001,150,MCH_119,Quality Control AI 1,AI Inference,24,2,false
+FAC_002,150,MCH_120,Quality Control AI 2,AI Inference,24,2,false
+FAC_003,150,MCH_121,Quality Control AI 3,AI Inference,24,2,false
+FAC_004,150,MCH_122,Quality Control AI 4,AI Inference,24,2,false
+FAC_005,150,MCH_123,Quality Control AI 5,AI Inference,24,2,false
+FAC_003,2200,MCH_124,Aluminum Casting,Casting,14,6,true
+FAC_005,2400,MCH_125,Heat Treatment Furnace,Heat Treatment,12,6,true
