@@ -108,6 +108,24 @@ const EXTENDED_PALETTE = [
 ];
 ```
 
+## Icons (lucide-react)
+
+The sandbox pins `lucide-react@0.263.1`. Many newer icon names do NOT exist in this version and will cause a render failure. **Only import icons from the verified list below.** Do not guess icon names — if an icon is not on this list, pick the closest alternative that is.
+
+### Verified icons (lucide-react@0.263.1)
+
+**Navigation & arrows:** ArrowDown, ArrowLeft, ArrowRight, ArrowUp, ArrowUpDown, ChevronDown, ChevronLeft, ChevronRight, ChevronUp, ExternalLink, MoreHorizontal, MoreVertical, Menu, Move, Undo
+
+**Charts & data:** Activity, BarChart, BarChart2, BarChart3, BarChart4, BarChartBig, BarChartHorizontal, LineChart, PieChart, TrendingDown, TrendingUp
+
+**Layout & UI:** Circle, Grid, Hash, Kanban, Layers, LayoutDashboard, LayoutGrid, List, Minus, PanelLeft, PanelRight, Plus, SlidersHorizontal, Sliders, Square, Table, X, XCircle
+
+**Status & feedback:** AlertCircle, AlertTriangle, Check, CheckCircle, CheckCircle2, HelpCircle, Info, Loader, Loader2, ThumbsDown, ThumbsUp, Zap
+
+**Objects:** Bell, BookOpen, Box, Building, Building2, Calendar, Clock, Cloud, Cog, CreditCard, Database, DollarSign, File, FileText, Flag, FolderOpen, Globe, Heart, Home, Image, Key, Link, Lock, Mail, Map, MapPin, MessageCircle, MessageSquare, Monitor, Mountain, Package, Palette, Pencil, Pin, Save, Search, Send, Settings, Settings2, Share, Share2, Shield, ShoppingCart, Signal, Smartphone, Sparkles, Star, Sun, Moon, Tag, Target, Timer, Trash, Trash2, Trophy, Truck, Umbrella, User, UserPlus, Users, Wallet, Wand
+
+**Actions:** Copy, Download, Eye, EyeOff, Filter, LogOut, Pencil, Play, Power, RefreshCcw, RefreshCw, RotateCcw, RotateCw, Shuffle, Upload, ZoomIn, ZoomOut
+
 ## Styling Defaults
 
 - **Always use `ResponsiveContainer`** for Recharts (never hardcode width)
